@@ -29,6 +29,7 @@ No account and no usage data. The app checks for updates and, once a key is ente
 - Manual: https://mediaflowswift.com/manual/
 - Support: https://mediaflowswift.com/support.html
 - Refund policy: https://mediaflowswift.com/refunds.html
+- About (who makes it and why): https://mediaflowswift.com/about/
 - Company: https://longroadsoftware.com/
 
 ## Contact
