@@ -6,7 +6,17 @@ MediaFlow takes your footage from the card to the finished upload, and keeps eve
 
 ## Coming next
 
-Nothing waiting. Everything finished so far is in 1.10.47.
+Nothing waiting. Everything finished so far is in 1.10.48.
+
+## 1.10.48 · October 11, 2026
+
+**Safer archives, faster Free Up Space, and privacy and licence promises kept to the letter.**
+
+- **Two projects with the same name, or two drives that look alike, are never mixed up.** Archiving a project to a drive that already holds another project with the same name now puts yours beside it, as “Trip (2)”, and never replaces the other one. Restoring checks that each drive is the very one your project was archived to, and that the folder on it is your project’s, so a lookalike drive or another project’s folder is never used by mistake. If the wrong drive is connected, MediaFlow tells you which one it needs, and changes nothing until you connect it.
+- **Free up space without reading every copy from your drive again.** MediaFlow now remembers which copies it read back in full when it organized them. When you free up space, it asks once whether to check those copies again or use that earlier check, and tells you how much checking again would read from your drive: a big saving over a phone connection. Copies it never fully checked are always read again, and the copies on your Mac are still checked every time. Staged files now wait in a Cleanup folder on your Mac instead of being uploaded to your drive first.
+- **Place names keep your exact spot private, just as Settings promises.** When you turn on place names, MediaFlow now rounds your clips’ coordinates to about 110 m before asking Apple for the name, so the exact spot where you filmed is never sent for place names. Settings › Privacy and Help now say exactly what is sent.
+- **Working away from home? Know the one drive setting that can lock a file.** A new Help page explains your network drive’s “durable handles” setting: why it helps on a steady home network, why over a phone, a hotspot or a VPN it can leave a file locked for hours, and when to turn it off. Find it under Setup & Network, or search Help for “durable handles”.
+- **Your licence key stays put, even if the licence service has a bad moment.** If the licence service ever says it doesn’t recognise your key, MediaFlow now keeps the key and your plan keeps working while it checks again, just as it does when you’re offline. Only a signed answer from the service can end a licence, so you’ll never have to look up your key again because of a hiccup on our side.
 
 ## 1.10.47 · October 7, 2026
 
