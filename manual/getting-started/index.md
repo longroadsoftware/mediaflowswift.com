@@ -174,7 +174,7 @@ The pipeline strip shows the seven steps of a shoot and how much work each one s
 - Categorize — clips with no category (a blank category counts). Button: Auto-suggest
 - Review — clips with no star rating. Button: Rapid Review…, the same as Workflow → Review (Cmd+Opt+R)
 - Organize — clips whose file is not at the destination folder. Button: Organize N clips. A clip that is at the destination with a size mismatch counts as organized here; the Where column still shows the mismatch
-- Free up space — the space the working-directory copies of organized clips still take on this Mac. A copy Free Up Space has moved to Cleanup or deleted no longer counts, and one Restore from Cleanup puts back counts again. Button: Free Up Space…, which checks each file and shows exactly what it will reclaim
+- Free up space — the space the working-directory copies of organized clips still take on this Mac. A copy Free Up Space has deleted no longer counts, one it has moved into this Mac’s Cleanup folder counts until it is deleted, and one Restore from Cleanup puts back counts again. Button: Free Up Space…, which checks each file and shows exactly what it will reclaim
 - Archive — Pending, or the volume the project was archived to (“USB #0007”) with the date. Button: Archive…
 - Eject — removable cards and drives still mounted. Button: Eject &lt;name>, or an Eject menu when more than one is connected
 

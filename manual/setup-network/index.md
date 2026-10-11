@@ -83,7 +83,7 @@ macOS asks for the share’s password, not MediaFlow. MediaFlow never sees or st
 
 Check that the server is switched on and on the same network. Also check that MediaFlow is allowed to use the local network: System Settings › Privacy & Security › Local Network.
 
-See also: [Setting Up MediaFlow](#setting-up-mediaflow), [Updating MediaFlow](#updating-mediaflow), [Database File or Database Server?](/manual/shared-database/#database-file-or-database-server), [Database Connection Issues](/manual/troubleshooting/#database-connection-issues), [Network Share 'Resource Busy' Errors](/manual/troubleshooting/#network-share-resource-busy-errors)
+See also: [Setting Up MediaFlow](#setting-up-mediaflow), [Updating MediaFlow](#updating-mediaflow), [Database File or Database Server?](/manual/shared-database/#database-file-or-database-server), [Database Connection Issues](/manual/troubleshooting/#database-connection-issues), [Network Share 'Resource Busy' Errors](/manual/troubleshooting/#network-share-resource-busy-errors), [Network Drive Settings for Working Away from Home](#network-drive-settings-for-working-away-from-home)
 
 ## Saved Setup: A Copy of Your Settings
 
@@ -233,8 +233,8 @@ A few features need a service run by another company. Settings › Privacy lists
 ### The switches
 
 - Apple’s online speech recognition — sends the audio of the clip being transcribed to Apple, only when this Mac has no on-device speech model for the language. While it is off, speech is recognized on this Mac only, and a language without an on-device model is not transcribed.
-- Historical weather lookup — sends each clip’s GPS coordinates, rounded to about 100 m, and the date it was shot to Open-Meteo. While it is off, Look Up Weather does nothing and tells you where to turn it on.
-- Place names for GPS coordinates — sends each clip’s coordinates, rounded to about 100 m, to Apple. While it is off, clips show their coordinates; names already looked up are kept.
+- Historical weather lookup — sends each clip’s GPS coordinates, rounded to three decimal places (about 110 m), and the date it was shot to Open-Meteo. While it is off, Look Up Weather does nothing and tells you where to turn it on.
+- Place names for GPS coordinates — sends the coordinates of each clip, or of the middle of a group of clips shot close together, rounded to three decimal places (about 110 m), to Apple, and nothing else about the clip. While it is off, clips show their coordinates; names already looked up are kept.
 - A model that writes your YouTube title, description and tags — sends the transcript of the finished video you chose, its length, the brief you typed, and then its own drafts, to the provider chosen in Settings › Analysis. Never the video or its file name. Not needed with the model on this Mac, when nothing is sent outside; a local model you have pointed at another computer on your network receives the same text. See The SEO Agent
 - Sending to YouTube — for Apply to the Video I Uploaded, reads your channel’s newest uploads (title, upload time, length, visibility and the name of the file each came from, which YouTube tells only the owner) and fetches each one’s small picture, so you can confirm the video; then sends that video its title, description, chapters and tags, and only if you ask its category, visibility, publish time, recording date, thumbnail and the transcript as captions, always together with what was read so nothing on it is lost. The advanced Upload tab sends the finished video you chose, with the same words and settings and the file’s size and type, to Google. Signing in opens your browser at Google; MediaFlow never sees your password. Signing in and staying signed in send your client ID and secret to Google. The permission is the one Google words as “See, edit, and permanently delete your YouTube videos, ratings, comments and captions”; MediaFlow never deletes anything and changes only the video you confirm. Nothing is sent until you confirm the video and click Apply, or click Upload and confirm. While it is off, both are refused and sign-in does not ask for the permission; with both YouTube switches off, signing in is refused too. See Applying Your Details to the Video You Uploaded
 - Reading your videos’ statistics from YouTube — asks Google which channel you signed in to, and sends the YouTube IDs of the videos your database records as published with MediaFlow with the span of dates from the first upload to today, and nothing else. Google answers with their views, likes, comments, watch time, average view, subscribers gained, shares, visibility and publish time. Turning it on makes the next sign-in ask Google for two more permissions, both read-only, which would allow reading your whole channel; MediaFlow asks only about those videos. Read only when you click Read from YouTube Now on the Results tab. See How Your Videos Are Doing
@@ -261,6 +261,51 @@ Buttons and links such as a provider’s API-key page, the Ollama download, Help
 macOS may separately ask permission for speech recognition or for finding devices on your local network. Those prompts come from macOS and are managed in System Settings › Privacy & Security.
 
 See also: [The Settings Window, Tab by Tab](#the-settings-window-tab-by-tab), [Using a Model to Suggest Categories](/manual/organizing-media/#using-a-model-to-suggest-categories), [Running a Model on This Mac](/manual/organizing-media/#running-a-model-on-this-mac), [Speech Transcription](/manual/organizing-media/#speech-transcription), [Historical Weather Lookup](/manual/organizing-media/#historical-weather-lookup), [Interactive Shoot Map](/manual/organizing-media/#interactive-shoot-map), [Saved Setup: A Copy of Your Settings](#saved-setup-a-copy-of-your-settings), [Contacting Support](/manual/troubleshooting/#contacting-support)
+
+## Network Drive Settings for Working Away from Home
+
+*A setting on your network drive called durable handles helps on a steady home network, but over a phone, a hotspot or a VPN it can leave a file locked for hours.*
+
+If your footage goes to a network drive, often called a NAS, its file sharing most likely has a setting called durable handles. It decides what the drive does with a file that was open when a Mac’s connection dropped. It matters most if you organize to the drive from somewhere else, over a phone, a hotspot or a VPN.
+
+### What durable handles do
+
+When a Mac opens a file on the drive, the drive keeps a handle for it: a note that this Mac has the file open, with a lock so nobody else changes it meanwhile. With durable handles on, the drive holds on to that handle for a while after the connection drops. If the same connection comes back, it carries on with the file as if nothing had happened.
+
+### Why they help at home
+
+On a steady home or office network, drops are rare and short, and a Mac nearly always comes back as the same connection. Durable handles then let an editing app or a copy ride out the blip without reopening anything.
+
+### Why they can hurt away from home
+
+Over a phone, a hotspot or a VPN, a dropped link often comes back as a new connection. To the drive, that is someone else. It keeps the old connection’s handle, and its lock, waiting for a connection that will never return, sometimes for hours. Meanwhile your Mac is refused that one file, and macOS calls the refusal “Resource temporarily unavailable”, while the drive answers everything else.
+
+### What you see
+
+Organize waits through the refusals, as it does for any drop. If they go on, the Organize window says the network drive keeps refusing a file, or that the drive is still holding part of a file locked. Everything else on the drive works normally: that is the sign that a lock, not the connection, is the problem.
+
+### Where the setting is
+
+Open your drive’s own settings, usually in a web browser, and look at its SMB or Windows file service, under advanced settings. Drive makers word it differently, such as “SMB durable handles”, “Enable durable handles” or just “Durable handles”. Many drives share files with Samba, which has this setting, including drives from UGREEN, Synology, QNAP, TrueNAS and others; where your drive shows it, if it does, varies. Your drive’s manual can tell you.
+
+### The trade-off of turning it off
+
+- The drive lets go of a file as soon as a connection drops, so your Mac can open it again straight away when it is back
+- A brief blip now breaks any file that was open at that moment. An editing app with a file open on the drive may need to reopen it
+- Applying the change restarts the drive’s file sharing, which drops every Mac connected to it for a moment. Do it when nothing is copying, with files on the drive closed
+
+### Oplocks and SMB2 leasing
+
+These nearby settings can stay on. They let a Mac keep part of a file it is using in its own memory, which keeps things quick. Without durable handles, the drive lets go of them when a connection drops, so they leave nothing locked behind. MediaFlowSwift works with any of these settings on or off.
+
+### What we suggest
+
+- Away from home, over a phone, a hotspot or a VPN: consider turning durable handles off before you organize
+- Back on a steady network: it’s your choice. Off costs little; on helps an editing app ride out a blip
+
+> **Tip:** A file that is already locked is let go at once when you turn durable handles off and apply the change, because the drive’s file sharing restarts. Organize then carries on.
+
+See also: [Choosing and Connecting Your Network Share](#choosing-and-connecting-your-network-share), [Organizing Media to Storage](/manual/organizing-media/#organizing-media-to-storage), [Organize Errors on a Network Drive](/manual/troubleshooting/#organize-errors-on-a-network-drive), [Network Share 'Resource Busy' Errors](/manual/troubleshooting/#network-share-resource-busy-errors)
 
 <div class="chapter-nav" role="navigation" aria-label="Chapters">
 <a rel="prev" href="/manual/getting-started/">&larr; Getting Started</a>

@@ -46,6 +46,8 @@ MediaFlow computes a SHA-256 checksum of each source file as it copies it, then 
 
 Each copy is written under a hidden name in its folder and takes the clip’s own name only once it has passed this check, so a half-written file never looks like a finished clip. If a network drive drops in the middle of a copy, MediaFlow waits for it to answer again, however long that takes, checks what had already arrived against the clip, and carries the copy on from there. Once a copy that was carried on is complete, MediaFlow compares the SHA-256 of everything read back from the drive with the clip’s, even with read-back verification off: over a slow connection each part is read back once, after it was last written; on a fast one the whole copy is read back again. If they differ, that copy is deleted and the clip copied again from its first byte. A copy left unfinished by an earlier Organize is carried on the same way, and only when the clip and the copy still match what MediaFlow noted about them. See Organize Errors on a Network Drive.
 
+Organizing to a network drive over a phone, a hotspot or a VPN? One setting on the drive, durable handles, decides whether a dropped connection can leave a file locked for hours: see Network Drive Settings for Working Away from Home.
+
 Only a copy that passed this check counts. While Organize runs, the progress window shows what has been sent and what has been checked apart, for example “1.2 GB of 3.77 GB sent · 800 MB checked”: the bar fills in full colour only for what is checked, with what is sent but not checked yet in a lighter shade. Under it, the current file says how much of it is sent, then how much has been read back to check it. The speed is what was actually sent over the last few minutes, and the time left covers both the sending and the checking still to do; while the network drive is away it says “Waiting for the network drive…” instead. Clips found already in place, or renamed there, are never counted as sent. When a run ends with clips it couldn’t finish the window says so plainly, for example “8 of 22 files organized and checked”, names the others with the reason, and leaves them where they were. Every clip that did pass is recorded in the project, whatever happened to the rest. If a clip changed in the project while it copied (the project was opened again from its file at another place, say), its checked copy can’t be recorded: the window says so, and the next Organize finds that copy, reads it back and records it without sending it again. Done then doesn’t offer to clear the card.
 
 On a drive connected to your Mac, the copy is written and read back without passing through the Mac’s memory, so the check reads it from the drive itself. On a network share, every byte is read back over the network from the server; the server may answer from its own memory.
@@ -99,7 +101,7 @@ Importing, Organize and Relink have progress windows of their own. Every other l
 
 Organize is part of the Studio plan; see Plans and Pricing.
 
-See also: [Change destination folder](#change-destination-folder), [Re-check files](#re-check-files), [Freeing Up Space](#freeing-up-space), [Clear Card](#clear-card)
+See also: [Change destination folder](#change-destination-folder), [Re-check files](#re-check-files), [Freeing Up Space](#freeing-up-space), [Clear Card](#clear-card), [Network Drive Settings for Working Away from Home](/manual/setup-network/#network-drive-settings-for-working-away-from-home)
 
 ## Change destination folder
 
@@ -177,14 +179,14 @@ See also: [Organizing Media to Storage](#organizing-media-to-storage), [Relinkin
 
 *Free Up Space lists every file before it stages or deletes anything. Know what it checks before you confirm.*
 
-After you organize, the imported copies are still where the import put them (on this Mac, Documents → MediaFlow Projects → Imports; or the drive or share chosen in Settings › Storage › Imports go to, including any folder used before), and the originals are usually still on the card or in the folder you imported from. A clip Organize moved within one drive left no imported copy behind, so no imported copy of it is listed here, and its organized file is never touched; its card original can still be listed, as for any organized clip, when you tick that group. Free Up Space reclaims that space in two stages: first it moves files into a Cleanup folder, and only later, when you choose, does it delete them.
+After you organize, the imported copies are still where the import put them (on this Mac, Documents → MediaFlow Projects → Imports; or the drive or share chosen in Settings › Storage › Imports go to, including any folder used before), and the originals are usually still on the card or in the folder you imported from. A clip Organize moved within one drive left no imported copy behind, so no imported copy of it is listed here, and its organized file is never touched; its card original can still be listed, as for any organized clip, when you tick that group. Free Up Space reclaims that space in two stages: first it moves files into a Cleanup folder on this Mac, and only later, when you choose, does it delete them.
 
 ### Free Up Space
 
 Workflow → Free Up Space… scans the open project and lists three groups. Each has a file count, a total size and an expandable list of the exact files it would touch.
 
 - “Local import copies that have an organized copy” — the imported copies of clips that have been organized, in whichever import folder they landed. Checked by default. Moved to Cleanup.
-- “Files still on the card or source folder” — the originals on the card or in the import folder. Unchecked by default. Moved to Cleanup. Files on a card laid out by the camera (Sony XAVC, XDCAM and XDCAM EX, older Sony cameras, Canon XF, Panasonic P2, AVCHD) are never listed, because taking single files off such a card leaves the camera’s own list of its clips wrong; the sheet says how many were left out. Format that card in the camera instead, once Clear Card says it is safe.
+- “Files still on the card or source folder” — the originals on the card or in the import folder. Unchecked by default. Moved to Cleanup on this Mac. Files on a card laid out by the camera (Sony XAVC, XDCAM and XDCAM EX, older Sony cameras, Canon XF, Panasonic P2, AVCHD) are never listed, because taking single files off such a card leaves the camera’s own list of its clips wrong; the sheet says how many were left out. Format that card in the camera instead, once Clear Card says it is safe.
 - “Staged in Cleanup” — files an earlier run already moved into Cleanup. This is the only group that deletes anything.
 
 A running “Reclaim” total follows your checkboxes, and one red button applies the selection. When you confirm, MediaFlow acts only on files the sheet listed. A listed file that no longer qualifies is skipped; nothing new is added.
@@ -194,25 +196,40 @@ A running “Reclaim” total follows your checkboxes, and one red button applie
 Two checks, at two moments. A quick one decides what the sheet lists; a thorough one runs on each file just before it is moved.
 
 - To be listed, a file needs an organized copy at the destination that is exactly the same size. That applies to local copies and to card or source-folder originals alike. The sheet says how many local copies were kept back because the organized copy is missing or a different size.
-- Before a listed file is moved, MediaFlow reads both it and the organized copy in full and compares their SHA-256. They must match each other, and match the checksum recorded when the clip was organized, if there is one.
+- Before a listed file is moved, MediaFlow reads it in full and compares its SHA-256 with the organized copy’s. They must match each other, and match the checksum recorded when the clip was organized, if there is one. The organized copy is read in full too, unless you chose Use the Earlier Check (below).
 - A file that cannot be proven is left exactly where it is. The summary lists each one with the reason: the organized copy could not be reached, the two do not match byte for byte, or the file has changed since it was organized.
 - A file is never compared with itself. If the “local copy” and the organized copy turn out to be one file under two names, it is kept.
 
-Reading the organized copy takes time, more so over a network: expect roughly as long as organizing the same clips took. The progress window shows “Checking and moving” and can be cancelled between files.
+Reading the organized copies takes time, more so over a network: expect roughly as long as organizing the same clips took, and over a phone connection it uses your data. The progress window shows “Checking and moving” and can be cancelled between files.
+
+### Check again, or use the earlier check
+
+When some of the copies were read back in full when they were organized, and nothing else uses them, Free Up Space asks once, when you click the red button: for example, “22 copies were checked when they were organized. Check them again before removing the copies on this Mac? Checking again reads 29 GB from the drive.” It counts organized copies: a clip’s copy on this Mac and its card original lean on one organized copy, which is read once however many files it vouches for. With card originals ticked, it says “the copies on this Mac or the card”.
+
+- Check Again (the default) — reads every organized copy in full, as before.
+- Use the Earlier Check — skips reading those organized copies. Each must still be at the same place, the same size and the same date to the second as when Organize read it back; one that has changed is read in full anyway. The copy being removed from this Mac or the card is always read and must match the checksum recorded at organize time.
+
+Copies with no earlier check to use are always read in full: copies organized with read-back off or by an earlier version, clips moved within one drive, clips pointed at another file since (by Relink, Library Moved, Move Project and the like), copies changed or on another drive or server since, and every copy when MediaFlow can’t ask the database whether another project uses them. When some copies do have an earlier check, the sheet says how many have none and how much they hold. The same choice applies to deleting staged files in the same run.
+
+> **Warning:** Using the earlier check trusts the drive: damage since the copies were organized that changes neither their size nor their date would go unnoticed, as would a change of the same size written within the same second they were checked, and the copies on this Mac would still be removed. When in doubt, choose Check Again. See How MediaFlow Verifies Copies.
 
 ### Staging and deleting
 
-The first two groups are moved into a Cleanup → &lt;Project Name> folder on the destination volume. They are not deleted, and Restore from Cleanup can bring them back.
+The first two groups are moved into Documents → MediaFlow Projects → Cleanup → &lt;Project Name>, beside the Imports folder, on this Mac. Nothing is sent over to the destination to be staged. An imported copy that is already on the destination’s drive (in an import folder there) is moved into a Cleanup → &lt;Project Name> folder on that drive instead, a quick move on the drive itself. Staged files are not deleted, and Restore from Cleanup can bring them back.
+
+Moving a copy into Cleanup on the same disk frees no space by itself: the space comes back when you delete the staged files, from the third group, in this run or a later one. A card original moved here frees the card at once and takes space on this Mac until you delete it. A file that comes to this Mac from another disk (a card, or an import folder on another drive) is copied, and the copy here is read back and matched against the checksum recorded at organize time before the original is removed; if this Mac hasn’t room for all of them, the sheet says so before anything is moved. The pipeline strip’s Free up space value keeps counting a copy staged on this Mac until it is deleted.
+
+Earlier versions staged everything in the Cleanup folder on the destination’s drive. Files staged there are still listed in the third group, deleted from there, and restored from there.
 
 The third group is deleted. Selecting it adds a confirmation that restates the file count, the total size and the file types, warns when the volume is a network drive with no Trash to recover from, and has a checkbox you must tick before the delete button enables.
 
-Before MediaFlow deletes a staged file, it checks it again, the same way: a clip in this project must have an organized copy that matches it byte for byte, read at that moment. A staged file whose organized copy is missing, damaged or a different size is kept, and so is any file in the Cleanup folder that does not belong to a clip in the project — delete those in the Finder if you are sure.
+Before MediaFlow deletes a staged file, it checks it again, the same way: the staged file is read in full, and a clip in this project must have an organized copy that matches it byte for byte, read at that moment, or, if you chose Use the Earlier Check and that check still holds, the checksum recorded when the clip was organized. A staged file whose organized copy is missing, damaged or a different size is kept, and so is any file in the Cleanup folder that does not belong to a clip in the project — delete those in the Finder if you are sure.
 
 > **Warning:** Deleting the staged group removes the files permanently. They are not moved to the Trash.
 
 ### Restore from Cleanup
 
-Workflow → Restore from Cleanup, also a link inside the Free Up Space sheet, moves staged files back where they came from: the working folder, or the card or source path for files staged from there. Projects staged by earlier versions, in folders named by project ID, are still recognized. Files you deleted from the staged group cannot be restored.
+Workflow → Restore from Cleanup, also a link inside the Free Up Space sheet, moves staged files back where they came from: the working folder, or the card or source path for files staged from there. It looks in this Mac’s Cleanup folder and in the one on the destination’s drive, where earlier versions staged files; projects staged by earlier versions in folders named by project ID are still recognized. Files you deleted from the staged group cannot be restored.
 
 A file goes back only to a place this Mac has had it. When two Macs share a project, a working copy staged on the other Mac stays in Cleanup, and the summary says so: restore it on that Mac. Otherwise, with two accounts of the same name, it would land in your home folder on the wrong Mac.
 
@@ -222,13 +239,13 @@ Workflow → Repair → Re-file folders by category (called Sync Folder Layout i
 
 ### The End of Day Wrap template
 
-The End of Day Wrap workflow template has a cleanup step that does not open the Free Up Space sheet. It stages local copies only, using the same check as the first group. It never touches card originals and never deletes.
+The End of Day Wrap workflow template’s cleanup step opens this same Free Up Space sheet. Nothing is staged or deleted that you have not seen listed and confirmed, and it asks the same question about the earlier check.
 
 ### Cancelling a cleanup run
 
 The Cancel button on the progress window stops a move, a restore, a delete or a re-file between files. Files already staged stay in the Cleanup folder, files already restored stay where they were put back, and anything already deleted is gone. The remaining files are untouched, so you can run the same command again later to finish.
 
-See also: [Organizing Media to Storage](#organizing-media-to-storage), [Re-check files](#re-check-files), [Clear Card](#clear-card), [Workflow Templates](#workflow-templates)
+See also: [Organizing Media to Storage](#organizing-media-to-storage), [Re-check files](#re-check-files), [Clear Card](#clear-card), [Workflow Templates](#workflow-templates), [How MediaFlow Verifies Copies](#how-mediaflow-verifies-copies)
 
 ## Clear Card
 
@@ -408,11 +425,11 @@ See also: [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-le
 
 ## How MediaFlow Verifies Copies
 
-*What MediaFlow checks, and when, before it treats an organized copy as safe and lets an original be removed.*
+*What MediaFlow checks, and when, before it treats an organized copy as safe and lets an original be removed, and what using the earlier check gives up.*
 
-MediaFlow checks your files at three moments: when Organize copies a clip, when Clear Card offers to delete it from the card, and when Free Up Space offers to move originals aside. The checks are not equally strong. This topic says exactly what each one proves.
+MediaFlow checks your files at three moments: when Organize copies a clip, when Clear Card deletes it from the card, and when Free Up Space removes the other copies. The checks are not equally strong. This topic says exactly what each one proves.
 
-The short version: leave “Verify organized copies by reading them back” on, and empty cards with Clear Card in Verified mode. Together they prove the organized copy matched the original byte for byte when it was made, and that the file you are deleting is that original.
+The short version: leave “Verify organized copies by reading them back” on. Then every copy is read back in full when it is made, and that check is saved with the clip, so Free Up Space can offer to use it later instead of reading every copy again.
 
 ### Organize
 
@@ -421,9 +438,11 @@ As MediaFlow copies a clip it computes a checksum of the original (SHA-256, a fi
 - On (the default; slower, safest) — the copy is read back in full from the destination. Its size and its SHA-256 must both match the original
 - Off — the copy is checked by size, plus a comparison of 1 MB samples at the start, middle and end. Much faster over a network. Damage outside the sampled ranges is not detected
 
-If the check fails, the copy is deleted and made again once. A second failure fails that clip and is reported. The original’s checksum is recorded on the clip; Clear Card relies on it later.
+If the check fails, the copy is deleted and made again once. A second failure fails that clip and is reported. The original’s checksum is recorded on the clip; Clear Card and Free Up Space rely on it later.
 
-One exception: if a file with the same name and the same size is already at the destination, Organize reuses it. It is not copied, not read, and no checksum is recorded for it.
+MediaFlow also saves, with the clip, how its copy was checked: whether it was read back in full, and the copy’s size and date at that moment. It is kept in the project file and in the database.
+
+A copy already at the destination from an earlier run is used only after it is read back in full and matches the clip byte for byte; anything else there is left alone and the clip is copied beside it. A copy carried on after a dropped connection is always read back in full too, whatever the setting. A clip moved within one drive (imported onto the destination’s own drive) is renamed, not copied, so nothing is read back, and it is saved as not checked in full.
 
 ### Read from the drive, not from memory
 
@@ -436,18 +455,28 @@ Only files in the state “Verified at destination” can be deleted, and there 
 - Verified (full SHA-256), the default — also reads every card file in full and compares its SHA-256 with the recorded checksum. This proves the card file is the file that was organized
 - Standard (path and size) — matches the card file to the clip by its original path and size. Fast, but it never reads the bytes. A file matched only by name and size is kept
 
-Neither mode reads the organized copy again; it is checked for presence and size only. So Clear Card is as strong as the check made at organize time. With read-back on, the copy was proven identical then. With read-back off, only its size and three samples were.
+Whichever mode you choose, when you confirm, Clear Card reads each organized copy back in full and matches it against the recorded checksum before it deletes the card file. It never relies on the check made at organize time.
 
 ### Free Up Space
 
-This is the step that removes your other copies, so it is the strictest. Files are moved to a Cleanup folder first and deleted only in a separate, confirmed step — and both steps prove the file first.
+This is the step that removes the copies on this Mac and on the card. Files are moved to a Cleanup folder first and deleted only in a separate, confirmed step — and both steps prove the file first.
 
 - To be listed at all, a file needs an organized copy of exactly the same size
-- Before a file is moved, it and the organized copy are both read in full and their SHA-256 compared. They must match each other and the checksum recorded at organize time
-- Before a staged file is deleted for good, the same comparison is made again, against the organized copy as it is at that moment
+- Before a file is moved, it is read in full and its SHA-256 must match the organized copy and the checksum recorded at organize time
+- The organized copy is read in full too, unless you choose to use the earlier check (below)
+- Before a staged file is deleted for good, the same check is made again, at that moment
 - Whatever cannot be proven is kept, with the reason
 
-Unlike Clear Card, this always reads the organized copy again. The checksum recorded at organize time is the checksum of the original; it says the local copy has not changed, not that the copy at the destination is whole. Reading it is the only way to know, which is why Free Up Space takes about as long as organizing did.
+### Using the earlier check
+
+Reading every organized copy again takes about as long as organizing did, and over a phone connection it uses your data. So when some of the copies were read back in full when they were organized, Free Up Space asks once, before it starts, for example: “22 copies were checked when they were organized. Check them again before removing the copies on this Mac? Checking again reads 29 GB from the drive.”
+
+- Check Again — reads each organized copy in full, as before. The surest choice, and the default
+- Use the Earlier Check — the copy on this Mac is still read in full and must match the checksum recorded at organize time, but the organized copy is not read. MediaFlow only looks at it: it must be at the same place, the same size, and have the same date to the second as when it was read back
+
+The earlier check is offered only for a copy that was read back in full when it was organized, is still on the same drive or the same share of the same server, and that nothing else uses: no other clip in the project and, as the database says, no other project. A clip pointed at another file since (Relink, Library Moved, Move Project, Move to Editing Drive and back, a new destination, a restore from an archive, re-filing by category) keeps no earlier check: the file it points at now was never read back by Organize, even when it is a copy with the same name, size and date on a new server. These are always read in full: copies organized with read-back off, copies organized by an earlier version, clips moved within one drive, copies whose size or date has changed since, and every copy when MediaFlow can’t ask the database (with no database, or when it doesn’t answer). When some copies do have an earlier check, the sheet and the question say how many have none and their size.
+
+> **Warning:** The trade-off: Use the Earlier Check trusts that the drive has kept each copy as it was. Damage on the drive since it was organized that changes neither the size nor the date would go unnoticed, and so would a change of the same size written within the same second the copy was checked; the copies on this Mac would still be removed. When in doubt, or if the drive has had problems, choose Check Again.
 
 See also: [Organizing Media to Storage](#organizing-media-to-storage), [Clear Card](#clear-card), [Freeing Up Space](#freeing-up-space), [The Settings Window, Tab by Tab](/manual/setup-network/#the-settings-window-tab-by-tab)
 
@@ -657,9 +686,9 @@ Both follow the weather switch in Settings › Privacy. With it off, MediaFlow d
 
 ### Caching
 
-Results are cached by location (to about 100 m) and hour, so clips shot at the same place within the same hour share one request. The cache lasts until you quit MediaFlow. The weather itself is saved with each clip in the project file.
+Results are cached for each ~110 m square and hour, so clips shot in the same square within the same hour share one request. The cache lasts until you quit MediaFlow. The weather itself is saved with each clip in the project file.
 
-> **Warning:** Weather Lookup sends data off this Mac. For each lookup it sends the clip’s coordinates, rounded to about 100 m, and the shooting date to the Open-Meteo service. No API key or account is needed.
+> **Warning:** Weather Lookup sends data off this Mac. For each lookup it sends the clip’s coordinates, rounded to three decimal places (about 110 m), and the shooting date to the Open-Meteo service. No API key or account is needed.
 
 See also: [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac), [NLE Template Export](/manual/reports/#nle-template-export)
 
