@@ -11,19 +11,19 @@
 window.MediaFlowPaddle = (function () {
   var environments = {
     sandbox: {
-      token: "test_d0cea1cf17f1a158f59bf9463cd",
+      token: "test_d722e70ada0734b95ca60bcd10d",
       licenceService: "https://mediaflow-licence.mediaflow-licence.workers.dev", // the sandbox Worker, deployed 2026-09-23
       prices: {
-        studio: { month: "pri_01m34gke51kwmnr5j02jb58jmm", year: "pri_01m34gkee4cdhzv7n2q6xw4j4q" },
-        pro:    { month: "pri_01m34gkepr3f0e2nc4p9vhxpvf", year: "pri_01m34gkezxvzagajm4vay46waa" }
+        studio: { month: "pri_01m4mgp3bc5b6nfmng3m14z1st", year: "pri_01m4mgp3s30ryms10xj4k56jk8" },
+        pro:    { month: "pri_01m4mgp59ad0rdbw6fcx24hsnw", year: "pri_01m4mgp5yt268k9bd4pp242nvh" }
       }
     },
     production: {
-      token: "live_2b3b300462b0c94a613c7ae20a8", // client-side token "mediaflowswift.com", made 2026-09-23
+      token: "live_f5b3acbcf166c01adb719e99b9a", // client-side token "mediaflowswift.com", Long Road Software LLC account, made 2026-10-11
       licenceService: "https://mediaflow-licence-production.mediaflow-licence.workers.dev",
       prices: {
-        studio: { month: "pri_01m38kej65avvs92ebazg7sxqe", year: "pri_01m38kejast9b85gh49722a106" },
-        pro:    { month: "pri_01m38kejw32spadewqm9wzr3bv", year: "pri_01m38kek1rajswp7wv3w4a1fq3" }
+        studio: { month: "pri_01m4mhm37z25v41ja1x2pa76ks", year: "pri_01m4mhm3q1q66zjeze0f8g4aqa" },
+        pro:    { month: "pri_01m4mhm4xr2es76r2xadgpp0d1", year: "pri_01m4mhm5fyefrj2wh81j3pqwh0" }
       }
     }
   };
