@@ -50,7 +50,7 @@ This is a different job from sorting clips into folders — it's about making fo
 
 ## Optional: let a model suggest categories first
 
-If you'd rather not even pick categories by hand after an import, MediaFlowSwift can ask a model to suggest them. This is opt-in per import, off by default, and listed in Settings › Privacy like every other connection to a service outside your Mac:
+If you'd rather not even pick categories by hand after an import, MediaFlowSwift can ask a model to suggest them. This is turned on in Settings › Analysis, separate from the Settings › Privacy switches, and ticked separately for each import:
 
 > This checkbox asks an AI model to look at each imported video clip and propose one of your project's categories. It is off every time the sheet opens and applies to this import only, so no import uses a model unless you tick the box for it.
 
