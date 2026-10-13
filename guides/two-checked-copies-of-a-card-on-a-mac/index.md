@@ -42,7 +42,21 @@ MediaFlowSwift warns you by name before archiving goes ahead, so this isn't a su
 
 > 3 clips (12.4 GB) are organized outside this project's folder and will not be on the archive drive.
 
-If you see that warning and still want a genuine second copy of those clips, move your destination inside the project folder — or move the organized files in yourself and relink them — before you archive. Once your destination lives inside the project folder, archiving copies everything, and that copy gets the same full check as the two before it:
+If you see that warning and want those clips on the archive drive too, changing the project's destination on its own will not move them:
+
+> Changing the destination never copies, moves or deletes a file. On its own it changes only where new organizing goes; clips you organized earlier still point at the files in the old folder unless you accept the offer described next.
+
+What to do instead:
+
+1. In the Finder, copy the organized folders into the project folder, keeping the folder layout they already have. Copy, don't move — a move would take away your only other copy of those clips before anything has checked the new one.
+2. Choose Workflow → Repair → Change destination folder… and pick the folder you copied them into. MediaFlowSwift looks for each organized clip there, in the same folder it had under the old destination, and asks whether to point the project at what it finds.
+3. For any clip it doesn't find, choose Workflow → Repair → Relink Missing Media…, then Workflow → Repair → Re-check files, and confirm the Where column shows nothing still missing.
+
+Step 2 is not a name-and-size match:
+
+> Same folder and same size is not proof that a file is the one you organized: cameras that split long recordings into chapters produce files of exactly the same size. So a clip that has a checksum recorded from when it was organized is read in full, and followed only if its contents are identical.
+
+Keep the original folders until that check has finished. Once every clip lives inside the project folder, archiving copies everything, and that copy gets the same full check as the two before it:
 
 > Every file is read back from the drive after it is written and compared with its original by checksum, so a file damaged on the way — even one that kept its size — fails the archive rather than being recorded.
 
@@ -82,3 +96,4 @@ The manual is direct about what that means for the import record: phones get no 
 - [How MediaFlow Verifies Copies](/manual/organizing-media/#how-mediaflow-verifies-copies) — what Organize, Clear Card and Free Up Space each check, and when
 - [Archiving a Project to USB](/manual/project-management/#archiving-a-project-to-usb) — the second checked copy, on a separate drive
 - [Clear Card](/manual/organizing-media/#clear-card) — what has to be true before the card itself is cleared
+- [Change destination folder](/manual/organizing-media/#change-destination-folder) — pointing a project at organized media you have copied somewhere else

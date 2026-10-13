@@ -1,12 +1,12 @@
 ---
 layout: guide
-title: "Safe to Erase Your Card on a Mac? — MediaFlowSwift"
+title: "Is It Safe to Erase Your Card After Importing on a Mac?"
 description: "Checksums, not playback, prove a copy is safe. See how MediaFlowSwift checks a copy at import, at organize, and once more before Clear Card erases a card."
 permalink: /guides/verify-footage-copied-before-erasing-card/
 ---
 # Is It Safe to Erase Your Card After Importing on a Mac?
 
-Yes — once every clip on the card has an organized copy that's been read back in full and matched against a checksum. A clip that plays for a few seconds doesn't tell you that; only a byte-for-byte compare does.
+Yes — once every clip on the card has an organized copy that's been read back in full and matched against a checksum. A clip that plays for a few seconds doesn't tell you that; only a checksum compare does.
 
 You just finished a shoot and want the card back for tomorrow. Here's exactly what has to be true before that's safe, and how MediaFlowSwift gets you there.
 
@@ -18,7 +18,7 @@ Dragging files in Finder tells you the copy finished. It doesn't tell you the co
 
 ## What actually proves a copy is good
 
-A real check compares the copied file against the original, byte for byte, using a checksum — a short fingerprint calculated from the file's contents. If the fingerprint of the copy matches the fingerprint of the original, the files are identical. If it doesn't match, something went wrong in the copy, and the original is still sitting on the card to try again.
+A real check compares a fingerprint of the copy with a fingerprint of the original — a checksum, calculated from every byte of the file. If the two match, the files are identical. If they don't, something went wrong in the copy, and the original is still sitting on the card to try again.
 
 ## How MediaFlowSwift checks a copy before you can erase a card
 
