@@ -50,7 +50,7 @@ With the destination inside the project folder, your working drive holds one ver
 
 ## One after another, not at once
 
-MediaFlowSwift does not write a card to two drives at the same time. The sequence above is deliberate and sequential: card → working destination, checked; then working destination → archive drive, checked again. Each copy has to finish and pass its own check before the next one starts. If you need true simultaneous dual-drive offload at the moment of import, that's a different kind of tool — this workflow gives you two verified copies, just not both at once.
+MediaFlowSwift does not write a card to two drives at the same time. The sequence above is deliberate and sequential: card → working destination, checked; then working destination → archive drive, checked again. Each copy has to finish and pass its own check before the next one starts. The end result is the thing simultaneous offload is usually for: two checked copies on two drives. You get there a step at a time, and the card stays untouched until you clear it yourself.
 
 ## If a copy doesn't check out
 
