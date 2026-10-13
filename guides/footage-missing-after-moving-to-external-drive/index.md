@@ -10,21 +10,21 @@ Your clips aren't lost — MediaFlowSwift just hasn't been told they moved. Choo
 
 You copied your whole projects folder to a new drive or network share yourself, by hand in the Finder, and now every project still points at the old location. That's exactly the case Library Moved is built for — as opposed to moving a project through MediaFlowSwift itself, which is a different command (Move Project).
 
-## Why clips read Missing or Not at destination
+## Why clips read Missing, not Not at destination
 
-Two different badges show up in the Where column, and they mean different things. A straightforward missing file gets a red X:
+Before you've run Library Moved, a clip whose file has moved reads a plain red X — Missing:
 
 > A red X in the Where column means MediaFlow cannot find the file; usually a drive or share is not mounted, or the file moved.
 
-But when you've moved a whole library to a new drive, clips usually read something milder — Not at destination — because MediaFlowSwift can still see a file, just not where it expects one:
+If the old drive itself isn't connected — unplugged, or not yet mounted — clips read Volume not connected instead, and nothing is called missing until the drive is back:
 
-> Not at destination — the file is somewhere other than the destination and not on a card, such as the folder you imported from or another drive. It is not lost; hover over it to see which drive.
+> Volume not connected — the drive or share the path names is not mounted right now. The file is neither checked nor called missing; its last known state stands until the drive is back.
 
-And the manual calls out exactly this situation:
+Not at destination is a different symptom, and it shows up *after* Library Moved has already done its job, not before. It's what the old project file reads once the current copy has already been repointed to the new drive:
 
 > If a whole project reads this way after a library was moved, you may have opened the old copy of the project: see After Moving Your Library to a New Drive.
 
-So before you do anything else: check whether the old drive is still connected and the project still opens from there. If it does, and everything just reads Not at destination instead of Missing, you're in exactly the case Library Moved fixes.
+So check what you're actually seeing. Missing, or Volume not connected if the old drive is unplugged, means you haven't run Library Moved yet — see the steps below. Not at destination across a whole project means you've opened the *old* copy after Library Moved already ran: don't run it again — open the current copy instead. On the Mac that ran Library Moved, opening that old file says "This is an old copy" and offers to open the current one; accept that offer.
 
 ## Fix it with Library Moved
 

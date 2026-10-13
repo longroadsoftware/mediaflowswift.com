@@ -6,7 +6,7 @@ permalink: /guides/verify-footage-copied-before-erasing-card/
 ---
 # Is It Safe to Erase Your Card After Importing on a Mac?
 
-Yes — once every clip on the card has an organized copy that's been read back in full and matched against a checksum. A clip that plays for a few seconds doesn't tell you that; only a checksum compare does.
+Yes to the clips MediaFlowSwift imported and checked — once each one has an organized copy that's been read back in full and matched against a checksum. But Clear Card only ever looks at the card's DCIM folder, and import only ever takes certain formats, so some files on the card are never imported or checked at all. Those you have to verify and copy yourself before you format.
 
 You just finished a shoot and want the card back for tomorrow. Here's exactly what has to be true before that's safe, and how MediaFlowSwift gets you there.
 
@@ -28,13 +28,23 @@ Clearing a card in MediaFlowSwift is a separate, deliberate step from importing 
 2. **Organize.** MediaFlowSwift files each clip into its Category and Camera folder at the project's destination, and checks that copy against the checksum taken from the card at import.
 3. **Clear Card.** When you confirm, Clear Card reads each organized copy back in full and matches it against the recorded checksum before it deletes the card file. It never relies on the check made at organize time — it checks again, from scratch, right before anything is deleted.
 
-Formatting the card afterwards happens in the camera, not in MediaFlowSwift, so there is nothing for the app to check at that point. What it checks is everything that came before it.
+Formatting the card afterwards happens in the camera, not in MediaFlowSwift. By that point Clear Card has checked every clip it imported and organized from the card — but, as the next section covers, that is not necessarily every file on the card.
 
 The last of the three steps is the one worth noticing: Clear Card doesn't trust the earlier checks. It re-reads and re-compares every organized copy itself, immediately before it lets you delete anything.
 
 The "Clear Card…" button appears beside Eject in the Import sheet, and the same action is available from the menu as File → Clear Card….
 
 One exception is worth knowing on day one. On a card the camera laid out itself — a Sony card with a PRIVATE/M4ROOT folder, say — Clear Card deletes nothing at all. It checks every clip on the card and then tells you when the card is safe to format in the camera, which is where you would format that card anyway.
+
+## What Clear Card never checks
+
+Clear Card only scans the card's DCIM folder. Anything outside DCIM is never looked at, checked, or counted — not by Clear Card, and not by import before it.
+
+Within DCIM, import itself only takes certain formats: MP4, MOV, M4V, AVI, JPG, JPEG, PNG, HEIC, DNG, WAV, MP3, AAC and M4A. Camera raw stills other than DNG (CR3, CR2, ARW, NEF, RAF, GPR), AVCHD's MTS and M2TS, Insta360's INSV and INSP, MXF, BRAW, R3D, and TIFF are left out — import never copies them, so Clear Card never has an organized copy to check them against.
+
+That matters most on a card the camera laid out itself (a Sony PRIVATE/M4ROOT card, an AVCHD card, and the like): when Clear Card tells you such a card is safe to format, that verdict still excludes any MTS or MXF clips on it, because MediaFlowSwift doesn't import that format yet. Those clips have no verified copy. Copy them yourself — by hand, in Finder — before you format.
+
+So before you format any card: check it in Finder first, and copy out anything in an unsupported format, or anything outside DCIM, that you want to keep. Clear Card's "safe to format" only covers what it actually imported and checked.
 
 ## Why the checks aren't all the same
 
@@ -56,6 +66,7 @@ Don't erase the card. Try the import again — a failed check usually means a ba
 ## Read more
 
 - [How MediaFlowSwift verifies copies](/manual/organizing-media/#how-mediaflow-verifies-copies) — the full explanation of what each check proves.
-- [Clear Card](/manual/organizing-media/#clear-card) — how clearing a card works.
-- [Importing media](/manual/importing-media/) — the import steps in full.
+- [Clear Card](/manual/organizing-media/#clear-card) — how clearing a card works, and what it scans.
+- [Cards Laid Out by the Camera](/manual/organizing-media/#cards-laid-out-by-the-camera) — what "safe to format" does and doesn't cover on these cards.
+- [Importing media](/manual/importing-media/) — the import steps in full, including what formats are left out.
 - [Download MediaFlowSwift](/download.html) to try it.
