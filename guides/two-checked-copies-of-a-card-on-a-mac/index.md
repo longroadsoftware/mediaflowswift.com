@@ -38,7 +38,7 @@ That matters because your project's destination doesn't have to be inside the pr
 
 > Only the project folder is copied; media organized to a destination outside the project folder is not included.
 
-MediaFlowSwift warns you by name before archiving goes ahead, so this isn't a surprise:
+MediaFlowSwift warns you before archiving goes ahead, with how many clips and how much data are outside the project folder, so this isn't a surprise:
 
 > 3 clips (12.4 GB) are organized outside this project's folder and will not be on the archive drive.
 
