@@ -46,11 +46,11 @@ A numbered drive only catalogs what Archive to USB actually copies, and that's n
 
 > Only the project folder is copied; media organized to a destination outside the project folder is not included.
 
-Your project's destination can be any folder — a network share, an external drive, a RAID — so if clips were organized somewhere outside the project folder itself, they won't be on the numbered drive, even though the project that references them is. MediaFlowSwift warns you by name before archiving goes ahead:
+Your project's destination can be any folder — a network share, an external drive, a RAID — so if clips were organized somewhere outside the project folder itself, they won't be on the numbered drive, even though the project that references them is. The Archive sheet tells you how many clips, and how much data, are outside the project folder before archiving goes ahead:
 
 > 3 clips (12.4 GB) are organized outside this project's folder and will not be on the archive drive.
 
-If you see that warning, the clips it names aren't missing — they're just not part of what that numbered drive holds. Worth knowing before you label a drive and shelve it.
+That count can include clips that are imported but not yet organized, or missing, not only clips organized elsewhere on purpose — the sheet gives you a count and a size, not a list of names. Worth knowing before you label a drive and shelve it.
 
 ## Projects too large for one drive still get tracked
 
