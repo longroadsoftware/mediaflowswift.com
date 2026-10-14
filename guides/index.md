@@ -29,6 +29,25 @@ Short, practical answers to the questions that come up when you move footage off
 - **[How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/)**
   Every archive drive gets a number, and the app keeps the record of what went where.
 
+## Reviewing, finding and handing off footage
+
+- **[How to Review Footage and Pick Your Selects on a Mac](/guides/review-and-pick-selects-on-a-mac/)**
+  Rapid Review plays, rates and rejects clips by keyboard. Smart Selects scores each one first.
+
+- **[How to Find a Clip by What Was Said in It on a Mac](/guides/search-video-by-what-was-said/)**
+  Transcribe your footage on-device, then search every transcript at once for a word or phrase.
+
+- **[How to Create a Dailies Report and a Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/)**
+  A by-day report for a director to read, and a separate export for your editor's software.
+
+- **[How to Find Where Each Clip in Your Project Was Filmed](/guides/find-where-footage-was-filmed-shoot-map/)**
+  The Shoot Map pins every clip with GPS data by location, clustered and clickable.
+
+## Publishing to YouTube
+
+- **[How to Write Your YouTube Title, Chapters and Tags](/guides/write-youtube-title-description-chapters-tags/)**
+  Transcribe your finished video and draft a title, description, chapters and tags from it, then edit and publish them yourself.
+
 ---
 
 Looking for how a particular window works? That's the [manual](/manual/). Stuck on something not covered here? [Support](/support.html).
