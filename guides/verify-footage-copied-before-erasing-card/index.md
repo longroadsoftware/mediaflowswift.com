@@ -70,6 +70,13 @@ Don't erase the card. Try the import again — a failed check usually means a ba
 - [Cards Laid Out by the Camera](/manual/organizing-media/#cards-laid-out-by-the-camera) — what "safe to format" does and doesn't cover on these cards.
 - [Importing media](/manual/importing-media/) — the import steps in full, including what formats are left out.
 
+## Other guides
+
+- [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) — getting a second checked copy, one step after the first.
+- [How to Automate Video File Organization on Your Mac](/guides/automate-video-file-organization-on-mac/) — Category and Camera folders, sorted the same way every time.
+
+[All guides](/guides/) — the full list.
+
 ## Try it on your own footage
 
 MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
