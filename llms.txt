@@ -25,8 +25,8 @@ No account and no usage data. The app checks for updates and, once a key is ente
 ## Guides
 Plain answers to the questions people ask when moving footage off a card on a Mac. Each one says what MediaFlowSwift does and where it stops.
 - All guides: https://mediaflowswift.com/guides/
-- Is it safe to erase a card after importing on a Mac: https://mediaflowswift.com/guides/verify-footage-copied-before-erasing-card/ — what each check proves, and what Clear Card does not scan (raw stills, AVCHD/MTS, MXF, BRAW, R3D and other formats the import never copies)
-- How to keep two checked copies of a memory card on a Mac: https://mediaflowswift.com/guides/two-checked-copies-of-a-card-on-a-mac/ — the app copies a card to one destination, not two at once; two checked copies is a sequential two-step job (import and organize, then archive to a second drive)
+- Is it safe to erase a card after importing on a Mac: https://mediaflowswift.com/guides/verify-footage-copied-before-erasing-card/ — what each check proves; on an ordinary card Clear Card only looks in DCIM, and formats import never copies (camera raw other than DNG, MTS/M2TS, MXF, BRAW, R3D, INSV, TIFF) never get a verified copy, so copy those yourself before formatting
+- How to keep two checked copies of a memory card on a Mac: https://mediaflowswift.com/guides/two-checked-copies-of-a-card-on-a-mac/ — the app copies a card to one destination, not two at once; two checked copies is a sequential two-step job (import and organize, then archive to a second drive), with the destination inside the project folder
 - Footage missing after moving to an external drive: https://mediaflowswift.com/guides/footage-missing-after-moving-to-external-drive/ — the Where column, Library Moved, relinking and re-checking
 - How to automate video file organization on a Mac: https://mediaflowswift.com/guides/automate-video-file-organization-on-mac/ — category and camera folders, workflow templates
 - How to label and catalog archive drives for video: https://mediaflowswift.com/guides/label-and-catalog-archive-drives-for-video/ — numbered archive volumes and the record of what is on each
