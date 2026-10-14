@@ -55,7 +55,7 @@ Import's checksum check is always full — there's no setting for it. Clear Card
 
 So Organize is the only step in the chain that can run on samples rather than a full read.
 
-The manual's own advice: leave read-back verification on if you plan to clear cards. Clear Card is thorough no matter what, but letting Organize run on samples only means more gets caught later, in editing, instead of here.
+The manual's own advice: leave read-back verification on if you plan to clear cards. With it off, Organize only spot-checks each copy, so a damaged copy is caught at Clear Card instead — that clip stays on the card, with the reason listed, and has to be organized again before the card can be cleared.
 
 This also means a verified copy and an organized copy aren't quite the same promise at every step. Only cards, drives and folders go through this checksum chain — importing from a phone or camera over USB works differently, and MediaFlowSwift can't make the same claim there.
 

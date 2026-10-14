@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "Footage Missing After Moving to an External Drive?"
-description: "MediaFlowSwift showing clips as missing after you moved your library to a new drive? Run Library Moved to repoint every project. Nothing is copied or deleted."
+description: "MediaFlowSwift showing clips missing after moving your library to a new drive? Run Library Moved to repoint every project. Nothing is copied or deleted."
 permalink: /guides/footage-missing-after-moving-to-external-drive/
 ---
 # Footage Missing After Moving to an External Drive?
@@ -20,11 +20,11 @@ If the old drive itself isn't connected — unplugged, or not yet mounted — cl
 
 > Volume not connected — the drive or share the path names is not mounted right now. The file is neither checked nor called missing; its last known state stands until the drive is back.
 
-Not at destination is a different symptom, and it shows up *after* Library Moved has already done its job, not before. It's what the old project file reads once the current copy has already been repointed to the new drive:
+Not at destination is a different symptom from Missing: it means the file is somewhere other than the project's destination and isn't on a card — the folder you imported from, or another drive.
 
-> If a whole project reads this way after a library was moved, you may have opened the old copy of the project: see After Moving Your Library to a New Drive.
+> Not at destination — the file is somewhere other than the destination and not on a card, such as the folder you imported from or another drive. It is not lost; hover over it to see which drive. If a whole project reads this way after a library was moved, you may have opened the old copy of the project: see After Moving Your Library to a New Drive.
 
-So check what you're actually seeing. Missing, or Volume not connected if the old drive is unplugged, means you haven't run Library Moved yet — see the steps below. Not at destination across a whole project means you've opened the *old* copy after Library Moved already ran: don't run it again — open the current copy instead. On the Mac that ran Library Moved, opening that old file says "This is an old copy" and offers to open the current one; accept that offer.
+So check what you're actually seeing. Missing, or Volume not connected if the old drive is unplugged, means the files you need are at the old location but MediaFlowSwift hasn't been pointed there yet — see the steps below (if you copied the library and the old drive is still connected, the originals are still at the old paths, so clips may read At destination or Not at destination rather than Missing until the old copy is gone). Not at destination across a whole project *may* mean you've opened the old copy of the project. On the Mac that ran Library Moved, opening that old file says "This is an old copy" and offers to open the current one — accept that offer. On another Mac, or for a library moved before this version, choose Library Moved again with the same two folders and click Find Projects: this only notes which projects are already followed and changes nothing, so it's safe to run again. See [The Old Copy of a Project](/manual/project-management/#the-old-copy-of-a-project) for the full picture.
 
 ## Fix it with Library Moved
 
