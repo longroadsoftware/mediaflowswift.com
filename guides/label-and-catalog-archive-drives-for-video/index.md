@@ -30,7 +30,7 @@ File → Manage Archive Volumes is the catalog itself:
 
 > File → Manage Archive Volumes lists every registered drive with its number, label, used space, and whether it is currently connected. Select a volume to edit its label, see capacity and creation date, and view the projects archived on it with their sizes.
 
-So for each drive you get its number, your own label, how full it is, and the full list of projects on it with their sizes — without needing to connect the drive to check. Once a project has been archived, the project browser itself shows the connection too, with a row that reads "Archived → USB #0007."
+So for each drive you get its number, your own label, how full it is, and the full list of projects on it with their sizes — without needing to connect the drive to check. Once a project has been archived, the project window shows the connection too: the Archive segment of the pipeline strip names the volume the project went to ("USB #0007"), with the date.
 
 ## Every copy on the shelf is checked before it counts
 
