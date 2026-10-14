@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Paddle brings the buyer here with ?_ptxn=<transaction id>, and that number can be
+     exchanged for the licence key. Send only the bare origin as the referrer, so the
+     number does not travel to Google Analytics (or anywhere else) in document.referrer
+     when the buyer clicks on to a page that has analytics. "origin" rather than
+     "no-referrer" on purpose: no-referrer also makes the Origin header null on
+     cross-origin requests, and the licence service matches Origin against this site,
+     so the key fetch below would be refused by the browser. -->
+<meta name="referrer" content="origin">
 <title>Thank you — MediaFlowSwift</title>
 <meta name="description" content="Your MediaFlowSwift licence key and how to enter it in the app.">
 <meta name="robots" content="noindex">
