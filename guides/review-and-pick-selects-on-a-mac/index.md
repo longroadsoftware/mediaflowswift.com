@@ -76,8 +76,8 @@ Category, rating and select-status changes — including ones made with the Rapi
 
 ## Other guides
 
-- [How to Create a Dailies Report for Your Editor](/guides/dailies-report-and-hand-off-file-for-editor/) — circle takes and ratings, laid out by shooting day.
-- [How to Search Your Footage by What Was Said](/guides/search-video-by-what-was-said/) — finding a clip by a line in it, not just its filename.
+- [How to Create a Dailies Report and a Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/) — circle takes and ratings, laid out by shooting day.
+- [How to Find a Clip by What Was Said in It on a Mac](/guides/search-video-by-what-was-said/) — finding a clip by a line in it, not just its filename.
 
 [All guides](/guides/) — the full list.
 

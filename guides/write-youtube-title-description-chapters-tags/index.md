@@ -78,7 +78,7 @@ Once it's up, Apply to the Video I Uploaded… finds it on your channel (you con
 
 ## Other guides
 
-- [How to Search Your Footage by What Was Said](/guides/search-video-by-what-was-said/) — the same on-this-Mac transcription that feeds this draft.
+- [How to Find a Clip by What Was Said in It on a Mac](/guides/search-video-by-what-was-said/) — the same on-this-Mac transcription that feeds this draft.
 
 [All guides](/guides/) — the full list.
 

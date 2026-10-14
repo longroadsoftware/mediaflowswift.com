@@ -35,7 +35,7 @@ So with Maps off, MediaFlowSwift still knows which clips have GPS data and can c
 
 ## Getting readable place names first
 
-A pin works from raw coordinates on its own, but the sidebar and cluster details are easier to read with place names attached. The manual's tip, from the related GPS Scene Detection feature, applies here too:
+A pin works from raw coordinates on its own, but the sidebar and cluster details are easier to read with place names attached. Place names is its own opt-in: it's off until you turn on "Place names for GPS coordinates" in Settings › Privacy, and once on, it sends each clip's coordinates (rounded to about 110 m) to Apple. The manual's tip, from the related GPS Scene Detection feature, applies here too:
 
 > Run Place names first (Workflow → Analyze… → Place names, once called Geocode Locations) so clips have readable place names. GPS Scenes works with raw coordinates too, but named places make the suggestions much easier to review.
 

@@ -1,12 +1,12 @@
 ---
 layout: guide
 title: "How to Find a Clip by What Was Said in It on a Mac"
-description: "Transcribe your clips on-device, then search every transcript at once for a word or phrase and jump straight to that line."
+description: "Transcribe your clips on-device, then search every transcript at once for a word or phrase and select the clip it's in."
 permalink: /guides/search-video-by-what-was-said/
 ---
 # How to Find a Clip by What Was Said in It on a Mac
 
-Transcribe your clips, then open any clip's Transcript tab, type a word or phrase into Search, and tick All clips. MediaFlowSwift searches every transcript in the project at once and lists the matching lines; click one to jump straight to it.
+Transcribe your clips, then open any clip's Transcript tab, type a word or phrase into Search, and tick All clips. MediaFlowSwift searches every transcript in the project at once and lists the matching lines; click a result to select that clip (then click the line's time in Read to jump the preview there).
 
 That's the feature. The rest of this page covers how transcription works, what it costs you in privacy, and the one thing it doesn't do — search by speech from the main search field.
 
@@ -66,7 +66,7 @@ Once a clip is transcribed, you can take the text with you:
 ## Other guides
 
 - [How to Review Footage and Pick Your Selects on a Mac](/guides/review-and-pick-selects-on-a-mac/) — rating and tagging clips with the keyboard.
-- [How to Write Your YouTube Title, Tags and Chapters Faster](/guides/write-youtube-title-description-chapters-tags/) — a transcript is also where that draft starts.
+- [How to Write Your YouTube Title, Chapters and Tags](/guides/write-youtube-title-description-chapters-tags/) — a transcript is also where that draft starts.
 
 [All guides](/guides/) — the full list.
 
