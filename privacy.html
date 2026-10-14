@@ -18,14 +18,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
 <link rel="stylesheet" href="site.css">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-392DG1V9T5"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-392DG1V9T5');
-</script>
+<!-- Analytics, off until the visitor says yes. See /privacy.html -->
+<script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
 </head>
 <body>
 <header class="top">
@@ -46,7 +40,7 @@ gtag('config', 'G-392DG1V9T5');
 <main class="wrap">
 <article class="doc">
   <h1>Privacy</h1>
-  <p class="updated">Last updated 12 October 2026. &ldquo;We&rdquo; and &ldquo;us&rdquo; on this page mean Long Road Software LLC, which makes MediaFlowSwift. This page describes the app; it says the same as Settings &rsaquo; Privacy inside MediaFlowSwift, which is the authoritative list and changes with the app.</p>
+  <p class="updated">Last updated 13 October 2026. &ldquo;We&rdquo; and &ldquo;us&rdquo; on this page mean Long Road Software LLC, which makes MediaFlowSwift. This page describes the app; it says the same as Settings &rsaquo; Privacy inside MediaFlowSwift, which is the authoritative list and changes with the app.</p>
 
   <h2>The short version</h2>
   <p>MediaFlowSwift works on your Mac and your own network. It has no account and collects no usage data or analytics. Your media, projects and database stay on your Mac and on your network. It contacts us for two things only: to ask whether there is a newer version, and, once you have entered a licence key, to check that key. Both are described below.</p>
@@ -89,7 +83,13 @@ gtag('config', 'G-392DG1V9T5');
   <p>If you send a problem report to us, it is filed as an issue in our development tracker so that we can fix the fault. It contains only what the app showed you before you clicked Send. If you chose to include an email address for a reply, we use it for that reply and nothing else. We keep reports for as long as the fault is being worked on and for our release records afterwards.</p>
 
   <h2>This website</h2>
-  <p>This site and longroadsoftware.com are static pages served by GitHub Pages. We use Google Analytics on both to count visits and see which pages people read and how they found us. It sets cookies in your browser and sends Google the page address, the site that linked you here, your browser and device type, and your approximate location, under <a href="https://policies.google.com/privacy">Google&rsquo;s privacy policy</a>. We do not send it your name, email or licence key, and it does not run on the thank-you or key pages. You can block it with any content blocker or with <a href="https://tools.google.com/dlpage/gaoptout">Google&rsquo;s opt-out add-on</a>; the site works the same without it. GitHub, as the host, keeps ordinary server logs of requests (IP address, page requested, time) under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub&rsquo;s privacy statement</a>. Fonts are loaded from Google Fonts, which receives the request for the font files.</p>
+  <p>This site and longroadsoftware.com are static pages served by GitHub Pages. We use Google Analytics on both to count visits and see which pages people read and how they found us, and <strong>it is off until you say yes</strong>. A notice at the bottom of the page asks once, on your first visit. Until you press Yes nothing is loaded from Google and no analytics cookie is set. No answer counts as no, so ignoring the notice, closing the page, or using a browser that blocks storage all leave analytics off. Your answer is kept in your browser&rsquo;s local storage, which sets no cookie of its own.</p>
+
+  <p>If you say yes, Google Analytics sets cookies in your browser and sends Google the page address, the site that linked you here, your browser and device type, and your approximate location, under <a href="https://policies.google.com/privacy">Google&rsquo;s privacy policy</a>. We do not send it your name, email or licence key, and it does not run on the thank-you or key pages. You can also block it with any content blocker or with <a href="https://tools.google.com/dlpage/gaoptout">Google&rsquo;s opt-out add-on</a>; the site works the same without it.</p>
+
+  <p id="analytics-choice">Analytics on this site is off until you say yes. With JavaScript on, this line says what you chose and lets you change it.</p>
+
+  <p>GitHub, as the host, keeps ordinary server logs of requests (IP address, page requested, time) under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub&rsquo;s privacy statement</a>. Fonts are loaded from Google Fonts, which receives the request for the font files.</p>
 
   <h2>Purchases</h2>
   <p>Payment is handled by Paddle, our merchant of record: the checkout, your card and billing details, receipts and tax are theirs, under <a href="https://www.paddle.com/legal/privacy">Paddle&rsquo;s privacy policy</a>. Paddle tells our licence service about the purchase so that a key can be made; the thank-you page fetches that key with the transaction number. We never see card numbers. Paddle.js, the checkout script, loads on the home page only.</p>
