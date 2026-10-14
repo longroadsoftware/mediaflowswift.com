@@ -51,9 +51,12 @@
   function stop() {
     window["ga-disable-" + id] = true;
     var names = ["_ga", "_ga_" + id.replace(/^G-/, ""), "_gid"];
+    var labels = location.hostname.split(".");
+    var registrable = labels.length > 2 ? labels.slice(-2).join(".") : location.hostname;
     for (var i = 0; i < names.length; i++) {
       document.cookie = names[i] + "=; Max-Age=0; path=/";
       document.cookie = names[i] + "=; Max-Age=0; path=/; domain=" + location.hostname;
+      document.cookie = names[i] + "=; Max-Age=0; path=/; domain=." + registrable;
     }
   }
 
@@ -125,7 +128,7 @@
     var change = document.createElement("button");
     change.type = "button";
     change.className = "consent-change";
-    change.textContent = "Change that";
+    change.textContent = said === "yes" ? "Change to no" : "Change to yes";
     change.addEventListener("click", function () {
       var now = answer() === "yes" ? "no" : "yes";
       remember(now);
