@@ -3,6 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- This page can be opened as ?transaction_id=txn_..., and that number can be
+     exchanged for the licence key. Send only the bare origin as the referrer, so the
+     number does not travel on in document.referrer. "origin" rather than "no-referrer":
+     no-referrer also makes the Origin header null on cross-origin requests, and the
+     licence service matches Origin against this site, so the key fetch would be refused. -->
+<meta name="referrer" content="origin">
 <title>Lost your key? — MediaFlowSwift</title>
 <meta name="description" content="Find your MediaFlowSwift licence key again from the transaction number on your Paddle receipt.">
 <link rel="canonical" href="https://mediaflowswift.com/key.html">
