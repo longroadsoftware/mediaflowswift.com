@@ -6,7 +6,7 @@ permalink: /guides/review-and-pick-selects-on-a-mac/
 ---
 # How to Review Footage and Pick Your Selects on a Mac
 
-Open Rapid Review (Workflow → Review, or Cmd+Opt+R) and go through your footage by keyboard: J/K/L to shuttle, 1–5 to rate, F to favorite, X to reject. Each clip ends up with a star rating and, if you want it, a Hero, Maybe or Reject tag — both of which you can filter and sort by afterward.
+Open Rapid Review (Workflow → Review, or Cmd+Opt+R) and go through your footage by keyboard: J/K/L to shuttle, 1–5 to rate, F to favorite, X to reject, C to mark a circle take. Each clip ends up with a star rating and, if you want it, a Reject tag or circle take set from Review — plus a Hero or Maybe tag you set from outside it — all of which you can filter and sort by afterward.
 
 That's the whole workflow. The rest of this page is what each key does, and how to get your best takes to the top of the pile before you start.
 
@@ -33,7 +33,7 @@ A star rating and a select status are two different things, and you can set eith
 > - Maybe (orange) — Worth reviewing again, possible B-roll
 > - Reject (red) — Definitely not using. Stored as “Kill”, which is what it used to be called
 
-Set it with Cmd+Shift+H / M / K outside Review, or X and C inside it. Once set, the Table view's Select column sorts by it, the toolbar's filter menu can show just your Heroes (or just your Rejects, to double-check them before anything is deleted), and the sidebar's Smart Groups has Reject candidates for clips an import proposal flagged but nobody has confirmed.
+Set it with Cmd+Shift+H / M / K. Maybe has no Review key; inside Review, X toggles Reject and C toggles circle take instead. Once set, the Table view's Select column sorts by it, the toolbar's filter menu can show just your Heroes or just your Rejects, and the sidebar's Smart Groups has Reject candidates (clips marked with R) and Unreviewed (clips with an import proposal nobody has confirmed).
 
 ## Narrow the queue before you open Review
 
@@ -65,7 +65,7 @@ Run it, accept what looks right, then open Rapid Review on what's left to make t
 
 ## Everything here can be undone
 
-Category, rating and select-status changes — including ones made with the Rapid Review shortcuts — go through Edit → Undo (Cmd+Z), named for the step: "Undo Rate ★4 on 12 Clips", for instance. Clear a rating or status entirely with Cmd+0, or Edit → Set Rating → Clear Rating and Edit → Select → Clear Status, on as many selected clips as you like.
+Category, rating and select-status changes — including ones made with the Rapid Review shortcuts — go through Edit → Undo (Cmd+Z), named for the step: "Undo Rate ★4 on 12 Clips", for instance. Clear a rating with Cmd+0 or Edit → Set Rating → Clear Rating, and a status with Edit → Select → Clear Status, on as many selected clips as you like.
 
 ## Read more
 

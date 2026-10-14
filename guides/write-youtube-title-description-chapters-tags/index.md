@@ -42,11 +42,11 @@ Writing the draft is off until you turn it on, and what gets sent depends on whi
 
 > This is off until you turn it on. In Settings › Privacy, switch on “A model that writes your YouTube title, description and tags”. While it is off and a paid provider is chosen, Write with the SEO Agent tells you where the switch is and sends nothing.
 
-With the model that runs on this Mac, the transcript never leaves it. Pick a paid provider (Claude, ChatGPT or Gemini, with your own API key) instead, and the transcript, the video's length and your brief go to that provider — never the video itself, or its file name.
+With the model that runs on this Mac, the transcript never leaves it — unless you've pointed that local model at another computer on your network, in which case the transcript, the video's length and your brief go only as far as that computer. Pick a paid provider (Claude, ChatGPT or Gemini, with your own API key) instead, and the transcript, the video's length, your brief, and then the agent's own drafts for revision go to that provider — never the video itself, or its file name.
 
 ## What has to be true before YouTube will show it
 
-The checklist beside the editor runs on whatever's in the fields, whether you wrote it or the agent did. The ones YouTube actually enforces:
+The checklist beside the editor runs on whatever's in the fields, whether you wrote it or the agent did. The red items, things YouTube enforces or that break a feature:
 
 > - Title — not empty, and no more than 100 characters
 > - Description — not empty, and no more than 5,000 characters, chapters included
@@ -63,7 +63,7 @@ The public video is always uploaded by you, in YouTube Studio — not by MediaFl
 
 > That is how the video goes public: uploaded by you, in YouTube Studio, with no Google Cloud audit standing between you and the visibility you choose there.
 
-Once it's up, Apply to the Video I Uploaded… finds it on your channel (you confirm which one), and sets the title, description with chapters at its end, and tags on it — reading the video first so nothing else on it changes. Copy Title, Copy Description and Copy Tags are there too, if you'd rather paste the words in by hand. Applying needs its own one-time Google sign-in, which takes about ten minutes to set up.
+Once it's up, Apply to the Video I Uploaded… finds it on your channel (you confirm which one), and sets the title, description with chapters at its end, and tags on it — reading the video first so nothing else on it changes. Copy Title, Copy Description and Copy Tags are there too, if you'd rather paste the words in by hand. Applying is off until you turn on Sending to YouTube in Settings › Privacy. It also needs a [Google client of your own](/manual/publishing/#setting-up-your-google-client), which takes about ten minutes to set up once.
 
 ## Read what it wrote before it goes out
 
