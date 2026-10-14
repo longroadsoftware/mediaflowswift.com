@@ -68,7 +68,11 @@ MediaFlowSwift does not write a card to two drives at the same time. The sequenc
 
 ## If a copy doesn't check out
 
-Both steps retry automatically before they give up. If a checksum doesn't match at import or at organize, MediaFlowSwift doesn't silently keep a bad file:
+Both steps retry automatically before they give up, and here they part ways. At import, a copy that doesn't match is made once more, and a second failure stops the whole import and names the file:
+
+> A copy that doesn't match is made once more; if it fails again, the import stops and names the file. Importing never deletes anything from the card.
+
+At organize, a second failure fails that one clip and leaves everything else alone:
 
 > If the check fails, the copy is deleted and made again once; if it fails a second time, that clip is reported as failed and its source is left alone.
 
@@ -97,3 +101,14 @@ The manual is direct about what that means for the import record: phones get no 
 - [Archiving a Project to USB](/manual/project-management/#archiving-a-project-to-usb) — the second checked copy, on a separate drive
 - [Clear Card](/manual/organizing-media/#clear-card) — what has to be true before the card itself is cleared
 - [Change destination folder](/manual/organizing-media/#change-destination-folder) — pointing a project at organized media you have copied somewhere else
+
+## Other guides
+
+- [Is It Safe to Erase Your Card After Importing on a Mac?](/guides/verify-footage-copied-before-erasing-card/) — what the checksum check proves before you format.
+- [How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/) — numbered drives, and a record of what went where.
+
+[All guides](/guides/) — the full list.
+
+## Try it on your own footage
+
+MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.

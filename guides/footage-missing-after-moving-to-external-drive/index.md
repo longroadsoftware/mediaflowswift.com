@@ -61,3 +61,14 @@ Library Moved is for a library you moved in one go. If just a handful of clips a
 - [Relinking Missing Media](/manual/storage-maintenance/#relinking-missing-media) — fixing one clip, or a handful, instead of a whole library
 - [Clips Showing as Missing](/manual/troubleshooting/#clips-showing-as-missing) — what a red X actually means and the ordinary causes
 - [Understanding the Where Column](/manual/troubleshooting/#understanding-the-where-column) — every badge MediaFlowSwift shows and what each one means
+
+## Other guides
+
+- [How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/) — numbered drives, and a record of what went where.
+- [How to Automate Video File Organization on Your Mac](/guides/automate-video-file-organization-on-mac/) — Category and Camera folders, sorted the same way every time.
+
+[All guides](/guides/) — the full list.
+
+## Try it on your own footage
+
+MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.

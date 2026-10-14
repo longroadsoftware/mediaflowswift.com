@@ -30,7 +30,7 @@ File → Manage Archive Volumes is the catalog itself:
 
 > File → Manage Archive Volumes lists every registered drive with its number, label, used space, and whether it is currently connected. Select a volume to edit its label, see capacity and creation date, and view the projects archived on it with their sizes.
 
-So for each drive you get its number, your own label, how full it is, and the full list of projects on it with their sizes — without needing to connect the drive to check. Once a project has been archived, the project browser itself shows the connection too, with a row that reads "Archived → USB #0007."
+So for each drive you get its number, your own label, how full it is, and the full list of projects on it with their sizes — without needing to connect the drive to check. Once a project has been archived, the project window shows the connection too: the Archive segment of the pipeline strip names the volume the project went to ("USB #0007"), with the date.
 
 ## Every copy on the shelf is checked before it counts
 
@@ -81,3 +81,14 @@ If you don't have one set up yet, Archive to USB offers to make a plain database
 - [Archiving a Project to USB](/manual/project-management/#archiving-a-project-to-usb) — the full archiving workflow, including splitting a project across more than one drive
 - [Managing Archive Volumes](/manual/project-management/#managing-archive-volumes) — the drive catalog itself: numbers, labels, capacity and what's on each one
 - [Restoring an Archived Project](/manual/project-management/#restoring-an-archived-project) — how MediaFlowSwift finds the right numbered drive again later
+
+## Other guides
+
+- [How to Automate Video File Organization on Your Mac](/guides/automate-video-file-organization-on-mac/) — Category and Camera folders, sorted the same way every time.
+- [Footage Missing After Moving to an External Drive?](/guides/footage-missing-after-moving-to-external-drive/) — why clips show as missing, and the command that repoints them.
+
+[All guides](/guides/) — the full list.
+
+## Try it on your own footage
+
+MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
