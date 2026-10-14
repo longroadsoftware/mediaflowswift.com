@@ -32,3 +32,5 @@ Short, practical answers to the questions that come up when you move footage off
 ---
 
 Looking for how a particular window works? That's the [manual](/manual/). Stuck on something not covered here? [Support](/support.html).
+
+Want to try it? [Download MediaFlowSwift](/download.html) — the full app runs for 14 days with no card asked for, on macOS 14 or later with Apple silicon.

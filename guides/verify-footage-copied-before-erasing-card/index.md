@@ -69,4 +69,7 @@ Don't erase the card. Try the import again — a failed check usually means a ba
 - [Clear Card](/manual/organizing-media/#clear-card) — how clearing a card works, and what it scans.
 - [Cards Laid Out by the Camera](/manual/organizing-media/#cards-laid-out-by-the-camera) — what "safe to format" does and doesn't cover on these cards.
 - [Importing media](/manual/importing-media/) — the import steps in full, including what formats are left out.
-- [Download MediaFlowSwift](/download.html) to try it.
+
+## Try it on your own footage
+
+MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.

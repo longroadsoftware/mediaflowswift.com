@@ -61,3 +61,7 @@ Library Moved is for a library you moved in one go. If just a handful of clips a
 - [Relinking Missing Media](/manual/storage-maintenance/#relinking-missing-media) — fixing one clip, or a handful, instead of a whole library
 - [Clips Showing as Missing](/manual/troubleshooting/#clips-showing-as-missing) — what a red X actually means and the ordinary causes
 - [Understanding the Where Column](/manual/troubleshooting/#understanding-the-where-column) — every badge MediaFlowSwift shows and what each one means
+
+## Try it on your own footage
+
+MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
