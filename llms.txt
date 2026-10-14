@@ -22,6 +22,15 @@ macOS 14 or later on a Mac with Apple silicon.
 ## Privacy
 No account and no usage data. The app checks for updates and, once a key is entered, checks the licence; every other outside service is off until the user turns it on.
 
+## Guides
+Plain answers to the questions people ask when moving footage off a card on a Mac. Each one says what MediaFlowSwift does and where it stops.
+- All guides: https://mediaflowswift.com/guides/
+- Is it safe to erase a card after importing on a Mac: https://mediaflowswift.com/guides/verify-footage-copied-before-erasing-card/ — what each check proves, and what Clear Card does not scan (raw stills, AVCHD/MTS, MXF, BRAW, R3D and other formats the import never copies)
+- How to keep two checked copies of a memory card on a Mac: https://mediaflowswift.com/guides/two-checked-copies-of-a-card-on-a-mac/ — the app copies a card to one destination, not two at once; two checked copies is a sequential two-step job (import and organize, then archive to a second drive)
+- Footage missing after moving to an external drive: https://mediaflowswift.com/guides/footage-missing-after-moving-to-external-drive/ — the Where column, Library Moved, relinking and re-checking
+- How to automate video file organization on a Mac: https://mediaflowswift.com/guides/automate-video-file-organization-on-mac/ — category and camera folders, workflow templates
+- How to label and catalog archive drives for video: https://mediaflowswift.com/guides/label-and-catalog-archive-drives-for-video/ — numbered archive volumes and the record of what is on each
+
 ## Key pages
 - Overview and plans: https://mediaflowswift.com/
 - Download: https://mediaflowswift.com/download.html

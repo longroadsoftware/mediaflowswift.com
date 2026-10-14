@@ -81,3 +81,7 @@ If you don't have one set up yet, Archive to USB offers to make a plain database
 - [Archiving a Project to USB](/manual/project-management/#archiving-a-project-to-usb) — the full archiving workflow, including splitting a project across more than one drive
 - [Managing Archive Volumes](/manual/project-management/#managing-archive-volumes) — the drive catalog itself: numbers, labels, capacity and what's on each one
 - [Restoring an Archived Project](/manual/project-management/#restoring-an-archived-project) — how MediaFlowSwift finds the right numbered drive again later
+
+## Try it on your own footage
+
+MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
