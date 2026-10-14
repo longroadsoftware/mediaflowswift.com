@@ -68,7 +68,11 @@ MediaFlowSwift does not write a card to two drives at the same time. The sequenc
 
 ## If a copy doesn't check out
 
-Both steps retry automatically before they give up. If a checksum doesn't match at import or at organize, MediaFlowSwift doesn't silently keep a bad file:
+Both steps retry automatically before they give up, and here they part ways. At import, a copy that doesn't match is made once more, and a second failure stops the whole import and names the file:
+
+> A copy that doesn't match is made once more; if it fails again, the import stops and names the file. Importing never deletes anything from the card.
+
+At organize, a second failure fails that one clip and leaves everything else alone:
 
 > If the check fails, the copy is deleted and made again once; if it fails a second time, that clip is reported as failed and its source is left alone.
 
