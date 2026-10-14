@@ -121,6 +121,8 @@ ok("privacy yes: GA loaded", t.ga() === 1);
 t.choice.children.find(c => c.className === "consent-change").click();
 ok("privacy: change to no sets Google's off switch", t.win["ga-disable-G-TEST123"] === true);
 ok("privacy: change to no clears cookies", (t.doc._cookies || []).length > 0);
+ok("privacy: change to no clears the cookie on the registrable domain, not just the host",
+  (t.doc._cookies || []).some(c => /^_ga=;.*domain=\./.test(c)));
 ok("privacy: change to no is remembered", t.store.v === "no");
 
 // 9 privacy page: yes, then no, then yes again, with no reload between
