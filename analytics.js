@@ -58,6 +58,10 @@
   function stop() {
     window["ga-disable-" + id] = true;
     var names = ["_ga", "_ga_" + id.replace(/^G-/, ""), "_gid"];
+    /* Google sets _ga on the registrable domain, not on the host, so clearing
+       location.hostname alone would miss it if this site were ever served from
+       www. The two-label guess is right for mediaflowswift.com; it would be
+       wrong for a suffix like co.uk. */
     var labels = location.hostname.split(".");
     var registrable = labels.length > 2 ? labels.slice(-2).join(".") : location.hostname;
     for (var i = 0; i < names.length; i++) {
