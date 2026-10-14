@@ -6,7 +6,7 @@ permalink: /guides/automate-video-file-organization-on-mac/
 ---
 # How to Automate Video File Organization on Your Mac
 
-Organize Media sorts every clip into a Category and Camera folder automatically, every time you run it, and Workflow Templates can chain that with other steps so one command does the whole routine. You still confirm anything that copies, moves or deletes.
+Organize Media sorts every clip into a Category and Camera folder automatically, every time you run it, and Workflow Templates can chain that with other steps so one command does the whole routine. Copies and deletions still wait for your confirmation; re-filing after you change a clip's category or camera happens on its own, in the background.
 
 Here's what's actually automatic, and what you still choose.
 

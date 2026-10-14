@@ -6,7 +6,7 @@ permalink: /guides/verify-footage-copied-before-erasing-card/
 ---
 # Is It Safe to Erase Your Card After Importing on a Mac?
 
-Yes to the clips MediaFlowSwift imported and checked — once each one has an organized copy that's been read back in full and matched against a checksum. But Clear Card only ever looks at the card's DCIM folder, and import only ever takes certain formats, so some files on the card are never imported or checked at all. Those you have to verify and copy yourself before you format.
+Yes to the clips MediaFlowSwift imported and checked — once each one has an organized copy that's been read back in full and matched against a checksum. On an ordinary card, Clear Card only scans the DCIM folder; on a card the camera laid out itself (Sony PRIVATE/M4ROOT, AVCHD and the like), it checks the whole card instead. Either way, import only ever takes certain formats, so some files are never imported or checked at all. Those you have to verify and copy yourself before you format.
 
 You just finished a shoot and want the card back for tomorrow. Here's exactly what has to be true before that's safe, and how MediaFlowSwift gets you there.
 
@@ -38,13 +38,13 @@ One exception is worth knowing on day one. On a card the camera laid out itself 
 
 ## What Clear Card never checks
 
-Clear Card only scans the card's DCIM folder. Anything outside DCIM is never looked at, checked, or counted — not by Clear Card, and not by import before it.
+On an ordinary card, Clear Card only scans the DCIM folder — nothing else on the card is looked at, checked, or counted. On a card the camera laid out itself (a Sony PRIVATE/M4ROOT card, an AVCHD card, and the like), Clear Card checks the whole card instead, and deletes nothing from it either way.
 
-Within DCIM, import itself only takes certain formats: MP4, MOV, M4V, AVI, JPG, JPEG, PNG, HEIC, DNG, WAV, MP3, AAC and M4A. Camera raw stills other than DNG (CR3, CR2, ARW, NEF, RAF, GPR), AVCHD's MTS and M2TS, Insta360's INSV and INSP, MXF, BRAW, R3D, and TIFF are left out — import never copies them, so Clear Card never has an organized copy to check them against.
+Import itself only takes certain formats, wherever it's scanning: MP4, MOV, M4V, AVI, JPG, JPEG, PNG, HEIC, DNG, WAV, MP3, AAC and M4A. Camera raw stills other than DNG (CR3, CR2, ARW, NEF, RAF, GPR), AVCHD's MTS and M2TS, Insta360's INSV and INSP, MXF, BRAW, R3D, and TIFF are left out — import never copies them, so Clear Card never has an organized copy to check them against. Import scans the whole source, including subfolders; it leaves files out by format, not by folder.
 
-That matters most on a card the camera laid out itself (a Sony PRIVATE/M4ROOT card, an AVCHD card, and the like): when Clear Card tells you such a card is safe to format, that verdict still excludes any MTS or MXF clips on it, because MediaFlowSwift doesn't import that format yet. Those clips have no verified copy. Copy them yourself — by hand, in Finder — before you format.
+That matters most on a card the camera laid out itself: MTS or MXF clips on it have no verified copy, because MediaFlowSwift doesn't import those formats yet. Clear Card won't call that card safe to format while they're on it — it says "Not safe to format yet" and lists each one, so you know exactly what still needs copying by hand, in Finder, before you format.
 
-So before you format any card: check it in Finder first, and copy out anything in an unsupported format, or anything outside DCIM, that you want to keep. Clear Card's "safe to format" only covers what it actually imported and checked.
+So before you format any card: check it in Finder first, and copy out anything in an unsupported format that you want to keep. On an ordinary card, also check outside DCIM — Clear Card never looked there.
 
 ## Why the checks aren't all the same
 
