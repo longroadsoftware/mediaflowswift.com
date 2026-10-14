@@ -33,7 +33,14 @@
 
   function load() {
     window["ga-disable-" + id] = false;
-    if (loaded) return;
+    if (loaded) {
+      /* Said yes, then no, then yes again without reloading. Google's script
+         is already here and the flag is clear, but nothing has been sent
+         since the no, so this visit would go uncounted while the privacy
+         page says no reload is needed. Ask for it again. */
+      if (window.gtag) window.gtag("config", id);
+      return;
+    }
     loaded = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };

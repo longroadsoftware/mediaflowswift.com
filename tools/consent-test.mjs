@@ -123,5 +123,20 @@ ok("privacy: change to no sets Google's off switch", t.win["ga-disable-G-TEST123
 ok("privacy: change to no clears cookies", (t.doc._cookies || []).length > 0);
 ok("privacy: change to no is remembered", t.store.v === "no");
 
+// 9 privacy page: yes, then no, then yes again, with no reload between
+t = run({ stored: "yes", privacyPage: true });
+const buttons = () => t.choice.children.filter(c => c.className === "consent-change");
+const toggle = () => buttons()[buttons().length - 1].click();
+const configs = () => (t.win.dataLayer || []).filter(a => a[0] === "config").length;
+ok("re-enable: counted once to start", configs() === 1);
+toggle();
+ok("re-enable: off switch set by the no", t.win["ga-disable-G-TEST123"] === true);
+ok("re-enable: nothing sent while off", configs() === 1);
+toggle();
+ok("re-enable: off switch cleared by the yes", t.win["ga-disable-G-TEST123"] === false);
+ok("re-enable: Google's script not loaded a second time", t.ga() === 1);
+ok("re-enable: this visit is counted again, no reload", configs() === 2);
+ok("re-enable: remembered as yes", t.store.v === "yes");
+
 console.log(`${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
