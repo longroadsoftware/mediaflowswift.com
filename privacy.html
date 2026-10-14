@@ -46,7 +46,7 @@ gtag('config', 'G-392DG1V9T5');
 <main class="wrap">
 <article class="doc">
   <h1>Privacy</h1>
-  <p class="updated">Last updated 12 October 2026. &ldquo;We&rdquo; and &ldquo;us&rdquo; on this page mean Long Road Software LLC, which makes MediaFlowSwift. This page describes the app; it says the same as Settings &rsaquo; Privacy inside MediaFlowSwift, which is the authoritative list and changes with the app.</p>
+  <p class="updated">Last updated 13 October 2026. &ldquo;We&rdquo; and &ldquo;us&rdquo; on this page mean Long Road Software LLC, which makes MediaFlowSwift. This page describes the app; it says the same as Settings &rsaquo; Privacy inside MediaFlowSwift, which is the authoritative list and changes with the app.</p>
 
   <h2>The short version</h2>
   <p>MediaFlowSwift works on your Mac and your own network. It has no account and collects no usage data or analytics. Your media, projects and database stay on your Mac and on your network. It contacts us for two things only: to ask whether there is a newer version, and, once you have entered a licence key, to check that key. Both are described below.</p>
@@ -74,7 +74,7 @@ gtag('config', 'G-392DG1V9T5');
   <table>
     <tr><th>Connection</th><th>When</th><th>What is sent</th></tr>
     <tr><td>Checking for a new version</td><td>Shortly after launch, then every few hours (every half hour while the site cannot be reached)</td><td>A request for one small file that names the newest version; nothing about you or your Mac goes with it. Installing an update downloads the new copy from this site and checks it is exactly the file promised and signed by us.</td></tr>
-    <tr><td>Licence check</td><td>Nothing until you enter a licence key. Then when you enter it, once a day after that, when you click Check now, and when you release a Mac</td><td>Entering the key sends the key, a random id the app made up for that Mac, and the Mac&rsquo;s name as you see it in System Settings. The daily check, Check now and release send the key and that id only. The answer is your plan, when it renews or ends, and which Macs hold seats. No email, no account name, nothing about your projects. The key and the answer are kept in your Keychain. The licence service keeps the key, the plan, Paddle&rsquo;s ids for the purchase, a one-way hash of the buying email, and for each Mac its random id, its name and when it last checked in.</td></tr>
+    <tr><td>Licence check</td><td>Nothing until you enter a licence key. Then when you enter it, once a day after that, when you click Check now, and when you release a Mac</td><td>Entering the key sends the key, a one-way code made from this Mac&rsquo;s hardware id (the same for every user account on this Mac, and never the hardware id itself), and the Mac&rsquo;s name as you see it in System Settings. The daily check, Check now and release send the key and that code only. Until an account first activated by an earlier version of the app has moved to that code, its checks, and Release this Mac, also send the random id that version made for it, so that its place on the key can be freed. The answer is your plan, when it renews or ends, and which Macs hold seats. No email, no account name, nothing about your projects. The key and the answer are kept in your Keychain. The licence service keeps the key, the plan, Paddle&rsquo;s ids for the purchase, a one-way hash of the buying email, and for each Mac the code it checks in with, the Mac&rsquo;s name and when it last checked in.</td></tr>
   </table>
   </div>
 
