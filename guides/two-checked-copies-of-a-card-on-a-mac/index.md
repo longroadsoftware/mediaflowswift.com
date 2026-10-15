@@ -101,3 +101,14 @@ The manual is direct about what that means for the import record: phones get no 
 - [Archiving a Project to USB](/manual/project-management/#archiving-a-project-to-usb) — the second checked copy, on a separate drive
 - [Clear Card](/manual/organizing-media/#clear-card) — what has to be true before the card itself is cleared
 - [Change destination folder](/manual/organizing-media/#change-destination-folder) — pointing a project at organized media you have copied somewhere else
+
+## Other guides
+
+- [Is It Safe to Erase Your Card After Importing on a Mac?](/guides/verify-footage-copied-before-erasing-card/) — what the checksum check proves before you format.
+- [How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/) — numbered drives, and a record of what went where.
+
+[All guides](/guides/) — the full list.
+
+## Try it on your own footage
+
+MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
