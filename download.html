@@ -103,7 +103,7 @@ gtag('config', 'G-392DG1V9T5');
       var mb = Math.round(m.size / 1000000 * 10) / 10;
       meta.textContent = "· " + mb + " MB" + (m.published ? " · " + m.published : "");
       // The button uses the GitHub Release copy, which GitHub counts; the app's updater keeps using m.url.
-      var counted = typeof m.download === "string" && m.download.indexOf("https://github.com/mwmike/mediaflowswift.com/releases/download/") === 0;
+      var counted = typeof m.download === "string" && /^https:\/\/github\.com\/(longroadsoftware|mwmike)\/mediaflowswift\.com\/releases\/download\//.test(m.download);
       get.href = counted ? m.download : m.url;
       get.removeAttribute("aria-disabled");
       get.textContent = "Download MediaFlowSwift " + m.version;

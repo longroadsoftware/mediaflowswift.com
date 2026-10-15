@@ -6,7 +6,7 @@
 # Two copies of each zip. The app's updater downloads the one on this site (manifest "url"),
 # because it refuses redirects and GitHub Release assets always redirect. The website's Download
 # button uses the GitHub Release copy (manifest "download"), because GitHub counts those downloads:
-#   gh api repos/mwmike/mediaflowswift.com/releases --jq '.[].assets[] | "\(.name) \(.download_count)"'
+#   gh api repos/longroadsoftware/mediaflowswift.com/releases --jq '.[].assets[] | "\(.name) \(.download_count)"'
 # Only the newest zip is kept in the repo; the Releases keep the history. The release is made first,
 # so the manifest never points the button at a copy that is not there yet; if it cannot be made,
 # the manifest leaves "download" out and the button falls back to the site copy. A re-run is safe.
@@ -18,7 +18,7 @@ set -u
 APP="${1:?the stapled .app}"
 LOG="${2:?CHANGELOG.md}"
 SITE="$(cd "$(dirname "$0")/.." && pwd)"
-REPO="mwmike/mediaflowswift.com"
+REPO="longroadsoftware/mediaflowswift.com"
 WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
 
@@ -63,7 +63,7 @@ m = json.load(open(sys.argv[1]))
 assert m["build"] > 0 and len(m["sha256"]) == 64 and m["url"].startswith("https://mediaflowswift.com/downloads/"), m
 assert os.path.getsize(sys.argv[2]) == m["size"], "size"
 assert hashlib.sha256(open(sys.argv[2], "rb").read()).hexdigest() == m["sha256"], "hash"
-assert "download" not in m or m["download"].startswith("https://github.com/mwmike/mediaflowswift.com/releases/download/"), m
+assert "download" not in m or m["download"].startswith("https://github.com/longroadsoftware/mediaflowswift.com/releases/download/"), m
 print("manifest ok:", m["version"], m["build"], m["size"], "bytes")
 PY
 
