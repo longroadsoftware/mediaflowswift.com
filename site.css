@@ -139,6 +139,9 @@ dl.messages dt { font-weight: 600; margin-top: 1.1rem; }
 dl.messages dd { margin: 0.25rem 0 0; }
 dl.messages code { font-size: 0.95em; overflow-wrap: anywhere; }
 
+/* About page: the opening paragraph, set larger than the body text */
+.about-lead { font-size: 1.25rem; color: var(--ink-2); margin-bottom: 1rem; }
+
 /* Footer */
 footer { border-top: 1px solid var(--line); padding: 2rem 0 3rem; color: var(--ink-2); font-size: 0.95rem; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between; }

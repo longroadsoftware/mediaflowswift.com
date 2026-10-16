@@ -38,6 +38,7 @@ Plain answers to the questions people ask when moving footage off a card on a Ma
 - Manual: https://mediaflowswift.com/manual/
 - Support: https://mediaflowswift.com/support.html
 - Refund policy: https://mediaflowswift.com/refunds.html
+- About (who makes it and why): https://mediaflowswift.com/about/
 - Company: https://longroadsoftware.com/
 
 ## Contact

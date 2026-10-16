@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About MediaFlowSwift — who makes it, and why</title>
+<meta name="description" content="MediaFlowSwift is made by Long Road Software LLC in Tennessee, by a software engineer who wrote it for his own footage. Who is behind it, why it exists, and what it promises about your files.">
+<link rel="canonical" href="https://mediaflowswift.com/about/">
+<meta property="og:site_name" content="MediaFlowSwift">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About MediaFlowSwift — who makes it, and why">
+<meta property="og:description" content="MediaFlowSwift is made by Long Road Software LLC in Tennessee, by a software engineer who wrote it for his own footage. Who is behind it, why it exists, and what it promises about your files.">
+<meta property="og:url" content="https://mediaflowswift.com/about/">
+<meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="5" width="24" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h4M6 14h4M6 18h4M18 10h4M18 14h4M18 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 11l5 3-5 3z" fill="currentColor"/></svg>MediaFlowSwift</a>
+    <nav class="menu" aria-label="Site">
+      <a href="/">Overview</a>
+      <a href="/download.html">Download</a>
+      <a href="/#how">How it works</a>
+      <a href="/#plans">Plans</a>
+      <a href="/manual/">Manual</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/about/" aria-current="page">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<article class="doc">
+  <h1>Who makes MediaFlowSwift, and why</h1>
+  <p class="lead about-lead">MediaFlowSwift is made by Long Road Software LLC, a small company in Tennessee that publishes the app and supports it directly. The person behind it is Mike. He is a software engineer, and a video creator. He wrote the app for his own footage and runs his own channel on it.</p>
+
+  <h2>Where it came from</h2>
+  <p>Mike also makes <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a>, a YouTube channel about living and travelling in an RV. The cameras added up. Two GoPros, then a third, and on top of that two iPhones and a Nikon.</p>
+  <p>For a long time only the GoPro video went up to the GoPro service and came back down. Grouping projects was a mess. Uploading a large number of files could take days. Errors were common, and so was lost footage. The only confirmation that an upload had finished was on the camera itself, and the errors along the way left real doubt about whether every clip had made it.</p>
+  <p>The iPhones were a separate mess. Getting video and pictures off them was hard, and he never quite mastered that.</p>
+  <p>He bought a NAS next. The first one was fairly cheap, under $500. That made offloading a bit less hard. It did not fix the rest. He still had to organize the videos into projects. Looking through them took forever, and it could lock him into that work for hours, sometimes days, before there was one project he could import and edit.</p>
+  <p>MediaFlowSwift came out of that frustration. It records where every clip is &mdash; on a card, in a working copy, at the project&rsquo;s destination, or on a numbered archive drive &mdash; copies footage into folders ready for editing. The checks that have to pass before a file is removed are set out below. It is sold to other creators because the mess is not special to one channel.</p>
+  <p>More recently he bought a more capable NAS, and that one cost more. He can reach it from away, and he can upload video to it on the road. Without Starlink, that upload would quickly burn through his data.</p>
+
+  <h2>What it promises about your files</h2>
+  <p>The promise is narrow. Organize is the only step that can check a new copy by samples. With read-back verification on, the default in Settings &rsaquo; Storage, Organize reads the whole copy back and compares its SHA-256 with the original. With that setting off, it checks the size plus three 1 MB samples, at the start, middle and end. That does not catch damage outside those samples.</p>
+  <p>Removing a file is a separate check. It does not use that sample check. When you confirm Clear Card, it reads each organized copy back in full and matches it against the recorded checksum before it deletes the card file. It never relies on the check made at organize time. On a card the camera laid out itself, Clear Card deletes nothing. It says whether the card is safe to format in the camera, and names what is not. Free Up Space reads the file it is about to remove in full before it moves or deletes it. It reads the organized copy in full too, unless you choose to use the earlier check. That choice trusts the drive has kept the organized copy as it was: the same place, the same size, and the same date to the second. The file being removed is still read in full. Returning a project from an editing drive reads the files in both places and compares them before it will remove the editing copy. The same name and the same size is not taken as proof. Moving a project to an editing drive does not remove the library copy. A file that fails its check is not removed.</p>
+  <p>Your footage stays in ordinary folders that any app can read, on the drives and network shares you chose. The app has no account and collects no usage data; apart from checking for updates and checking your licence key, it talks to no outside service until you turn one on, and Settings &rsaquo; Privacy lists what each one sends. When something fails, it says which file, why, and what to do. That is the whole promise: not that drives never fail, but that a file which fails its check is left where it is.</p>
+
+  <h2>Get in touch</h2>
+  <p>Questions, problems, refunds and ideas all go to <a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a>; the <a href="/support.html">support page</a> says what helps most. The company&rsquo;s own page is <a href="https://longroadsoftware.com/">longroadsoftware.com</a>.</p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+  </div>
+</footer>
+</body>
+</html>
