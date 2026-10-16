@@ -18,14 +18,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
 <link rel="stylesheet" href="site.css">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-392DG1V9T5"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-392DG1V9T5');
-</script>
+<!-- Analytics, off until the visitor says yes. See /privacy.html -->
+<script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
 </head>
 <body>
 <header class="top">
@@ -89,7 +83,13 @@ gtag('config', 'G-392DG1V9T5');
   <p>If you send a problem report to us, it is filed as an issue in our development tracker so that we can fix the fault. It contains only what the app showed you before you clicked Send. If you chose to include an email address for a reply, we use it for that reply and nothing else. We keep reports for as long as the fault is being worked on and for our release records afterwards.</p>
 
   <h2>This website</h2>
-  <p>This site and longroadsoftware.com are static pages served by GitHub Pages. We use Google Analytics on both to count visits and see which pages people read and how they found us. It sets cookies in your browser and sends Google the page address, the site that linked you here, your browser and device type, and your approximate location, under <a href="https://policies.google.com/privacy">Google&rsquo;s privacy policy</a>. We do not send it your name, email or licence key, and it does not run on the thank-you or key pages. You can block it with any content blocker or with <a href="https://tools.google.com/dlpage/gaoptout">Google&rsquo;s opt-out add-on</a>; the site works the same without it. GitHub, as the host, keeps ordinary server logs of requests (IP address, page requested, time) under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub&rsquo;s privacy statement</a>. Fonts are loaded from Google Fonts, which receives the request for the font files.</p>
+  <p>This site and longroadsoftware.com are static pages served by GitHub Pages. We use Google Analytics on both to count visits and see which pages people read and how they found us. On this site, <strong>it is off until you say yes</strong>: a notice at the bottom of the page asks until you answer, then not again, and until you press Yes nothing is loaded from Google Analytics and no analytics cookie is set. No answer counts as no, so ignoring the notice, closing the page, or using a browser that blocks storage all leave analytics off; a browser that blocks storage cannot remember your answer, so the notice asks again. Your answer is kept in your browser&rsquo;s local storage, which sets no cookie of its own. The same notice is on longroadsoftware.com.</p>
+
+  <p>If you say yes, Google Analytics sets cookies in your browser and sends Google the page address, the site that linked you here, your browser and device type, and your approximate location, under <a href="https://policies.google.com/privacy">Google&rsquo;s privacy policy</a>. We do not send it your name, email or licence key, and it does not run on the thank-you or key pages. You can also block it with any content blocker or with <a href="https://tools.google.com/dlpage/gaoptout">Google&rsquo;s opt-out add-on</a>; the site works the same without it.</p>
+
+  <p id="analytics-choice">Analytics on this site is off until you say yes. With JavaScript on, this line says what you chose and lets you change it.</p>
+
+  <p>GitHub, as the host, keeps ordinary server logs of requests (IP address, page requested, time) under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub&rsquo;s privacy statement</a>. Fonts are loaded from Google Fonts, which receives the request for the font files.</p>
 
   <h2 id="email-list">Email list</h2>
   <p>You can ask to be emailed when a Long Road Software product is ready, using the form on its page, or by ticking the marketing box at Paddle checkout. Either way the list is kept by <a href="https://kit.com/">Kit</a>, our email service, under <a href="https://kit.com/privacy">Kit&rsquo;s privacy policy</a>. Kit keeps your email address, which list you joined and when, and, for each email we send, whether it was opened and which links were clicked. A website sign-up is added only after you click the link in Kit&rsquo;s confirmation email. We use the address only for Long Road Software news, we do not sell or share it, and every email has an unsubscribe link that removes you at once. To be removed by hand, write to the address under Questions.</p>
