@@ -34,6 +34,7 @@
       <a href="/guides/">Guides</a>
       <a href="/support.html">Support</a>
       <a href="/privacy.html">Privacy</a>
+      <a href="/about/">About</a>
     </nav>
   </div>
 </header>
@@ -76,7 +77,7 @@
 <footer>
   <div class="wrap">
     <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
-    <nav aria-label="Legal"><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
   </div>
 </footer>
 
@@ -97,7 +98,7 @@
       var mb = Math.round(m.size / 1000000 * 10) / 10;
       meta.textContent = "· " + mb + " MB" + (m.published ? " · " + m.published : "");
       // The button uses the GitHub Release copy, which GitHub counts; the app's updater keeps using m.url.
-      var counted = typeof m.download === "string" && m.download.indexOf("https://github.com/mwmike/mediaflowswift.com/releases/download/") === 0;
+      var counted = typeof m.download === "string" && /^https:\/\/github\.com\/(longroadsoftware|mwmike)\/mediaflowswift\.com\/releases\/download\//.test(m.download);
       get.href = counted ? m.download : m.url;
       get.removeAttribute("aria-disabled");
       get.textContent = "Download MediaFlowSwift " + m.version;
