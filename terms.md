@@ -6,7 +6,7 @@ permalink: /terms.html
 ---
 # Terms of use and refunds
 
-Last updated 24 September 2026. Plain language on purpose. If you have a question about any of it, ask: [support@mediaflowswift.com](mailto:support@mediaflowswift.com).
+Last updated 17 October 2026. Plain language on purpose. If you have a question about any of it, ask: [support@mediaflowswift.com](mailto:support@mediaflowswift.com).
 
 ## Who we are
 
@@ -14,7 +14,7 @@ MediaFlowSwift is made and sold by Long Road Software LLC, a Tennessee limited l
 
 ## The licence
 
-A plan gives you, personally, the right to install and use MediaFlowSwift on the Macs you use. A plan follows you, not a machine: the licence key you receive works on up to three Macs at once, and the app lets you release a Mac to make room for another. You may not share the key beyond your own Macs, resell, rent or sublicense the app, or remove or work around the parts of it that check your plan.
+A plan gives you the right to install and use MediaFlowSwift on up to three Macs at once, and anyone who uses one of those Macs may use it there. The licence key you receive works on those Macs; a Mac can release only itself to free its place for another, and a fourth Mac needs another key. You may not sell or publish the key, resell, rent or sublicense the app, or remove or work around the parts of it that check your plan.
 
 The free trial is the full Studio Pro app for 14 days, with no card required. When it ends, and when a plan ends, the app keeps opening every project, keeps showing where every clip is, and keeps restoring from archives and copying footage out; new imports, proxies, publishing and the shared server pause until a plan is active.
 
@@ -53,7 +53,7 @@ The [refund policy](/refunds.html) has the details; in short:
 
 You can stop using MediaFlowSwift at any time. Cancelling a plan is covered under Prices and billing above.
 
-We may end your licence, by switching off your licence key, if you break the licence terms above, for example by sharing the key beyond your own Macs or by working around the parts of the app that check your plan. Before we do, we will email you at the address you bought with and give you 14 days to put it right, unless the breach cannot be put right or involves fraud. If we end a licence for a breach, no refund is due for the rest of the period, except where the refund policy or the law where you live requires one.
+We may end your licence, by switching off your licence key, if you break the licence terms above, for example by selling or publishing the key or by working around the parts of the app that check your plan. Before we do, we will email you at the address you bought with and give you 14 days to put it right, unless the breach cannot be put right or involves fraud. If we end a licence for a breach, no refund is due for the rest of the period, except where the refund policy or the law where you live requires one.
 
 However a licence ends, the app keeps working as it does for any plan that has ended: every project opens, every clip shows where it is, and restoring from archives and copying footage out keep working. Your footage and projects are always yours. The parts of these terms about your footage and data, care with footage, no warranties and governing law continue to apply after a licence ends.
 

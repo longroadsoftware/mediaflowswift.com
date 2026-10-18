@@ -17,7 +17,7 @@
 macOS 14 or later on a Mac with Apple silicon.
 
 ## Pricing
-14-day free trial of the full app, no card required. Studio: USD 4.99/month or USD 49.99/year. Studio Pro: USD 9.99/month or USD 99.99/year. Yearly is about 17% off the monthly price. One plan covers one person on up to three Macs. Payment through Paddle, merchant of record. Full refund within 14 days.
+14-day free trial of the full app, no card required. Studio: USD 4.99/month or USD 49.99/year. Studio Pro: USD 9.99/month or USD 99.99/year. Yearly is about 17% off the monthly price. On either plan, one licence key covers up to three Macs at once, whoever uses them; a fourth Mac needs another key. Payment through Paddle, merchant of record. Full refund within 14 days.
 
 ## Privacy
 No account and no usage data. The app checks for updates and, once a key is entered, checks the licence; every other outside service is off until the user turns it on.
