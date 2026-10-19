@@ -76,10 +76,10 @@ nav.menu a[aria-current="page"], nav.menu a:hover { color: var(--ink); }
 .cta.quiet { background: transparent; color: var(--accent); border: 1px solid var(--accent); margin-left: 0.5rem; }
 .note { font-size: 0.95rem; color: var(--ink-2); }
 
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
-.hero-photo { margin: 0; }
-.hero-photo img { display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 0.55); }
-@media (max-width: 60rem) { .hero-grid { grid-template-columns: 1fr; } .hero-photo { order: -1; } }
+.hero-text { max-width: 44rem; }
+.hero-shot { margin: 2.5rem 0 0; }
+.hero-shot img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); box-shadow: 0 20px 50px -25px rgba(0, 0, 0, 0.55); }
+.hero-shot figcaption { font-size: 0.95rem; color: var(--ink-2); margin-top: 0.6rem; }
 
 /* How it works */
 .how-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; }
@@ -285,6 +285,8 @@ ol.steps li { margin: 0.4rem 0; }
   nav.menu a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.5rem; }
   .hero .cta { display: block; text-align: center; }
   .cta.quiet { margin-left: 0; margin-top: 0.75rem; }
+  .hero-shot { margin-top: 2rem; }
+  .hero-shot img { height: 18rem; object-fit: cover; object-position: left top; }
   .pipeline { grid-template-columns: 1fr; }
   .pipeline li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); column-gap: 0.5rem; padding: 0.75rem 1rem; border-right: 0; }
   .pipeline li:last-child { border-bottom: 0; }
