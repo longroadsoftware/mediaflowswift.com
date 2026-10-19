@@ -2,6 +2,7 @@
 layout: guide
 title: "How to Automate Video File Organization on Your Mac"
 description: "MediaFlowSwift sorts clips into Category and Camera folders automatically, and Workflow Templates chain that with other steps into one command."
+updated: 2026-10-19
 permalink: /guides/automate-video-file-organization-on-mac/
 ---
 # How to Automate Video File Organization on Your Mac
@@ -20,11 +21,13 @@ MediaFlowSwift also looks for shortcuts to avoid redoing work it's already done.
 
 > When a clip's imported copy is on the same drive as the destination and still matches the checksum its import took from the card... Organize renames it into place instead of copying it: seconds, and no extra space.
 
+On macOS, moving a file within the same volume is a cheap rename rather than a byte-for-byte copy — the same distinction Apple's own file-system documentation draws between a move within a volume and a copy across volumes ([File System Programming Guide, Apple Developer Documentation](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)).
+
 And if you change a clip's category or camera later, you don't have to move the file yourself — MediaFlowSwift re-files it for you, in the background:
 
 > When you change the category or the camera of an organized clip, MediaFlow moves its copy at the destination into the matching folder. This happens in the background, keeps any edit you make meanwhile, and only interrupts you if a file fails to move or you open another project before the move could be saved.
 
-## Chain several steps with Workflow Templates
+## How do you chain several steps with Workflow Templates?
 
 For a routine you run every shoot day, Workflow Templates string several operations together under one command:
 
@@ -36,7 +39,7 @@ Open the picker with Cmd+Shift+R, or choose Workflow → Run Workflow Template. 
 > - End of Day Wrap — Re-check files, generate a report, open Free Up Space, then show a summary. Free Up Space shows its usual preview: nothing is staged or deleted that you have not seen listed and confirmed
 > - Relink & Repair — Re-check files, relink missing media, re-file folders by category, then show a summary
 
-A template doesn't skip your confirmations. When a step needs you to confirm a copy, choose a folder, or read a result, the template's own window steps aside and that step's ordinary window appears, same as if you'd run it on its own.
+A template doesn't skip your confirmations. When a step needs you to confirm a copy, choose a folder, or read a result, the template's own window steps aside. That step's ordinary window appears instead, same as if you'd run it on its own.
 
 ## Batch tools for the busywork around organizing
 
@@ -46,7 +49,7 @@ Separate from Organize itself, the Proxy queue automates thumbnail and proxy gen
 > - Process Queue (Proxies) — Generate a low-resolution MP4 proxy for each queued video. Photos and audio files are skipped
 > - Process Queue (All) — Generate both
 
-This is a different job from sorting clips into folders — it's about making footage easier to scrub and preview, not about where files live — but it's the other place MediaFlowSwift lets you queue work up and run it across many clips at once.
+This is a different job from sorting clips into folders. It's about making footage easier to scrub and preview, not about where files live. But it's the other place MediaFlowSwift lets you queue work up and run it across many clips at once.
 
 ## Optional: let a model suggest categories first
 
@@ -57,6 +60,8 @@ If you'd rather not even pick categories by hand after an import, MediaFlowSwift
 What it sends depends on which model you choose. A model running on your own Mac sends nothing anywhere:
 
 > With a model that runs on this Mac, nothing leaves the Mac and it costs nothing.
+
+A model that runs entirely on this Mac is what Apple calls on-device machine learning, built on frameworks such as [Core ML](https://developer.apple.com/documentation/coreml), designed so a model's inference never has to leave the device.
 
 A paid provider sees a little more, and the manual is upfront that it costs money:
 

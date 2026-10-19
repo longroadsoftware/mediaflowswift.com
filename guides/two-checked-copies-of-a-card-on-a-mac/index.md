@@ -2,19 +2,22 @@
 layout: guide
 title: "How to Keep Two Checked Copies of a Memory Card on a Mac"
 description: "Import and organize a card to your working drive, then archive the project to a second drive. Two checksum-verified copies, made one after the other."
+updated: 2026-10-19
 permalink: /guides/two-checked-copies-of-a-card-on-a-mac/
 ---
 # How to Keep Two Checked Copies of a Memory Card on a Mac
 
 Import and organize the card to your working drive first, then archive that project to a second drive. That gives you two independently checksum-verified copies — made one after the other, not at the same time — and MediaFlowSwift checks each one before it counts.
 
-This isn't a single button. It's two separate, verified steps, run in order, and it's worth understanding what each one actually proves.
+This isn't a single button. It's two separate, verified steps, run in order, and it's worth understanding what each one actually proves. The pattern mirrors the chain-of-custody approach formalized in the production industry's own [ASC Media Hash List specification](https://github.com/ascmitc/mhl-specification), which production and post houses use to prove that nothing changed between successive copies of a shoot's media.
 
 ## Copy one: import, then organize
 
 Importing is the first checked copy. As MediaFlowSwift copies each file off the card, it fingerprints the original and checks the result:
 
 > As each file is copied, MediaFlow computes its SHA-256 checksum from the card, writes the copy to the drive, then reads the whole copy back from the drive, not from the Mac's memory, and compares the two. A copy that doesn't match is made once more; if it fails again, the import stops and names the file. Importing never deletes anything from the card.
+
+SHA-256 is a cryptographic hash function standardized by NIST ([FIPS 180-4, Secure Hash Standard](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf)); if even one bit differs between the original and the copy, the two checksums won't match.
 
 Organize, which files that imported copy into its Category and Camera folder at your project's destination, checks it again against the same checksum:
 
@@ -76,7 +79,7 @@ At organize, a second failure fails that one clip and leaves everything else alo
 
 > If the check fails, the copy is deleted and made again once; if it fails a second time, that clip is reported as failed and its source is left alone.
 
-The same applies on the archive side — a file that fails its read-back comparison fails the archive outright rather than being recorded as if it were fine, so you never end up with a "verified" copy on the shelf that actually differs from the original.
+The same applies on the archive side. A file that fails its read-back comparison fails the archive outright, rather than being recorded as if it were fine. That way you never end up with a "verified" copy on the shelf that actually differs from the original.
 
 ## The card itself is a third copy, for a while
 
@@ -86,7 +89,7 @@ Nothing says you have to erase the card the moment you've made these two copies.
 
 So in practice you often have three copies for a while — card, working drive, archive drive — until you choose to clear the card yourself.
 
-## Where this doesn't apply
+## Where doesn't this checksum chain apply?
 
 This checksum chain is specifically for cards, drives and folders. Importing from an iPhone or camera over USB works differently, because MediaFlowSwift can't see the original file the way it can on a card:
 

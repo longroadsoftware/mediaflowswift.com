@@ -2,6 +2,7 @@
 layout: guide
 title: "How to Review Footage and Pick Your Selects on a Mac"
 description: "Rapid Review plays, rates and rejects clips by keyboard. Smart Selects scores each one first, so you review in quality order, not import order."
+updated: 2026-10-19
 permalink: /guides/review-and-pick-selects-on-a-mac/
 ---
 # How to Review Footage and Pick Your Selects on a Mac
@@ -10,7 +11,7 @@ Open Rapid Review (Workflow → Review, or Cmd+Opt+R) and go through your footag
 
 That's the whole workflow. The rest of this page is what each key does, and how to get your best takes to the top of the pile before you start.
 
-## What Rapid Review is for
+## What is Rapid Review for?
 
 > Rapid Review is a focused review sheet for evaluating clips quickly. Use the keyboard to play, rate, favorite, reject and move through your footage without touching the mouse.
 
@@ -23,9 +24,11 @@ Press `?` at any time for an on-screen list of the keys. The ones you'll use mos
 - **A** — accept the category and camera MediaFlowSwift proposed for this clip at import; **R** marks it a reject candidate
 - **Down / Up Arrow** — next / previous clip in the queue
 
-With auto-advance on (the default — press T to toggle it), rating a clip, favoriting it, rejecting it, or pressing A or R moves you to the next clip after a short delay. Taking a favorite or Reject back off, clearing a rating, or pressing C keeps you on the clip instead, so a double-tap doesn't skip you past one you're still deciding on.
+J, K and L as play-reverse, stop and play-forward are a long-standing editing convention, also documented in Apple's own [Final Cut Pro keyboard shortcuts guide](https://support.apple.com/guide/final-cut-pro/keyboard-shortcuts-ver90ba5929/mac).
 
-## Hero, Maybe, Reject
+With auto-advance on (the default — press T to toggle it), rating a clip, favoriting it, rejecting it, or pressing A or R moves you to the next clip after a short delay. Taking a favorite or Reject back off, clearing a rating, or pressing C keeps you on the clip instead. That way a double-tap doesn't skip you past one you're still deciding on.
+
+## What do Hero, Maybe and Reject mean?
 
 A star rating and a select status are two different things, and you can set either, both, or neither on a clip. The select status sorts clips three ways:
 
@@ -33,7 +36,7 @@ A star rating and a select status are two different things, and you can set eith
 > - Maybe (orange) — Worth reviewing again, possible B-roll
 > - Reject (red) — Definitely not using. Stored as “Kill”, which is what it used to be called
 
-Set it with Cmd+Shift+H / M / K. Maybe has no Review key; inside Review, X toggles Reject and C toggles circle take instead. Once set, the Table view's Select column sorts by it, the toolbar's filter menu can show just your Heroes or just your Rejects, and the sidebar's Smart Groups has Reject candidates (clips marked with R) and Unreviewed (clips with an import proposal nobody has confirmed).
+Set it with Cmd+Shift+H / M / K. Maybe has no Review key; inside Review, X toggles Reject and C toggles circle take instead. Once set, the Table view's Select column sorts by it, and the toolbar's filter menu can show just your Heroes or just your Rejects. The sidebar's Smart Groups adds Reject candidates (clips marked with R) and Unreviewed (clips with an import proposal nobody has confirmed).
 
 ## Narrow the queue before you open Review
 
@@ -49,13 +52,15 @@ Smart Selects scores every clip before you look at it, so you can review in qual
 
 > Smart Selects, once called AI Smart Selects, scores every clip on five measures and suggests a star rating. It runs on this Mac and needs no internet connection.
 
+Running this kind of image analysis entirely on-device is possible because of frameworks like Apple's [Vision](https://developer.apple.com/documentation/vision), which can assess properties such as sharpness and horizon stability locally, without a network connection.
+
 It weighs sharpness, exposure, audio, a rough stability guess and composition, then sorts the results by overall quality score. You accept ratings individually or click Accept All — nothing is set until you do.
 
 The one case worth knowing about:
 
 > Sharpness analysis samples a single frame near the start of each clip. Clips that start out of focus but later become sharp may receive a lower sharpness score than expected.
 
-So a clip that racks focus in its first second can score lower than it deserves — worth a second look before you trust the number over your own eyes, especially for anything near your cutoff.
+So a clip that racks focus in its first second can score lower than it deserves. That's worth a second look before you trust the number over your own eyes, especially for anything near your cutoff.
 
 Smart Selects also proposes circle takes on its own:
 
@@ -63,7 +68,7 @@ Smart Selects also proposes circle takes on its own:
 
 Run it, accept what looks right, then open Rapid Review on what's left to make the calls a score can't.
 
-## Everything here can be undone
+## Can I undo these changes?
 
 Category, rating and select-status changes — including ones made with the Rapid Review shortcuts — go through Edit → Undo (Cmd+Z), named for the step: "Undo Rate ★4 on 12 Clips", for instance. Clear a rating with Cmd+0 or Edit → Set Rating → Clear Rating, and a status with Edit → Select → Clear Status, on as many selected clips as you like.
 
