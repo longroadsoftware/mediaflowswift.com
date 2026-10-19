@@ -13,8 +13,9 @@
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+{% assign updated_date = page.updated | default: "2026-10-13" %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"url":"{{ site.url }}{{ page.url }}","mainEntityOfPage":{"@type":"WebPage","@id":"{{ site.url }}{{ page.url }}"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"}}
+{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"url":"{{ site.url }}{{ page.url }}","datePublished":{{ updated_date | jsonify }},"dateModified":{{ updated_date | jsonify }},"mainEntityOfPage":{"@type":"WebPage","@id":"{{ site.url }}{{ page.url }}"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://www.youtube.com/@onislandtimeRV"]}}
 </script>
 <script type="application/ld+json">
 {% if page.url == "/guides/" %}{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"MediaFlowSwift","item":"https://mediaflowswift.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://mediaflowswift.com/guides/"}]}{% else %}{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"MediaFlowSwift","item":"https://mediaflowswift.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://mediaflowswift.com/guides/"},{"@type":"ListItem","position":3,"name":{{ page.title | jsonify }},"item":"{{ site.url }}{{ page.url }}"}]}{% endif %}
@@ -50,6 +51,9 @@
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">MediaFlowSwift</a> &rsaquo; <a href="/guides/">Guides</a></nav>
 {% endunless %}
 <article class="doc manual guide">
+  {% unless page.url == "/guides/" %}
+  <p class="updated">Updated {{ updated_date | date: "%-d %B %Y" }} &middot; Written by <strong>Long Road Software</strong>, the small team that builds and supports MediaFlowSwift. We write from what the app does, not from marketing copy.</p>
+  {% endunless %}
   {{ content }}
 </article>
 </main>
@@ -58,6 +62,7 @@
   <div class="wrap">
     <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
     <nav aria-label="Legal"><a href="/about/">About</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <span class="founder">Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Ask me anything: <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a></span>
   </div>
 </footer>
 </body>
