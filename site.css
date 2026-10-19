@@ -272,11 +272,12 @@ ol.steps li { margin: 0.4rem 0; }
 .consent-change { font: inherit; font-size: inherit; font-weight: 600; cursor: pointer; background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; text-underline-offset: 0.15em; }
 
 /* Footer: founder credit line, always its own row, under the nav links */
-footer .founder { flex-basis: 100%; order: 3; font-size: 0.9rem; }
+footer .founder { flex-basis: 100%; order: 3; font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+.founder-thumb { flex: 0 0 auto; border-radius: 50%; }
 
-/* About page: founder photo placeholder beside the bio text */
+/* About page: founder photo beside the bio text */
 .founder-bio { display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 1rem; }
-.founder-avatar { flex: 0 0 auto; color: var(--accent); }
+.founder-avatar { flex: 0 0 auto; border-radius: 50%; }
 @media (max-width: 30rem) { .founder-bio { flex-direction: column; } }
 
 /* Homepage: the price-anchor line under the billing toggle */
