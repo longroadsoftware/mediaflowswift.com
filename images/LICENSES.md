@@ -9,3 +9,5 @@ All three photographs are from Envato Elements, downloaded on 2026-09-22 under M
 | memory-cards.jpg | Memory Cards For Digital Storage And Data | towfiqu_barbhuyia | NDRHH9E |
 
 og-image.png is not a photograph: it is drawn by `tools/make_og_image.swift` from the site's own mark and the system font. Run that script again to change it.
+
+mike-williams-400/800 (.jpg, .webp) is a photograph of Mike Williams, the founder, taken by him and supplied for this site (2026-10-19). Location and camera data were removed. Use it only for the founder on the About page and footer.
