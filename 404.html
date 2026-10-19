@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+/* Short links: /a to /z and /0 to /9 are HeyCatch campaign links. GitHub Pages
+   cannot redirect, so this page sends them on to the home page with the
+   campaign in the address. Nothing is counted unless the visitor says yes
+   to analytics there. */
+(function () {
+  var m = location.pathname.match(/^\/([a-z0-9])\/?$/);
+  if (m) location.replace("/?utm_source=heycatch&utm_campaign=" + m[1]);
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Page not found — MediaFlowSwift</title>
 <meta name="description" content="There is no page at this address on mediaflowswift.com.">
