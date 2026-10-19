@@ -1,7 +1,8 @@
 /* Analytics, off until the visitor says yes.
 
-   No Google code is in any page of this site. This file loads Google
-   Analytics only after a visitor presses Yes on the notice, and remembers
+   No Google or HeyCatch code is in any page of this site. This file loads
+   Google Analytics and HeyCatch only after a visitor presses Yes on the
+   notice, and remembers
    the answer in localStorage, which sets no cookie of its own. No answer
    counts as no: closing the page, ignoring the notice, or a browser that
    blocks storage all leave analytics off.
@@ -19,6 +20,47 @@
   var store = "analytics-consent";
   var loaded = false;
 
+  /* HeyCatch (heycatch.ai): visits, clicks and where visitors came from,
+     for our marketing. Same yes as Google Analytics. The key is a public
+     project key, made to sit in pages. The version is pinned to the npm
+     "latest" release; never a -dev or -beta build. */
+  var hcKey = "hck_pk_Gmk9VtzfQcURl2mN-gu8HUT-wZgRafmM";
+  var hcUrl = "https://esm.sh/@heycatch/sdk@0.8.3";
+  var hc = null;
+
+  function loadHeyCatch() {
+    if (hc) {
+      hc.then(function (a) { if (a) a.optInCapturing(); });
+      return;
+    }
+    var importer;
+    try { importer = new Function("u", "return import(u)"); } catch (e) { return; }
+    hc = importer(hcUrl).then(function (m) {
+      m.analytics.init({
+        projectKey: hcKey,
+        install: { framework: "web", agent: "other" },
+        requestBatching: false,
+        persistence: "localStorage",
+        respectDnt: true
+      });
+      return m.analytics;
+    }).catch(function () { return null; });
+  }
+
+  /* A no after a yes: stop HeyCatch on this page and forget its visitor id. */
+  function stopHeyCatch() {
+    if (hc) hc.then(function (a) { if (a) a.optOutCapturing(); });
+    try {
+      var stores = [window.localStorage, window.sessionStorage];
+      for (var s = 0; s < stores.length; s++) {
+        for (var k = stores[s].length - 1; k >= 0; k--) {
+          var key = stores[s].key(k);
+          if (key && key.indexOf("ph_") === 0) stores[s].removeItem(key);
+        }
+      }
+    } catch (e) { /* storage blocked: nothing was kept */ }
+  }
+
   /* What the visitor said on this page, when the browser will not keep it. */
   var saidHere = null;
 
@@ -32,6 +74,7 @@
   }
 
   function load() {
+    loadHeyCatch();
     window["ga-disable-" + id] = false;
     if (loaded) {
       /* Said yes, then no, then yes again without reloading. Google's script
@@ -56,6 +99,7 @@
      what was set. Google reads this flag, so nothing more is sent without
      a reload. */
   function stop() {
+    stopHeyCatch();
     window["ga-disable-" + id] = true;
     var names = ["_ga", "_ga_" + id.replace(/^G-/, ""), "_gid"];
     /* Google sets _ga on the registrable domain, not on the host, so clearing
@@ -94,9 +138,10 @@
     box.innerHTML =
       '<div class="consent-inner">' +
       "<h2>Before we count this visit</h2>" +
-      "<p>We use Google Analytics to see which pages people read. It sets cookies in your " +
-      "browser and tells Google the page address, where you came from, your browser and " +
-      "device type, and roughly where you are. It is off until you say yes.</p>" +
+      "<p>We use Google Analytics and HeyCatch to see which pages people read and what brought " +
+      "them here. They keep a random visitor id in your browser and are told the page address, " +
+      "the buttons and links you click, where you came from, your browser and device type, " +
+      "and roughly where you are. Both are off until you say yes.</p>" +
       "<p>Saying no does not change the site. Nothing we sell needs this.</p>" +
       '<p class="consent-buttons">' +
       '<button type="button" data-said="yes">Yes, count my visit</button>' +
