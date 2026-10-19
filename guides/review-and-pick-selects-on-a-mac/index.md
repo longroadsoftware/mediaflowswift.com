@@ -52,8 +52,6 @@ Smart Selects scores every clip before you look at it, so you can review in qual
 
 > Smart Selects, once called AI Smart Selects, scores every clip on five measures and suggests a star rating. It runs on this Mac and needs no internet connection.
 
-Running this kind of image analysis entirely on-device is possible because of frameworks like Apple's [Vision](https://developer.apple.com/documentation/vision), which can assess properties such as sharpness and horizon stability locally, without a network connection.
-
 It weighs sharpness, exposure, audio, a rough stability guess and composition, then sorts the results by overall quality score. You accept ratings individually or click Accept All — nothing is set until you do.
 
 The one case worth knowing about:

@@ -24,7 +24,7 @@ That answers where. The rest of this page is what the map needs to show you that
 
 The sidebar lists every location cluster, sorted by clip count, with the place name, clip count, sample filenames and category badges for each. Click one to zoom the map there.
 
-This is for clips with GPS data — phone and drone footage typically carries it; most cameras don't. A clip with no GPS data simply has nothing to put on the map. A clip's GPS data itself comes from the camera's own location hardware, recorded the way Apple's [Core Location framework](https://developer.apple.com/documentation/corelocation) documents for any device capturing coordinates alongside media.
+This is for clips with GPS data — phone and drone footage typically carries it; most cameras don't. A clip with no GPS data simply has nothing to put on the map.
 
 ## How do I turn the map on?
 

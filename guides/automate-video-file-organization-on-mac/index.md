@@ -61,8 +61,6 @@ What it sends depends on which model you choose. A model running on your own Mac
 
 > With a model that runs on this Mac, nothing leaves the Mac and it costs nothing.
 
-A model that runs entirely on this Mac is what Apple calls on-device machine learning, built on frameworks such as [Core ML](https://developer.apple.com/documentation/coreml), designed so a model's inference never has to leave the device.
-
 A paid provider sees a little more, and the manual is upfront that it costs money:
 
 > With a paid provider (Claude, ChatGPT or Gemini), MediaFlow sends three small frames from each clip to that provider, together with your category list, the clip's camera, duration and place name, the opening words of its transcript when it has one, and your recent category corrections. The provider bills you for each clip.

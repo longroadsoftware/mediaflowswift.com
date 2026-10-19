@@ -43,7 +43,7 @@ Here's what "checked" means, in the manual's own words:
 
 > A clip is followed only if a file is at the same place under the new folder and is the same size. If the clip was checksummed when it was organized, the file at the new place is also read in full and compared, because Clear Card later trusts that checksum: same name and same size is not proof. A clip with no recorded checksum is followed on its size. A clip that is missing, a different size, or different inside keeps pointing where it did and is listed.
 
-That checksum is a SHA-256 hash, the algorithm standardized in NIST's Secure Hash Standard ([FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf)), which is why a same-named, same-sized file still isn't accepted as proof on its own.
+That checksum is the SHA-256 one MediaFlowSwift records when it organizes a clip ([FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf) is the standard that defines it).
 
 That last sentence matters: Library Moved won't just assume a same-named file in the same spot is the right one. For a clip that was organized with checksums on, it reads the whole file again and compares it before it will repoint the project. Clips it can't confirm are left exactly as they were, and listed, so you know which ones still need attention.
 
@@ -54,8 +54,6 @@ Nothing, until a clip passes its check:
 > Nothing is copied, moved or deleted on either drive, and the old project file is not touched. Keep the old drive until you are satisfied; MediaFlowSwift does not use it again for a project that was fully followed.
 
 The project itself is saved at the new location once its clips are confirmed, along with its destination and any proxies kept with it. The old project file keeps working too — open it later on the Mac that ran Library Moved and MediaFlowSwift says "This is an old copy" and offers to open the current one instead. Another Mac doesn't know that yet, and won't until Library Moved has been run on it the same way.
-
-This matches how macOS itself treats storage: Apple's own `FileManager` APIs let an app list the volumes currently mounted on a Mac, and a drive that isn't mounted simply doesn't appear in that list ([FileManager volume enumeration, Apple Developer Documentation](https://developer.apple.com/documentation/foundation/filemanager/volumeenumerationoptions)) — which is exactly why MediaFlowSwift can't repoint a project on its own until you tell it where the files went.
 
 ## If it's one clip, not a whole library
 

@@ -39,7 +39,7 @@ Cataloging a drive is only useful if what's on it is trustworthy. Archive to USB
 
 > Every file is read back from the drive after it is written and compared with its original by checksum, so a file damaged on the way — even one that kept its size — fails the archive rather than being recorded.
 
-That check uses a SHA-256 checksum, the hash algorithm NIST standardizes in its [Secure Hash Standard (FIPS 180-4)](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf), so a file that kept its name and size but lost even one bit along the way still fails the comparison. Nothing is marked as archived, and nothing goes into the catalog, until that check has passed for every file.
+Nothing is marked as archived, and nothing goes into the catalog, until that check has passed for every file.
 
 ## What doesn't the catalog cover?
 
