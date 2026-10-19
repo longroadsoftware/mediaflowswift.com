@@ -68,7 +68,8 @@ nav.menu a { color: var(--ink-2); text-decoration: none; font-size: 1rem; }
 nav.menu a[aria-current="page"], nav.menu a:hover { color: var(--ink); }
 
 /* Hero */
-.hero { padding: 4.5rem 0 3rem; }
+/* Top and bottom only, so the 16px side padding from .wrap still applies */
+.hero { padding-top: 4.5rem; padding-bottom: 3rem; }
 .hero .kicker { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; color: var(--accent); margin: 0 0 1rem; }
 .hero p.lead { font-size: 1.35rem; color: var(--ink-2); max-width: 36rem; }
 .cta { display: inline-block; margin-top: 1.25rem; padding: 0.75rem 1.25rem; border-radius: 6px; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; }
@@ -122,6 +123,9 @@ section.tinted { background: var(--paper-2); }
 .plan ul { padding-left: 1.1rem; margin: 0.75rem 0 0; color: var(--ink-2); font-size: 1.02rem; }
 .plan li { margin: 0.25rem 0; }
 .plan .price { font-family: var(--display); font-weight: 600; margin-top: 1rem; }
+/* The recommended plan: card styling only; the price and button are untouched */
+.plan.recommended { position: relative; border: 2px solid var(--accent); box-shadow: 0 12px 32px -20px rgba(0, 0, 0, 0.45); }
+.plan .badge { position: absolute; top: -0.8rem; right: 1.25rem; padding: 0.15rem 0.7rem; border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-family: var(--display); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.04em; }
 
 /* Article pages */
 article.doc { padding: 3rem 0 4rem; }
@@ -270,3 +274,27 @@ ol.steps li { margin: 0.4rem 0; }
 .consent-buttons button { font: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; padding: 0.55rem 1.1rem; min-width: 11rem; border: 1px solid var(--accent); border-radius: 6px; background: var(--accent); color: var(--accent-ink); }
 .consent-more { font-size: 0.95rem; margin-bottom: 0; }
 .consent-change { font: inherit; font-size: inherit; font-weight: 600; cursor: pointer; background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; text-underline-offset: 0.15em; }
+
+/* Phones (checked at 375px wide): taps at least 44px tall, the two hero
+   buttons stacked, the seven steps as one list, the comparison table narrower */
+@media (max-width: 40rem) {
+  .hero { padding-top: 2rem; }
+  .top .wrap { gap: 0.25rem; padding-bottom: 0.25rem; }
+  .brand { min-height: 44px; }
+  nav.menu { gap: 0 0.25rem; margin-left: -0.5rem; }
+  nav.menu a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.5rem; }
+  .hero .cta { display: block; text-align: center; }
+  .cta.quiet { margin-left: 0; margin-top: 0.75rem; }
+  .pipeline { grid-template-columns: 1fr; }
+  .pipeline li { display: grid; grid-template-columns: 2rem minmax(0, 1fr); column-gap: 0.5rem; padding: 0.75rem 1rem; border-right: 0; }
+  .pipeline li:last-child { border-bottom: 0; }
+  .pipeline .n { grid-row: 1 / span 2; padding-top: 0.2rem; }
+  .pipeline .name { margin: 0; }
+  .billing-choice { min-height: 44px; }
+  .plan { padding: 1.4rem 1.1rem 1.2rem; }
+  table.compare { font-size: 0.95rem; }
+  table.compare th, table.compare td { padding: 0.5rem 0.4rem; }
+  table.compare th:nth-child(n+2), table.compare td:nth-child(n+2) { width: 4.5rem; }
+  footer nav { gap: 0 1rem; }
+  footer a { display: inline-flex; align-items: center; min-height: 44px; }
+}
