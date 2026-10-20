@@ -2,6 +2,7 @@
 layout: guide
 title: "How to Keep Two Checked Copies of a Memory Card on a Mac"
 description: "Import and organize a card to your working drive, then archive the project to a second drive. Two checksum-verified copies, made one after the other."
+published: "2026-10-13"
 updated: 2026-10-19
 permalink: /guides/two-checked-copies-of-a-card-on-a-mac/
 ---

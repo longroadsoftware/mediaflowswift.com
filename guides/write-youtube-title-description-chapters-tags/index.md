@@ -2,6 +2,7 @@
 layout: guide
 title: "How to Write Your YouTube Title, Chapters and Tags"
 description: "MediaFlowSwift transcribes your finished video and drafts a title, description, chapters and tags from it. You edit the draft before anything goes live."
+published: "2026-10-13"
 updated: 2026-10-19
 permalink: /guides/write-youtube-title-description-chapters-tags/
 ---
