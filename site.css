@@ -241,7 +241,7 @@ footer .founder { flex-basis: 100%; order: 3; font-size: 0.9rem; display: flex; 
 @media (max-width: 30rem) { .founder-bio { flex-direction: column; } }
 
 /* Homepage: the price-anchor line under the billing toggle */
-.plans .anchor { margin-top: 1rem; }
+#plans .anchor { margin-top: 1rem; }
 
 /* /vs/ comparison pages */
 .vs-answer { font-size: 1.2rem; color: var(--ink-2); }
