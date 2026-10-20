@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+<title id="t">Writing a YouTube title, description, chapters and tags with MediaFlowSwift</title>
+<desc id="d">Five steps from left to right: choose the exported video, which is only read; transcribe it; the SEO agent drafts titles, a description, chapters and tags; you edit while the checklist flags what YouTube won't accept; you upload in YouTube Studio, then apply the words to that video.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#555"/></marker></defs>
+<rect x="0.5" y="0.5" width="719" height="259" rx="10" fill="#ffffff" stroke="#dddddd"/>
+<rect x="8" y="40" width="125" height="150" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="70.5" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">1  Choose video</text>
+<text x="70.5" y="110" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">the export from</text>
+<text x="70.5" y="130" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">your editor,</text>
+<text x="70.5" y="150" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">only read</text>
+<line x1="136" y1="115.0" x2="150" y2="115.0" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="153" y="40" width="125" height="150" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="215.5" y="100" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">2  Transcribe</text>
+<text x="215.5" y="120" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">what is said</text>
+<text x="215.5" y="140" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">in the video</text>
+<line x1="281" y1="115.0" x2="295" y2="115.0" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="298" y="40" width="125" height="150" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="360.5" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">3  SEO agent</text>
+<text x="360.5" y="110" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">drafts titles,</text>
+<text x="360.5" y="130" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">description,</text>
+<text x="360.5" y="150" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">chapters, tags</text>
+<line x1="425" y1="115.0" x2="439" y2="115.0" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="442" y="40" width="125" height="150" rx="8" fill="#f4f4f4" stroke="#2a6df4" stroke-width="2.5"/>
+<text x="504.5" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#2a6df4">4  You edit</text>
+<text x="504.5" y="110" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">checklist flags</text>
+<text x="504.5" y="130" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">what YouTube</text>
+<text x="504.5" y="150" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">won’t accept</text>
+<line x1="570" y1="115.0" x2="584" y2="115.0" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="587" y="40" width="125" height="150" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="649.5" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">5  Upload, apply</text>
+<text x="649.5" y="110" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">you upload in</text>
+<text x="649.5" y="130" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">YouTube Studio,</text>
+<text x="649.5" y="150" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">then Apply</text>
+<rect x="8" y="210" width="704" height="36" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="360.0" y="233" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">Apply needs Sending to YouTube turned on in Settings › Privacy</text>
+</svg>

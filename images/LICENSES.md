@@ -25,3 +25,5 @@ The process diagrams in `images/guides/` are not photographs or app screenshots.
 | guides/two-checked-copies-of-a-card-on-a-mac.svg | Card → Import → working-drive copy → Archive to USB → archive-drive copy | /guides/two-checked-copies-of-a-card-on-a-mac/ |
 | guides/label-and-catalog-archive-drives-for-video.svg | Drive Set Up, numbering, checked archive, catalog and shelf sticker | /guides/label-and-catalog-archive-drives-for-video/ |
 | guides/automate-video-file-organization-on-mac.svg | One-click Organize template steps and the Destination / Category / Camera / Filename layout | /guides/automate-video-file-organization-on-mac/ |
+
+guides/review-and-pick-selects-on-a-mac.svg, guides/search-video-by-what-was-said.svg, guides/dailies-report-and-hand-off-file-for-editor.svg and guides/write-youtube-title-description-chapters-tags.svg are process diagrams made for this site by Long Road Software (2026-10-20): hand-written SVG drawn with the system font, showing only the steps their guides describe. No photographs or app screenshots.

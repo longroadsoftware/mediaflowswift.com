@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+<title id="t">Reviewing footage and picking selects in MediaFlowSwift</title>
+<desc id="d">Four steps from left to right: narrow the queue with a filter; optionally run Smart Selects, which scores each clip on five measures and suggests ratings you accept; review in Rapid Review by keyboard; then sort and filter by rating and select status.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#555"/></marker></defs>
+<rect x="0.5" y="0.5" width="719" height="259" rx="10" fill="#ffffff" stroke="#dddddd"/>
+<rect x="8" y="40" width="156" height="150" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="86.0" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">1  Narrow the queue</text>
+<text x="86.0" y="110" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">Filter by category,</text>
+<text x="86.0" y="130" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">scene or camera,</text>
+<text x="86.0" y="150" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">or show unrated</text>
+<line x1="168" y1="115.0" x2="188" y2="115.0" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="190" y="40" width="156" height="150" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="268.0" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">2  Smart Selects</text>
+<text x="268.0" y="110" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">(optional)</text>
+<text x="268.0" y="130" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">scores five measures,</text>
+<text x="268.0" y="150" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">you accept ratings</text>
+<line x1="350" y1="115.0" x2="370" y2="115.0" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="373" y="40" width="156" height="150" rx="8" fill="#f4f4f4" stroke="#2a6df4" stroke-width="2.5"/>
+<text x="451.0" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#2a6df4">3  Rapid Review</text>
+<text x="451.0" y="110" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">J / K / L shuttle</text>
+<text x="451.0" y="130" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">1–5 rate, F favorite</text>
+<text x="451.0" y="150" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">X reject, C circle</text>
+<line x1="532" y1="115.0" x2="552" y2="115.0" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="556" y="40" width="156" height="150" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="634.0" y="90" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">4  Sort and filter</text>
+<text x="634.0" y="110" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">by star rating and</text>
+<text x="634.0" y="130" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">select status: Hero,</text>
+<text x="634.0" y="150" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">Maybe, Reject</text>
+<rect x="8" y="210" width="704" height="36" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="360.0" y="233" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">Rating and select-status changes, Rapid Review keys included, undo with Edit → Undo (Cmd+Z)</text>
+</svg>
