@@ -13,8 +13,9 @@
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+{% assign updated_date = page.updated | default: "2026-10-13" %}
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"url":"{{ site.url }}{{ page.url }}","mainEntityOfPage":{"@type":"WebPage","@id":"{{ site.url }}{{ page.url }}"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"}}
+{"@context":"https://schema.org","@type":"Article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }}{% if page.published %},"datePublished":{{ page.published | jsonify }}{% endif %},"dateModified":{{ updated_date | jsonify }},"url":"{{ site.url }}{{ page.url }}","mainEntityOfPage":{"@type":"WebPage","@id":"{{ site.url }}{{ page.url }}"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware"]}}
 </script>
 <script type="application/ld+json">
 {% if page.url == "/guides/" %}{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"MediaFlowSwift","item":"https://mediaflowswift.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://mediaflowswift.com/guides/"}]}{% else %}{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"MediaFlowSwift","item":"https://mediaflowswift.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://mediaflowswift.com/guides/"},{"@type":"ListItem","position":3,"name":{{ page.title | jsonify }},"item":"{{ site.url }}{{ page.url }}"}]}{% endif %}
@@ -50,6 +51,9 @@
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">MediaFlowSwift</a> &rsaquo; <a href="/guides/">Guides</a></nav>
 {% endunless %}
 <article class="doc manual guide">
+  {% unless page.url == "/guides/" %}
+  <p class="updated">Updated {{ updated_date | date: "%-d %B %Y" }} &middot; Written by <strong>Long Road Software LLC</strong>. <a href="/about/#how-we-write-these-guides">How we write these guides</a>.</p>
+  {% endunless %}
   {{ content }}
 </article>
 </main>
@@ -57,7 +61,8 @@
 <footer>
   <div class="wrap">
     <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
-    <nav aria-label="Legal"><a href="/about/">About</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/guides/#comparing-mediaflowswift-to-other-ways-of-doing-this">Compare</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a></span>
   </div>
 </footer>
 </body>

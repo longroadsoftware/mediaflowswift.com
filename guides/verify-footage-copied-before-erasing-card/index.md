@@ -2,6 +2,8 @@
 layout: guide
 title: "Is It Safe to Erase Your Card After Importing on a Mac?"
 description: "Checksums, not playback, prove a copy is safe. See how MediaFlowSwift checks a copy at import, at organize, and once more before Clear Card erases a card."
+published: "2026-10-13"
+updated: "2026-10-19"
 permalink: /guides/verify-footage-copied-before-erasing-card/
 ---
 # Is It Safe to Erase Your Card After Importing on a Mac?
@@ -16,11 +18,11 @@ A copy can land with the right file name and the right file size and still have 
 
 Dragging files in Finder tells you the copy finished. It doesn't tell you the copy is intact — Finder doesn't compare what landed on the drive against what's on the card.
 
-## What actually proves a copy is good
+## What actually proves a copy is good?
 
-A real check compares a fingerprint of the copy with a fingerprint of the original — a checksum, calculated from every byte of the file. If the two match, the files are identical. If they don't, something went wrong in the copy, and the original is still sitting on the card to try again.
+A real check compares a fingerprint of the copy with a fingerprint of the original — a checksum, calculated from every byte of the file. MediaFlowSwift uses [SHA-256](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf), the hash function set out in the US government's own Secure Hash Standard. If the two checksums match, the files are identical. If they don't, something went wrong in the copy, and the original is still sitting on the card to try again.
 
-## How MediaFlowSwift checks a copy before you can erase a card
+## How does MediaFlowSwift check a copy before you can erase a card?
 
 Clearing a card in MediaFlowSwift is a separate, deliberate step from importing — and it only offers to delete clips that already have an organized copy it can vouch for. Three checked steps get a clip there:
 
@@ -34,9 +36,9 @@ The last of the three steps is the one worth noticing: Clear Card doesn't trust 
 
 The "Clear Card…" button appears beside Eject in the Import sheet, and the same action is available from the menu as File → Clear Card….
 
-One exception is worth knowing on day one. On a card the camera laid out itself — a Sony card with a PRIVATE/M4ROOT folder, say — Clear Card deletes nothing at all. It checks every clip on the card and then tells you when the card is safe to format in the camera, which is where you would format that card anyway.
+One exception is worth knowing on day one. On a card the camera laid out itself — a Sony card with a PRIVATE/M4ROOT folder, say, [a folder name Sony's own camera help guides describe](https://helpguide.sony.net/ilc/2630/v1/en/contents/proxy_shooting.html) — Clear Card deletes nothing at all. It checks every clip on the card and then tells you when the card is safe to format in the camera, which is where you would format that card anyway.
 
-## What Clear Card never checks
+## What does Clear Card never check?
 
 On an ordinary card, Clear Card only scans the DCIM folder — nothing else on the card is looked at, checked, or counted. On a card the camera laid out itself (a Sony PRIVATE/M4ROOT card, an AVCHD card, and the like), Clear Card checks the whole card instead, and deletes nothing from it either way.
 
@@ -46,7 +48,7 @@ That matters most on a card the camera laid out itself: MTS or MXF clips on it h
 
 So before you format any card: check it in Finder first, and copy out anything in an unsupported format that you want to keep. On an ordinary card, also check outside DCIM — Clear Card never looked there.
 
-## Why the checks aren't all the same
+## Why aren't the checks all the same?
 
 Import's checksum check is always full — there's no setting for it. Clear Card's is always full too. The one step that can be lighter is Organize:
 
@@ -59,7 +61,7 @@ The manual's own advice: leave read-back verification on if you plan to clear ca
 
 This also means a verified copy and an organized copy aren't quite the same promise at every step. Only cards, drives and folders go through this checksum chain — importing from a phone or camera over USB works differently, and MediaFlowSwift can't make the same claim there.
 
-## If a copy fails
+## What if a copy fails?
 
 Don't erase the card. Try the import again — a failed check usually means a bad read, a loose cable, or a card reader hiccup, and a second attempt from the same original often succeeds. If it keeps failing, the card or the connection is worth checking before you trust anything else from that shoot.
 

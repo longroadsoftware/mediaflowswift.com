@@ -48,6 +48,17 @@ Short, practical answers to the questions that come up when you move footage off
 - **[How to Write Your YouTube Title, Chapters and Tags](/guides/write-youtube-title-description-chapters-tags/)**
   Transcribe your finished video and draft a title, description, chapters and tags from it, then edit and publish them yourself.
 
+## Comparing MediaFlowSwift to other ways of doing this
+
+- **[MediaFlowSwift vs OffShoot](/vs/offshoot/)**
+  Both verify copies with checksums. What each is actually built for, and what each costs.
+
+- **[MediaFlowSwift vs habitat flow](/vs/habitat-flow/)**
+  Both check a card copy before you format. Where the free tier helps, and where it stops.
+
+- **[MediaFlowSwift vs Just Using Finder and a Spreadsheet](/vs/finder-and-spreadsheet/)**
+  What you give up going manual, and when the free way is good enough.
+
 ---
 
 Looking for how a particular window works? That's the [manual](/manual/). Stuck on something not covered here? [Support](/support.html).

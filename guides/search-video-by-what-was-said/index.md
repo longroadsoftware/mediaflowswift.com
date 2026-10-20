@@ -2,6 +2,8 @@
 layout: guide
 title: "How to Find a Clip by What Was Said in It on a Mac"
 description: "Transcribe your clips on-device, then search every transcript at once for a word or phrase and select the clip it's in."
+published: "2026-10-13"
+updated: 2026-10-19
 permalink: /guides/search-video-by-what-was-said/
 ---
 # How to Find a Clip by What Was Said in It on a Mac
@@ -10,33 +12,35 @@ Transcribe your clips, then open any clip's Transcript tab, type a word or phras
 
 That's the feature. The rest of this page covers how transcription works, what it costs you in privacy, and the one thing it doesn't do — search by speech from the main search field.
 
-## Transcribing a clip
+## How do I transcribe a clip?
 
 > Transcribe turns the speech in your video clips into text using Apple’s speech recognition. The text is saved with each clip in the project file, and import analysis uses it as one of its signals when it proposes a category. Audio-only files are not transcribed.
 
 To do a whole project at once, choose Workflow → Analyze… → Transcribe and let it run; the progress panel reports how many clips it got through. To do one clip, select it, open the Transcript tab of the metadata panel, and click Transcribe This Clip.
 
-## Where the audio goes
+## Where does the audio go?
 
 Transcription happens on this Mac by default, and stays there unless you say otherwise:
 
 > Speech is recognized on this Mac. Apple’s online recognition is used only if you turn it on in Settings › Privacy, and only for a language this Mac has no on-device model for.
 
+This on-device option uses Apple's own [Speech framework](https://developer.apple.com/documentation/speech/sfspeechrecognizer), which can recognize speech locally on a Mac that has the right language model installed.
+
 The only case that leaves the Mac is a language your Mac has no on-device model for, and even then only if you've opted in:
 
 > MediaFlow recognizes speech on this Mac when the Mac has an on-device model for your system language. When it does not, nothing is transcribed unless you have turned on online speech recognition in Settings › Privacy; with that on, the audio is sent to Apple. The Transcript tab says which applies before you start. No API key is needed either way.
 
-The Transcript tab tells you, before you click Transcribe, which of the two applies to that clip — so you always know whether the audio is staying on this Mac or going to Apple before anything is sent.
+The Transcript tab tells you, before you click Transcribe, which of the two applies to that clip. That way you always know whether the audio is staying on this Mac or going to Apple before anything is sent.
 
-## Searching across every clip
+## How do I search across every clip?
 
 The Transcript tab's own Search box is what gets you a speech search across the whole project:
 
 > - Search — type in the field to show only the lines containing every word you typed. Tick All clips to search every clip’s transcript instead; click a result to select that clip
 
-That's the tool for "what did she say about the budget" across forty interview clips — type `budget`, tick All clips, and read down the list of lines it turns up without opening a single clip by hand first.
+That's the tool for "what did she say about the budget" across forty interview clips. Type `budget`, tick All clips, and read down the list of lines it turns up — without opening a single clip by hand first.
 
-## Fixing a mishear
+## How do I fix a mishear?
 
 Speech recognition mishears names, places and technical terms more often than ordinary words, and a wrong word in a transcript stays wrong until you fix it:
 
@@ -44,19 +48,19 @@ Speech recognition mishears names, places and technical terms more often than or
 
 Transcribe Again throws out your corrections along with the rest of the transcript, so fix names and terms once you're happy with the pass, not before.
 
-## What the project-wide search field doesn't do
+## What doesn't the project-wide search field do?
 
 MediaFlowSwift's main search field — the one in the toolbar, Cmd+F — is a different search from the Transcript tab's, and it does not look inside a transcript:
 
 > A clip is found by its file name, its notes, its tags, its category, the camera it came from and its scene.
 
-So typing a line of dialogue into the toolbar search won't find it. If you want the words someone said, not the filename or the notes you wrote about the clip, the Transcript tab's own Search, with All clips ticked, is the one that reads what's actually in the transcript.
+So typing a line of dialogue into the toolbar search won't find it. If you want the words someone said — not the filename or the notes you wrote about the clip — use the Transcript tab's own Search instead. With All clips ticked, that's the one that reads what's actually in the transcript.
 
-## Getting a transcript out of MediaFlowSwift
-
-Once a clip is transcribed, you can take the text with you:
+## How do I get a transcript out of MediaFlowSwift?
 
 > - Export — save the transcript as SubRip (.srt) or WebVTT (.vtt) subtitles, or as plain text with timecodes. The file is named after the clip
+
+The .vtt option follows the W3C's own [WebVTT specification](https://www.w3.org/TR/webvtt1/), the open format browsers and most editing tools use for timed captions and subtitles.
 
 ## Read more
 

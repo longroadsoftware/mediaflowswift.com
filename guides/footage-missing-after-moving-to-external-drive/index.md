@@ -2,6 +2,8 @@
 layout: guide
 title: "Footage Missing After Moving to an External Drive?"
 description: "MediaFlowSwift showing clips missing after moving your library to a new drive? Run Library Moved to repoint every project. Nothing is copied or deleted."
+published: "2026-10-13"
+updated: 2026-10-19
 permalink: /guides/footage-missing-after-moving-to-external-drive/
 ---
 # Footage Missing After Moving to an External Drive?
@@ -10,7 +12,7 @@ Your clips aren't lost — MediaFlowSwift just hasn't been told they moved. Choo
 
 You copied your whole projects folder to a new drive or network share yourself, by hand in the Finder, and now every project still points at the old location. That's exactly the case Library Moved is built for — as opposed to moving a project through MediaFlowSwift itself, which is a different command (Move Project).
 
-## Why clips read Missing, not Not at destination
+## Why do clips read Missing, not Not at destination?
 
 Before you've run Library Moved, a clip whose file has moved reads a plain red X — Missing:
 
@@ -24,9 +26,11 @@ Not at destination is a different symptom from Missing: it means the file is som
 
 > Not at destination — the file is somewhere other than the destination and not on a card, such as the folder you imported from or another drive. It is not lost; hover over it to see which drive. If a whole project reads this way after a library was moved, you may have opened the old copy of the project: see After Moving Your Library to a New Drive.
 
-So check what you're actually seeing. Missing, or Volume not connected if the old drive is unplugged, means the files you need are at the old location but MediaFlowSwift hasn't been pointed there yet — see the steps below (if you copied the library and the old drive is still connected, the originals are still at the old paths, so clips may read At destination or Not at destination rather than Missing until the old copy is gone). Not at destination across a whole project *may* mean you've opened the old copy of the project. On the Mac that ran Library Moved, opening that old file says "This is an old copy" and offers to open the current one — accept that offer. On another Mac, or for a library moved before this version, choose Library Moved again with the same two folders and click Find Projects: this only notes which projects are already followed and changes nothing, so it's safe to run again. See [The Old Copy of a Project](/manual/project-management/#the-old-copy-of-a-project) for the full picture.
+So check what you're actually seeing first. Missing, or Volume not connected if the old drive is unplugged, means the files you need are at the old location but MediaFlowSwift hasn't been pointed there yet — see the steps below. If you copied the library and the old drive is still connected, the originals are still at the old paths, so clips may read At destination or Not at destination rather than Missing until the old copy is gone.
 
-## Fix it with Library Moved
+Not at destination across a whole project *may* mean you've opened the old copy of the project instead. On the Mac that ran Library Moved, opening that old file says "This is an old copy" and offers to open the current one — accept that offer. On another Mac, or for a library moved before this version, choose Library Moved again with the same two folders and click Find Projects: this only notes which projects are already followed and changes nothing, so it's safe to run again. See [The Old Copy of a Project](/manual/project-management/#the-old-copy-of-a-project) for the full picture.
+
+## How do I fix it with Library Moved?
 
 1. Connect both drives — the old one and the new one — at the same time
 2. Choose Workflow → Repair → Library Moved…
@@ -40,9 +44,11 @@ Here's what "checked" means, in the manual's own words:
 
 > A clip is followed only if a file is at the same place under the new folder and is the same size. If the clip was checksummed when it was organized, the file at the new place is also read in full and compared, because Clear Card later trusts that checksum: same name and same size is not proof. A clip with no recorded checksum is followed on its size. A clip that is missing, a different size, or different inside keeps pointing where it did and is listed.
 
+That checksum is the SHA-256 one MediaFlowSwift records when it organizes a clip ([FIPS 180-4](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf) is the standard that defines it).
+
 That last sentence matters: Library Moved won't just assume a same-named file in the same spot is the right one. For a clip that was organized with checksums on, it reads the whole file again and compares it before it will repoint the project. Clips it can't confirm are left exactly as they were, and listed, so you know which ones still need attention.
 
-## What actually changes on disk
+## What actually changes on disk?
 
 Nothing, until a clip passes its check:
 

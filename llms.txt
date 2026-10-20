@@ -31,6 +31,12 @@ Plain answers to the questions people ask when moving footage off a card on a Ma
 - How to automate video file organization on a Mac: https://mediaflowswift.com/guides/automate-video-file-organization-on-mac/ — category and camera folders, workflow templates
 - How to label and catalog archive drives for video: https://mediaflowswift.com/guides/label-and-catalog-archive-drives-for-video/ — numbered archive volumes and the record of what is on each
 
+## Comparisons
+Honest, dated comparisons against other ways of getting footage off a card.
+- MediaFlowSwift vs OffShoot: https://mediaflowswift.com/vs/offshoot/ — both verify copies with checksums; OffShoot's strength is large-scale, multi-destination DIT transfers, MediaFlowSwift's is the review-to-archive pipeline after the copy
+- MediaFlowSwift vs habitat flow: https://mediaflowswift.com/vs/habitat-flow/ — both check a card copy before you format; habitat flow has a free tier and a cheaper entry price, MediaFlowSwift covers review, archive, reports and YouTube publishing too
+- MediaFlowSwift vs Finder and a spreadsheet: https://mediaflowswift.com/vs/finder-and-spreadsheet/ — what a manual workflow gives up, and when it is good enough
+
 ## Key pages
 - Overview and plans: https://mediaflowswift.com/
 - Download: https://mediaflowswift.com/download.html
