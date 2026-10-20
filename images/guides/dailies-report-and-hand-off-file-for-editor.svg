@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+<title id="t">Two outputs from one rated project in MediaFlowSwift: a dailies report and a hand-off file</title>
+<desc id="d">A box on the left, rated and tagged footage, branches into two commands. Generate Dailies writes an HTML, CSV or plain-text report for a director or producer to read. NLE Template Export or Report writes a Final Cut Pro, DaVinci Resolve or CSV file for an editor's software to open.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#555"/></marker></defs>
+<rect x="0.5" y="0.5" width="719" height="259" rx="10" fill="#ffffff" stroke="#dddddd"/>
+<rect x="12" y="85" width="180" height="90" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="102.0" y="115" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">Rate and tag first</text>
+<text x="102.0" y="135" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">scenes, cameras,</text>
+<text x="102.0" y="155" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">ratings</text>
+<rect x="250" y="22" width="200" height="96" rx="8" fill="#f4f4f4" stroke="#2a6df4" stroke-width="2.5"/>
+<text x="350.0" y="55" text-anchor="middle" font-size="15" font-weight="700" fill="#2a6df4">Generate Dailies</text>
+<text x="350.0" y="75" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">by shooting day, with</text>
+<text x="350.0" y="95" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">circle takes and notes</text>
+<rect x="250" y="142" width="200" height="96" rx="8" fill="#f4f4f4" stroke="#2a6df4" stroke-width="2.5"/>
+<text x="350.0" y="185" text-anchor="middle" font-size="15" font-weight="700" fill="#2a6df4">NLE Template Export</text>
+<text x="350.0" y="205" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">or Report</text>
+<rect x="500" y="22" width="208" height="96" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="604.0" y="55" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">Dailies report</text>
+<text x="604.0" y="75" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">HTML, CSV or plain text</text>
+<text x="604.0" y="95" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">for a director to read</text>
+<rect x="500" y="142" width="208" height="96" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="604.0" y="165" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">Hand-off file</text>
+<text x="604.0" y="185" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">Final Cut Pro, DaVinci</text>
+<text x="604.0" y="205" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">Resolve or CSV, for</text>
+<text x="604.0" y="225" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">the editor’s software</text>
+<line x1="195" y1="115" x2="246" y2="75" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="195" y1="145" x2="246" y2="185" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="453" y1="70" x2="496" y2="70" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<line x1="453" y1="190" x2="496" y2="190" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+</svg>
