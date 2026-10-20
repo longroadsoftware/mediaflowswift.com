@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">How an archive drive gets its number and its catalog entry in MediaFlowSwift</title>
+<desc id="d">Five steps left to right: an unused drive shows as not initialized; Set Up gives it the next number, such as USB #0007, written to a hidden file on the drive; Archive to USB copies the project folder, reads every file back and compares checksums; File, Manage Archive Volumes lists the drive and the projects on it; a sticker with the same number goes on the drive's case. Nothing is recorded until every file passes, and the record lives in MediaFlowSwift's database.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#555"/></marker></defs>
+<rect x="1" y="1" width="718" height="258" rx="12" fill="#ffffff" stroke="#d6d6d6"/>
+<text x="360.0" y="34" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">How an archive drive gets its number and its record</text>
+<rect x="14.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="76.0" y="101.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Unused drive</text>
+<text x="76.0" y="119.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">shows “(not</text>
+<text x="76.0" y="137.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">initialized)”</text>
+<line x1="141.0" y1="114.0" x2="153.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="156.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="218.0" y="92.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Set Up</text>
+<text x="218.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">next number,</text>
+<text x="218.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">e.g. USB #0007,</text>
+<text x="218.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">written to drive</text>
+<line x1="283.0" y1="114.0" x2="295.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="298.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="360.0" y="92.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Archive to USB</text>
+<text x="360.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">project folder</text>
+<text x="360.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">copied, read</text>
+<text x="360.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">back, compared</text>
+<line x1="425.0" y1="114.0" x2="437.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="440.0" y="58" width="124.0" height="112" rx="8" fill="#eaf1fe" stroke="#2a6df4" stroke-width="2"/>
+<text x="502.0" y="92.0" font-size="15" font-weight="bold" fill="#2a6df4" text-anchor="middle">Catalog</text>
+<text x="502.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">File → Manage</text>
+<text x="502.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">Archive Volumes</text>
+<text x="502.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">lists it</text>
+<line x1="567.0" y1="114.0" x2="579.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="582.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="644.0" y="101.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Sticker</text>
+<text x="644.0" y="119.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">“USB #0007”</text>
+<text x="644.0" y="137.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">on the case</text>
+<text x="360.0" y="204" font-size="14" font-weight="normal" fill="#333" text-anchor="middle">Nothing is recorded until every file passes its check.</text>
+<text x="360.0" y="226" font-size="14" font-weight="normal" fill="#333" text-anchor="middle">The record lives in MediaFlowSwift’s database.</text>
+</svg>

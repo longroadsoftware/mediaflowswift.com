@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">How MediaFlowSwift checks a clip before Clear Card deletes it</title>
+<desc id="d">Five steps left to right: the clip on the card; Import copies it to the drive and reads the whole copy back; the SHA-256 checksum of the copy must match the one taken from the card; Organize files it into its Category and Camera folder and checks it again; Clear Card reads the organized copy back in full once more and only then deletes the card file. A failed check never deletes the card file, and files import never took are not covered.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#555"/></marker></defs>
+<rect x="1" y="1" width="718" height="258" rx="12" fill="#ffffff" stroke="#d6d6d6"/>
+<text x="360.0" y="34" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">From card to Clear Card in MediaFlowSwift</text>
+<rect x="14.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="76.0" y="101.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Card</text>
+<text x="76.0" y="119.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">clip on the</text>
+<text x="76.0" y="137.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">camera card</text>
+<line x1="141.0" y1="114.0" x2="153.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="156.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="218.0" y="92.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Import</text>
+<text x="218.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">copy to drive,</text>
+<text x="218.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">read the whole</text>
+<text x="218.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">copy back</text>
+<line x1="283.0" y1="114.0" x2="295.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="298.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="360.0" y="92.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">SHA-256</text>
+<text x="360.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">card checksum</text>
+<text x="360.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">must match the</text>
+<text x="360.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">copy’s checksum</text>
+<line x1="425.0" y1="114.0" x2="437.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="440.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="502.0" y="92.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Organize</text>
+<text x="502.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">Category and</text>
+<text x="502.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">Camera folder,</text>
+<text x="502.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">checked again</text>
+<line x1="567.0" y1="114.0" x2="579.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="582.0" y="58" width="124.0" height="112" rx="8" fill="#eaf1fe" stroke="#2a6df4" stroke-width="2"/>
+<text x="644.0" y="92.0" font-size="15" font-weight="bold" fill="#2a6df4" text-anchor="middle">Clear Card</text>
+<text x="644.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">full re-check,</text>
+<text x="644.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">then delete</text>
+<text x="644.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">the card file</text>
+<text x="360.0" y="204" font-size="14" font-weight="normal" fill="#333" text-anchor="middle">If any check fails, the card file is not deleted.</text>
+<text x="360.0" y="226" font-size="14" font-weight="normal" fill="#333" text-anchor="middle">Formats import never takes are not covered: copy those by hand.</text>
+</svg>
