@@ -3,14 +3,14 @@ layout: guide
 title: "How to Find Where Each Clip in Your Project Was Filmed"
 description: "The Shoot Map pins every clip with GPS data by location, clustered and clickable. Turning it on sends the area you're viewing to Apple."
 published: "2026-10-13"
-updated: 2026-10-19
+updated: 2026-10-20
 permalink: /guides/find-where-footage-was-filmed-shoot-map/
 ---
 # How to Find Where Each Clip in Your Project Was Filmed
 
-Open the Shoot Map (Workflow → Plan & Deliver → Shoot Map, or Cmd+Opt+M). Clips with GPS data appear as pins, grouped into one numbered pin per nearby location; click a pin to see its clips and select them in the media list.
+Open the Shoot Map (Workflow → Plan & Deliver → Shoot Map, or Cmd+Opt+M). Clips with GPS data appear as pins, grouped into one numbered pin per nearby location. Click a pin to see its clips and select them in the media list. Only clips that carry GPS data, usually phone and drone footage, can be placed.
 
-That answers where. The rest of this page is what the map needs to show you that, and the one setting that gates it.
+The rest of this page covers what the map needs, the one setting that gates it, and its limits.
 
 ## What does the map show?
 
@@ -25,7 +25,19 @@ That answers where. The rest of this page is what the map needs to show you that
 
 The sidebar lists every location cluster, sorted by clip count, with the place name, clip count, sample filenames and category badges for each. Click one to zoom the map there.
 
-This is for clips with GPS data — phone and drone footage typically carries it; most cameras don't. A clip with no GPS data simply has nothing to put on the map.
+## Which of my clips have GPS data?
+
+You don't have to guess. Three places in the app tell you:
+
+- **The Places section** in the sidebar lists the places your clips were shot, grouped from their GPS data. It appears only when at least one clip has GPS data.
+- **The metadata panel** shows a GPS section in a clip's Full Metadata when the file carries one.
+- **Workflow → Analyze…** counts it for you on rows that need it, for example "needs GPS — 38 of 212 clips have it".
+
+## What does that look like on a real project?
+
+Say a travel day gives you 212 clips. 174 came from a mirrorless camera with no GPS, and 38 from a phone and a drone. The Shoot Map shows those 38 clips and nothing else.
+
+Say 14 of them were shot within 50 m of one trailhead. They become one pin with a 14 on it. Filter to a minimum rating of 4 stars to see only your best shots there. Select All in Browser then selects those clips in the media list, ready to tag in one go.
 
 ## How do I turn the map on?
 
@@ -33,9 +45,9 @@ The map itself is opt-in, and for a reason worth knowing before you click it:
 
 > The map itself is off until you turn on Maps in Settings › Privacy, or with the Turn On Maps button: showing a map sends the area you are looking at to Apple. Until then the locations are counted without a map.
 
-Showing a map at all means asking Apple's own mapping service for tiles — the same [MapKit](https://developer.apple.com/documentation/mapkit) framework any Mac or iOS app uses to draw a map — which is why that step, and not simply having GPS data, is the one that sends something to Apple.
+Showing a map at all means asking Apple's mapping service for tiles. That is the same [MapKit](https://developer.apple.com/documentation/mapkit) framework any Mac or iOS app uses to draw a map. So that step, not simply having GPS data, is the one that sends something to Apple.
 
-So with Maps off, MediaFlowSwift still knows which clips have GPS data and can count and list them. It just can't draw a map of them, because drawing one means asking Apple for map tiles of the area you're looking at.
+With Maps off, the Shoot Map still counts and lists the locations. It just doesn't draw the map.
 
 ## How do I get readable place names first?
 
@@ -49,7 +61,18 @@ If you've run GPS Scene Detection to group clips shot near each other into propo
 
 > Use the Shoot Map alongside GPS Scene Detection to visually verify scene groupings before applying them.
 
-GPS Scene Detection and the Shoot Map are separate features that both read a clip's GPS data — one proposes scenes from it, the other just shows you the pins — so running one doesn't require the other, but they're a natural pair on a multi-location shoot.
+GPS Scene Detection and the Shoot Map are separate features that both read a clip's GPS data. One proposes scenes from it; the other shows you the pins. Running one doesn't require the other, but they're a natural pair on a multi-location shoot.
+
+## What are the limits?
+
+- **Clips without GPS data never appear on the map.** Many dedicated cameras don't record it, so a camera-only project may have nothing to show.
+- **Map pins group clips within 50 m.** GPS Scene Detection offers radii from 25 m to 250 m.
+- **GPS is where the phone or drone was,** not what it was pointed at. A drone shot of a far ridge is pinned where the drone flew.
+- **GPS data stays in the project file.** A shared database does not keep it, so open the project file, not just the database's copy, to see the pins.
+
+## How do I hand locations to my editor?
+
+NLE Template Export for Final Cut Pro puts the place name and GPS coordinates on every clip. Its CSV (Universal) target writes them as columns, one row per clip. See [NLE Template Export](/manual/reports/#nle-template-export).
 
 ## Read more
 
