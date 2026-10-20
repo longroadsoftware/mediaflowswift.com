@@ -2,6 +2,7 @@
 layout: guide
 title: "How to Create a Dailies Report and a Hand-Off File"
 description: "Generate Dailies builds a by-day report for a director to read. A separate export hands your organization to an editor's software."
+published: "2026-10-13"
 updated: 2026-10-19
 permalink: /guides/dailies-report-and-hand-off-file-for-editor/
 ---
