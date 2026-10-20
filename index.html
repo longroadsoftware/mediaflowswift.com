@@ -14,10 +14,10 @@
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MediaFlowSwift","url":"https://mediaflowswift.com/","downloadUrl":"https://mediaflowswift.com/download.html","applicationCategory":"MultimediaApplication","operatingSystem":"macOS 14 or later (Apple silicon)","description":"Footage manager for Mac video creators: import from cards and phones, review and sort, organize into folders for editing, free up space only after copies are proved, archive, and publish to YouTube.","publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"offers":[{"@type":"Offer","name":"Studio (monthly)","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Studio Pro (monthly)","price":"9.99","priceCurrency":"USD"}]}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"MediaFlowSwift","url":"https://mediaflowswift.com/","downloadUrl":"https://mediaflowswift.com/download.html","applicationCategory":"MultimediaApplication","operatingSystem":"macOS 14 or later (Apple silicon)","description":"Footage manager for Mac video creators: import from cards and phones, review and sort, organize into folders for editing, free up space only after copies are proved, archive, and publish to YouTube.","publisher":{"@id":"https://longroadsoftware.com/#organization"},"offers":[{"@type":"Offer","name":"Studio (monthly)","price":"4.99","priceCurrency":"USD"},{"@type":"Offer","name":"Studio Pro (monthly)","price":"9.99","priceCurrency":"USD"}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","email":"support@mediaflowswift.com","sameAs":["https://github.com/longroadsoftware"]}
+{"@context":"https://schema.org","@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","email":"support@mediaflowswift.com","sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]}
 </script>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,7 +54,7 @@
       <div>
         <p class="kicker">For video creators, on the Mac</p>
         <h1>Every clip from the card to the archive, accounted for.</h1>
-        <p class="lead">MediaFlowSwift keeps track of the footage from a shoot. Import from cards, phones and folders; sort, rate and review; copy everything into a tidy folder structure ready for editing; free up space only once each copy is proved; archive; publish.</p>
+        <p class="lead">MediaFlowSwift keeps track of the footage from a shoot. Import from cards, phones and folders, then sort, rate and review. Copy everything into a tidy folder structure ready for editing. Free up space only once each copy is proved, then archive and publish.</p>
         <a class="cta" href="/download.html">Download the free trial</a>
         <a class="cta quiet" href="/#plans">See the plans</a>
         <p class="note">macOS 14 or later, on a Mac with Apple silicon. Fourteen days of the full app, no card; then $4.99 or $9.99 a month.</p>
@@ -62,7 +62,7 @@
     </div>
 
     <figure class="hero-shot">
-      <img src="images/app-lake-day-grid.jpg" srcset="images/app-lake-day-grid-1272.jpg 1272w, images/app-lake-day-grid.jpg 2544w" sizes="(min-width: 68rem) 66rem, 100vw" width="2544" height="1036" alt="MediaFlowSwift showing a demo project called Lake Day: the seven-step strip under the toolbar, with Import, Categorize and Organize checked and Review next, above a grid of twelve lake and road clips, each marked B-roll and At destination, three with star ratings" fetchpriority="high">
+      <picture><source type="image/webp" srcset="images/app-lake-day-grid-1272.webp 1272w, images/app-lake-day-grid.webp 2544w" sizes="(min-width: 68rem) 66rem, 100vw"><img src="images/app-lake-day-grid.jpg" srcset="images/app-lake-day-grid-1272.jpg 1272w, images/app-lake-day-grid.jpg 2544w" sizes="(min-width: 68rem) 66rem, 100vw" width="2544" height="1036" alt="MediaFlowSwift showing a demo project called Lake Day: the seven-step strip under the toolbar, with Import, Categorize and Organize checked and Review next, above a grid of twelve lake and road clips, each marked B-roll and At destination, three with star ratings" fetchpriority="high"></picture>
       <figcaption>A demo project in MediaFlowSwift: the strip under the toolbar, and the clips from one shoot.</figcaption>
     </figure>
 
@@ -87,22 +87,22 @@
         <figcaption id="demo-video-caption">76 seconds, captions on screen: a card imported, reviewed, organized and checked, the card cleared, space freed, and the project sent to Final Cut Pro. A demo project, recorded in the app. <a href="https://youtu.be/IEgDnzYr-1M">Watch it with a voice-over on YouTube</a>.</figcaption>
       </figure>
       <div class="how-intro">
-        <p>A strip under the toolbar follows the seven steps of a shoot and always offers the one next action. You never have to remember where a project stands: the strip shows what is still waiting at each step, and a finished step shows a check. When the video is cut, Studio Pro drafts its title, description, chapters and tags from what you say; upload it in YouTube Studio and MediaFlow puts those words, your thumbnail and captions on it in one click.</p>
+        <p>A strip under the toolbar follows the seven steps of a shoot and always offers the one next action. You never have to remember where a project stands. The strip shows what is still waiting at each step, and a finished step shows a check. When the video is cut, Studio Pro drafts its title, description, chapters and tags from what you say. Upload it in YouTube Studio, and MediaFlow puts those words, your thumbnail and captions on it in one click.</p>
         <figure class="side-photo">
-          <img src="images/storage-devices.jpg" width="1400" height="933" loading="lazy" alt="Memory cards, USB sticks and external drives spread around a laptop">
+          <picture><source type="image/webp" srcset="images/storage-devices.webp"><img src="images/storage-devices.jpg" width="1400" height="933" loading="lazy" alt="Memory cards, USB sticks and external drives spread around a laptop"></picture>
           <figcaption>Cards, drives, shares: MediaFlowSwift records where every clip is, and where it should be.</figcaption>
         </figure>
       </div>
       <div class="grid">
-        <div><h3>Projects that know where their footage is</h3><p>Each project records its destination folder &mdash; a network share, an external drive or a folder on the Mac &mdash; and every clip&rsquo;s place: on the card, in a working copy, at the destination, or archived. Move a library to a new drive and one command points every project at it.</p></div>
-        <div><h3>Find a clip by what was said in it</h3><p>Transcribe the speech in your video clips on this Mac, then search one clip&rsquo;s transcript, or every clip&rsquo;s, for a word; click a line&rsquo;s time to jump the preview to it. GPS scenes group clips by where they were shot, the shoot map shows them on a map, and category suggestions propose a category for each clip that has none yet, for you to accept or dismiss. Place names, the map and online speech recognition stay off until you turn them on in Settings &rsaquo; Privacy. All of this is in both plans; drafting a video&rsquo;s title, description and chapters from what you say is Studio Pro only. In the manual: <a href="/manual/organizing-media/#speech-transcription">transcription</a>, <a href="/manual/organizing-media/#gps-scene-detection">GPS scenes</a>, <a href="/manual/organizing-media/#interactive-shoot-map">the shoot map</a>, <a href="/manual/tags-categories/#auto-suggest-categories">category suggestions</a>.</p></div>
-        <div><h3>Copies that are proved before anything is removed</h3><p>Freeing up space, moving a project, returning it from an editing drive: whenever a copy is followed by a removal, the copy is checked against the original first. If it does not match, nothing is removed.</p></div>
+        <div><h3>Projects that know where their footage is</h3><p>Each project records its destination folder: a network share, an external drive or a folder on the Mac. It also records every clip&rsquo;s place: on the card, in a working copy, at the destination, or archived. Move a library to a new drive and one command points every project at it.</p></div>
+        <div><h3>Find a clip by what was said in it</h3><p>Transcribe the speech in your video clips on this Mac, then search one clip&rsquo;s transcript, or every clip&rsquo;s, for a word. Click a line&rsquo;s time to jump the preview to it. GPS scenes group clips by where they were shot, and the shoot map shows them on a map. Category suggestions propose a category for each clip that has none yet, for you to accept or dismiss. Place names, the map and online speech recognition stay off until you turn them on in Settings &rsaquo; Privacy. All of this is in both plans. Drafting a video&rsquo;s title, description and chapters from what you say is Studio Pro only. In the manual: <a href="/manual/organizing-media/#speech-transcription">transcription</a>, <a href="/manual/organizing-media/#gps-scene-detection">GPS scenes</a>, <a href="/manual/organizing-media/#interactive-shoot-map">the shoot map</a>, <a href="/manual/tags-categories/#auto-suggest-categories">category suggestions</a>.</p></div>
+        <div><h3>Copies that are proved before anything is removed</h3><p>Freeing up space, moving a project, returning it from an editing drive: each one copies, then removes. MediaFlowSwift checks the copy against the original before anything is removed. If it does not match, nothing is removed.</p></div>
         <div><h3>An editing drive for the fast work</h3><p>Move a project to a fast SSD for editing and bring it back to the library afterwards, with everything you changed carried across and checked.</p></div>
         <div><h3>Proxies over the network</h3><p>Footage that lives on a network share can be choppy to scrub. MediaFlowSwift offers to make a proxy for the clip you are looking at, or for every clip that needs one.</p></div>
-        <div><h3>A shared database, when you want one</h3><p>Search every project from the search field and copy clips between them, find duplicates, and see the same project list from every Mac in the studio &mdash; a single database file with Studio, or a database server on your own network with Studio Pro.</p></div>
+        <div><h3>A shared database, when you want one</h3><p>Search every project from the search field and copy clips between them. Find duplicates, and see the same project list from every Mac in the studio. Studio does this with a single database file; Studio Pro adds a database server on your own network.</p></div>
         <div><h3>Reports and hand-off</h3><p>PDF, HTML and CSV reports of what was shot, what was kept and where it went, for your editor or your records.</p></div>
       </div>
-      <p class="note">Wondering about one step in particular? The <a href="/guides/">guides</a> answer the questions that come up most &mdash; proving a card really copied before you erase it, keeping two checked copies, and finding clips again after a move. Weighing MediaFlowSwift against another app? See how it <a href="/vs/offshoot/">compares to OffShoot</a>, <a href="/vs/habitat-flow/">to habitat flow</a>, and <a href="/vs/finder-and-spreadsheet/">to Finder and a spreadsheet</a>.</p>
+      <p class="note">Wondering about one step in particular? The <a href="/guides/">guides</a> answer the questions that come up most. Examples: proving a card really copied before you erase it, keeping two checked copies, and finding clips again after a move. Weighing MediaFlowSwift against another app? See how it <a href="/vs/offshoot/">compares to OffShoot</a>, <a href="/vs/habitat-flow/">to habitat flow</a>, and <a href="/vs/finder-and-spreadsheet/">to Finder and a spreadsheet</a>.</p>
     </div>
   </section>
 
@@ -111,7 +111,7 @@
       <h2>What it will not do</h2>
       <div class="promise">
         <div><strong>Delete footage on a guess</strong><span>Nothing is removed until the copy that replaces it is proved to match, byte for byte.</span></div>
-        <div><strong>Send your work anywhere by itself</strong><span>No account and no usage data. It checks our website for new versions and, once you enter a key, checks your licence; every other outside service is off until you turn it on. Settings &rsaquo; Privacy lists exactly what each one sends.</span></div>
+        <div><strong>Send your work anywhere by itself</strong><span>No account and no usage data. It checks our website for new versions and, once you enter a key, checks your licence. Every other outside service is off until you turn it on. Settings &rsaquo; Privacy lists exactly what each one sends.</span></div>
         <div><strong>Lock you out of your own files</strong><span>Projects are plain files in folders you chose. Your footage stays in ordinary folders that any app can read.</span></div>
         <div><strong>Hide what went wrong</strong><span>When something fails, it says which file, why, and what to do; a report you can read in full is one click away.</span></div>
       </div>
@@ -126,7 +126,7 @@
         <button type="button" class="billing-choice" data-period="month" aria-pressed="false">Monthly</button>
         <button type="button" class="billing-choice" data-period="year" aria-pressed="true">Yearly <span class="save">about 17% off</span></button>
       </div>
-      <p class="note anchor">For comparison, as of October 2026, in US dollars: habitat flow has a free plan and a $69-a-year Pro plan (or $149 once for Pro forever); OffShoot sells one-time editions, priced on its own site. Studio starts at $4.99 a month, or $49.99 a year with the yearly discount above &mdash; try the full app free for 14 days first, no card. See the <a href="/vs/offshoot/">OffShoot</a> and <a href="/vs/habitat-flow/">habitat flow</a> comparisons for the detail.</p>
+      <p class="note anchor">For comparison, as of October 2026, in US dollars: habitat flow has a free plan and a $69-a-year Pro plan (or $149 once for Pro forever). OffShoot sells one-time editions, priced on its own site. Studio starts at $4.99 a month, or $49.99 a year with the yearly discount above. Try the full app free for 14 days first, no card. See the <a href="/vs/offshoot/">OffShoot</a> and <a href="/vs/habitat-flow/">habitat flow</a> comparisons for the detail.</p>
       <p class="paddle-notice" id="paddle-notice" hidden></p>
       <div class="plans" id="plan-cards">
         <div class="plan" data-tier="studio">
@@ -160,7 +160,7 @@
         </div>
       </div>
       <p class="note"><strong>Already subscribed?</strong> To move to Studio Pro, or to switch between monthly and yearly, write to <a href="mailto:support@mediaflowswift.com?subject=Change%20my%20plan">support@mediaflowswift.com</a> from the email address you bought with. We change your existing subscription, and your licence key stays the same. Please don&rsquo;t buy a second plan: that would start a second subscription alongside the first.</p>
-      <p class="note">Prices are shown in your local currency; tax is added at checkout where it applies. Payment is handled by Paddle, our merchant of record; your licence key is shown as soon as the payment goes through and is also on your receipt. On either plan, one key covers up to three Macs at once, whoever uses them; a fourth Mac needs another key.</p>
+      <p class="note">Prices are shown in your local currency; tax is added at checkout where it applies. Payment is handled by Paddle, our merchant of record. Your licence key is shown as soon as the payment goes through, and it is also on your receipt. On either plan, one key covers up to three Macs at once, whoever uses them; a fourth Mac needs another key.</p>
       <h3 class="compare-title">Studio and Studio Pro, side by side</h3>
       <div class="tablewrap">
       <table class="compare">
@@ -195,7 +195,7 @@
         <tr><td>14-day trial of Studio Pro, no card</td><td>&#10003;</td><td>&#10003;</td></tr>
       </table>
       </div>
-      <p class="note">When a plan ends, MediaFlowSwift keeps opening every project and keeps showing where every clip is; restoring from an archive and copying footage out always work. Only importing, Organize, proxies, the editing drive, writing, publishing and the database server pause.</p>
+      <p class="note">When a plan ends, MediaFlowSwift keeps opening every project and keeps showing where every clip is. Restoring from an archive and copying footage out always work. Only importing, Organize, proxies, the editing drive, writing, publishing and the database server pause.</p>
     </div>
   </section>
 </main>

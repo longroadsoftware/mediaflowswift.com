@@ -13,3 +13,5 @@ og-image.png is not a photograph: it is drawn by `tools/make_og_image.swift` fro
 mike-williams-400/800 (.jpg, .webp) is a photograph of Mike Williams, the founder, taken by him and supplied for this site (2026-10-19). Location and camera data were removed. Use it only for the founder on the About page and footer.
 
 demo-video-poster.jpg is a frame of `videos/mediaflowswift-demo.mp4`, the MediaFlowSwift feature demo made by Long Road Software (2026-10-18): a screen recording of the app on a demo project, with On Island Time B-roll that shows no people. Metadata removed.
+
+The .webp files beside app-lake-day-grid(-1272).jpg and storage-devices.jpg are the same pictures re-encoded as WebP (cwebp -q 80, metadata removed), under the same terms as their .jpg.

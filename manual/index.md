@@ -1,7 +1,7 @@
 ---
 layout: manual
 title: "MediaFlowSwift Manual — Import, Organize and Archive Footage"
-description: "The MediaFlowSwift user guide, generated from the Help inside the app."
+description: "The MediaFlowSwift manual, chapter by chapter: importing from cards, organizing, archiving, the shared database, publishing to YouTube, troubleshooting."
 generated: tools/import-guide.sh
 ---
 # MediaFlowSwift Manual
