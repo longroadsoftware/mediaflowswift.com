@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"MediaFlowSwift vs OffShoot","description":"MediaFlowSwift and OffShoot both verify copies with checksums. See what each does better, how each is priced, and which fits your workflow.","url":"https://mediaflowswift.com/vs/offshoot/","datePublished":"2026-10-19","dateModified":"2026-10-19","mainEntityOfPage":{"@type":"WebPage","@id":"https://mediaflowswift.com/vs/offshoot/"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware"]}}
+{"@context":"https://schema.org","@type":"Article","headline":"MediaFlowSwift vs OffShoot","description":"MediaFlowSwift and OffShoot both verify copies with checksums. See what each does better, how each is priced, and which fits your workflow.","url":"https://mediaflowswift.com/vs/offshoot/","datePublished":"2026-10-19","dateModified":"2026-10-20","mainEntityOfPage":{"@type":"WebPage","@id":"https://mediaflowswift.com/vs/offshoot/"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware"]}}
 </script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,18 +43,40 @@
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">MediaFlowSwift</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; MediaFlowSwift vs OffShoot</nav>
 <article class="doc">
-  <p class="updated">Updated 19 October 2026 &middot; Written by <strong>Long Road Software LLC</strong>. <a href="/about/#how-we-write-these-guides">How we write these guides</a>.</p>
+  <p class="updated">Updated 20 October 2026 &middot; Written by <strong>Long Road Software LLC</strong>. <a href="/about/#how-we-write-these-guides">How we write these guides</a>.</p>
   <h1>MediaFlowSwift vs OffShoot: Which One Fits Your Workflow?</h1>
-  <p class="vs-answer">Both prove a copy is good with a checksum, not just a successful drag. OffShoot is built for fast, large-scale transfers across many sources and destinations at once, with S3 and scripting in its Pro tier. MediaFlowSwift is built for what happens after the copy: reviewing, organizing, archiving and publishing the footage, not just moving it.</p>
+  <p class="vs-answer">Both prove a copy is good with a checksum, not just a finished drag. OffShoot is built for fast transfers from many sources to many destinations at once. Its Pro edition adds S3 and scripting. MediaFlowSwift is built for what happens after the copy: reviewing, organizing, archiving and publishing the footage.</p>
 
   <h2>What does each app actually verify?</h2>
-  <p>MediaFlowSwift computes a SHA-256 checksum of every file it imports from a card, drive or folder, then reads the copy back in full and compares it &mdash; the hash function set out in the US government's own <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard</a>. It checks again, from scratch, right before Clear Card deletes anything from the card. OffShoot <a href="https://docs.hedge.video/offshoot/overview">performs verified transfers using checksums to and from any type of storage medium</a>, and can write an MHL sidecar log of what it checked, in the format kept by the American Society of Cinematographers&rsquo; <a href="https://theasc.com/mitc/asc-media-hash-list/">ASC Media Hash List</a> initiative. MediaFlowSwift keeps its own record of what was checked inside the project rather than as a separate MHL file.</p>
+  <p>MediaFlowSwift computes a SHA-256 checksum of every file it imports from a card, drive or folder. It then reads the whole copy back from the drive and compares the two. SHA-256 is the hash function set out in the US government's <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard</a>. Right before Clear Card deletes anything from the card, it checks again from scratch.</p>
+  <p>OffShoot <a href="https://docs.hedge.video/offshoot/overview">performs verified transfers using checksums to and from any type of storage medium</a>. It can also write an MHL file that lists what it checked. That format is kept by the American Society of Cinematographers' <a href="https://theasc.com/mitc/asc-media-hash-list/">ASC Media Hash List</a> project. OffShoot's pricing page lists ASC MHL among the Pro edition's features. MediaFlowSwift keeps its record of what was checked inside the project, not as a separate MHL file.</p>
 
   <h2>What does OffShoot do better?</h2>
-  <p>OffShoot multiplies sources by destinations: point it at several cards and several drives, and it runs every source-to-destination pair as one job, which matters on a set with more than one DIT station. Its Pro edition adds S3 transfers, scripting and APIs, and support for high-end cameras such as the Alexa 35 &mdash; the kind of setup a dedicated DIT or a post house would ask for. It also has a free companion app, Connect, for watching a transfer's progress from a browser, and it runs on Windows as well as Mac.</p>
+  <p>OffShoot multiplies sources by destinations. Point it at three cards and two drives, and one click adds all six transfers. That matters on a set with a dedicated DIT station. Its Pro edition adds S3 transfers, scripting and APIs, and Codex copy engines for cameras such as the Alexa 35. It also has Connect, a free browser companion for watching transfers, and it runs on Windows as well as Mac.</p>
 
   <h2>What does MediaFlowSwift do better?</h2>
-  <p>OffShoot's job ends once the files have arrived and been checked. MediaFlowSwift keeps going: it files each clip into folders by camera and category when you organize, offers frame-accurate review with star ratings and tags, archives to numbered drives with a record of what went where, and writes PDF, HTML and CSV reports for an editor. Studio Pro also drafts YouTube titles, descriptions, chapters and tags from the finished video and can set them on the upload for you. If a card going safely into one tidy project folder matters more than moving data across a fleet of drives, that is the gap.</p>
+  <p>OffShoot centres on moving and checking files. Its presets can rename files and sort them into new folders. MediaFlowSwift keeps going after the copy.</p>
+  <p>When you organize, it files each clip into Category and Camera folders. It offers frame-accurate review with star ratings and tags. It archives to numbered drives and records what went where.</p>
+  <p>It also writes PDF, HTML and CSV reports for an editor. Studio Pro drafts YouTube titles, descriptions, chapters and tags from the finished video. It can set them on the upload for you.</p>
+
+  <h2>What does one 128 GB card look like in each?</h2>
+  <p>Take a full 128 GB card and a setup that moves data at 250 MB/s end to end. One full pass over the card is 128,000 MB &divide; 250 MB/s = 512 seconds, about 8.5 minutes. That is arithmetic, not a benchmark. The real figure depends on the slowest of the card, the reader, the cable and the drive.</p>
+  <ul>
+    <li><strong>MediaFlowSwift, import:</strong> one pass to copy, one pass to read the copy back. About 17 minutes.</li>
+    <li><strong>MediaFlowSwift, organize:</strong> if the import landed on the destination drive, the clips are renamed into place in seconds. Otherwise they are copied and checked again.</li>
+    <li><strong>MediaFlowSwift, Clear Card:</strong> it reads the card files and the organized copies in full before deleting. That is up to two more passes, about 17 minutes.</li>
+    <li><strong>OffShoot, one card to two drives:</strong> one source times two destinations is two transfers in one job. You get both copies from a single run.</li>
+  </ul>
+  <p>MediaFlowSwift makes its second copy later, when you archive the project to another drive. See <a href="/guides/two-checked-copies-of-a-card-on-a-mac/">how to keep two checked copies of a card</a>.</p>
+
+  <h2>What are the limits on each side?</h2>
+  <ul>
+    <li>MediaFlowSwift runs only on a Mac with Apple silicon and macOS 14 or later. OffShoot runs on macOS and Windows.</li>
+    <li>MediaFlowSwift copies to drives and network shares, not to S3 or other cloud storage.</li>
+    <li>MediaFlowSwift writes no MHL file. If a client or studio asks for ASC MHL, OffShoot Pro covers it.</li>
+    <li>MediaFlowSwift clears one card at a time. On a card laid out by the camera, such as a Sony card, it deletes nothing and tells you when the card is safe to format in the camera.</li>
+    <li>OffShoot's own feature list has no clip review with star ratings, no record of numbered archive drives and no YouTube publishing.</li>
+  </ul>
 
   <h2>How is each one priced?</h2>
   <div class="tablewrap">
@@ -68,23 +90,25 @@
     <tr><td>Runs on Windows as well as Mac</td><td>&mdash;</td><td>&#10003;</td></tr>
     <tr><td>Free companion app for remote transfer monitoring</td><td>&mdash;</td><td>&#10003;</td></tr>
     <tr><td colspan="3" class="group">After the copy</td></tr>
-    <tr><td>Categorizes into folders by camera and category</td><td>&#10003;</td><td>&mdash;</td></tr>
+    <tr><td>Gives each clip a category, then files it into Category and Camera folders</td><td>&#10003;</td><td>&mdash;</td></tr>
     <tr><td>Frame-accurate review, star ratings, tags inside the app</td><td>&#10003;</td><td>&mdash;</td></tr>
     <tr><td>Archive to numbered drives with a destination record</td><td>&#10003;</td><td>&mdash;</td></tr>
     <tr><td>Drafts YouTube titles, descriptions and tags and sets them on your upload (Studio Pro)</td><td>&#10003;</td><td>&mdash;</td></tr>
   </table>
   </div>
-  <p>MediaFlowSwift's Studio plan is $4.99 a month or $49.99 a year, and Studio Pro is $9.99 a month or $99.99 a year, with a 14-day free trial of the full app and no card needed. OffShoot is sold as one-time editions, priced by tier and number of activations; see <a href="https://hedge.co/products/offshoot#pricing">its own pricing page</a> for current prices. OffShoot's own site also offers a trial if you want to test it on your own footage first.</p>
+  <p>MediaFlowSwift's Studio plan is $4.99 a month or $49.99 a year. Studio Pro is $9.99 a month or $99.99 a year. The full app runs free for 14 days, with no card needed. One plan covers up to three Macs.</p>
+  <p>In US dollars, as listed on <a href="https://hedge.co/products/offshoot#pricing">OffShoot's pricing page</a> on 19 October 2026: OffShoot is $169 per activation and OffShoot Pro is $249 per activation. Each is a perpetual licence with a year of free updates. A 30-day Pro licence is $49. There is no free tier, but there is a fully working 10-day trial.</p>
 
   <h2>Which one should you pick?</h2>
-  <p>If a production already has a DIT moving large volumes across several drives, archiving to S3, or working with cameras like the Alexa 35, OffShoot's Pro tier is built for exactly that. If what you actually want is one card to turn into one organized, reviewed, reported project without juggling a separate app for the rest of the pipeline, that is what MediaFlowSwift is for. <a href="/download.html">Try MediaFlowSwift free for 14 days</a>, no card, and see which one fits how you actually work.</p>
+  <p>Pick OffShoot for a DIT moving large volumes to several drives at once, for S3, for ASC MHL, or for Windows. Pick MediaFlowSwift if you want one card to become one organized, reviewed and reported project, without a second app. <a href="/download.html">Try MediaFlowSwift free for 14 days</a>, no card, and see which one fits how you work.</p>
 
   <h2>Sources</h2>
   <ul class="vs-sources">
     <li><a href="https://docs.hedge.video/offshoot/overview">OffShoot overview, Hedge's own documentation</a></li>
-    <li><a href="https://hedge.co/products/offshoot">OffShoot product and pricing page, hedge.co</a></li>
+    <li><a href="https://hedge.co/products/offshoot">OffShoot product and pricing page, hedge.co</a> (prices checked 19 October 2026)</li>
     <li><a href="https://theasc.com/mitc/asc-media-hash-list/">ASC Media Hash List, American Society of Cinematographers</a></li>
     <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard (FIPS 180-4), NIST</a></li>
+    <li><a href="/manual/organizing-media/#how-mediaflow-verifies-copies">How MediaFlow verifies copies, MediaFlowSwift manual</a></li>
   </ul>
 
   <p><a href="/guides/">All guides</a> &middot; <a href="/vs/habitat-flow/">MediaFlowSwift vs habitat flow</a> &middot; <a href="/vs/finder-and-spreadsheet/">MediaFlowSwift vs Finder and a spreadsheet</a></p>
