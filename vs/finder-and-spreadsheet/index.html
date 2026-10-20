@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"MediaFlowSwift vs Just Using Finder and a Spreadsheet","description":"Finder and a spreadsheet are free, but neither proves a copy is safe. What you give up going manual, and when MediaFlowSwift is worth the extra cost.","url":"https://mediaflowswift.com/vs/finder-and-spreadsheet/","datePublished":"2026-10-19","dateModified":"2026-10-19","mainEntityOfPage":{"@type":"WebPage","@id":"https://mediaflowswift.com/vs/finder-and-spreadsheet/"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware"]}}
+{"@context":"https://schema.org","@type":"Article","headline":"MediaFlowSwift vs Just Using Finder and a Spreadsheet","description":"Finder and a spreadsheet are free, but neither proves a copy is safe. What you give up going manual, and when MediaFlowSwift is worth the extra cost.","url":"https://mediaflowswift.com/vs/finder-and-spreadsheet/","datePublished":"2026-10-19","dateModified":"2026-10-20","mainEntityOfPage":{"@type":"WebPage","@id":"https://mediaflowswift.com/vs/finder-and-spreadsheet/"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware"]}}
 </script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,26 +43,53 @@
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">MediaFlowSwift</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; MediaFlowSwift vs Finder and a spreadsheet</nav>
 <article class="doc">
-  <p class="updated">Updated 19 October 2026 &middot; Written by <strong>Long Road Software LLC</strong>. <a href="/about/#how-we-write-these-guides">How we write these guides</a>.</p>
+  <p class="updated">Updated 20 October 2026 &middot; Written by <strong>Long Road Software LLC</strong>. <a href="/about/#how-we-write-these-guides">How we write these guides</a>.</p>
   <h1>MediaFlowSwift vs Just Using Finder and a Spreadsheet</h1>
-  <p class="vs-answer">Finder and a spreadsheet cost nothing and need no new app. What they do not do is prove a copy is safe: a drag-and-drop that finishes without an error can still leave you with a damaged file, and nothing tells you that until you try to use it. MediaFlowSwift's checksum checks exist specifically to catch that case.</p>
+  <p class="vs-answer">Finder and a spreadsheet cost nothing and need no new app. What they don't do is prove a copy is safe. A drag that finishes without an error can still leave a damaged file. Nothing tells you until you try to use it. MediaFlowSwift's checksum checks exist to catch that case.</p>
 
   <h2>Why isn't a successful copy in Finder proof enough?</h2>
-  <p>Dragging files in Finder, or using a card reader's built-in copy, moves the bytes and tells you when it's done. It does not compute a checksum of the original and compare it against the checksum of the copy, so it cannot tell the difference between a perfect copy and one with a few flipped bits. A file with dropped data can still have the right name, the right size, and still open and even play for a few seconds before it stutters or goes black. The hash functions that catch this &mdash; such as <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">SHA-256, set out in the US government's own Secure Hash Standard</a> &mdash; are not something Finder's Copy command runs.</p>
+  <p>Dragging files in Finder moves the bytes and tells you when it's done. It does not compute a checksum of the original and compare it with one of the copy. So it can't tell a perfect copy from one with a few flipped bits. A damaged file can still have the right name and size. It can even open and play for a few seconds before it stutters or goes black.</p>
+  <p>The hash functions that catch this are not something Finder's Copy command runs. One of them is <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">SHA-256, set out in the US government's Secure Hash Standard</a>.</p>
+
+  <h2>How do you check a copy by hand?</h2>
+  <p>You can do the manual way properly. It just takes steps that are easy to skip on a busy day:</p>
+  <ol>
+    <li>Compare the item count and total size of the card folder and the copy in Finder's Get Info. This catches a missing file, but not a damaged one.</li>
+    <li>Run <code>shasum -a 256</code> in Terminal on each file on the card, then on each copy. Compare the two lists line by line. This catches a damaged file.</li>
+    <li>Write the card, the drive and the date in your spreadsheet.</li>
+    <li>Keep the card unformatted until a second copy exists somewhere else.</li>
+  </ol>
+  <p>Step 2 is the one that proves anything. It also means reading the card and the copy in full, which is the slow part.</p>
+
+  <h2>How long does a proper check take?</h2>
+  <p>Take a full 128 GB card and a setup that moves data at 250 MB/s. One full read of the card is 128,000 MB &divide; 250 MB/s = 512 seconds, about 8.5 minutes. Copying it, then reading both sides to compare, is three passes, roughly 25 minutes. That is arithmetic, not a benchmark. The real figure depends on the slowest of the card, the reader and the drive.</p>
+  <p>The time is the same whether you run the check or an app does. The difference is who has to remember to run it. MediaFlowSwift reads the copy back on every import without being asked. It takes the card's checksum while it copies, so its import is two passes, about 17 minutes.</p>
 
   <h2>What does a spreadsheet miss that an app like this keeps track of?</h2>
-  <p>A spreadsheet can record which card went where, but it only knows what you remember to type into it, and it does not look inside your drives to check that what it says is still true. It will not notice when a drive is renamed, a folder gets moved, or a copy that was supposed to finish actually stopped partway through. MediaFlowSwift keeps that record automatically: every clip's status &mdash; on the card, in a working copy, at the project's destination, or archived &mdash; is read from the files themselves, not typed in by hand, and a copy that fails its check is never marked as if it succeeded. It does not follow a move on its own, though: a file moved or renamed outside the app shows as Missing until you relink it, so the change is flagged instead of slipping by.</p>
+  <p>A spreadsheet can record which card went where. But it only knows what you remember to type into it. It does not look at your drives to check that what it says is still true. It won't notice a renamed drive, a moved folder, or a copy that stopped partway through.</p>
+  <p>MediaFlowSwift keeps that record from the files themselves. Each clip shows whether it is on the card, in a working copy, at the project's destination, or archived. A copy that fails its check is never marked as if it succeeded.</p>
+  <p>It does not follow a move on its own, though. A file moved or renamed outside the app shows as Missing until you relink it. So the change is flagged instead of slipping by.</p>
 
   <h2>When is the manual way good enough?</h2>
-  <p>For a handful of clips you are about to edit the same day, from a card you are not in a hurry to reuse, Finder is genuinely fine &mdash; the risk of a bad copy going unnoticed is low, and the cost of checking by eye is small. The manual way gets riskier as the stakes go up: more cards, more projects, footage you cannot reshoot, or a card you need to format and hand back today. That is the point where an unverified copy becomes an expensive mistake rather than an inconvenience.</p>
+  <p>Finder is fine for a handful of clips you will edit the same day. The same goes for a card you are in no hurry to reuse. The risk of a bad copy going unnoticed is low, and checking by eye costs little. The manual way gets riskier as the stakes rise:</p>
+  <ul>
+    <li>more cards and more projects than you can remember;</li>
+    <li>footage you cannot reshoot, such as an event or a trip;</li>
+    <li>a card you need to format and hand back today;</li>
+    <li>archive drives on a shelf that someone else may need to search.</li>
+  </ul>
+  <p>That is the point where an unchecked copy becomes an expensive mistake, not an inconvenience.</p>
 
   <h2>What does MediaFlowSwift add, and what does it cost?</h2>
-  <p>MediaFlowSwift checks the checksum of every file it imports from a card, drive or folder, checks the organized copy again at Organize (a full read-back by default, or quick samples if you choose the faster setting), and checks it a third time, from scratch and always in full, right before Clear Card lets you erase the card &mdash; see <a href="/guides/verify-footage-copied-before-erasing-card/">how it proves a copy before you erase a card</a>. It also does the filing and tracking a spreadsheet can't: categorizing clips into folders automatically, archiving to numbered drives with a record of what went where, and writing reports instead of a hand-kept list. Studio is $4.99 a month or $49.99 a year; Studio Pro, which adds YouTube publishing and a database server for several Macs at once, is $9.99 a month or $99.99 a year. You can try the full app free for 14 days first, no card, to see whether that is worth it for how much footage actually passes through your hands.</p>
+  <p>MediaFlowSwift checks every file it imports from a card, drive or folder against its checksum. At Organize it checks the organized copy again. That is a full read-back by default, or quick samples if you choose the faster setting. Right before Clear Card lets you erase the card, it checks a third time, from scratch and always in full. See <a href="/guides/verify-footage-copied-before-erasing-card/">how it proves a copy before you erase a card</a>.</p>
+  <p>It also does the filing a spreadsheet can't. It sorts clips into Category and Camera folders, archives to numbered drives with a record of what went where, and writes reports. It has two limits. It runs only on a Mac with Apple silicon and macOS 14 or later. And on a card laid out by the camera, such as a Sony card, Clear Card deletes nothing; it tells you when to format the card in the camera instead.</p>
+  <p>Studio is $4.99 a month or $49.99 a year. Studio Pro adds YouTube publishing and a database server for several Macs at once. It is $9.99 a month or $99.99 a year. One plan covers up to three Macs. You can try the full app free for 14 days first, with no card, to see whether it is worth it for the footage you handle.</p>
 
   <h2>Sources</h2>
   <ul class="vs-sources">
     <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard (FIPS 180-4), NIST</a> &mdash; the checksum standard behind a real verified copy</li>
     <li><a href="https://theasc.com/mitc/asc-media-hash-list/">ASC Media Hash List, American Society of Cinematographers</a> &mdash; the film industry's own standard for recording that a copy was checked</li>
+    <li><a href="/manual/organizing-media/#how-mediaflow-verifies-copies">How MediaFlow verifies copies, MediaFlowSwift manual</a> &mdash; what each of the app's checks proves</li>
   </ul>
 
   <p><a href="/guides/">All guides</a> &middot; <a href="/vs/offshoot/">MediaFlowSwift vs OffShoot</a> &middot; <a href="/vs/habitat-flow/">MediaFlowSwift vs habitat flow</a></p>

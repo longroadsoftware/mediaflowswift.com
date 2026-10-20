@@ -3,46 +3,46 @@ layout: guide
 title: "How to Keep Two Checked Copies of a Memory Card on a Mac"
 description: "Import and organize a card to your working drive, then archive the project to a second drive. Two checksum-verified copies, made one after the other."
 published: "2026-10-13"
-updated: 2026-10-19
+updated: 2026-10-20
 permalink: /guides/two-checked-copies-of-a-card-on-a-mac/
 ---
 # How to Keep Two Checked Copies of a Memory Card on a Mac
 
-Import and organize the card to your working drive first, then archive that project to a second drive. That gives you two independently checksum-verified copies — made one after the other, not at the same time — and MediaFlowSwift checks each one before it counts.
+To keep two checked copies of a card, import and organize it to your working drive with MediaFlowSwift. Then archive that project to a second drive with Archive to USB. MediaFlowSwift reads each copy back and compares checksums before it counts the copy. The two copies are made one after the other, not at the same time.
 
-This isn't a single button. It's two separate, verified steps, run in order, and it's worth understanding what each one actually proves. The pattern mirrors the chain-of-custody approach formalized in the production industry's own [ASC Media Hash List specification](https://github.com/ascmitc/mhl-specification), which production and post houses use to prove that nothing changed between successive copies of a shoot's media.
+Two checked copies in MediaFlowSwift isn't a single button. The method is two separate, verified steps, run in order, and each step proves something different. Archive to USB copies only the project folder, so clips organized outside it need one extra step, covered below. The pattern mirrors the chain-of-custody approach in the production industry's own [ASC Media Hash List specification](https://github.com/ascmitc/mhl-specification). Production and post houses use ASC MHL to prove that nothing changed between successive copies of a shoot's media.
 
 ## Copy one: import, then organize
 
-Importing is the first checked copy. As MediaFlowSwift copies each file off the card, it fingerprints the original and checks the result:
+Importing is the first checked copy. As MediaFlowSwift copies each file off the card, the app fingerprints the original and checks the result:
 
 > As each file is copied, MediaFlow computes its SHA-256 checksum from the card, writes the copy to the drive, then reads the whole copy back from the drive, not from the Mac's memory, and compares the two. A copy that doesn't match is made once more; if it fails again, the import stops and names the file. Importing never deletes anything from the card.
 
-SHA-256 is a cryptographic hash function standardized by NIST ([FIPS 180-4, Secure Hash Standard](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf)); if even one bit differs between the original and the copy, the two checksums won't match.
+SHA-256 is a cryptographic hash function standardized by NIST ([FIPS 180-4, Secure Hash Standard](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf)). If even one bit differs between the original and the copy, the two SHA-256 checksums won't match.
 
-Organize, which files that imported copy into its Category and Camera folder at your project's destination, checks it again against the same checksum:
+Organize then files the imported copy into its Category and Camera folder at your project's destination. Organize checks the copy again against the same checksum:
 
 > As MediaFlow copies a clip it computes a checksum of the original (SHA-256, a fingerprint of the file's contents). It finishes writing the copy to the destination before it checks it... On (the default; slower, safest) — the copy is read back in full from the destination. Its size and its SHA-256 must both match the original.
 
-So by the time a clip reads "At destination," it's usually been checked twice: once against the card at import, once against that same checksum at organize. There's one exception. If the card was imported straight onto the same drive that holds your project's destination, Organize doesn't make a second copy at all — it just renames the file into place:
+So by the time a clip reads "At destination," the clip has usually been checked twice: once against the card at import, once against that same checksum at organize. There's one exception. If the card was imported straight onto the drive that holds your project's destination, Organize doesn't make a second copy at all. Organize just renames the file into place:
 
 > A clip moved within one drive (imported onto the destination's own drive) is renamed, not copied, so nothing is read back, and it is saved as not checked in full.
 
-That clip isn't checked a second time, but nothing is unproved either:
+A renamed clip isn't checked a second time, but nothing is unproved either:
 
 > The chain stays proved, because the bytes never move and the import's copy was proved.
 
 ## Copy two: archive to a second drive
 
-The second checked copy comes from archiving to a separate USB drive — but only the project folder, specifically:
+The second checked copy comes from archiving to a separate USB drive. Archive to USB copies the project folder, specifically:
 
 > Archive to USB frees your working storage by copying a finished project to a drive you can put on a shelf. It copies the whole project folder to a removable drive, checks the copy, and records where it went in the shared database.
 
-That matters because your project's destination doesn't have to be inside the project folder — it can be any folder, including a NAS, an external drive, or a RAID. If it's outside the project folder, Archive to USB won't pick those clips up:
+The project folder matters because your project's destination doesn't have to be inside it. The destination can be any folder, including a NAS, an external drive, or a RAID. If the destination is outside the project folder, Archive to USB won't pick those clips up:
 
 > Only the project folder is copied; media organized to a destination outside the project folder is not included.
 
-MediaFlowSwift warns you before archiving goes ahead, with how many clips and how much data are outside the project folder, so this isn't a surprise:
+MediaFlowSwift warns you before archiving goes ahead, with how many clips and how much data are outside the project folder:
 
 > 3 clips (12.4 GB) are organized outside this project's folder and will not be on the archive drive.
 
@@ -50,29 +50,31 @@ If you see that warning and want those clips on the archive drive too, changing 
 
 > Changing the destination never copies, moves or deletes a file. On its own it changes only where new organizing goes; clips you organized earlier still point at the files in the old folder unless you accept the offer described next.
 
-What to do instead:
+To bring those clips inside the project folder instead:
 
-1. In the Finder, copy the organized folders into the project folder, keeping the folder layout they already have. Copy, don't move — a move would take away your only other copy of those clips before anything has checked the new one.
-2. Choose Workflow → Repair → Change destination folder… and pick the folder you copied them into. MediaFlowSwift looks for each organized clip there, in the same folder it had under the old destination, and asks whether to point the project at what it finds.
+1. In the Finder, copy the organized folders into the project folder, keeping the folder layout they already have. Copy, don't move. A move would take away your only other copy of those clips before anything has checked the new one.
+2. Choose Workflow → Repair → Change destination folder… and pick the folder you copied them into. MediaFlowSwift looks for each organized clip there, in the same folder it had under the old destination. Then it asks whether to point the project at what it finds.
 3. For any clip it doesn't find, choose Workflow → Repair → Relink Missing Media…, then Workflow → Repair → Re-check files, and confirm the Where column shows nothing still missing.
 
 Step 2 is not a name-and-size match:
 
 > Same folder and same size is not proof that a file is the one you organized: cameras that split long recordings into chapters produce files of exactly the same size. So a clip that has a checksum recorded from when it was organized is read in full, and followed only if its contents are identical.
 
-Keep the original folders until that check has finished. Once every clip lives inside the project folder, archiving copies everything, and that copy gets the same full check as the two before it:
+Keep the original folders until the Change destination folder check has finished. Once every clip lives inside the project folder, Archive to USB copies everything. The archive copy gets the same full check as the two before it:
 
 > Every file is read back from the drive after it is written and compared with its original by checksum, so a file damaged on the way — even one that kept its size — fails the archive rather than being recorded.
 
-With the destination inside the project folder, your working drive holds one verified copy, and the archive drive holds a second, independently verified one.
+With the destination inside the project folder, your working drive holds one verified copy. The archive drive holds a second, independently verified one.
 
 ## One after another, not at once
 
-MediaFlowSwift does not write a card to two drives at the same time. The sequence above is deliberate and sequential: card → working destination, checked; then working destination → archive drive, checked again. Each copy has to finish and pass its own check before the next one starts. The end result is the thing simultaneous offload is usually for: two checked copies on two drives. You get there a step at a time, and the card stays untouched until you clear it yourself.
+MediaFlowSwift does not write a card to two drives at the same time. The sequence above is deliberate: card → working destination, checked; then working destination → archive drive, checked again. Each copy has to finish and pass its own check before the next one starts. The end result is what simultaneous offload is usually for: two checked copies on two drives. You get there a step at a time, and the card stays untouched until you clear it yourself.
+
+<figure class="guide-figure"><img src="/images/guides/two-checked-copies-of-a-card-on-a-mac.svg" width="720" height="260" style="max-width:100%;height:auto" alt="Diagram of two checked copies made in sequence: the card; Import copies each clip, reads it back and compares SHA-256 checksums; copy one on the working drive, organized at the project's destination; Archive to USB copies the project folder, reads it back and compares; copy two on the archive drive. Only the project folder is archived, and the card stays untouched until Clear Card." loading="lazy"><figcaption>Card to working drive, then working drive to archive drive. Each copy passes its own check before the next starts.</figcaption></figure>
 
 ## If a copy doesn't check out
 
-Both steps retry automatically before they give up, and here they part ways. At import, a copy that doesn't match is made once more, and a second failure stops the whole import and names the file:
+Import and Organize both retry a failed copy once before they give up, and here they part ways. At import, a copy that doesn't match is made once more, and a second failure stops the whole import and names the file:
 
 > A copy that doesn't match is made once more; if it fails again, the import stops and names the file. Importing never deletes anything from the card.
 
@@ -80,23 +82,23 @@ At organize, a second failure fails that one clip and leaves everything else alo
 
 > If the check fails, the copy is deleted and made again once; if it fails a second time, that clip is reported as failed and its source is left alone.
 
-The same applies on the archive side. A file that fails its read-back comparison fails the archive outright, rather than being recorded as if it were fine. That way you never end up with a "verified" copy on the shelf that actually differs from the original.
+On the archive side, a file that fails its read-back comparison fails the archive outright, rather than being recorded as if it were fine. You never end up with a "verified" copy on the shelf that actually differs from the original.
 
 ## The card itself is a third copy, for a while
 
-Nothing says you have to erase the card the moment you've made these two copies. Clear Card is a separate, deliberate step, and it runs its own check before it will delete anything:
+MediaFlowSwift never makes you erase the card the moment you've made these two copies. Clear Card is a separate, deliberate step, and Clear Card runs its own check before it will delete anything:
 
 > Clear Card reads each organized copy back in full and matches it against the recorded checksum before it deletes the card file. It never relies on the check made at organize time.
 
-So in practice you often have three copies for a while — card, working drive, archive drive — until you choose to clear the card yourself.
+So in practice you often have three copies for a while: card, working drive, archive drive. The card copy lasts until you choose to clear the card yourself.
 
 ## Where doesn't this checksum chain apply?
 
-This checksum chain is specifically for cards, drives and folders. Importing from an iPhone or camera over USB works differently, because MediaFlowSwift can't see the original file the way it can on a card:
+The MediaFlowSwift checksum chain is specifically for cards, drives and folders. Importing from an iPhone or camera over USB works differently, because MediaFlowSwift can't see the original file the way it can on a card:
 
 > Image Capture hands each file over itself, so MediaFlow can't compare the copy with the file on the phone, as it does for a card.
 
-The manual is direct about what that means for the import record: phones get no such line. If you need two checked copies of footage that came off a phone, there's no equivalent claim to make here — only cards, drives and folders go through the full chain described above.
+The manual is direct about what that means for the import record: phones get no such line. For footage that came off a phone, MediaFlowSwift makes no two-checked-copies claim. Only cards, drives and folders go through the full chain described above.
 
 ## Read more
 

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">One-click Organize template steps and the folder layout Organize Media builds</title>
+<desc id="d">Top row: the One-click Organize workflow template runs Re-check files, a format conformance check, Organize all media, then a summary, in order. Bottom row: the folder layout Organize Media writes, Destination, then Category, then Camera, then the file name. Changing a clip's category or camera later re-files its copy in the background.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#555"/></marker></defs>
+<rect x="1" y="1" width="718" height="258" rx="12" fill="#ffffff" stroke="#d6d6d6"/>
+<text x="360.0" y="30" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">One-click Organize, and where the clips land</text>
+<text x="20" y="56" font-size="14" font-weight="normal" fill="#333" text-anchor="start">Workflow template, steps run in order:</text>
+<rect x="14.0" y="64" width="159.5" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="93.75" y="95.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Re-check files</text>
+<line x1="176.5" y1="90.0" x2="188.5" y2="90.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="191.5" y="64" width="159.5" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="271.25" y="86.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Check format</text>
+<text x="271.25" y="104.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">conformance</text>
+<line x1="354.0" y1="90.0" x2="366.0" y2="90.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="369.0" y="64" width="159.5" height="52" rx="8" fill="#eaf1fe" stroke="#2a6df4" stroke-width="2"/>
+<text x="448.75" y="86.0" font-size="15" font-weight="bold" fill="#2a6df4" text-anchor="middle">Organize</text>
+<text x="448.75" y="104.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">all media</text>
+<line x1="531.5" y1="90.0" x2="543.5" y2="90.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="546.5" y="64" width="159.5" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="626.25" y="86.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Show a</text>
+<text x="626.25" y="104.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">summary</text>
+<text x="20" y="144" font-size="14" font-weight="normal" fill="#333" text-anchor="start">Folder layout Organize Media builds:</text>
+<rect x="14.0" y="152" width="159.5" height="44" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="93.75" y="179.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Destination</text>
+<text x="182.5" y="181.0" font-size="20" font-weight="bold" fill="#555" text-anchor="middle">/</text>
+<rect x="191.5" y="152" width="159.5" height="44" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="271.25" y="179.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Category</text>
+<text x="360.0" y="181.0" font-size="20" font-weight="bold" fill="#555" text-anchor="middle">/</text>
+<rect x="369.0" y="152" width="159.5" height="44" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="448.75" y="179.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Camera</text>
+<text x="537.5" y="181.0" font-size="20" font-weight="bold" fill="#555" text-anchor="middle">/</text>
+<rect x="546.5" y="152" width="159.5" height="44" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="626.25" y="179.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Filename</text>
+<text x="360.0" y="232" font-size="14" font-weight="normal" fill="#333" text-anchor="middle">Change a clip’s category or camera later and its copy is re-filed in the background.</text>
+</svg>

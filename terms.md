@@ -1,7 +1,7 @@
 ---
 layout: legal
 title: Terms & refunds
-description: The terms for using MediaFlowSwift, and the refund policy for its plans.
+description: The terms for using MediaFlowSwift: the licence for up to three Macs, the 14-day trial, what still works when a plan ends, payment through Paddle, and refunds.
 permalink: /terms.html
 ---
 # Terms of use and refunds

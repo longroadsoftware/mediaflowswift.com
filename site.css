@@ -334,3 +334,12 @@ h2 + details.faq { border-top: 1px solid var(--line); }
 .demo-video { margin: 0 0 2rem; }
 .demo-video video { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); background: #000; }
 .demo-video figcaption { font-size: 0.92rem; margin-top: 0.5rem; color: var(--ink-2); }
+
+/* A diagram or picture inside a guide (images/guides/*.svg) */
+.guide-figure { margin: 1.6rem 0; }
+.guide-figure img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.guide-figure figcaption { font-size: 0.92rem; margin-top: 0.5rem; color: var(--ink-2); }
+
+/* Paragraphs inside a table cell (privacy page) */
+td p { margin: 0 0 0.5em; }
+td p:last-child { margin-bottom: 0; }

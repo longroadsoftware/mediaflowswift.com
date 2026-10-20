@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"MediaFlowSwift vs habitat flow","description":"MediaFlowSwift and habitat flow both verify card copies before you format. See what each does better, what each costs as of October 2026, and who it fits.","url":"https://mediaflowswift.com/vs/habitat-flow/","datePublished":"2026-10-19","dateModified":"2026-10-19","mainEntityOfPage":{"@type":"WebPage","@id":"https://mediaflowswift.com/vs/habitat-flow/"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware"]}}
+{"@context":"https://schema.org","@type":"Article","headline":"MediaFlowSwift vs habitat flow","description":"MediaFlowSwift and habitat flow both verify card copies before you format. See what each does better, what each costs as of October 2026, and who it fits.","url":"https://mediaflowswift.com/vs/habitat-flow/","datePublished":"2026-10-19","dateModified":"2026-10-20","mainEntityOfPage":{"@type":"WebPage","@id":"https://mediaflowswift.com/vs/habitat-flow/"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware"]}}
 </script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,18 +43,32 @@
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">MediaFlowSwift</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; MediaFlowSwift vs habitat flow</nav>
 <article class="doc">
-  <p class="updated">Updated 19 October 2026 &middot; Written by <strong>Long Road Software LLC</strong>. <a href="/about/#how-we-write-these-guides">How we write these guides</a>.</p>
+  <p class="updated">Updated 20 October 2026 &middot; Written by <strong>Long Road Software LLC</strong>. <a href="/about/#how-we-write-these-guides">How we write these guides</a>.</p>
   <h1>MediaFlowSwift vs habitat flow: Which One Fits You?</h1>
-  <p class="vs-answer">Both check a card's copy before you format it, and both have a free trial. habitat flow is a lighter, cheaper tool focused on the offload itself, with a free tier and a live iPhone companion. MediaFlowSwift covers more of the pipeline after the copy: categorizing, reviewing, archiving, reporting and publishing &mdash; at a higher starting price.</p>
+  <p class="vs-answer">Both check a card's copy before you format it. habitat flow is a lighter, cheaper tool focused on the offload itself. It has a free plan and a live iPhone companion. MediaFlowSwift covers more of the work after the copy: categorizing, reviewing, archiving, reporting and publishing. It also starts at a higher price.</p>
 
   <h2>What does each app actually verify?</h2>
-  <p>MediaFlowSwift computes a SHA-256 checksum for every file it imports from a card, drive or folder, then reads the whole copy back and compares it &mdash; the hash function set out in the US government's <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard</a>. It checks again, from scratch, right before Clear Card deletes anything from the card. habitat flow computes an <a href="https://github.com/Cyan4973/xxHash">xxHash64</a> checksum for every file and leaves an <a href="https://theasc.com/mitc/asc-media-hash-list/">ASC Media Hash List</a> report with the footage, <a href="https://habitat-flow.com">per habitat flow's own site</a>. xxHash64 is a fast, widely used checksum; SHA-256 is slower to compute but is the one specified in a formal cryptographic standard. Either one catches a copy that landed wrong.</p>
+  <p>MediaFlowSwift computes a SHA-256 checksum for every file it imports from a card, drive or folder. It then reads the whole copy back and compares the two. SHA-256 is the hash function set out in the US government's <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard</a>. Right before Clear Card deletes anything from the card, it checks again from scratch.</p>
+  <p>habitat flow computes an <a href="https://github.com/Cyan4973/xxHash">xxHash64</a> checksum for every file on the card and in the copy, then compares them. Each offload leaves an <a href="https://theasc.com/mitc/asc-media-hash-list/">ASC Media Hash List</a> report with the footage, <a href="https://habitat-flow.com">per habitat flow's own site</a>. xxHash64 is a fast, widely used checksum. SHA-256 is slower to compute, and it is the one written into a formal standard. Either one catches a copy that landed wrong.</p>
 
   <h2>What does habitat flow do better?</h2>
-  <p>habitat flow has a Free plan that covers the whole offload process up to 150 GB a week, with up to three folder presets &mdash; genuinely free, not a time-boxed trial. Its Pro plan can mirror a card to two drives in one pass, and its companion iPhone app shows live ingest status and pushes a notification when a copy is verified, so you can step away from the Mac while it works. Pro can also be bought once, for $149, instead of a yearly $69 subscription, if you would rather own it outright.</p>
+  <p>habitat flow has a Free plan that covers the whole offload, up to 150 GB a week. It is free with no time limit, not a trial. The Pro plan can mirror a card to two drives in one pass. The free iPhone app shows live ingest status and sends a notification when a copy is verified. So you can step away from the Mac while it works.</p>
+  <p>It also knows a few things about cards that save time on set:</p>
+  <ul>
+    <li>A card copied before shows up as copied.</li>
+    <li>Shooting days come from the recording date, and footage shot past midnight splits into days.</li>
+    <li>A wrong camera clock can be corrected before copying.</li>
+    <li>A second card from the same camera goes into its own folder, never over the first.</li>
+    <li>It only reads the card. You format when you decide.</li>
+  </ul>
 
   <h2>What does MediaFlowSwift do better?</h2>
-  <p>habitat flow's job is the offload: it does not categorize footage into a project structure, review or rate clips, archive to numbered drives, write reports, or help with publishing. MediaFlowSwift does all of that after the same kind of checksum-proved copy: it files each clip into Category and Camera folders, offers frame-accurate review with star ratings and tags, archives to numbered drives with a record of what went where, and writes PDF, HTML and CSV reports. Studio Pro also drafts YouTube titles, descriptions, chapters and tags from the finished video. If the card is only the start of the work, that is the gap.</p>
+  <p>habitat flow sorts each card into a project, a shooting day and folders from a preset, and keeps the card's own structure. Its job ends at a verified, reported offload. Its site describes no clip review or rating, no numbered archive drives and no help with publishing. MediaFlowSwift does all of that after the same kind of checked copy.</p>
+  <p>It files each clip into Category and Camera folders by what the clip is. It offers frame-accurate review with star ratings and tags. It archives to numbered drives and records what went where. It writes PDF, HTML and CSV reports. Studio Pro also drafts YouTube titles, descriptions, chapters and tags from the finished video.</p>
+
+  <h2>How far does the free plan go?</h2>
+  <p>The Free plan's limit is 150 GB a week. One full 128 GB card fits inside it. Two of those cards make 256 GB, which is 106 GB over. A weekend shoot on two cameras would need Pro, or a wait until the week resets. A creator who fills one 64 GB card a week stays well inside the free plan.</p>
+  <p>MediaFlowSwift has no free plan after its 14-day trial. When the trial ends, everything you made still opens, and the files stay on your own drives. To go on working, you buy a plan.</p>
 
   <h2>What does each cost, as of October 2026?</h2>
   <div class="tablewrap">
@@ -68,23 +82,25 @@
     <tr><td>Mirror a card to two drives in one pass</td><td>&mdash;</td><td>&#10003; (Pro)</td></tr>
     <tr><td>Live ingest status on a companion iPhone app</td><td>&mdash;</td><td>&#10003;</td></tr>
     <tr><td colspan="3" class="group">After the copy</td></tr>
-    <tr><td>Categorizes into folders by camera and category</td><td>&#10003;</td><td>&mdash;</td></tr>
+    <tr><td>Gives each clip a category, then files it into Category and Camera folders</td><td>&#10003;</td><td>&mdash;</td></tr>
     <tr><td>Frame-accurate review, star ratings, tags inside the app</td><td>&#10003;</td><td>&mdash;</td></tr>
     <tr><td>Archive to numbered drives with a destination record</td><td>&#10003;</td><td>&mdash;</td></tr>
     <tr><td>Drafts YouTube titles, descriptions and tags and sets them on your upload (Studio Pro)</td><td>&#10003;</td><td>&mdash;</td></tr>
   </table>
   </div>
-  <p>MediaFlowSwift's Studio plan is $4.99 a month or $49.99 a year, and Studio Pro is $9.99 a month or $99.99 a year, with a 14-day free trial of the full app and no card needed. In US dollars, habitat flow's Free plan is $0 for up to 150 GB a week; its Pro plan, <a href="https://habitat-flow.com">on habitat flow's own pricing page</a>, is $69 a year or $149 once for a licence with no expiry, and comes with its own free trial period.</p>
+  <p>MediaFlowSwift's Studio plan is $4.99 a month or $49.99 a year. Studio Pro is $9.99 a month or $99.99 a year. The full app runs free for 14 days, with no card needed. One plan covers up to three Macs.</p>
+  <p>In US dollars, as listed on <a href="https://habitat-flow.com">habitat flow's pricing page</a> on 19 October 2026: Free is $0 for up to 150 GB a week. Pro is $69 a year, or $149 once for a licence with no expiry and a year of updates. Prices are per user. Sign-ups before 24 October 2026 also get Pro at no cost until that date.</p>
 
   <h2>Which one should you pick?</h2>
-  <p>If the job stops at a verified offload &mdash; a light shoot, a short trip, a budget that starts at zero &mdash; habitat flow's Free plan may be all you need. If you want the same proved copy to turn automatically into an organized, reviewed, reported and archived project, without a second app for the rest of the pipeline, that is what MediaFlowSwift is for. <a href="/download.html">Try MediaFlowSwift free for 14 days</a>, no card, and see which one fits how you actually work.</p>
+  <p>Pick habitat flow if the job stops at a verified offload. A light shoot, a short trip or a budget that starts at zero all fit its Free plan. Pick MediaFlowSwift if the same checked copy should become an organized, reviewed, reported and archived project. Then you don't need a second app for the rest of the pipeline. <a href="/download.html">Try MediaFlowSwift free for 14 days</a>, no card, and see which one fits how you work.</p>
 
   <h2>Sources</h2>
   <ul class="vs-sources">
-    <li><a href="https://habitat-flow.com">habitat flow's own site: features and pricing</a></li>
+    <li><a href="https://habitat-flow.com">habitat flow's own site: features and pricing</a> (prices checked 19 October 2026)</li>
     <li><a href="https://theasc.com/mitc/asc-media-hash-list/">ASC Media Hash List, American Society of Cinematographers</a></li>
     <li><a href="https://github.com/Cyan4973/xxHash">xxHash, the checksum algorithm's own reference project</a></li>
     <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard (FIPS 180-4), NIST</a></li>
+    <li><a href="/manual/organizing-media/#how-mediaflow-verifies-copies">How MediaFlow verifies copies, MediaFlowSwift manual</a></li>
   </ul>
 
   <p><a href="/guides/">All guides</a> &middot; <a href="/vs/offshoot/">MediaFlowSwift vs OffShoot</a> &middot; <a href="/vs/finder-and-spreadsheet/">MediaFlowSwift vs Finder and a spreadsheet</a></p>
