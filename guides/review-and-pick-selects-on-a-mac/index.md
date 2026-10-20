@@ -2,6 +2,7 @@
 layout: guide
 title: "How to Review Footage and Pick Your Selects on a Mac"
 description: "Rapid Review plays, rates and rejects clips by keyboard. Smart Selects scores each one first, so you review in quality order, not import order."
+published: "2026-10-13"
 updated: 2026-10-19
 permalink: /guides/review-and-pick-selects-on-a-mac/
 ---
@@ -68,7 +69,7 @@ Run it, accept what looks right, then open Rapid Review on what's left to make t
 
 ## Can I undo these changes?
 
-Category, rating and select-status changes — including ones made with the Rapid Review shortcuts — go through Edit → Undo (Cmd+Z), named for the step: "Undo Rate ★4 on 12 Clips", for instance. Clear a rating with Cmd+0 or Edit → Set Rating → Clear Rating, and a status with Edit → Select → Clear Status, on as many selected clips as you like.
+Category, rating and select-status changes — including ones made with the Rapid Review shortcuts — go through Edit → Undo (Cmd+Z), named for the step: "Undo Rate ★★★★ on 12 Clips", for instance. Clear a rating with Cmd+0 or Edit → Set Rating → Clear Rating, and a status with Edit → Select → Clear Status, on as many selected clips as you like.
 
 ## Read more
 

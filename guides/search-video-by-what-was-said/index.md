@@ -2,6 +2,7 @@
 layout: guide
 title: "How to Find a Clip by What Was Said in It on a Mac"
 description: "Transcribe your clips on-device, then search every transcript at once for a word or phrase and select the clip it's in."
+published: "2026-10-13"
 updated: 2026-10-19
 permalink: /guides/search-video-by-what-was-said/
 ---
