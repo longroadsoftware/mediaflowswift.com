@@ -15,7 +15,7 @@ DIR="$(cd "$(dirname "$0")/.." && pwd)"
 [ -f "$SRC" ] || { echo "terms not found at $SRC" >&2; exit 1; }
 grep -q "^# Terms of use" "$SRC" || { echo "$SRC does not look like the terms" >&2; exit 1; }
 {
-  printf -- '---\nlayout: legal\ntitle: Terms & refunds\ndescription: "The terms for using MediaFlowSwift: the licence for up to three Macs, the 14-day trial, what still works when a plan ends, payment through Paddle, and refunds."\npermalink: /terms.html\n---\n'
+  printf -- '---\nlayout: legal\ntitle: Terms & refunds\ndescription: "The terms for using MediaFlowSwift: the licence for up to 3 computers (Mac or Windows), the 14-day trial, what still works when a plan ends, payment through Paddle, and refunds."\npermalink: /terms.html\n---\n'
   # Links in the app point at the full address; on the site they stay on the site.
   sed -e 's#](https://mediaflowswift.com/#](/#g' "$SRC"
 } > "$DIR/terms.md"
