@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">How Library Moved repoints projects after a library was copied to a new drive</title>
+<desc id="d">Five steps left to right: you copy the projects folder to a new drive in the Finder; choose Workflow, Repair, Library Moved and set Was in and Is now in; Find Projects lists what it finds and changes nothing; Check and Point follows a clip only if a file of the same size is at the same place, reading it in full when a checksum was recorded; the project then points at the new drive. A clip that fails keeps its old path and is listed, and nothing is copied, moved or deleted on either drive.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#555"/></marker></defs>
+<rect x="1" y="1" width="718" height="258" rx="12" fill="#ffffff" stroke="#d6d6d6"/>
+<text x="360.0" y="34" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">Library Moved: repoint projects after a Finder copy</text>
+<rect x="14.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="76.0" y="92.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Finder copy</text>
+<text x="76.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">projects folder</text>
+<text x="76.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">copied to a</text>
+<text x="76.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">new drive</text>
+<line x1="141.0" y1="114.0" x2="153.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="156.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="218.0" y="101.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Library Moved…</text>
+<text x="218.0" y="119.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">set “Was in”</text>
+<text x="218.0" y="137.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">and “Is now in”</text>
+<line x1="283.0" y1="114.0" x2="295.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="298.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="360.0" y="92.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Find Projects</text>
+<text x="360.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">lists what it</text>
+<text x="360.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">finds; changes</text>
+<text x="360.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">nothing</text>
+<line x1="425.0" y1="114.0" x2="437.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="440.0" y="58" width="124.0" height="112" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="502.0" y="92.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Check and Point</text>
+<text x="502.0" y="110.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">same place and</text>
+<text x="502.0" y="128.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">size; checksum</text>
+<text x="502.0" y="146.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">read if recorded</text>
+<line x1="567.0" y1="114.0" x2="579.0" y2="114.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="582.0" y="58" width="124.0" height="112" rx="8" fill="#eaf1fe" stroke="#2a6df4" stroke-width="2"/>
+<text x="644.0" y="101.0" font-size="15" font-weight="bold" fill="#2a6df4" text-anchor="middle">Project</text>
+<text x="644.0" y="119.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">now points at</text>
+<text x="644.0" y="137.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">the new drive</text>
+<text x="360.0" y="204" font-size="14" font-weight="normal" fill="#333" text-anchor="middle">A clip that fails its check keeps its old path and is listed.</text>
+<text x="360.0" y="226" font-size="14" font-weight="normal" fill="#333" text-anchor="middle">Nothing is copied, moved or deleted on either drive.</text>
+</svg>

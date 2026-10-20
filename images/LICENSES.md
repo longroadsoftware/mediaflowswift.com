@@ -15,3 +15,13 @@ mike-williams-400/800 (.jpg, .webp) is a photograph of Mike Williams, the founde
 demo-video-poster.jpg is a frame of `videos/mediaflowswift-demo.mp4`, the MediaFlowSwift feature demo made by Long Road Software (2026-10-18): a screen recording of the app on a demo project, with On Island Time B-roll that shows no people. Metadata removed.
 
 The .webp files beside app-lake-day-grid(-1272).jpg and storage-devices.jpg are the same pictures re-encoded as WebP (cwebp -q 80, metadata removed), under the same terms as their .jpg.
+
+The process diagrams in `images/guides/` are not photographs or app screenshots. Each is a hand-written SVG made for this site by Long Road Software (2026-10-20), drawn from the steps its guide describes:
+
+| File | Shows | Guide |
+|---|---|---|
+| guides/verify-footage-copied-before-erasing-card.svg | Card → Import read-back → SHA-256 match → Organize → Clear Card | /guides/verify-footage-copied-before-erasing-card/ |
+| guides/footage-missing-after-moving-to-external-drive.svg | The Library Moved steps, from Finder copy to Check and Point | /guides/footage-missing-after-moving-to-external-drive/ |
+| guides/two-checked-copies-of-a-card-on-a-mac.svg | Card → Import → working-drive copy → Archive to USB → archive-drive copy | /guides/two-checked-copies-of-a-card-on-a-mac/ |
+| guides/label-and-catalog-archive-drives-for-video.svg | Drive Set Up, numbering, checked archive, catalog and shelf sticker | /guides/label-and-catalog-archive-drives-for-video/ |
+| guides/automate-video-file-organization-on-mac.svg | One-click Organize template steps and the Destination / Category / Camera / Filename layout | /guides/automate-video-file-organization-on-mac/ |

@@ -3,28 +3,30 @@ layout: guide
 title: "How to Automate Video File Organization on Your Mac"
 description: "MediaFlowSwift sorts clips into Category and Camera folders automatically, and Workflow Templates chain that with other steps into one command."
 published: "2026-10-13"
-updated: 2026-10-19
+updated: 2026-10-20
 permalink: /guides/automate-video-file-organization-on-mac/
 ---
 # How to Automate Video File Organization on Your Mac
 
-Organize Media sorts every clip into a Category and Camera folder automatically, every time you run it, and Workflow Templates can chain that with other steps so one command does the whole routine. Copies and deletions still wait for your confirmation; re-filing after you change a clip's category or camera happens on its own, in the background.
+To automate video file organization on a Mac, run Organize Media in MediaFlowSwift. Organize Media sorts every clip into Destination / Category / Camera / Filename folders, the same way every time. Workflow Templates chain Organize with other steps, so one command runs your whole routine. Copies and deletions still wait for your confirmation.
 
-Here's what's actually automatic, and what you still choose.
+Re-filing after you change a clip's category or camera happens on its own, in the background. Here's what's actually automatic, and what you still choose.
 
 ## Folders happen on their own, every time
 
-Once you've set up categories and cameras, organizing is the same tidy layout every time, with no filing decisions left to make by hand:
+Once you've set up categories and cameras, Organize Media gives the same tidy layout every time, with no filing decisions left to make by hand:
 
 > Organize Media copies your clips into a tidy folder layout at the project destination. The destination can be any folder: a network share, an external drive, a RAID, or a folder on this Mac. The layout is Destination / Category / Camera / Filename.
 
-MediaFlowSwift also looks for shortcuts to avoid redoing work it's already done. If a clip's imported copy is already sitting on the same drive as the destination, Organize skips copying it entirely:
+A fixed folder structure is also what the Library of Congress recommends for keeping digital video. Its [Keeping Personal Digital Video](https://digitalpreservation.gov/personalarchiving/video.html) page suggests descriptive file names and a folder structure for the videos you keep.
+
+MediaFlowSwift also looks for shortcuts to avoid redoing work it's already done. If a clip's imported copy is already on the same drive as the destination, Organize skips copying it entirely:
 
 > When a clip's imported copy is on the same drive as the destination and still matches the checksum its import took from the card... Organize renames it into place instead of copying it: seconds, and no extra space.
 
-On macOS, moving a file within the same volume is a cheap rename rather than a byte-for-byte copy — the same distinction Apple's own file-system documentation draws between a move within a volume and a copy across volumes ([File System Programming Guide, Apple Developer Documentation](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html)).
+On macOS, moving a file within the same volume is a cheap rename rather than a byte-for-byte copy. Apple's developer documentation for [FileManager's move method](https://developer.apple.com/documentation/foundation/filemanager/moveitem%28at%3Ato%3A%29) draws the same line: when source and destination are not on the same volume, the item is copied first and then removed.
 
-And if you change a clip's category or camera later, you don't have to move the file yourself — MediaFlowSwift re-files it for you, in the background:
+If you change a clip's category or camera later, you don't have to move the file yourself. MediaFlowSwift re-files it for you, in the background:
 
 > When you change the category or the camera of an organized clip, MediaFlow moves its copy at the destination into the matching folder. This happens in the background, keeps any edit you make meanwhile, and only interrupts you if a file fails to move or you open another project before the move could be saved.
 
@@ -40,25 +42,27 @@ Open the picker with Cmd+Shift+R, or choose Workflow → Run Workflow Template. 
 > - End of Day Wrap — Re-check files, generate a report, open Free Up Space, then show a summary. Free Up Space shows its usual preview: nothing is staged or deleted that you have not seen listed and confirmed
 > - Relink & Repair — Re-check files, relink missing media, re-file folders by category, then show a summary
 
-A template doesn't skip your confirmations. When a step needs you to confirm a copy, choose a folder, or read a result, the template's own window steps aside. That step's ordinary window appears instead, same as if you'd run it on its own.
+A workflow template doesn't skip your confirmations. When a step needs you to confirm a copy, choose a folder, or read a result, the template's own window steps aside. That step's ordinary window appears instead, same as if you'd run it on its own.
+
+<figure class="guide-figure"><img src="/images/guides/automate-video-file-organization-on-mac.svg" width="720" height="260" style="max-width:100%;height:auto" alt="Diagram in two rows. Top row: the One-click Organize workflow template runs Re-check files, Check format conformance, Organize all media, then Show a summary, in order. Bottom row: the folder layout Organize Media builds, Destination / Category / Camera / Filename. A note says changing a clip's category or camera later re-files its copy in the background." loading="lazy"><figcaption>The One-click Organize template's steps, and the folder layout its Organize step writes.</figcaption></figure>
 
 ## Batch tools for the busywork around organizing
 
-Separate from Organize itself, the Proxy queue automates thumbnail and proxy generation across many clips at once. Right-click a clip or a selection and add it to the queue, then process the whole thing in one go:
+Separate from Organize itself, the Proxy queue automates thumbnail and proxy generation across many clips at once. Right-click a clip or a selection and add it to the queue, then process the whole queue in one go:
 
 > - Process Queue (Thumbnails) — Generate a thumbnail image for each queued clip
 > - Process Queue (Proxies) — Generate a low-resolution MP4 proxy for each queued video. Photos and audio files are skipped
 > - Process Queue (All) — Generate both
 
-This is a different job from sorting clips into folders. It's about making footage easier to scrub and preview, not about where files live. But it's the other place MediaFlowSwift lets you queue work up and run it across many clips at once.
+The Proxy queue is a different job from sorting clips into folders. Proxies make footage easier to scrub and preview; they don't change where files live. Apple's Final Cut Pro guide describes why editors use them: [proxy files increase editing performance and take up considerably less storage space](https://support.apple.com/guide/final-cut-pro/create-optimized-and-proxy-files-verb8e5f6fd/mac) than optimized files. The queue is the other place MediaFlowSwift lets you line work up and run it across many clips at once.
 
 ## Optional: let a model suggest categories first
 
-If you'd rather not even pick categories by hand after an import, MediaFlowSwift can ask a model to suggest them. This is turned on in Settings › Analysis, separate from the Settings › Privacy switches, and ticked separately for each import:
+If you'd rather not pick categories by hand after an import, MediaFlowSwift can ask a model to suggest them. Model suggestions are turned on in Settings › Analysis, separate from the Settings › Privacy switches. They are also ticked separately for each import:
 
 > This checkbox asks an AI model to look at each imported video clip and propose one of your project's categories. It is off every time the sheet opens and applies to this import only, so no import uses a model unless you tick the box for it.
 
-What it sends depends on which model you choose. A model running on your own Mac sends nothing anywhere:
+What the model receives depends on which model you choose. A model running on your own Mac sends nothing anywhere:
 
 > With a model that runs on this Mac, nothing leaves the Mac and it costs nothing.
 
@@ -66,7 +70,7 @@ A paid provider sees a little more, and the manual is upfront that it costs mone
 
 > With a paid provider (Claude, ChatGPT or Gemini), MediaFlow sends three small frames from each clip to that provider, together with your category list, the clip's camera, duration and place name, the opening words of its transcript when it has one, and your recent category corrections. The provider bills you for each clip.
 
-Either way, nothing is applied to a clip automatically — suggestions arrive as proposals you confirm yourself.
+Either way, nothing is applied to a clip automatically. Suggestions arrive as proposals you confirm yourself.
 
 ## Read more
 
