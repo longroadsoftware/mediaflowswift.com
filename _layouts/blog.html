@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+{% if page.noindex %}<meta name="robots" content="noindex, follow">{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="alternate" type="application/rss+xml" title="MediaFlowSwift Blog" href="{{ site.url }}/blog/feed.xml">
+<meta property="og:site_name" content="MediaFlowSwift">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":{% if page.url == "/blog/" %}"Blog"{% else %}"CollectionPage"{% endif %},"@id":"{{ site.url }}{{ page.url }}{% if page.url == "/blog/" %}#blog{% endif %}","name":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"url":"{{ site.url }}{{ page.url }}","inLanguage":"en-US","isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"publisher":{"@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]}{% if page.items %},"{% if page.url == "/blog/" %}blogPost{% else %}hasPart{% endif %}":[{% for i in page.items %}{"@type":"BlogPosting","headline":{{ i.title | jsonify }},"url":"{{ site.url }}{{ i.url }}","datePublished":{{ i.published | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}},
+{"@type":"BreadcrumbList","itemListElement":[{% for c in page.crumbs %}{"@type":"ListItem","position":{{ forloop.index }},"name":{{ c.name | jsonify }},"item":"{{ site.url }}{{ c.url }}"}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+]}
+</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/site.css">
+<!-- Analytics, off until the visitor says yes. See /privacy.html -->
+<script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="5" width="24" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h4M6 14h4M6 18h4M18 10h4M18 14h4M18 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 11l5 3-5 3z" fill="currentColor"/></svg>MediaFlowSwift</a>
+    <nav class="menu" aria-label="Site">
+      <a href="/">Overview</a>
+      <a href="/download.html">Download</a>
+      <a href="/#how">How it works</a>
+      <a href="/#plans">Plans</a>
+      <a href="/manual/">Manual</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+{% if page.url != "/blog/" %}
+<nav class="crumbs" aria-label="Breadcrumb">{% for c in page.crumbs %}{% unless forloop.last %}<a href="{{ c.url }}">{{ c.name }}</a> &rsaquo; {% endunless %}{% endfor %}</nav>
+{% endif %}
+<article class="doc blog-list">
+{{ content }}
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/blog/feed.xml">RSS</a><a href="/guides/#comparing-mediaflowswift-to-other-ways-of-doing-this">Compare</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a></span>
+  </div>
+</footer>
+</body>
+</html>

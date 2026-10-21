@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% assign cat = site.data.blog.categories[page.category] %}
+{% assign short_title = page.seo_title | default: page.title %}
+{% assign full_title = short_title | append: " | MediaFlowSwift Blog" %}
+{% if full_title.size > 60 %}{% assign full_title = short_title | append: " | MediaFlowSwift" %}{% endif %}
+{% if full_title.size > 60 %}{% assign full_title = short_title %}{% endif %}
+{% assign updated_date = page.updated | default: page.published %}
+{% assign og_image = page.og_image | default: "/images/og-image.png" %}
+<title>{{ full_title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+<meta name="keywords" content="{{ page.keywords | escape }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<link rel="alternate" type="application/rss+xml" title="MediaFlowSwift Blog" href="{{ site.url }}/blog/feed.xml">
+<meta property="og:site_name" content="MediaFlowSwift">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ page.title | escape }}">
+<meta property="article:published_time" content="{{ page.published }}">
+<meta property="article:modified_time" content="{{ updated_date }}">
+<meta property="article:section" content="{{ cat.name | escape }}">
+{% for tag in page.tags %}<meta property="article:tag" content="{{ tag | escape }}">
+{% endfor %}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page.description | escape }}">
+<meta name="twitter:image" content="{{ site.url }}{{ og_image }}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"BlogPosting","@id":"{{ site.url }}{{ page.url }}#article","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"image":"{{ site.url }}{{ og_image }}","datePublished":{{ page.published | jsonify }},"dateModified":{{ updated_date | jsonify }},"inLanguage":"en-US","articleSection":{{ cat.name | jsonify }},"keywords":{{ page.keywords | jsonify }},"wordCount":{{ content | strip_html | number_of_words }},"url":"{{ site.url }}{{ page.url }}","mainEntityOfPage":{"@type":"WebPage","@id":"{{ site.url }}{{ page.url }}"},"isPartOf":{"@type":"Blog","@id":"https://mediaflowswift.com/blog/#blog","name":"MediaFlowSwift Blog","url":"https://mediaflowswift.com/blog/"},"author":{"@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","email":"support@mediaflowswift.com","sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]},"publisher":{"@id":"https://longroadsoftware.com/#organization"}{% if page.sources %},"citation":[{% for s in page.sources %}{"@type":"CreativeWork","name":{{ s.title | jsonify }},"url":{{ s.url | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"MediaFlowSwift","item":"https://mediaflowswift.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://mediaflowswift.com/blog/"},{"@type":"ListItem","position":3,"name":{{ cat.name | jsonify }},"item":"https://mediaflowswift.com/blog/category/{{ page.category }}/"},{"@type":"ListItem","position":4,"name":{{ page.title | jsonify }},"item":"{{ site.url }}{{ page.url }}"}]}{% if page.faq %},
+{"@type":"FAQPage","@id":"{{ site.url }}{{ page.url }}#faq","mainEntity":[{% for f in page.faq %}{"@type":"Question","name":{{ f.q | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ f.a | jsonify }}}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% endif %}
+]}
+</script>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="/site.css">
+<!-- Analytics, off until the visitor says yes. See /privacy.html -->
+<script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="5" width="24" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h4M6 14h4M6 18h4M18 10h4M18 14h4M18 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 11l5 3-5 3z" fill="currentColor"/></svg>MediaFlowSwift</a>
+    <nav class="menu" aria-label="Site">
+      <a href="/">Overview</a>
+      <a href="/download.html">Download</a>
+      <a href="/#how">How it works</a>
+      <a href="/#plans">Plans</a>
+      <a href="/manual/">Manual</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/" aria-current="page">Blog</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<nav class="crumbs" aria-label="Breadcrumb"><a href="/">MediaFlowSwift</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <a href="/blog/category/{{ page.category }}/">{{ cat.name | escape }}</a></nav>
+<article class="doc manual guide post">
+  <header class="post-head">
+    <p class="post-kicker"><a href="/blog/category/{{ page.category }}/">{{ cat.name | escape }}</a></p>
+    <h1>{{ page.title }}</h1>
+    {% assign minutes = content | strip_html | number_of_words | divided_by: 230 | plus: 1 %}
+    <p class="updated">
+      <time datetime="{{ page.published }}">{{ page.published | date: "%B %-d, %Y" }}</time>{% if page.updated and page.updated != page.published %} &middot; Updated <time datetime="{{ page.updated }}">{{ page.updated | date: "%B %-d, %Y" }}</time>{% endif %}
+      &middot; {{ minutes }} min read &middot; By <strong>Long Road Software LLC</strong> (<a href="/about/#how-we-write-these-guides">how we write these articles</a>)
+    </p>
+  </header>
+
+  {% if page.takeaways %}
+  <section class="takeaways" id="key-takeaways" aria-labelledby="key-takeaways-title">
+    <h2 id="key-takeaways-title">Key takeaways</h2>
+    <ul>
+      {% for t in page.takeaways %}<li>{{ t | markdownify | remove: "<p>" | remove: "</p>" | strip }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% assign parts = content | split: '<h2 id="' %}
+  {% if parts.size > 2 %}
+  <nav class="toc" aria-labelledby="toc-title">
+    <h2 id="toc-title">In this article</h2>
+    <ol>
+      {% for part in parts offset: 1 %}{% assign head = part | split: '</h2>' | first %}{% assign hid = head | split: '"' | first %}{% assign htext = head | remove_first: hid | remove_first: '">' | strip_html %}<li><a href="#{{ hid }}">{{ htext }}</a></li>
+      {% endfor %}{% if page.faq %}<li><a href="#faq">Frequently asked questions</a></li>{% endif %}
+    </ol>
+  </nav>
+  {% endif %}
+
+  {{ content }}
+
+  {% if page.faq %}
+  <section class="faq" aria-labelledby="faq">
+    <h2 id="faq">Frequently asked questions</h2>
+    {% for f in page.faq %}
+    <h3>{{ f.q }}</h3>
+    <p>{{ f.a }}</p>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if page.sources %}
+  <section class="sources" aria-labelledby="sources">
+    <h2 id="sources">Sources</h2>
+    <ul>
+      {% for s in page.sources %}<li><a href="{{ s.url }}" rel="noopener">{{ s.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <aside class="post-about">
+    <p><strong>About this article.</strong> AI writes the articles on this blog for Long Road Software LLC, the company that makes MediaFlowSwift. Each one is checked against its sources and, where it describes the app, against the current app and its <a href="/manual/">manual</a> before it is published. Mike, who makes MediaFlowSwift, does not personally review each one. Spot a mistake? Tell us at <a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a>.</p>
+    {% if page.tags %}<p class="post-tags">Topics: {% for tag in page.tags %}<span>{{ tag }}</span>{% endfor %}</p>{% endif %}
+  </aside>
+
+  {% assign related = site.pages | where: "layout", "post" | where: "category", page.category | sort: "published" | reverse %}
+  {% assign shown = 0 %}
+  {% capture related_html %}{% for p in related %}{% if p.url != page.url and shown < 3 %}{% assign shown = shown | plus: 1 %}<li><a href="{{ p.url }}">{{ p.title }}</a></li>{% endif %}{% endfor %}{% endcapture %}
+  {% if shown == 0 %}
+  {% assign related = site.pages | where: "layout", "post" | sort: "published" | reverse %}
+  {% capture related_html %}{% for p in related %}{% if p.url != page.url and shown < 3 %}{% assign shown = shown | plus: 1 %}<li><a href="{{ p.url }}">{{ p.title }}</a></li>{% endif %}{% endfor %}{% endcapture %}
+  {% endif %}
+  {% if shown > 0 %}
+  <nav class="related" aria-labelledby="related-title">
+    <h2 id="related-title">Keep reading</h2>
+    <ul>{{ related_html }}</ul>
+    <p><a href="/blog/">All articles</a> &middot; <a href="/blog/category/{{ page.category }}/">More in {{ cat.name }}</a> &middot; <a href="/guides/">How-to guides</a></p>
+  </nav>
+  {% endif %}
+
+  <p class="post-cta">MediaFlowSwift checks every card copy before anything is erased, files footage into the same folders every time, and numbers your archive drives. <a href="/download.html">Try it free for 14 days</a> on a Mac with Apple silicon, no card asked for.</p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/blog/">Blog</a><a href="/blog/feed.xml">RSS</a><a href="/guides/#comparing-mediaflowswift-to-other-ways-of-doing-this">Compare</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a></span>
+  </div>
+</footer>
+</body>
+</html>

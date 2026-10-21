@@ -1,0 +1,22 @@
+{
+  "title": "MediaFlowSwift Blog",
+  "description": "Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.",
+  "categories": {
+    "storage-backup": {
+      "name": "Storage & Backup",
+      "description": "NAS setups, RAID, archive tiers, backups and what each kind of storage really costs for video footage."
+    },
+    "organization": {
+      "name": "Footage Organization",
+      "description": "Folder structures, naming, drive labels and routines that keep footage findable years later."
+    },
+    "software": {
+      "name": "Choosing Software",
+      "description": "How to judge video file management, card offload and media asset tools before you commit to one."
+    },
+    "workflow": {
+      "name": "Workflow",
+      "description": "From the card to the edit to the archive: shoot-day and post-production routines for small teams and solo creators."
+    }
+  }
+}

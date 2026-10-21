@@ -80,7 +80,10 @@ def front_matter(text):
     for line in text[4:end].split("\n"):
         k, _, v = line.partition(":")
         v = v.strip()
-        fields[k.strip()] = json.loads(v) if v.startswith('"') else v
+        try:
+            fields[k.strip()] = json.loads(v) if v.startswith('"') else v
+        except ValueError:  # a YAML list item or a multi-line value (the blog posts' takeaways, faq, sources)
+            fields[k.strip()] = v
     return fields, text[end + 5:]
 
 
@@ -108,7 +111,13 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
             url = fields.get("permalink") or ("/" + rel[: -len("index.md")] if name == "index.md" else "/" + rel[:-3] + ".html")
             layout = open(os.path.join(ROOT, "_layouts", fields["layout"] + ".html"), encoding="utf-8").read()
             layout = layout.replace("{{ site.url }}{{ page.url }}", SITE + url)
-            layout_scan = scan(re.sub(r"{{.*?}}", "", layout))
+            # Liquid: keep a simple {% if page.x %}...{% endif %} only when the page sets x (the blog's noindex),
+            # and leave out links built from page variables (the post layout's category links); those are
+            # checked by tools/build-blog.py, which knows every category.
+            layout = re.sub(r"{% if page\.(\w+) %}(.*?){% endif %}",
+                            lambda m: m.group(2) if fields.get(m.group(1)) not in (None, "", "false") else "", layout)
+            layout = re.sub(r'(href|src)="[^"]*{{[^"]*"', "", layout)
+            layout_scan = scan(re.sub(r"{{.*?}}|{%.*?%}", "", layout))
             body_scan = scan(body)  # raw HTML inside the Markdown
             md_links = [m.group(1) for m in re.finditer(r"\]\(([^)\s]+)\)", body)]
             h1 = [line for line in body.split("\n") if re.match(r"^#[ \t]", line)]
