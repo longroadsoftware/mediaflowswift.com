@@ -343,3 +343,16 @@ h2 + details.faq { border-top: 1px solid var(--line); }
 /* Paragraphs inside a table cell (privacy page) */
 td p { margin: 0 0 0.5em; }
 td p:last-child { margin-bottom: 0; }
+
+/* Email-me form (posts straight to Kit, no script) */
+.notify { margin-top: 1.25rem; max-width: var(--measure); }
+.notify label { display: block; font-weight: 600; margin-bottom: 0.4rem; }
+.notify-row { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.notify input {
+  flex: 1 1 16rem; min-width: 0; padding: 0.65rem 0.8rem;
+  font: inherit; color: var(--ink); background: var(--paper-2);
+  border: 1px solid var(--line); border-radius: 6px;
+}
+.notify input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.notify .cta { margin-top: 0; border: 0; cursor: pointer; font: inherit; font-weight: 600; }
+.fine { color: var(--ink-2); font-size: 0.95rem; }
