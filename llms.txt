@@ -31,6 +31,16 @@ Plain answers to the questions people ask when moving footage off a card on a Ma
 - How to automate video file organization on a Mac: https://mediaflowswift.com/guides/automate-video-file-organization-on-mac/ — category and camera folders, workflow templates
 - How to label and catalog archive drives for video: https://mediaflowswift.com/guides/label-and-catalog-archive-drives-for-video/ — numbered archive volumes and the record of what is on each
 
+## Blog
+
+Articles on video storage, backup, archiving and choosing software. AI-written for Long Road Software LLC and checked against their sources; prices of other products are dated.
+
+- All articles: https://mediaflowswift.com/blog/ (RSS: https://mediaflowswift.com/blog/feed.xml)
+- NAS video storage, how to choose and structure one: https://mediaflowswift.com/blog/2026/10/nas-video-storage-how-to-choose/ — network speed vs codec data rates, capacity math, RAID levels, folder layout, verified offloads, backing up the NAS
+- External hard drive organization for video creators: https://mediaflowswift.com/blog/2026/10/external-hard-drive-organization-for-video/ — folder tree, naming, Mac file systems, relinking in editing apps, backups
+- Video archive storage, LTO vs NAS vs cloud: https://mediaflowswift.com/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/ — five-year cost per TB and restore times at October 2026 prices; MediaFlowSwift does not write LTO tape or upload to cloud storage
+- Evaluating video file management software: https://mediaflowswift.com/blog/2026/10/evaluating-video-file-management-software/ — a pass/fail checklist and how the main Mac tools compare
+
 ## Comparisons
 Honest, dated comparisons against other ways of getting footage off a card.
 - MediaFlowSwift vs OffShoot: https://mediaflowswift.com/vs/offshoot/ — both verify copies with checksums; OffShoot's strength is large-scale, multi-destination DIT transfers, MediaFlowSwift's is the review-to-archive pipeline after the copy

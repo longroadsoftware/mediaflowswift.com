@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>MediaFlowSwift Blog</title>
+  <link>https://mediaflowswift.com/blog/</link>
+  <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
+  <language>en-us</language>
+  <lastBuildDate>Wed, 21 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs</title>
+    <link>https://mediaflowswift.com/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/</guid>
+    <pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Storage &amp; Backup</category>
+    <description>Video archive storage compared: five-year cost per TB and restore times for LTO tape, NAS, drives and cloud, using October 2026 prices in US dollars.</description>
+  </item>
+  <item>
+    <title>NAS Video Storage: How to Choose and Structure One</title>
+    <link>https://mediaflowswift.com/blog/2026/10/nas-video-storage-how-to-choose/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/nas-video-storage-how-to-choose/</guid>
+    <pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Storage &amp; Backup</category>
+    <description>How to choose NAS video storage: network speed, capacity math from real camera bitrates, RAID levels, folder structure, verified offloads and backups.</description>
+  </item>
+  <item>
+    <title>External Hard Drive Organization for Video Creators</title>
+    <link>https://mediaflowswift.com/blog/2026/10/external-hard-drive-organization-for-video/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/external-hard-drive-organization-for-video/</guid>
+    <pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Footage Organization</category>
+    <description>How to organize an external hard drive for video: a folder tree, naming rules, the right Mac file system, verified card offloads and safe backups.</description>
+  </item>
+  <item>
+    <title>Evaluating Video File Management Software: A Pass/Fail Checklist for Mac</title>
+    <link>https://mediaflowswift.com/blog/2026/10/evaluating-video-file-management-software/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/evaluating-video-file-management-software/</guid>
+    <pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Choosing Software</category>
+    <description>A pass/fail checklist for video file management software on Mac: test verified offloads, drive tracking, search and relinking, then compare the main tools.</description>
+  </item>
+</channel>
+</rss>

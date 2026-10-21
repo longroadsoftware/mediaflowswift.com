@@ -1,0 +1,57 @@
+---
+layout: blog
+generated: tools/build-blog.py
+title: "MediaFlowSwift Blog: Video Storage, Backup and Archiving"
+description: "Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job."
+permalink: "/blog/"
+crumbs: [{"name": "MediaFlowSwift", "url": "/"}, {"name": "Blog", "url": "/blog/"}]
+items: [{"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
+---
+# The MediaFlowSwift Blog
+
+Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job. New articles appear here first, and in the [RSS feed](/blog/feed.xml).
+
+Looking for step-by-step help with the app itself? The [how-to guides](/guides/) and the [manual](/manual/) cover that.
+
+## Browse by topic
+
+<ul class="category-chips">
+<li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>2</span></li>
+<li><a href="/blog/category/organization/">Footage Organization</a> <span>1</span></li>
+<li><a href="/blog/category/software/">Choosing Software</a> <span>1</span></li>
+</ul>
+
+## Latest articles
+
+<div class="post-list">
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 9 min read</p>
+<h3><a href="/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/">Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs</a></h3>
+<p>Video archive storage compared: five-year cost per TB and restore times for LTO tape, NAS, drives and cloud, using October 2026 prices in US dollars.</p>
+</article>
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 10 min read</p>
+<h3><a href="/blog/2026/10/nas-video-storage-how-to-choose/">NAS Video Storage: How to Choose and Structure One</a></h3>
+<p>How to choose NAS video storage: network speed, capacity math from real camera bitrates, RAID levels, folder structure, verified offloads and backups.</p>
+</article>
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/organization/">Footage Organization</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 10 min read</p>
+<h3><a href="/blog/2026/10/external-hard-drive-organization-for-video/">External Hard Drive Organization for Video Creators</a></h3>
+<p>How to organize an external hard drive for video: a folder tree, naming rules, the right Mac file system, verified card offloads and safe backups.</p>
+</article>
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 9 min read</p>
+<h3><a href="/blog/2026/10/evaluating-video-file-management-software/">Evaluating Video File Management Software: A Pass/Fail Checklist for Mac</a></h3>
+<p>A pass/fail checklist for video file management software on Mac: test verified offloads, drive tracking, search and relinking, then compare the main tools.</p>
+</article>
+</div>
+
+## Archive
+
+<ul class="archive-list">
+<li><a href="/blog/2026/">2026</a> (4)<ul><li><a href="/blog/2026/10/">October 2026</a> (4)</li></ul></li>
+</ul>
+
+## How are these articles written?
+
+AI writes the articles on this blog for Long Road Software LLC. Each one is checked against its sources and, where it describes MediaFlowSwift, against the current app and its manual before it is published. Mike, who makes MediaFlowSwift, does not personally review each one. If an article gets something wrong, tell us at [support@mediaflowswift.com](mailto:support@mediaflowswift.com).
