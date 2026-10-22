@@ -5,7 +5,7 @@ title: "MediaFlowSwift Blog: Video Storage, Backup and Archiving"
 description: "Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job."
 permalink: "/blog/"
 crumbs: [{"name": "MediaFlowSwift", "url": "/"}, {"name": "Blog", "url": "/blog/"}]
-items: [{"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
+items: [{"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}, {"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
 ---
 # The MediaFlowSwift Blog
 
@@ -19,11 +19,17 @@ Looking for step-by-step help with the app itself? The [how-to guides](/guides/)
 <li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>2</span></li>
 <li><a href="/blog/category/organization/">Footage Organization</a> <span>1</span></li>
 <li><a href="/blog/category/software/">Choosing Software</a> <span>1</span></li>
+<li><a href="/blog/category/workflow/">Workflow</a> <span>1</span></li>
 </ul>
 
 ## Latest articles
 
 <div class="post-list">
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-22">October 22, 2026</time> &middot; 9 min read</p>
+<h3><a href="/blog/2026/10/checksum-verification-before-erasing-card/">Checksum Verification: Prove Your Card Copy Before Erasing</a></h3>
+<p>Checksum verification for video: how SHA-256, MD5 and xxHash prove a card copy, how to check one on a Mac, and what a failed check means.</p>
+</article>
 <article class="post-card">
 <p class="post-meta"><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 9 min read</p>
 <h3><a href="/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/">Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs</a></h3>
@@ -49,7 +55,7 @@ Looking for step-by-step help with the app itself? The [how-to guides](/guides/)
 ## Archive
 
 <ul class="archive-list">
-<li><a href="/blog/2026/">2026</a> (4)<ul><li><a href="/blog/2026/10/">October 2026</a> (4)</li></ul></li>
+<li><a href="/blog/2026/">2026</a> (5)<ul><li><a href="/blog/2026/10/">October 2026</a> (5)</li></ul></li>
 </ul>
 
 ## How are these articles written?

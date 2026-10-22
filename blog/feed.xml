@@ -6,7 +6,15 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 21 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 22 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Checksum Verification: Prove Your Card Copy Before Erasing</title>
+    <link>https://mediaflowswift.com/blog/2026/10/checksum-verification-before-erasing-card/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/checksum-verification-before-erasing-card/</guid>
+    <pubDate>Thu, 22 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>Checksum verification for video: how SHA-256, MD5 and xxHash prove a card copy, how to check one on a Mac, and what a failed check means.</description>
+  </item>
   <item>
     <title>Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs</title>
     <link>https://mediaflowswift.com/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/</link>
