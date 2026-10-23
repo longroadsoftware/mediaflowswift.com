@@ -6,11 +6,16 @@ description: "Every article published on the MediaFlowSwift blog in October 2026
 permalink: "/blog/2026/10/"
 noindex: true
 crumbs: [{"name": "MediaFlowSwift", "url": "/"}, {"name": "Blog", "url": "/blog/"}, {"name": "2026", "url": "/blog/2026/"}, {"name": "October 2026", "url": "/blog/2026/10/"}]
-items: [{"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}, {"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
+items: [{"title": "Digital Asset Management for Video Production: What It Means on a Mac", "url": "/blog/2026/10/digital-asset-management-for-video-production/", "published": "2026-10-23"}, {"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}, {"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
 ---
 # Articles from October 2026
 
 <div class="post-list">
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-23">October 23, 2026</time> &middot; 9 min read</p>
+<h2><a href="/blog/2026/10/digital-asset-management-for-video-production/">Digital Asset Management for Video Production: What It Means on a Mac</a></h2>
+<p>Digital asset management for video production explained: DAM vs MAM vs footage managers, what a video catalog tracks, and how it fits shoot to archive.</p>
+</article>
 <article class="post-card">
 <p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-22">October 22, 2026</time> &middot; 9 min read</p>
 <h2><a href="/blog/2026/10/checksum-verification-before-erasing-card/">Checksum Verification: Prove Your Card Copy Before Erasing</a></h2>
