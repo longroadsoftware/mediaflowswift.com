@@ -6,7 +6,15 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 22 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 23 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Digital Asset Management for Video Production: What It Means on a Mac</title>
+    <link>https://mediaflowswift.com/blog/2026/10/digital-asset-management-for-video-production/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/digital-asset-management-for-video-production/</guid>
+    <pubDate>Fri, 23 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Choosing Software</category>
+    <description>Digital asset management for video production explained: DAM vs MAM vs footage managers, what a video catalog tracks, and how it fits shoot to archive.</description>
+  </item>
   <item>
     <title>Checksum Verification: Prove Your Card Copy Before Erasing</title>
     <link>https://mediaflowswift.com/blog/2026/10/checksum-verification-before-erasing-card/</link>
