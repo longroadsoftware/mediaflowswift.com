@@ -102,9 +102,11 @@
       // Megabytes as Finder counts them (1,000,000 bytes), so File › Get Info shows the same number; Support asks people to compare.
       var mb = Math.round(m.size / 1000000 * 10) / 10;
       meta.textContent = "· " + mb + " MB" + (m.published ? " · " + m.published : "");
-      // The button uses the GitHub Release copy, which GitHub counts; the app's updater keeps using m.url.
-      var counted = typeof m.download === "string" && /^https:\/\/github\.com\/(longroadsoftware|mwmike)\/mediaflowswift\.com\/releases\/download\//.test(m.download);
-      get.href = counted ? m.download : m.url;
+      // The button goes through our download counter (lrs-downloads), which adds one to a daily total,
+      // skips Mike and Sheri, stores nothing about the visitor, and redirects to the GitHub Release copy.
+      // The app's updater keeps using m.url, so updates are never counted.
+      get.href = "https://lrs-downloads.mediaflow-licence.workers.dev/mediaflowswift";
+      get.rel = "nofollow";
       get.removeAttribute("aria-disabled");
       get.textContent = "Download MediaFlowSwift " + m.version;
     })
