@@ -11,7 +11,7 @@ generated: tools/import-guide.sh
 
 *The welcome tour explains the app; the Setup Wizard then asks where your footage goes and only what follows from that, and you can skip any of it.*
 
-A new copy of MediaFlow knows nothing about your equipment: no network share, no shared database, no destination. Three things greet you on first launch. First come the terms of use, which you agree to once (see Terms of Use). The welcome tour then explains the app, and the Setup Wizard asks where your storage is.
+A new copy of MediaFlow knows nothing about your equipment: no network share, no shared database, no destination. Four things greet you on first launch. First come the terms of use, which you agree to once (see Terms of Use). The welcome tour then explains the app, and the Setup Wizard asks where your storage is. Last, MediaFlow asks whether to check mediaflowswift.com for new versions (see Updating MediaFlow).
 
 You do not have to answer anything. MediaFlow works on a single Mac, with or without an external drive, and needs no network share; every answer can be changed later in Settings. Archive to USB, Restore and Search All Projects do need a database, so on a single Mac the wizard makes a small one for you unless you say no (see below).
 
@@ -133,7 +133,7 @@ MediaFlow looks for a newer version of itself, tells you when there is one, and 
 
 ### Where new versions come from
 
-New versions come from the MediaFlow website. MediaFlow reads one small file from mediaflowswift.com that names the newest version, and nothing about you or your Mac goes with the request. Every copy of MediaFlow updates this way; earlier versions could also update from a copy of the app on a share, and that choice is gone.
+New versions come from the MediaFlow website. MediaFlow reads one small file from mediaflowswift.com that names the newest version, and nothing about you or your Mac goes with the request. When there is a newer version, it also reads that version’s list of changes from mediaflowswift.com, to show you what is new. Every copy of MediaFlow updates this way; earlier versions could also update from a copy of the app on a share, and that choice is gone.
 
 ### Who may sign an update
 
@@ -141,7 +141,7 @@ An update is installed only if it was signed with MediaFlowSwift’s Apple Devel
 
 ### Automatic checks
 
-With “Check for new versions automatically” on, MediaFlow looks shortly after launch, when the Mac wakes, and then every few hours; while the website cannot be reached it tries again every half hour. Checking reads one small file.
+MediaFlow asks once whether to check mediaflowswift.com for new versions: on a new copy after the setup, and on a copy updated from an earlier version the next time it opens, unless you had already set the switch. Until you say yes it never looks by itself. Not Now is an answer too and is not asked again; the switch is in Settings › Privacy, beside the other online features, and in Settings › General. Check for Updates… in the app menu and Check Now in About look whenever you choose them, whatever the answer. With “Check for new versions automatically” on, MediaFlow looks shortly after launch, when the Mac wakes, and then every few hours; while the website cannot be reached it tries again every half hour. Checking reads one small file, and that version’s list of changes from mediaflowswift.com when there is a new version.
 
 ### When a new version is found
 
@@ -164,7 +164,7 @@ The update window lists what is new in the version on offer, taken from the chan
 
 Your settings are written to disk and to the saved setup before the app restarts.
 
-MediaFlow looks for a new version a few seconds after launch, again every half hour until it can reach the website, and then every few hours, as well as after the Mac wakes. If anything about the new version does not check out, nothing is changed and the version you had reopens. The version you updated from is kept whole for Revert, in MediaFlow’s own folder under Library › Application Support, not beside the app: two copies of MediaFlow in Applications made macOS judge the wrong one when the app asked for your local network after an update. A copy an earlier version left beside the app is moved there the first time this version opens. Every version is the same signed app to macOS, and before the new one reopens the installer tells Launch Services about it, so that permissions you have given MediaFlow carry over from one update to the next; the Keychain’s do. Reaching your local network is the one macOS has sometimes made the new version ask for again; see It Stopped Connecting After an Update. What the installer did is written to Library/Logs/MediaFlow/update.log in your home folder.
+With automatic checks on (your answer to the question, or the switch in Settings › Privacy or General), MediaFlow looks for a new version a few seconds after launch, again every half hour until it can reach the website, and then every few hours, as well as after the Mac wakes. If anything about the new version does not check out, nothing is changed and the version you had reopens. The version you updated from is kept whole for Revert, in MediaFlow’s own folder under Library › Application Support, not beside the app: two copies of MediaFlow in Applications made macOS judge the wrong one when the app asked for your local network after an update. A copy an earlier version left beside the app is moved there the first time this version opens. Every version is the same signed app to macOS, and before the new one reopens the installer tells Launch Services about it, so that permissions you have given MediaFlow carry over from one update to the next; the Keychain’s do. Reaching your local network is the one macOS has sometimes made the new version ask for again; see It Stopped Connecting After an Update. What the installer did is written to Library/Logs/MediaFlow/update.log in your home folder.
 
 ### Going back
 
@@ -226,7 +226,7 @@ See also: [Setting Up MediaFlow](#setting-up-mediaflow), [Choosing and Connectin
 
 MediaFlow has no account and collects no usage data. Your media, projects and shared database stay on this Mac and on your own network.
 
-On its own it reaches its maker in two ways. It asks mediaflowswift.com whether there is a newer version, with nothing about you or your Mac in the request, and downloads the new version when you choose to install it. And once you enter a licence key, it checks the key with MediaFlow’s licence service, sending the key, a one-way code made from this Mac’s hardware id (the same for every user account on this Mac, and never the hardware id itself), and the Mac’s name; until an account first activated with an earlier version has moved to that code, its checks also send the random id that version made for it, to release that id’s place. Settings › Privacy lists both, with the exact details. A problem report reaches its maker only when you send it: from your own mail app with Email Report…, or, on a Mac set up with the maker’s report relay, when you have turned on Sending problem reports and click Send on a report you have read.
+It reaches its maker in two ways, and only when you let it. Once you say yes to checking for new versions, or choose Check for Updates…, it asks mediaflowswift.com whether there is a newer version, with nothing about you or your Mac in the request, reads that version’s list of changes from mediaflowswift.com when there is one, and downloads the new version when you choose to install it. And once you enter a licence key, it checks the key with MediaFlow’s licence service, sending the key, a one-way code made from this Mac’s hardware id (the same for every user account on this Mac, and never the hardware id itself), and the Mac’s name; until an account first activated with an earlier version has moved to that code, its checks also send the random id that version made for it, to release that id’s place. Settings › Privacy lists both, with the exact details. A problem report reaches its maker only when you send it: from your own mail app with Email Report…, or, on a Mac set up with the maker’s report relay, when you have turned on Sending problem reports and click Send on a report you have read.
 
 A few features need a service run by another company. Settings › Privacy lists every one: what is sent, to whom, and what it is for. Each is off until you turn it on, and you can turn it off again at any time.
 

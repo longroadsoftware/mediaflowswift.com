@@ -54,8 +54,8 @@ Choose MediaFlow → Settings (Cmd+,). The window has nine tabs. This topic says
 ### General
 
 - Setup — Run Setup Again… reopens the first-run setup questions. MediaFlow saves your setup whenever you quit and puts it back if this Mac’s settings are ever lost. Save Setup Now saves it at once. Restore Saved Setup puts the saved settings back, replacing what is set now, except today’s spend and the YouTube permissions, which it only fills in where this Mac has none. Passwords and API keys are not part of the saved setup; they stay in the Keychain
-- Updates — New versions come from mediaflowswift.com. “Check for new versions automatically” looks shortly after launch, on wake and every few hours; a new version asks Install Now, Later or Skip This Version, never while something is running, while you are typing or while another dialog is open. A version you skipped is shown here, with Offer It Again. To look now, choose MediaFlow → Check for Updates…, which always offers the newest version
-- About — The version and build you are running, the maker, what MediaFlowSwift needs to run (a Mac with Apple silicon and macOS 14 Sonoma or later), links to the website, the support page, the terms of use and the privacy page, and Acknowledgements… for the open-source packages it is built with. The same as MediaFlowSwift → About MediaFlowSwift
+- Updates — New versions come from mediaflowswift.com. “Check for new versions automatically” is off until you say yes, when MediaFlow first asks or here; it is in Privacy too. While it is on, MediaFlow looks shortly after launch, on wake and every few hours; a new version asks Install Now, Later or Skip This Version, never while something is running, while you are typing or while another dialog is open. A version you skipped is shown here, with Offer It Again. To look now, choose MediaFlow → Check for Updates…, which always offers the newest version
+- About — The version and build you are running, the maker, what MediaFlowSwift needs to run (a Mac with Apple silicon and macOS 14 Sonoma or later), links to the website, the support page, the terms of use and the privacy page, and Acknowledgements… for the open-source packages it is built with. MediaFlowSwift → About MediaFlowSwift shows these too, and also whether this is the newest version, with Check Now and Release Notes, and the details support asks for
 
 ### Network
 
@@ -95,7 +95,7 @@ Where you choose the network share that MediaFlow reconnects to. Nothing is assu
 
 ### Privacy
 
-Every connection MediaFlow can make to a service outside this Mac, each with its own switch. All are off until you turn them on. Each row says what is sent and to whom. See Privacy: What Leaves This Mac.
+Every connection MediaFlow can make to a service outside this Mac, each with its own switch. All are off until you turn them on. The check for new versions is listed here too, with its switch, under the connections to MediaFlowSwift’s maker. Each row says what is sent and to whom. See Privacy: What Leaves This Mac.
 
 ### Notifications
 
