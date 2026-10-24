@@ -161,7 +161,7 @@ Anything you can't place goes in a single `_INBOX` folder at the drive root. Sch
 
 ### Migrating with MediaFlowSwift
 
-MediaFlowSwift can pull existing footage into a project. File → Create Project From Folder scans a folder and its subfolders and adds every supported media file, as described in [Getting Started](/manual/getting-started/#create-from-existing-folder). Organize Media then copies each clip into the Category and Camera layout. Each copy is checked with SHA-256 by reading it back from the drive.
+MediaFlowSwift can pull existing footage into a project. File → Create Project From Folder scans a folder and its subfolders and adds every supported media file, as described in [Getting Started](/manual/getting-started/#create-from-existing-folder). The scan copies and moves nothing; the files stay where they are. Organize Media then copies each clip into the Category and Camera layout. By default, each copy is read back from the drive and checked with SHA-256.
 
 Projects whose files you moved in the Finder have repair tools too. Library Moved repoints projects after you copy a whole projects folder to a new drive. Relink Missing Media scans a folder for stray clips. The [storage maintenance chapter](/manual/storage-maintenance/) and the [missing footage guide](/guides/footage-missing-after-moving-to-external-drive/) cover both.
 
