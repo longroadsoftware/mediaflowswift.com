@@ -13,7 +13,7 @@ From the card to the edit to the archive: shoot-day and post-production routines
 
 <ul class="category-chips">
 <li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>2</span></li>
-<li><a href="/blog/category/organization/">Footage Organization</a> <span>1</span></li>
+<li><a href="/blog/category/organization/">Footage Organization</a> <span>2</span></li>
 <li><a href="/blog/category/software/">Choosing Software</a> <span>2</span></li>
 <li><a href="/blog/category/workflow/" aria-current="page">Workflow</a> <span>1</span></li>
 </ul>

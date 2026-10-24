@@ -6,15 +6,20 @@ description: "Every article published on the MediaFlowSwift blog in 2026, newest
 permalink: "/blog/2026/"
 noindex: true
 crumbs: [{"name": "MediaFlowSwift", "url": "/"}, {"name": "Blog", "url": "/blog/"}, {"name": "2026", "url": "/blog/2026/"}]
-items: [{"title": "Digital Asset Management for Video Production: What It Means on a Mac", "url": "/blog/2026/10/digital-asset-management-for-video-production/", "published": "2026-10-23"}, {"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}, {"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
+items: [{"title": "How to Organize Video Footage: Pick a Model First", "url": "/blog/2026/10/how-to-organize-video-footage/", "published": "2026-10-24"}, {"title": "Digital Asset Management for Video Production: What It Means on a Mac", "url": "/blog/2026/10/digital-asset-management-for-video-production/", "published": "2026-10-23"}, {"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}, {"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
 ---
 # Articles from 2026
 
 <ul class="archive-list">
-<li><a href="/blog/2026/">2026</a> (6)<ul><li><a href="/blog/2026/10/">October 2026</a> (6)</li></ul></li>
+<li><a href="/blog/2026/">2026</a> (7)<ul><li><a href="/blog/2026/10/">October 2026</a> (7)</li></ul></li>
 </ul>
 
 <div class="post-list">
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/organization/">Footage Organization</a> &middot; <time datetime="2026-10-24">October 24, 2026</time> &middot; 9 min read</p>
+<h2><a href="/blog/2026/10/how-to-organize-video-footage/">How to Organize Video Footage: Pick a Model First</a></h2>
+<p>How to organize video footage: compare project, date and shot-type folder models, build a hybrid, copy a naming template and migrate old footage safely.</p>
+</article>
 <article class="post-card">
 <p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-23">October 23, 2026</time> &middot; 9 min read</p>
 <h2><a href="/blog/2026/10/digital-asset-management-for-video-production/">Digital Asset Management for Video Production: What It Means on a Mac</a></h2>
