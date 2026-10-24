@@ -42,6 +42,7 @@ Articles on video storage, backup, archiving and choosing software. AI-written f
 - Evaluating video file management software: https://mediaflowswift.com/blog/2026/10/evaluating-video-file-management-software/ — a pass/fail checklist and how the main Mac tools compare
 - Checksum verification, proving a card copy before erasing: https://mediaflowswift.com/blog/2026/10/checksum-verification-before-erasing-card/ — SHA-256 vs MD5 vs xxHash, checking a copy by hand with shasum, what rsync -c and FTP/SFTP do and don't check, what a failed check means; MediaFlowSwift does not write ASC MHL files or copy to two drives at once
 - Digital asset management for video production on a Mac: https://mediaflowswift.com/blog/2026/10/digital-asset-management-for-video-production/ — DAM vs MAM vs footage managers vs offload tools, what a video catalog tracks (camera metadata, XMP and sidecars, transcripts, GPS, proxies, archive drives), the shoot-to-archive lifecycle; MediaFlowSwift skips MXF, BRAW and R3D and has no XMP or client review
+- How to organize video footage, picking a folder model first: https://mediaflowswift.com/blog/2026/10/how-to-organize-video-footage/ — project vs date vs shot-type folders, a date-plus-project hybrid, a naming template, migrating old footage drive by drive; MediaFlowSwift's Organize layout is fixed (Destination / Category / Camera / Filename)
 
 ## Comparisons
 Honest, dated comparisons against other ways of getting footage off a card.
