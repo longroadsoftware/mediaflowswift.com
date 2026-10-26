@@ -110,12 +110,14 @@
     </fieldset>
 
     <fieldset>
-      <legend>Which computer do you edit on?</legend>
-      <p class="fine">MediaFlowSwift needs macOS 14 or later on a Mac with Apple silicon today. An Intel Mac version is being built. Edit on Windows? Apply anyway, and we&rsquo;ll offer you a beta of a Windows version when one is available.</p>
-      <label><input type="radio" name="fields[mac]" value="Apple silicon M1 or later"> Apple silicon Mac (M1 or later)</label>
-      <label><input type="radio" name="fields[mac]" value="Intel Mac"> Intel Mac</label>
-      <label><input type="radio" name="fields[mac]" value="Windows PC"> Windows PC</label>
+      <legend>What operating system do you edit on?</legend>
+      <p class="fine">MediaFlowSwift needs macOS 14 or later on a Mac with Apple silicon today. An Intel Mac version is being built. Edit on Windows? Apply anyway, and we&rsquo;ll offer you a beta of a Windows version when one is available. On Linux? Tell us anyway; it helps us learn where creators edit.</p>
+      <label><input type="radio" name="fields[mac]" value="macOS on Apple silicon (M1 or later)"> macOS on an Apple silicon Mac (M1 or later)</label>
+      <label><input type="radio" name="fields[mac]" value="macOS on Intel Mac"> macOS on an Intel Mac</label>
+      <label><input type="radio" name="fields[mac]" value="Windows"> Windows</label>
+      <label><input type="radio" name="fields[mac]" value="Linux"> Linux</label>
       <label><input type="radio" name="fields[mac]" value="not sure"> not sure</label>
+      <label>Version, if you know it (for example macOS 15, Windows 11, Ubuntu 24.04): <input type="text" name="fields[os_version]" aria-label="Operating system version" class="inline"></label>
     </fieldset>
 
     <fieldset>
