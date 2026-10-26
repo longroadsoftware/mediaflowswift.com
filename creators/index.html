@@ -111,6 +111,7 @@
 
     <fieldset>
       <legend>Which Mac do you edit on?</legend>
+      <p class="fine">MediaFlowSwift needs macOS 14 or later on a Mac with Apple silicon today. An Intel Mac version is being built.</p>
       <label><input type="radio" name="fields[mac]" value="Apple silicon M1 or later"> Apple silicon M1 or later</label>
       <label><input type="radio" name="fields[mac]" value="Intel Mac"> Intel Mac</label>
       <label><input type="radio" name="fields[mac]" value="not sure"> not sure</label>
@@ -156,17 +157,25 @@
 <script>
 // "Tick all" answers go to Kit as one comma-separated custom field. Without
 // JavaScript the browser sends each ticked box and Kit keeps one of them.
+// Each submit starts from a clean state, so going back from Kit's page and
+// submitting again still sends the ticked boxes.
 document.getElementById("creator-form").addEventListener("submit", function (e) {
   var form = e.target;
   form.querySelectorAll("fieldset.tick-all").forEach(function (set) {
-    var boxes = set.querySelectorAll("input[type=checkbox]:checked");
-    if (!boxes.length) return;
-    var joined = Array.prototype.map.call(boxes, function (b) { return b.value; }).join(", ");
-    set.querySelectorAll("input[type=checkbox]").forEach(function (b) { b.removeAttribute("name"); });
+    var name = "fields[" + set.dataset.field + "]";
+    var boxes = set.querySelectorAll("input[type=checkbox]");
+    boxes.forEach(function (b) { b.name = name; });
+    form.querySelectorAll("input[type=hidden][data-joined]").forEach(function (h) {
+      if (h.name === name) h.remove();
+    });
+    var ticked = set.querySelectorAll("input[type=checkbox]:checked");
+    if (!ticked.length) return;
     var hidden = document.createElement("input");
     hidden.type = "hidden";
-    hidden.name = "fields[" + set.dataset.field + "]";
-    hidden.value = joined;
+    hidden.name = name;
+    hidden.value = Array.prototype.map.call(ticked, function (b) { return b.value; }).join(", ");
+    hidden.setAttribute("data-joined", "");
+    boxes.forEach(function (b) { b.removeAttribute("name"); });
     form.appendChild(hidden);
   });
 });
