@@ -6,7 +6,15 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Sun, 25 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 26 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Video Ingest Workflow: When to Erase the Card</title>
+    <link>https://mediaflowswift.com/blog/2026/10/video-ingest-workflow/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/video-ingest-workflow/</guid>
+    <pubDate>Mon, 26 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>A video ingest workflow from card to archive: offload, verify, second copy, log, numbered drives, and the exact point a card is safe to erase.</description>
+  </item>
   <item>
     <title>Can&#x27;t Find Video Files on SD Card? Why Footage Hides and Where to Look</title>
     <link>https://mediaflowswift.com/blog/2026/10/cant-find-video-files-on-sd-card/</link>
