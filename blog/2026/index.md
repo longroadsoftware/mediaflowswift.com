@@ -6,15 +6,20 @@ description: "Every article published on the MediaFlowSwift blog in 2026, newest
 permalink: "/blog/2026/"
 noindex: true
 crumbs: [{"name": "MediaFlowSwift", "url": "/"}, {"name": "Blog", "url": "/blog/"}, {"name": "2026", "url": "/blog/2026/"}]
-items: [{"title": "Can't Find Video Files on SD Card? Why Footage Hides and Where to Look", "url": "/blog/2026/10/cant-find-video-files-on-sd-card/", "published": "2026-10-25"}, {"title": "How to Organize Video Footage: Pick a Model First", "url": "/blog/2026/10/how-to-organize-video-footage/", "published": "2026-10-24"}, {"title": "Digital Asset Management for Video Production: What It Means on a Mac", "url": "/blog/2026/10/digital-asset-management-for-video-production/", "published": "2026-10-23"}, {"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}, {"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
+items: [{"title": "Video Ingest Workflow: When to Erase the Card", "url": "/blog/2026/10/video-ingest-workflow/", "published": "2026-10-26"}, {"title": "Can't Find Video Files on SD Card? Why Footage Hides and Where to Look", "url": "/blog/2026/10/cant-find-video-files-on-sd-card/", "published": "2026-10-25"}, {"title": "How to Organize Video Footage: Pick a Model First", "url": "/blog/2026/10/how-to-organize-video-footage/", "published": "2026-10-24"}, {"title": "Digital Asset Management for Video Production: What It Means on a Mac", "url": "/blog/2026/10/digital-asset-management-for-video-production/", "published": "2026-10-23"}, {"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}, {"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
 ---
 # Articles from 2026
 
 <ul class="archive-list">
-<li><a href="/blog/2026/">2026</a> (8)<ul><li><a href="/blog/2026/10/">October 2026</a> (8)</li></ul></li>
+<li><a href="/blog/2026/">2026</a> (9)<ul><li><a href="/blog/2026/10/">October 2026</a> (9)</li></ul></li>
 </ul>
 
 <div class="post-list">
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-26">October 26, 2026</time> &middot; 9 min read</p>
+<h2><a href="/blog/2026/10/video-ingest-workflow/">Video Ingest Workflow: When to Erase the Card</a></h2>
+<p>A video ingest workflow from card to archive: offload, verify, second copy, log, numbered drives, and the exact point a card is safe to erase.</p>
+</article>
 <article class="post-card">
 <p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-25">October 25, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/cant-find-video-files-on-sd-card/">Can&#x27;t Find Video Files on SD Card? Why Footage Hides and Where to Look</a></h2>
