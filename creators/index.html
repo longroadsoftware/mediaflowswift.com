@@ -106,14 +106,15 @@
       <label><input type="checkbox" name="fields[shoots_on]" value="mirrorless or DSLR"> mirrorless or DSLR</label>
       <label><input type="checkbox" name="fields[shoots_on]" value="cinema camera"> cinema camera</label>
       <label><input type="checkbox" name="fields[shoots_on]" value="360 camera"> 360 camera</label>
-      <label><input type="checkbox" name="fields[shoots_on]" value="other"> other</label>
+      <label><input type="checkbox" name="fields[shoots_on]" value="other"> other: <input type="text" name="fields[shoots_on_other]" aria-label="What else do you shoot on?" class="inline"></label>
     </fieldset>
 
     <fieldset>
-      <legend>Which Mac do you edit on?</legend>
-      <p class="fine">MediaFlowSwift needs macOS 14 or later on a Mac with Apple silicon today. An Intel Mac version is being built.</p>
-      <label><input type="radio" name="fields[mac]" value="Apple silicon M1 or later"> Apple silicon M1 or later</label>
+      <legend>Which computer do you edit on?</legend>
+      <p class="fine">MediaFlowSwift needs macOS 14 or later on a Mac with Apple silicon today. An Intel Mac version is being built. Edit on Windows? Apply anyway, and we&rsquo;ll offer you a beta of a Windows version when one is available.</p>
+      <label><input type="radio" name="fields[mac]" value="Apple silicon M1 or later"> Apple silicon Mac (M1 or later)</label>
       <label><input type="radio" name="fields[mac]" value="Intel Mac"> Intel Mac</label>
+      <label><input type="radio" name="fields[mac]" value="Windows PC"> Windows PC</label>
       <label><input type="radio" name="fields[mac]" value="not sure"> not sure</label>
     </fieldset>
 
@@ -123,7 +124,13 @@
       <label><input type="radio" name="fields[editor]" value="Premiere Pro"> Premiere Pro</label>
       <label><input type="radio" name="fields[editor]" value="DaVinci Resolve"> DaVinci Resolve</label>
       <label><input type="radio" name="fields[editor]" value="iMovie"> iMovie</label>
-      <label><input type="radio" name="fields[editor]" value="other"> other</label>
+      <label><input type="radio" name="fields[editor]" value="CapCut"> CapCut</label>
+      <label><input type="radio" name="fields[editor]" value="Descript"> Descript</label>
+      <label><input type="radio" name="fields[editor]" value="Canva"> Canva</label>
+      <label><input type="radio" name="fields[editor]" value="Clipchamp"> Clipchamp</label>
+      <label><input type="radio" name="fields[editor]" value="VEED"> VEED</label>
+      <label><input type="radio" name="fields[editor]" value="Kapwing"> Kapwing</label>
+      <label><input type="radio" name="fields[editor]" value="other"> other: <input type="text" name="fields[editor_other]" aria-label="Which other editor?" class="inline"></label>
     </fieldset>
 
     <p>
