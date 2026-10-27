@@ -181,7 +181,7 @@ for loc in locs:
     elif pages[path]["noindex"]:
         problems.append(f"sitemap.xml: {loc} is marked noindex")
 for url in manual:
-    if SITE + url not in locs:
+    if SITE + url not in locs and not pages[url]["noindex"]:  # a noindex forward (renamed chapter) stays out
         problems.append(f"sitemap.xml: {url} is missing")
 
 print(f"{len({p['file'] for p in pages.values()})} pages, {checked} links on this site checked "
