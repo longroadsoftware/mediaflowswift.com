@@ -6,7 +6,15 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 26 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 27 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>How to Clear a Memory Card Without Losing Footage</title>
+    <link>https://mediaflowswift.com/blog/2026/10/clear-memory-card-without-losing-footage/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/clear-memory-card-without-losing-footage/</guid>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>How to clear a memory card safely: delete vs quick vs full format, in-camera steps for Sony, GoPro and DJI, Mac and Windows erase, exFAT, and recovery.</description>
+  </item>
   <item>
     <title>Video Ingest Workflow: When to Erase the Card</title>
     <link>https://mediaflowswift.com/blog/2026/10/video-ingest-workflow/</link>
