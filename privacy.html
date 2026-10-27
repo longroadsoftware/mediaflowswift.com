@@ -65,7 +65,7 @@
     <tr><td>Setting the details of a video you uploaded in YouTube Studio</td><td>Google, in a Google Cloud project you own</td><td>The list of your channel&rsquo;s newest uploads is read so you can pick the video; then the title, description, chapters, tags, thumbnail and captions you prepared are written to that one video. Nothing else on it is changed, and nothing is written until you click Apply and confirm. Sign-in opens your browser at Google; MediaFlowSwift never sees your Google password.</td></tr>
     <tr><td>Uploading to YouTube (advanced)</td><td>Google, in a Google Cloud project you own</td><td>The finished video you chose and the details you entered for it, and the thumbnail if you chose to send it. Nothing is uploaded until you click Upload and confirm.</td></tr>
     <tr><td>Reading your videos&rsquo; statistics</td><td>Google (YouTube and YouTube Analytics)</td><td>The YouTube IDs of videos uploaded by MediaFlowSwift and a date span; Google answers with views, likes, comments, watch time and the like. Only when you click Read from YouTube Now.</td></tr>
-    <tr><td>Sending problem reports</td><td>The report relay whose address you entered (for reports to us, see below)</td><td>A problem report, only when you click Send on one you have read in full: its text exactly as shown, a title, a random identifier for your copy of the app, and a crash signature if there is one. Names, drives, folders and file names are taken out before you see it.</td></tr>
+    <tr><td>Sending problem reports</td><td>The report relay whose address you entered (for reports to us, see below)</td><td>A problem report, only when you click Send on one you have read in full: its text exactly as shown, a title, a random identifier for your copy of the app, and a crash signature if there is one; and a screenshot, only if you added one to the report yourself. Names, drives, folders and file names are taken out of the text before you see it; nothing is taken out of a screenshot, so the app shows it to you first.</td></tr>
   </table>
   </div>
 
@@ -86,7 +86,7 @@
   </ul>
 
   <h2>Problem reports sent to us</h2>
-  <p>If you send a problem report to us, it is filed as an issue in our development tracker so that we can fix the fault. It contains only what the app showed you before you clicked Send. If you chose to include an email address for a reply, we use it for that reply and nothing else. We keep reports for as long as the fault is being worked on and for our release records afterwards.</p>
+  <p>If you send a problem report to us, it is filed as an issue in our development tracker so that we can fix the fault. It contains only what the app showed you before you clicked Send. A screenshot goes with a report only if you added one; one sent with Send is kept on our report relay for 30 days and then deleted, and is never put in the tracker. If you chose to include an email address for a reply, we use it for that reply and nothing else. We keep reports for as long as the fault is being worked on and for our release records afterwards.</p>
 
   <h2>This website</h2>
   <p>This site and longroadsoftware.com are static pages served by GitHub Pages. We use Google Analytics on both to count visits and see which pages people read and how they found us. On this site we also use HeyCatch for the same purpose.</p>
