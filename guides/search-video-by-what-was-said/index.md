@@ -69,7 +69,7 @@ MediaFlowSwift's .vtt option follows the W3C's [WebVTT specification](https://ww
 ## Read more
 
 - [Speech Transcription](/manual/organizing-media/#speech-transcription) — transcribing, correcting and exporting a transcript, in full
-- [Filtering and Searching](/manual/managing-assets/#filtering-and-searching) — what the toolbar search field looks at, and the sidebar and filter menu beside it
+- [Filtering and Searching](/manual/managing-clips/#filtering-and-searching) — what the toolbar search field looks at, and the sidebar and filter menu beside it
 
 ## Other guides
 

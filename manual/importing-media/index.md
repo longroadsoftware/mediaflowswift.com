@@ -28,7 +28,7 @@ Above Import Selected, the sheet says where this import goes and how much space 
 
 As each file is copied, MediaFlow computes its SHA-256 checksum from the card, writes the copy to the drive, then reads the whole copy back from the drive, not from the Mac’s memory, and compares the two. A copy that doesn’t match is made once more; if it fails again, the import stops and names the file. Importing never deletes anything from the card. Once the last file is copied, MediaFlow asks the drive to finish writing everything it holds in its own memory, before the copies count as checked. The checksum is kept with the clip, and Organize later checks its own copy against it, so the chain from the card to the destination is proved at every step.
 
-The card that appears at the end of the import says so, for example “All 24 clips copied and checked against the card.” If the drive couldn’t be asked to finish writing, it says that instead. Whether you can format the card is a different question, answered by Clear Card once the clips are organized: it checks every clip’s organized copy, not just the import’s. Phones get no such line.
+The card that appears at the end of the import says so, for example “All 24 clips copied and checked against the card.” If the drive couldn’t be asked to finish writing, it says that instead. Whether you can format the card is a different question, answered by Clear Card once the clips are organized: it checks every clip’s organized copy, not just the import’s. A phone import says “copied from the phone and checked” (see Importing from iPhone or Camera).
 
 ### What Is Left Out
 
@@ -50,7 +50,7 @@ If the folder imports go to is in cloud storage, as Documents is in iCloud when 
 
 ### Duplicates
 
-Files that are already in the project are marked Duplicate in the list. A line at the bottom of the sheet says how many duplicates were detected, and they are skipped when you import.
+Files that are already in the project are marked Duplicate in the list. A file counts as already in the project when a clip there has the same name as the card file and exactly the same size, so a different clip that only shares its name, such as C0001.MP4 from a second card, is not marked. Two different clips that have the same name and exactly the same size, from two cards, are still marked Duplicate. A clip imported without a recorded size is still compared by name alone. A line at the bottom of the sheet says how many duplicates were detected, and they are skipped when you import.
 
 ### Disk Space
 
@@ -141,14 +141,14 @@ The iPhone segment of the Import sheet copies photos and videos straight from a 
 1. Connect your iPhone or camera via USB. Unlock the iPhone and tap Trust if it asks
 2. Choose File → Import… and select the iPhone segment at the top of the sheet
 3. Select your device from the Device picker
-4. Check the items to import in the list. Items already in the project are marked Duplicate and are skipped
+4. Check the items to import in the list. An item already in the project is marked Duplicate and is skipped, matched by name, size and the date the phone reports for it; an item imported before this matching was added, or a card, drive or folder clip that happens to share its name, is still compared by name alone
 5. Click Import Selected
 
 Click an item to preview it on the right; MediaFlow copies it to this Mac to show it. Press Space to play or pause a video, as for a card or folder.
 
 MediaFlow uses Apple’s Image Capture framework to talk to the device. While an iPhone is locked, the sheet asks you to unlock it and tap Trust.
 
-Image Capture hands each file over itself, so MediaFlow can’t compare the copy with the file on the phone, as it does for a card. Organize checks its own copy as it always has, and the import ends without a “copied and checked” line.
+Image Capture brings each item across from the phone to this Mac first, into a folder of its own, so two items with the same name never land on each other: an iPhone starts again at IMG_0001 after IMG_9999. MediaFlow then copies it to the place your imports go as it copies from a card: it computes the SHA-256 checksum as it copies, reads the whole copy back from the drive and compares the two, and keeps the checksum with the clip for Organize to check against. A name already taken there gets _1, _2 and so on, and each clip always points at its own file. The copy on this Mac is removed once that is done. Image Capture reads the phone itself, so the checksum starts from what it handed over. What came across is checked against the phone too, as far as the phone allows: an item that arrives empty is never imported. A phone that shoots HEIF and HEVC, as recent iPhones do, may convert photos to JPEG and videos to H.264 as it sends them, so from such a phone a photo must not arrive smaller than the size the phone gives, and a video, whose converted size can’t be known beforehand, must not arrive empty. Any other phone or camera sends files as they are, and must send each at exactly the size it gives and, where it gives one, with the same fingerprint as the file on the device. If any check fails, the import stops and names the item. If the phone stops answering partway through an item — unplugged, locked, or the connection otherwise dropped — MediaFlow waits a while for it to resume, then ends the import at that item and names it, rather than waiting forever; nothing on the phone is touched either way. The import ends with a line such as “All 12 clips copied from the phone and checked.” Importing never deletes or changes anything on the phone.
 
 ### If Clips Are Missing
 
@@ -160,7 +160,7 @@ Only media stored on the phone itself appears in the list. Photos and videos tha
 
 ### Disk Space
 
-The import does not start unless the place it goes has room for the selected items plus 10 GB.
+The import does not start unless the place it goes has room for the selected items plus 10 GB, and this Mac has room for the largest selected item plus 1 GB while it comes across.
 
 > **Tip:** If the device does not appear, disconnect and reconnect the USB cable, then click Refresh to scan again.
 
@@ -201,5 +201,5 @@ See also: [Importing from a Card, Drive or Folder](#importing-from-a-card-drive-
 <div class="chapter-nav" role="navigation" aria-label="Chapters">
 <a rel="prev" href="/manual/setup-network/">&larr; Setup &amp; Network</a>
 <a href="/manual/">All chapters</a>
-<a rel="next" href="/manual/managing-assets/">Managing Assets &rarr;</a>
+<a rel="next" href="/manual/managing-clips/">Managing Clips &rarr;</a>
 </div>

@@ -163,7 +163,7 @@ Judge every option by three questions. Does it read the copy back and compare ch
 - **[habitat flow](https://habitat-flow.com/)** uses xxHash64 and saves an ASC MHL report. It has a free plan up to 150 GB a week; Pro copies to two drives at once.
 - **[MediaTools](https://mediatoolspro.com/)** ingests with SHA-256 verification on macOS and Windows. The Lite version is free.
 
-MediaFlowSwift fits after the copy as well as during it. Verified clips land in a library you can [search](/manual/managing-assets/#filtering-and-searching) by name, notes, tags, camera or scene. You can also [search transcripts](/manual/organizing-media/#speech-transcription) for what was said, play clips back, rate them, and see which numbered archive drive holds a project.
+MediaFlowSwift fits after the copy as well as during it. Verified clips land in a library you can [search](/manual/managing-clips/#filtering-and-searching) by name, notes, tags, camera or scene. You can also [search transcripts](/manual/organizing-media/#speech-transcription) for what was said, play clips back, rate them, and see which numbered archive drive holds a project.
 
 MediaFlowSwift's limits are just as real. It doesn't write a card to two drives at once; the second copy comes later, from Archive to USB. It writes no MHL file, and it copies to drives and network shares, not to S3 or other cloud storage. It runs on Apple silicon Macs with macOS 13 or later today, with Windows and Intel Mac versions coming. Compare it in detail on [MediaFlowSwift vs OffShoot](/vs/offshoot/) and [MediaFlowSwift vs habitat flow](/vs/habitat-flow/).
 

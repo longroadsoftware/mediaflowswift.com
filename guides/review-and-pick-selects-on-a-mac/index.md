@@ -76,9 +76,9 @@ Category, rating and select-status changes in MediaFlowSwift go through Edit →
 ## Read more
 
 - [Reviewing Clips with the Keyboard](/manual/video-preview-playback/#reviewing-clips-with-the-keyboard) — every Rapid Review key, and how auto-advance decides when to move on
-- [Star Ratings & Selects](/manual/managing-assets/#star-ratings--selects) — ratings, Hero/Maybe/Reject, and where each one shows up in the app
+- [Star Ratings & Selects](/manual/managing-clips/#star-ratings--selects) — ratings, Hero/Maybe/Reject, and where each one shows up in the app
 - [Smart Selects](/manual/organizing-media/#smart-selects) — the five quality measures and how circle takes get proposed
-- [Undo and Redo](/manual/managing-assets/#undo-and-redo) — what can and can't be undone after a review session
+- [Undo and Redo](/manual/managing-clips/#undo-and-redo) — what can and can't be undone after a review session
 
 ## Other guides
 

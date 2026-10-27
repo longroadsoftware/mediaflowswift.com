@@ -111,7 +111,7 @@ Tag a few clips, add a note to one, and mark a favorite take. Close the tool and
 
 Fail the trial if search only matches file names. Fail it, too, if notes you typed vanish, or if you must open another player to check a result.
 
-Know exactly what each tool searches. MediaFlowSwift's [toolbar search](/manual/managing-assets/#filtering-and-searching) covers file name, notes, tags, category, camera and scene. It does not search speech. Transcripts are searched from a clip's Transcript tab, across every clip in the project ([finding a clip by what was said](/guides/search-video-by-what-was-said/)). Searching across all projects needs the optional shared database. Clips can be rated 1–5 stars and marked Hero, Maybe or Reject, and the preview steps frame by frame.
+Know exactly what each tool searches. MediaFlowSwift's [toolbar search](/manual/managing-clips/#filtering-and-searching) covers file name, notes, tags, category, camera and scene. It does not search speech. Transcripts are searched from a clip's Transcript tab, across every clip in the project ([finding a clip by what was said](/guides/search-video-by-what-was-said/)). Searching across all projects needs the optional shared database. Clips can be rated 1–5 stars and marked Hero, Maybe or Reject, and the preview steps frame by frame.
 
 ## When is a DAM overkill compared to a dedicated video organizer?
 

@@ -133,7 +133,7 @@ MediaFlowSwift is a footage manager for Macs with Apple silicon and macOS 13 or 
 - **Places and scenes.** [GPS Scene Detection](/manual/organizing-media/#gps-scene-detection) suggests scenes from where clips were shot, and the Shoot Map plots them. [Historical Weather Lookup](/manual/organizing-media/#historical-weather-lookup) stores the conditions at each clip's time and place.
 - **Vision.** [Vision (AI Scene Analysis)](/manual/organizing-media/#vision-ai-scene-analysis) detects shot type, faces, indoor or outdoor and on-screen text with Apple's Vision framework, then suggests a category.
 - **Proxies.** The [Proxy queue](/manual/batch-operations/) makes low-resolution MP4 proxies. When imports land on a network share, it makes [proxies for review](/manual/importing-media/#proxies-for-review) straight after the copy. A proxy also plays when the original's drive is not connected.
-- **Ratings and selects.** Clips take [1–5 stars and Hero, Maybe or Reject](/manual/managing-assets/#star-ratings--selects), and Rapid Review rates them from the keyboard. [Reports](/manual/reports/) export PDF, HTML, CSV, FCPXML and EDL CSV files for the editor.
+- **Ratings and selects.** Clips take [1–5 stars and Hero, Maybe or Reject](/manual/managing-clips/#star-ratings--selects), and Rapid Review rates them from the keyboard. [Reports](/manual/reports/) export PDF, HTML, CSV, FCPXML and EDL CSV files for the editor.
 - **Archive drives.** [Archive to USB](/manual/project-management/#archiving-a-project-to-usb) numbers each drive (USB #0001, USB #0002), checks every file by checksum and records what went where. File → Manage Archive Volumes lists each drive and its projects.
 
 ### Privacy and offline drives
