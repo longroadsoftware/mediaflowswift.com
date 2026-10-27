@@ -81,7 +81,7 @@ The comparisons with other apps quote each app's own pages, with the date prices
 
 ## What the guides assume
 
-- **Your Mac:** MediaFlowSwift runs on macOS 14 or later, on a Mac with Apple silicon.
+- **Your Mac:** MediaFlowSwift runs on macOS 13 or later, on a Mac with Apple silicon.
 - **Your plan:** most guides work on either plan. YouTube publishing and the database server several Macs share need Studio Pro.
 - **Your storage:** cards, external drives and shared drives you already own.
 - **Your privacy:** features that send anything off your Mac, such as maps or place names, are off until you turn them on. Settings › Privacy lists each one.
@@ -96,4 +96,4 @@ If a guide gets something wrong, tell us at [support@mediaflowswift.com](mailto:
 
 Looking for how a particular window works? That's the [manual](/manual/). Broader articles on NAS setups, archive storage and choosing software are on the [blog](/blog/). Stuck on something not covered here? [Support](/support.html).
 
-Want to try it? [Download MediaFlowSwift](/download.html) — the full app runs for 14 days with no card asked for, on macOS 14 or later with Apple silicon.
+Want to try it? [Download MediaFlowSwift](/download.html) — the full app runs for 14 days with no card asked for, on macOS 13 or later with Apple silicon.

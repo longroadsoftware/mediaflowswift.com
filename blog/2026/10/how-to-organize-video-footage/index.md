@@ -194,7 +194,7 @@ Tools can apply a model for you, but only after you pick one. Judge them on veri
 - **[OffShoot](https://hedge.co/products/offshoot)**, the app formerly known as Hedge, does verified offloads to several destinations at once. It runs on macOS and Windows and offers a 10-day trial.
 - **[ShotPut Pro](https://www.imagineproducts.com/product/shotput-pro/mac)** from Imagine Products does verified offloads with PDF reports, and a demo is available.
 - **[Silverstack XT](https://pomfort.com/silverstackxt/)** from Pomfort backs up to multiple destinations and keeps a searchable clip library. Pomfort aims it at DITs and data managers on professional sets.
-- **MediaFlowSwift** verifies imports with SHA-256, files clips by category and camera, and numbers archive drives. It runs only on Macs with Apple silicon and macOS 14 or later.
+- **MediaFlowSwift** verifies imports with SHA-256, files clips by category and camera, and numbers archive drives. It runs only on Macs with Apple silicon and macOS 13 or later.
 
 A fuller comparison, with a pass/fail trial checklist, is in [evaluating video file management software](/blog/2026/10/evaluating-video-file-management-software/). If you need a catalog more than a folder model, read [digital asset management for video production](/blog/2026/10/digital-asset-management-for-video-production/).
 

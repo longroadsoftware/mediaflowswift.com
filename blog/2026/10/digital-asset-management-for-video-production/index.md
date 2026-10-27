@@ -122,7 +122,7 @@ For choosing between apps, use the [evaluation checklist](/blog/2026/10/evaluati
 
 ## Where does MediaFlowSwift fit, and where doesn't it?
 
-MediaFlowSwift is a footage manager for Macs with Apple silicon and macOS 14 or later. Windows and Intel Mac versions are coming. Everything below is described in its online manual.
+MediaFlowSwift is a footage manager for Macs with Apple silicon and macOS 13 or later. Windows and Intel Mac versions are coming. Everything below is described in its online manual.
 
 ### What it tracks
 

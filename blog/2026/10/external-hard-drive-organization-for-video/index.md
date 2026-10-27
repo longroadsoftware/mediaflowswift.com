@@ -146,7 +146,7 @@ MediaFlowSwift's import computes a SHA-256 checksum from the card, writes the co
 
 Organize Media then files each clip and checks it against the import checksum. [Clear Card](/manual/organizing-media/#clear-card) deletes only clips that are already organized and verified at the destination. On cards laid out by the camera, such as Sony XAVC cards, Clear Card deletes nothing. It tells you instead when the card is safe to format in the camera.
 
-The limits are real. MediaFlowSwift runs only on Macs with Apple silicon and macOS 14 or later, though Windows and Intel Mac versions are coming. It writes no ASC MHL file, and it makes a second copy as a separate later step. Crews that need MHL reports or several destinations at once are better served by OffShoot or Silverstack XT. The [MediaFlowSwift vs OffShoot comparison](/vs/offshoot/) sets out the differences, and [evaluating video file management software](/blog/2026/10/evaluating-video-file-management-software/) covers the wider field.
+The limits are real. MediaFlowSwift runs only on Macs with Apple silicon and macOS 13 or later, though Windows and Intel Mac versions are coming. It writes no ASC MHL file, and it makes a second copy as a separate later step. Crews that need MHL reports or several destinations at once are better served by OffShoot or Silverstack XT. The [MediaFlowSwift vs OffShoot comparison](/vs/offshoot/) sets out the differences, and [evaluating video file management software](/blog/2026/10/evaluating-video-file-management-software/) covers the wider field.
 
 ## How do you decide what to keep, archive, or delete?
 

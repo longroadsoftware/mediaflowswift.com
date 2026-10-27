@@ -176,4 +176,4 @@ Cloud storage is the other offsite option. [Backblaze's pricing page](https://ww
 
 NAS snapshots undo accidental deletions and overwrites, which is worth having. A snapshot lives on the same disks as the original, so a dead enclosure or a stolen NAS takes both. Treat snapshots as undo, not backup. The test for a real backup is simple: could you lose the NAS entirely and still recover every clip?
 
-If you want verified imports, organizing to a NAS share, Clear Card and numbered archive drives in one Mac app, [download MediaFlowSwift](/download.html). It runs on Apple silicon Macs with macOS 14 or later, and the [plans](/#plans) start with a 14-day Studio Pro trial that needs no card.
+If you want verified imports, organizing to a NAS share, Clear Card and numbered archive drives in one Mac app, [download MediaFlowSwift](/download.html). It runs on Apple silicon Macs with macOS 13 or later, and the [plans](/#plans) start with a 14-day Studio Pro trial that needs no card.

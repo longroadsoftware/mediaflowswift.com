@@ -89,4 +89,4 @@ Category, rating and select-status changes in MediaFlowSwift go through Edit →
 
 ## Try it on your own footage
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
+MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 13 or later, on a Mac with Apple silicon.

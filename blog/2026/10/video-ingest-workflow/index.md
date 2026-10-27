@@ -151,7 +151,7 @@ Organize Media then files each clip as Destination / Category / Camera / Filenam
 
 The second copy comes from [Archive to USB](/manual/project-management/#archiving-a-project-to-usb). That copies the project folder to a drive, reads every file back and compares it by checksum. Archive drives get numbers (USB #0001, USB #0002 and so on), and the app records which project went to which drive. [Manage Archive Volumes](/manual/project-management/#managing-archive-volumes) lists them. [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) shows the whole sequence.
 
-The limits are real. MediaFlowSwift doesn't write a card to two drives at once, and it writes no checksum list or MHL file onto the drive. It copies to drives and network shares, not to cloud storage. It runs on Apple silicon Macs with macOS 14 or later today; Windows and Intel Mac versions are coming. For a side-by-side, see [MediaFlowSwift vs OffShoot](/vs/offshoot/).
+The limits are real. MediaFlowSwift doesn't write a card to two drives at once, and it writes no checksum list or MHL file onto the drive. It copies to drives and network shares, not to cloud storage. It runs on Apple silicon Macs with macOS 13 or later today; Windows and Intel Mac versions are coming. For a side-by-side, see [MediaFlowSwift vs OffShoot](/vs/offshoot/).
 
 ## How does ingest change when a creator hands off to an editor?
 

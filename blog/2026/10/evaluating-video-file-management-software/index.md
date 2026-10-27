@@ -16,7 +16,7 @@ takeaways:
   - "A free trial with a real card, a moved file and an ejected drive tells you more than any feature list."
   - "Offload tools such as OffShoot, ShotPut Pro and habitat flow stop at a verified, reported copy; Silverstack XT and MediaFlowSwift also catalog the footage afterward."
   - "Several of these tools have a free plan or a one-time licence, so weigh price model as well as features."
-  - "MediaFlowSwift runs only on Apple silicon Macs with macOS 14 or later, copies to one destination per import and writes no MHL file."
+  - "MediaFlowSwift runs only on Apple silicon Macs with macOS 13 or later, copies to one destination per import and writes no MHL file."
 faq:
   - q: "Is it safe to erase my memory card after importing on a Mac?"
     a: "Only after the copy has been checked. A Finder drag does not compare checksums, so a damaged copy can look fine. Use software that computes a checksum of each file on the card and on the copy and compares them. Keep the card unformatted until that check passes, and ideally until a second copy exists on another drive."
@@ -137,7 +137,7 @@ Score each tool yourself during a trial. The table below comes from each vendor'
 | Silverstack XT (Pomfort) | Yes, with checksum manifests | Yes | Searchable clip library, tags, smart folders, proxies, relink | 10-day free trial | Mac (native on Apple silicon) |
 | habitat flow | Yes, xxHash64 with an ASC MHL report | Pro: mirror to two drives | Projects and shooting days at offload | Free plan, up to 150 GB a week | macOS, plus a free iPhone companion |
 | MediaTools Pro | Yes, SHA-256 | Not stated | Search across drives; DaVinci Resolve import in Pro | Lite is free | macOS 12+, Windows 10+ |
-| MediaFlowSwift | Yes, SHA-256 with full read-back | No; second copy via Archive | Category and camera folders, ratings, transcripts, proxies, numbered archive drives, reports | 14-day trial, no card; no free plan | Apple silicon Macs, macOS 14+ |
+| MediaFlowSwift | Yes, SHA-256 with full read-back | No; second copy via Archive | Category and camera folders, ratings, transcripts, proxies, numbered archive drives, reports | 14-day trial, no card; no free plan | Apple silicon Macs, macOS 13+ |
 
 A few details from the vendors' pages help with the price model. [OffShoot](https://hedge.co/products/offshoot) is $169 per activation, or $249 for OffShoot Pro, each perpetual with a year of updates. A 30-day Pro rental costs $49. [ShotPut Pro for Mac](https://www.imagineproducts.com/product/shotput-pro/mac) is $169 perpetual, or $60 for a 30-day rental. [ShotPut Studio](https://www.imagineproducts.com/product/shotput-studio/mac) is $299 perpetual, or $99 for 30 days.
 
@@ -151,7 +151,7 @@ MediaFlowSwift fits a creator who wants each card to become an organized, review
 
 ### Where does MediaFlowSwift fall short?
 
-- It runs only on Macs with Apple silicon and macOS 14 or later. Windows and Intel Mac versions are coming.
+- It runs only on Macs with Apple silicon and macOS 13 or later. Windows and Intel Mac versions are coming.
 - It copies to one destination per import, not to several drives in one job.
 - It copies to drives and network shares, not to S3 or other cloud storage.
 - It writes no ASC MHL file. If a client asks for [ASC MHL](https://theasc.com/mitc/asc-media-hash-list/), OffShoot Pro or habitat flow covers it.
