@@ -11,7 +11,7 @@ generated: tools/import-guide.sh
 
 *Every keyboard shortcut in MediaFlow, grouped by menu, plus the single keys used in Review and the video preview.*
 
-Menu shortcuts work anywhere in the main window. The Review keys work while Review is open (Workflow → Review); they are single keys with no modifier. In Review and in the Import sheet, Space plays and pauses the video showing, whatever you clicked last, except while you are typing in a text field. The Video Playback keys work while the video preview has keyboard focus: click the preview first.
+Menu shortcuts work anywhere in the main window. The Review keys work while Review is open (Workflow → Review); they are single keys with no modifier. In the main window, in Review and in the Import sheet, Space plays and pauses the video showing, whatever you clicked last, except while you are typing in a text field. The other Video Playback keys, I and O, work while the video preview has keyboard focus: click the preview first.
 
 ### File Operations
 
@@ -105,7 +105,7 @@ Menu shortcuts work anywhere in the main window. The Review keys work while Revi
 
 `0` — Clear the star rating
 
-`F` — Toggle Favorite
+`F` — Toggle Hero
 
 `X` — Toggle Reject
 
@@ -113,11 +113,11 @@ Menu shortcuts work anywhere in the main window. The Review keys work while Revi
 
 `I / O` — Mark the in or out point
 
-`A` — Accept proposed category / camera (in Rapid Review)
+`A` — Accept proposed category / camera (in Review)
 
-`R` — Mark reject candidate (in Rapid Review)
+`R` — Mark reject candidate (in Review)
 
-`T` — Toggle auto-advance (in Rapid Review)
+`T` — Toggle auto-advance (in Review)
 
 `M` — Show or hide the metadata overlay
 
@@ -165,7 +165,7 @@ These come from the standard Edit menu. They undo and redo changes to categories
 
 `Cmd+Shift+Z` — Redo
 
-See also: [Reviewing Clips with the Keyboard](/manual/video-preview-playback/#reviewing-clips-with-the-keyboard), [Star Ratings & Selects](/manual/managing-assets/#star-ratings--selects), [Undo and Redo](/manual/managing-assets/#undo-and-redo), [Extracting Thumbnails and Subclips](/manual/video-preview-playback/#extracting-thumbnails-and-subclips)
+See also: [Reviewing Clips with the Keyboard](/manual/video-preview-playback/#reviewing-clips-with-the-keyboard), [Star Ratings & Selects](/manual/managing-clips/#star-ratings--selects), [Undo and Redo](/manual/managing-clips/#undo-and-redo), [Extracting Thumbnails and Subclips](/manual/video-preview-playback/#extracting-thumbnails-and-subclips)
 
 <div class="chapter-nav" role="navigation" aria-label="Chapters">
 <a rel="prev" href="/manual/settings-preferences/">&larr; Settings &amp; Preferences</a>

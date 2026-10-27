@@ -61,7 +61,7 @@ With two or more clips selected, the Edit tab shows three tag buttons:
 
 > **Tip:** The search field above the media list matches tags, in this project or, with All Projects chosen, in every project in the shared database.
 
-See also: [Working with Categories](#working-with-categories), [Filtering and Searching](/manual/managing-assets/#filtering-and-searching)
+See also: [Working with Categories](#working-with-categories), [Filtering and Searching](/manual/managing-clips/#filtering-and-searching)
 
 ## Adding, Renaming, Retiring and Removing Categories
 
@@ -127,7 +127,7 @@ Choose Workflow → Repair → Re-file folders by category. It checks every orga
 
 If this project shares its media files with another (see Duplicating a Project), nothing is re-filed. The category changes; the file stays where it is, because moving it would make the clip go missing from the other project. MediaFlow tells you when this happens.
 
-See also: [Adding, Renaming, Retiring and Removing Categories](#adding-renaming-retiring-and-removing-categories), [Organizing Media to Storage](/manual/organizing-media/#organizing-media-to-storage), [Progress and Messages](/manual/getting-started/#progress-and-messages), [Working with Categories](#working-with-categories), [Undo and Redo](/manual/managing-assets/#undo-and-redo)
+See also: [Adding, Renaming, Retiring and Removing Categories](#adding-renaming-retiring-and-removing-categories), [Organizing Media to Storage](/manual/organizing-media/#organizing-media-to-storage), [Progress and Messages](/manual/getting-started/#progress-and-messages), [Working with Categories](#working-with-categories), [Undo and Redo](/manual/managing-clips/#undo-and-redo)
 
 ## Auto-Suggest Categories
 
@@ -156,7 +156,7 @@ The Categories pass saves you from categorizing clips one at a time. Choose Work
 
 Every category you assign, by hand or by accepting a suggestion, teaches the suggester. If you pick a different category than it proposed for a camera three times, it stops making that proposal. Settings › Categories › Category Learning shows what it has learned, and Reset Pattern Memory clears it. The Uncategorized Clips smart notification offers an Auto-Suggest button when five or more clips need a category.
 
-See also: [Working with Categories](#working-with-categories), [Vision (AI Scene Analysis)](/manual/organizing-media/#vision-ai-scene-analysis), [The Analyze Hub](/manual/getting-started/#the-analyze-hub), [Undo and Redo](/manual/managing-assets/#undo-and-redo)
+See also: [Working with Categories](#working-with-categories), [Vision (AI Scene Analysis)](/manual/organizing-media/#vision-ai-scene-analysis), [The Analyze Hub](/manual/getting-started/#the-analyze-hub), [Undo and Redo](/manual/managing-clips/#undo-and-redo)
 
 <div class="chapter-nav" role="navigation" aria-label="Chapters">
 <a rel="prev" href="/manual/batch-operations/">&larr; Batch Operations</a>
