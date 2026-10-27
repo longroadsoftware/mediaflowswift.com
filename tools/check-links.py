@@ -149,7 +149,8 @@ for url, page in sorted(pages.items()):
             problems.append(f"{page['file']}: {link} leads to no heading or id on {path}")
 
 # --- The manual -------------------------------------------------------------------------------------------------
-manual = {u: p for u, p in pages.items() if u.startswith("/manual/")}
+# A noindex page under /manual/ is a forward from a renamed chapter, not a chapter: no heading, not in the sitemap.
+manual = {u: p for u, p in pages.items() if u.startswith("/manual/") and not p["noindex"]}
 for url, page in sorted(manual.items()):
     if page.get("h1") != 1:
         problems.append(f"{page['file']}: {page.get('h1')} headings of level 1")
