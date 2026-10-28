@@ -5,7 +5,7 @@ title: "Workflow Articles | MediaFlowSwift Blog"
 description: "From the card to the edit to the archive: shoot-day and post-production routines for small teams and solo creators."
 permalink: "/blog/category/workflow/"
 crumbs: [{"name": "MediaFlowSwift", "url": "/"}, {"name": "Blog", "url": "/blog/"}, {"name": "Workflow", "url": "/blog/category/workflow/"}]
-items: [{"title": "How to Clear a Memory Card Without Losing Footage", "url": "/blog/2026/10/clear-memory-card-without-losing-footage/", "published": "2026-10-27"}, {"title": "Video Ingest Workflow: When to Erase the Card", "url": "/blog/2026/10/video-ingest-workflow/", "published": "2026-10-26"}, {"title": "Can't Find Video Files on SD Card? Why Footage Hides and Where to Look", "url": "/blog/2026/10/cant-find-video-files-on-sd-card/", "published": "2026-10-25"}, {"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}]
+items: [{"title": "Does rsync Verify Copied Files? What It Checks and What It Misses", "url": "/blog/2026/10/rsync-verify-copied-files/", "published": "2026-10-28"}, {"title": "How to Clear a Memory Card Without Losing Footage", "url": "/blog/2026/10/clear-memory-card-without-losing-footage/", "published": "2026-10-27"}, {"title": "Video Ingest Workflow: When to Erase the Card", "url": "/blog/2026/10/video-ingest-workflow/", "published": "2026-10-26"}, {"title": "Can't Find Video Files on SD Card? Why Footage Hides and Where to Look", "url": "/blog/2026/10/cant-find-video-files-on-sd-card/", "published": "2026-10-25"}, {"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}]
 ---
 # Workflow
 
@@ -15,10 +15,15 @@ From the card to the edit to the archive: shoot-day and post-production routines
 <li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>2</span></li>
 <li><a href="/blog/category/organization/">Footage Organization</a> <span>2</span></li>
 <li><a href="/blog/category/software/">Choosing Software</a> <span>2</span></li>
-<li><a href="/blog/category/workflow/" aria-current="page">Workflow</a> <span>4</span></li>
+<li><a href="/blog/category/workflow/" aria-current="page">Workflow</a> <span>5</span></li>
 </ul>
 
 <div class="post-list">
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-28">October 28, 2026</time> &middot; 10 min read</p>
+<h2><a href="/blog/2026/10/rsync-verify-copied-files/">Does rsync Verify Copied Files? What It Checks and What It Misses</a></h2>
+<p>Does rsync verify copied files? What its built-in check covers, what -c really does, the gaps, and a shasum recipe to prove a card copy on a Mac.</p>
+</article>
 <article class="post-card">
 <p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-27">October 27, 2026</time> &middot; 9 min read</p>
 <h2><a href="/blog/2026/10/clear-memory-card-without-losing-footage/">How to Clear a Memory Card Without Losing Footage</a></h2>

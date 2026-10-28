@@ -5,7 +5,7 @@ title: "MediaFlowSwift Blog: Video Storage, Backup and Archiving"
 description: "Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job."
 permalink: "/blog/"
 crumbs: [{"name": "MediaFlowSwift", "url": "/"}, {"name": "Blog", "url": "/blog/"}]
-items: [{"title": "How to Clear a Memory Card Without Losing Footage", "url": "/blog/2026/10/clear-memory-card-without-losing-footage/", "published": "2026-10-27"}, {"title": "Video Ingest Workflow: When to Erase the Card", "url": "/blog/2026/10/video-ingest-workflow/", "published": "2026-10-26"}, {"title": "Can't Find Video Files on SD Card? Why Footage Hides and Where to Look", "url": "/blog/2026/10/cant-find-video-files-on-sd-card/", "published": "2026-10-25"}, {"title": "How to Organize Video Footage: Pick a Model First", "url": "/blog/2026/10/how-to-organize-video-footage/", "published": "2026-10-24"}, {"title": "Digital Asset Management for Video Production: What It Means on a Mac", "url": "/blog/2026/10/digital-asset-management-for-video-production/", "published": "2026-10-23"}, {"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}, {"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
+items: [{"title": "Does rsync Verify Copied Files? What It Checks and What It Misses", "url": "/blog/2026/10/rsync-verify-copied-files/", "published": "2026-10-28"}, {"title": "How to Clear a Memory Card Without Losing Footage", "url": "/blog/2026/10/clear-memory-card-without-losing-footage/", "published": "2026-10-27"}, {"title": "Video Ingest Workflow: When to Erase the Card", "url": "/blog/2026/10/video-ingest-workflow/", "published": "2026-10-26"}, {"title": "Can't Find Video Files on SD Card? Why Footage Hides and Where to Look", "url": "/blog/2026/10/cant-find-video-files-on-sd-card/", "published": "2026-10-25"}, {"title": "How to Organize Video Footage: Pick a Model First", "url": "/blog/2026/10/how-to-organize-video-footage/", "published": "2026-10-24"}, {"title": "Digital Asset Management for Video Production: What It Means on a Mac", "url": "/blog/2026/10/digital-asset-management-for-video-production/", "published": "2026-10-23"}, {"title": "Checksum Verification: Prove Your Card Copy Before Erasing", "url": "/blog/2026/10/checksum-verification-before-erasing-card/", "published": "2026-10-22"}, {"title": "Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs", "url": "/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/", "published": "2026-10-21"}, {"title": "NAS Video Storage: How to Choose and Structure One", "url": "/blog/2026/10/nas-video-storage-how-to-choose/", "published": "2026-10-21"}, {"title": "External Hard Drive Organization for Video Creators", "url": "/blog/2026/10/external-hard-drive-organization-for-video/", "published": "2026-10-21"}, {"title": "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac", "url": "/blog/2026/10/evaluating-video-file-management-software/", "published": "2026-10-21"}]
 ---
 # The MediaFlowSwift Blog
 
@@ -19,12 +19,17 @@ Looking for step-by-step help with the app itself? The [how-to guides](/guides/)
 <li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>2</span></li>
 <li><a href="/blog/category/organization/">Footage Organization</a> <span>2</span></li>
 <li><a href="/blog/category/software/">Choosing Software</a> <span>2</span></li>
-<li><a href="/blog/category/workflow/">Workflow</a> <span>4</span></li>
+<li><a href="/blog/category/workflow/">Workflow</a> <span>5</span></li>
 </ul>
 
 ## Latest articles
 
 <div class="post-list">
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-28">October 28, 2026</time> &middot; 10 min read</p>
+<h3><a href="/blog/2026/10/rsync-verify-copied-files/">Does rsync Verify Copied Files? What It Checks and What It Misses</a></h3>
+<p>Does rsync verify copied files? What its built-in check covers, what -c really does, the gaps, and a shasum recipe to prove a card copy on a Mac.</p>
+</article>
 <article class="post-card">
 <p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-27">October 27, 2026</time> &middot; 9 min read</p>
 <h3><a href="/blog/2026/10/clear-memory-card-without-losing-footage/">How to Clear a Memory Card Without Losing Footage</a></h3>
@@ -80,7 +85,7 @@ Looking for step-by-step help with the app itself? The [how-to guides](/guides/)
 ## Archive
 
 <ul class="archive-list">
-<li><a href="/blog/2026/">2026</a> (10)<ul><li><a href="/blog/2026/10/">October 2026</a> (10)</li></ul></li>
+<li><a href="/blog/2026/">2026</a> (11)<ul><li><a href="/blog/2026/10/">October 2026</a> (11)</li></ul></li>
 </ul>
 
 ## How are these articles written?

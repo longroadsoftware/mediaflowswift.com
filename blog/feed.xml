@@ -6,7 +6,15 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Tue, 27 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 28 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Does rsync Verify Copied Files? What It Checks and What It Misses</title>
+    <link>https://mediaflowswift.com/blog/2026/10/rsync-verify-copied-files/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/rsync-verify-copied-files/</guid>
+    <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>Does rsync verify copied files? What its built-in check covers, what -c really does, the gaps, and a shasum recipe to prove a card copy on a Mac.</description>
+  </item>
   <item>
     <title>How to Clear a Memory Card Without Losing Footage</title>
     <link>https://mediaflowswift.com/blog/2026/10/clear-memory-card-without-losing-footage/</link>
