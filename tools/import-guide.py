@@ -31,6 +31,7 @@ CONTENTS_DESCRIPTION = "The MediaFlowSwift manual, chapter by chapter: importing
 SITEMAP_BEGIN = "<!-- manual: written by tools/import-guide.sh, do not edit by hand -->"
 SITEMAP_END = "<!-- end of manual -->"
 DESCRIPTION_LIMIT = 154  # characters, so it stays under the 155 search engines show
+SCREENSHOTS = "tools/manual-screenshots.json"  # pictures put under headings; the guide itself has none
 
 
 def fail(message):
@@ -101,6 +102,89 @@ def first_paragraph(lines):
 
 def html(text):
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+
+
+def image_size(path):
+    """Width and height of a PNG or JPEG, from its header, or None."""
+    with open(path, "rb") as f:
+        data = f.read()
+    if data[:8] == b"\x89PNG\r\n\x1a\n" and data[12:16] == b"IHDR":
+        return int.from_bytes(data[16:20], "big"), int.from_bytes(data[20:24], "big")
+    if data[:2] == b"\xff\xd8":
+        i = 2
+        while i + 9 < len(data) and data[i] == 0xFF:
+            marker, length = data[i + 1], int.from_bytes(data[i + 2 : i + 4], "big")
+            if marker in (0xC0, 0xC1, 0xC2):
+                return int.from_bytes(data[i + 7 : i + 9], "big"), int.from_bytes(data[i + 5 : i + 7], "big")
+            i += 2 + length
+    return None
+
+
+def screenshots(root, chapters):
+    """The pictures in tools/manual-screenshots.json whose files exist, by (chapter slug, heading id), and the
+    ones still waiting for their file.
+
+    A picture whose file is not there yet is left out, so the list can name shots before they are taken. Every
+    entry must name a heading the guide has, so a renamed heading stops the import instead of a picture quietly
+    disappearing."""
+    path = os.path.join(root, SCREENSHOTS)
+    if not os.path.isfile(path):
+        return {}, []
+    try:
+        entries = json.load(open(path, encoding="utf-8"))["screenshots"]
+    except (ValueError, KeyError, TypeError) as e:
+        fail(f"{SCREENSHOTS} is not readable: {e}")
+    ids = {(c["slug"], h["new"]) for c in chapters for h in c["headings"]}
+    found, waiting, keys = {}, [], set()
+    for e in entries:
+        key = (e.get("chapter"), e.get("heading"))
+        src, alt, caption = e.get("image", ""), e.get("alt", "").strip(), e.get("caption", "").strip()
+        if key not in ids:
+            fail(f"{SCREENSHOTS}: no heading #{key[1]} in chapter '{key[0]}' (was it renamed in the guide?)")
+        if key in keys:
+            fail(f"{SCREENSHOTS}: two pictures under #{key[1]} in '{key[0]}'")
+        keys.add(key)
+        if not re.match(r"^/images/manual/[a-z0-9-]+\.(png|jpg)$", src) or not alt:
+            fail(f"{SCREENSHOTS}: the picture for #{key[1]} needs an image /images/manual/<name>.png or .jpg and alt text")
+        if "{{" in alt + caption or "{%" in alt + caption:
+            fail(f"{SCREENSHOTS}: the text for #{key[1]} contains {{{{ or {{%, which Jekyll would read as Liquid")
+        file = os.path.join(root, src.lstrip("/"))
+        if not os.path.isfile(file):
+            waiting.append(src)
+            continue
+        size = image_size(file)
+        if not size:
+            fail(f"{src} is not a PNG or JPEG this tool can read")
+        found[key] = (
+            f'<figure class="guide-figure"><img src="{src}" width="{size[0]}" height="{size[1]}" '
+            f'style="max-width:100%;height:auto" alt="{html(alt)}" loading="lazy">'
+            + (f"<figcaption>{html(caption)}</figcaption>" if caption else "")
+            + "</figure>"
+        )
+    return found, waiting
+
+
+def with_pictures(lines, slug, pictures):
+    """A chapter page's lines (already escaped) with each picture after the first paragraph under its heading,
+    or straight under the heading when another heading follows it at once."""
+    out, seen, pending, in_paragraph = [], {}, None, False
+    for line in lines:
+        h = atx(line)
+        if pending and in_paragraph and not line.strip():
+            out += ["", pending]
+            pending, in_paragraph = None, False
+        if h:
+            if pending:
+                out += [pending, ""]
+                pending = None
+            _, new = heading_id(h[1], seen)
+            pending, in_paragraph = pictures.get((slug, new)), False
+        elif pending and line.strip():
+            in_paragraph = True
+        out.append(line)
+    if pending:
+        out += ["", pending]
+    return out
 
 
 def yaml_string(text):
@@ -242,6 +326,7 @@ def main():
         fail("links that lead to no heading: " + ", ".join(sorted(set(unresolved))))
 
     # --- The pages ----------------------------------------------------------------------------------------------
+    pictures, waiting = screenshots(root, chapters)
     pages = {}  # path relative to root -> content
     for n, c in enumerate(chapters):
         nav = ['<div class="chapter-nav" role="navigation" aria-label="Chapters">']
@@ -265,7 +350,8 @@ def main():
             ("permalink", f"/manual/{c['slug']}/"),
             ("generated", "tools/import-guide.sh"),
         ])
-        text += escaped(lines[starts[n]]) + "\n" + escaped("\n".join(c["body"])) + "\n\n" + "\n".join(nav) + "\n"
+        page = escaped(lines[starts[n]] + "\n" + "\n".join(c["body"])).split("\n")
+        text += "\n".join(with_pictures(page, c["slug"], pictures)) + "\n\n" + "\n".join(nav) + "\n"
         pages[f"manual/{c['slug']}/index.md"] = text
 
     contents = [f"# {MANUAL_TITLE}", ""]
@@ -358,6 +444,9 @@ def main():
     words = sum(len(t.split()) for p, t in pages.items() if p != "sitemap.xml")
     print(f"manual written from {source}: {len(chapters)} chapters and the contents page ({words} words), "
           f"{len(moved)} old anchors redirected, sitemap.xml updated")
+    if pictures or waiting:
+        print(f"{len(pictures)} screenshots placed from {SCREENSHOTS}; "
+              + (f"{len(waiting)} not taken yet: " + ", ".join(waiting) if waiting else "none waiting"))
     print("Commit manual/ and sitemap.xml together.")
 
 
