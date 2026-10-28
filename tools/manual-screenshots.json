@@ -1,0 +1,125 @@
+{
+  "about": "Screenshots for the online manual. tools/import-guide.py puts each picture after the first paragraph under its heading (chapter = the page's address under /manual/, heading = the id of the heading on that page). A picture whose file is not in images/manual/ yet is skipped, so a shot can be listed before it is taken. Real screenshots of the demo project only. 'shot' says what to capture; correct 'alt' if the picture shows something else. After adding files, run tools/import-guide.sh and commit images/manual/, manual/ and sitemap.xml together.",
+  "screenshots": [
+    {
+      "chapter": "getting-started",
+      "heading": "understanding-the-interface",
+      "image": "/images/manual/main-window.png",
+      "shot": "Whole main window, demo project open in Table view, one video clip selected so the preview and metadata panel are filled, sidebar showing Library and Smart Groups.",
+      "alt": "The MediaFlowSwift main window with a project open: the pipeline strip across the top, the sidebar on the left, the clip table in the middle, and the video preview and metadata panel on the right.",
+      "caption": "The main window: pipeline strip, sidebar, media list, preview panel and metadata panel."
+    },
+    {
+      "chapter": "getting-started",
+      "heading": "understanding-the-pipeline-strip",
+      "image": "/images/manual/pipeline-strip.png",
+      "shot": "Crop to the pipeline strip only, mid-project: some clips uncategorized, some unrated, some not yet organized, so the segments show real counts and buttons.",
+      "alt": "The pipeline strip: seven segments, Import, Categorize, Review, Organize, Free up space, Archive and Eject, each with a count of the work left and a button.",
+      "caption": "The pipeline strip shows how far the project has come and offers the next action."
+    },
+    {
+      "chapter": "setup-network",
+      "heading": "setting-up-mediaflow",
+      "image": "/images/manual/setup-wizard.png",
+      "shot": "The Setup Wizard's first step, 'Where your footage goes', with its three choices visible.",
+      "alt": "The Setup Wizard's first step, asking where your footage goes: This Mac, An external drive, or A network share.",
+      "caption": "The Setup Wizard's first answer decides which steps follow."
+    },
+    {
+      "chapter": "importing-media",
+      "heading": "importing-from-a-card-drive-or-folder",
+      "image": "/images/manual/import-sheet.png",
+      "shot": "File > Import... with Cards & drives (or Folder) chosen, a source scanned, the file list with checkboxes and the Camera picker set.",
+      "alt": "The Import sheet with a card chosen as the source, its files listed with checkboxes, and the Camera picker set to the camera that shot them.",
+      "caption": "The Import sheet: pick the source, check the files, set the camera."
+    },
+    {
+      "chapter": "importing-media",
+      "heading": "the-import-sheet-and-completion-card",
+      "image": "/images/manual/import-complete.png",
+      "shot": "The completion card at the end of an import (\"Imported N clips (x GB) from Camera ...\") with its Eject, Categorize now and Done buttons.",
+      "alt": "The completion card at the end of an import, giving the number of clips imported, their size and camera, with Eject, Categorize now and Done buttons.",
+      "caption": "When the import finishes, the completion card offers the next step."
+    },
+    {
+      "chapter": "managing-clips",
+      "heading": "table-and-grid-views",
+      "image": "/images/manual/grid-view.png",
+      "shot": "The media list in Grid view: thumbnail cards with stars and Hero/Maybe/Reject badges on some of them.",
+      "alt": "The media list in Grid view: a thumbnail card for each clip, some showing star ratings and Hero, Maybe or Reject badges.",
+      "caption": "Grid view; the Table / Grid control in the toolbar switches between the two."
+    },
+    {
+      "chapter": "managing-clips",
+      "heading": "filtering-and-searching",
+      "image": "/images/manual/search-and-filter.png",
+      "shot": "A filter chosen in the sidebar (shown as a chip) plus a word typed in the toolbar search field, with the 'N of M clips' line above the narrowed list.",
+      "alt": "The media list narrowed by a filter and a search: the filter shows as a chip in the sidebar, the search word is in the toolbar field, and a line above the list counts the matching clips.",
+      "caption": "A search works inside the current filter."
+    },
+    {
+      "chapter": "managing-clips",
+      "heading": "star-ratings--selects",
+      "image": "/images/manual/ratings-and-selects.png",
+      "shot": "Table view sorted by Rating, best first, so the Rating and Select columns show stars and Hero/Maybe/Reject; crop to those columns plus Filename.",
+      "alt": "Clips in Table view sorted by rating, best first, with star ratings in the Rating column and Hero, Maybe or Reject in the Select column.",
+      "caption": "Sorted by rating: five stars and Hero at the top, Reject last."
+    },
+    {
+      "chapter": "organizing-media",
+      "heading": "organizing-media-to-storage",
+      "image": "/images/manual/organize-media.png",
+      "shot": "The Organize Media confirmation: scope, number of clips, total size, destination menu and its free space, the 'Make this the project destination' box.",
+      "alt": "The Organize Media confirmation, showing the number of clips, their total size, the destination with its free space, and the Organize Media button.",
+      "caption": "Organize Media copies clips into Category and Camera folders and verifies every copy."
+    },
+    {
+      "chapter": "video-preview-playback",
+      "heading": "video-playback-controls",
+      "image": "/images/manual/preview-panel.png",
+      "shot": "Preview panel only, a video paused mid-clip, with an in/out range marked on the seek slider and the time display visible.",
+      "alt": "The preview panel with a video paused mid-clip, and under it the seek slider with a marked range, step back, play, step forward, the time display and the pop-out button.",
+      "caption": "The preview panel's controls."
+    },
+    {
+      "chapter": "batch-operations",
+      "heading": "processing-the-proxy-queue",
+      "image": "/images/manual/proxy-queue.png",
+      "shot": "Proxy queue chosen in the sidebar with several clips in it, and the Workflow Tools tab showing the Process Queue buttons (ideally with the progress bar running).",
+      "alt": "The Proxy queue with several clips in it, and the Workflow Tools tab with the Process Queue (Thumbnails), Process Queue (Proxies) and Process Queue (All) buttons.",
+      "caption": "Clips in the Proxy queue, ready to process."
+    },
+    {
+      "chapter": "tags-categories",
+      "heading": "working-with-categories",
+      "image": "/images/manual/category-picker.png",
+      "shot": "Several clips selected, the Edit tab's Category picker open showing the default categories, and the Apply Category button.",
+      "alt": "The Category picker open in the Edit tab, listing categories such as A-roll, B-roll, Interview and Skip (don't copy), with the Apply Category button below.",
+      "caption": "Choosing a category for the selected clips."
+    },
+    {
+      "chapter": "reports",
+      "heading": "generating-reports",
+      "image": "/images/manual/report-dialog.png",
+      "shot": "Workflow > Plan & Deliver > Report: the Export / Generate Report dialog with its format choices.",
+      "alt": "The Export / Generate Report dialog with its list of formats, including PDF, HTML and spreadsheet, and the Generate button.",
+      "caption": "Pick a format and click Generate."
+    },
+    {
+      "chapter": "publishing",
+      "heading": "preparing-a-video-for-youtube",
+      "image": "/images/manual/prepare-for-youtube.png",
+      "shot": "Prepare for YouTube after Write with the SEO Agent on the demo video: chosen video, title options, description, chapters, tags and the checklist.",
+      "alt": "The Prepare for YouTube window with a finished video chosen, suggested titles, a description with chapters, tags, and the publishing checklist.",
+      "caption": "Prepare for YouTube: the words drafted for the finished video, ready to edit."
+    },
+    {
+      "chapter": "project-management",
+      "heading": "archiving-a-project-to-usb",
+      "image": "/images/manual/archive-to-usb.png",
+      "shot": "Workflow > Archive to USB... with a numbered drive listed and marked Recommended, before clicking Archive.",
+      "alt": "The Archive to USB sheet listing a numbered archive drive marked Recommended, with its free space and the Archive button.",
+      "caption": "Archive to USB copies the finished project to a numbered drive and checks every file."
+    }
+  ]
+}
