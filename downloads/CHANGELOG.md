@@ -2,6 +2,12 @@
 
 What's new in each version of MediaFlowSwift, newest first.
 
+## 1.11.1 · October 29, 2026
+
+**Fixes for transcription, imports and the Hero list.**
+
+- **Bug fixes.** Transcribe and Prepare for YouTube, the camera choice in the Import sheet, the Hero list after the database reconnects, and banners at the top of the window, plus small improvements.
+
 ## 1.11 · October 26, 2026
 
 **Encrypted database connections, macOS 13 Ventura, and a clearer About window.**
