@@ -6,7 +6,15 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 28 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 29 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Video Asset Management for Solo Mac Creators: What You Need, What to Skip</title>
+    <link>https://mediaflowswift.com/blog/2026/10/video-asset-management-solo-mac-creators/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/video-asset-management-solo-mac-creators/</guid>
+    <pubDate>Thu, 29 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Choosing Software</category>
+    <description>Video asset management for solo Mac creators: the three jobs that matter on one Mac, the team features to skip, and the signs it is time to grow.</description>
+  </item>
   <item>
     <title>Does rsync Verify Copied Files? What It Checks and What It Misses</title>
     <link>https://mediaflowswift.com/blog/2026/10/rsync-verify-copied-files/</link>
