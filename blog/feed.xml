@@ -6,7 +6,15 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 29 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 30 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Dailies Workflow: Card Offload to Editor Hand-Off on Mac</title>
+    <link>https://mediaflowswift.com/blog/2026/10/dailies-workflow-mac/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/dailies-workflow-mac/</guid>
+    <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>A dailies workflow for Mac shooters: organize the day&#x27;s footage, review and pick selects, write a dailies report, and hand off files your editor can open.</description>
+  </item>
   <item>
     <title>Video Asset Management for Solo Mac Creators: What You Need, What to Skip</title>
     <link>https://mediaflowswift.com/blog/2026/10/video-asset-management-solo-mac-creators/</link>

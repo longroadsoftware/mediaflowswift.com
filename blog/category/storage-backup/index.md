@@ -15,7 +15,7 @@ NAS setups, RAID, archive tiers, backups and what each kind of storage really co
 <li><a href="/blog/category/storage-backup/" aria-current="page">Storage &amp; Backup</a> <span>2</span></li>
 <li><a href="/blog/category/organization/">Footage Organization</a> <span>2</span></li>
 <li><a href="/blog/category/software/">Choosing Software</a> <span>3</span></li>
-<li><a href="/blog/category/workflow/">Workflow</a> <span>5</span></li>
+<li><a href="/blog/category/workflow/">Workflow</a> <span>6</span></li>
 </ul>
 
 <div class="post-list">
