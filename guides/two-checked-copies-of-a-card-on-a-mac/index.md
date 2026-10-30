@@ -3,7 +3,7 @@ layout: guide
 title: "How to Keep Two Checked Copies of a Memory Card on a Mac"
 description: "Import and organize a card to your working drive, then archive the project to a second drive. Two checksum-verified copies, made one after the other."
 published: "2026-10-13"
-updated: 2026-10-20
+updated: 2026-10-30
 permalink: /guides/two-checked-copies-of-a-card-on-a-mac/
 ---
 # How to Keep Two Checked Copies of a Memory Card on a Mac
@@ -94,11 +94,13 @@ So in practice you often have three copies for a while: card, working drive, arc
 
 ## Does this checksum chain cover an iPhone import too?
 
-Importing from an iPhone or camera over USB works a little differently, because Image Capture hands each file over itself rather than letting MediaFlowSwift read the original straight off the card:
+Importing from an iPhone or camera over USB works a little differently, because Image Capture hands each file over itself rather than letting MediaFlowSwift read the original straight off the device:
 
 > Image Capture reads the phone itself, so the checksum starts from what it handed over. What came across is checked against the phone too, as far as the phone allows: an item that arrives empty is never imported.
 
-So a phone import is checked against the phone, not skipped — but the check is not identical to a card's. A phone that converts photos and videos as it sends them, as recent iPhones do with HEIF and HEVC, can't be matched byte-for-byte, so MediaFlowSwift checks what it can: a converted item isn't allowed to arrive smaller than the phone says, or empty. Any other phone or camera that sends files unchanged is matched at the exact size, and by fingerprint where the phone gives one. From there on, Organize and Archive to USB check a phone-sourced clip the same way they check one that came from a card.
+So a phone import is checked against the phone, not skipped — but the check is not identical to a card's. A phone that converts photos and videos as it sends them, as recent iPhones do with HEIF and HEVC, can't be matched byte-for-byte, so MediaFlowSwift checks what it can: from such a phone, a photo isn't allowed to arrive smaller than the size the phone gives, and a video, whose converted size can't be known beforehand, isn't allowed to arrive empty. Any other phone or camera that sends files unchanged is matched at the exact size, and by fingerprint where the phone gives one. If any of these checks fails, the import stops and names the item.
+
+Once Image Capture has handed a file over, MediaFlowSwift copies it to your import location with the same SHA-256 read-back it uses for a card, and keeps the checksum with the clip for Organize to check against.
 
 ## Read more
 
