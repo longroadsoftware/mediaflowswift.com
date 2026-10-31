@@ -13,7 +13,7 @@ How to judge video file management, card offload and media asset tools before yo
 
 <ul class="category-chips">
 <li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>2</span></li>
-<li><a href="/blog/category/organization/">Footage Organization</a> <span>2</span></li>
+<li><a href="/blog/category/organization/">Footage Organization</a> <span>3</span></li>
 <li><a href="/blog/category/software/" aria-current="page">Choosing Software</a> <span>3</span></li>
 <li><a href="/blog/category/workflow/">Workflow</a> <span>6</span></li>
 </ul>
