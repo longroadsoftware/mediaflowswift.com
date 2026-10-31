@@ -6,7 +6,15 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Fri, 30 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Sat, 31 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>How to Find All Video Files on Mac (and Verify Them)</title>
+    <link>https://mediaflowswift.com/blog/2026/10/find-all-video-files-on-mac/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/find-all-video-files-on-mac/</guid>
+    <pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Footage Organization</category>
+    <description>Find all video files on a Mac with Finder, Spotlight and Terminal, catch camera formats Finder misses, and verify copies before you delete anything.</description>
+  </item>
   <item>
     <title>Dailies Workflow: Card Offload to Editor Hand-Off on Mac</title>
     <link>https://mediaflowswift.com/blog/2026/10/dailies-workflow-mac/</link>
