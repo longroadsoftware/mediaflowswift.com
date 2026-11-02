@@ -2,6 +2,14 @@
 
 What's new in each version of MediaFlowSwift, newest first.
 
+## 1.11.2 · November 2, 2026
+
+**Organize keeps each project in its own folder, and Export FCPXML saves every clip.**
+
+- **Each project in its own folder.** When you Organize into a share or a year folder, MediaFlow files the clips in a folder named after the project and shows you the whole path first.
+- **Export FCPXML saves every clip.** Export FCPXML… writes all of a project’s clips, with Scene Log markers where you have them, and tells you where the file went.
+- **Bug fixes.** Photo imports from folders and notices at the top of the window, plus small improvements.
+
 ## 1.11.1 · October 29, 2026
 
 **Fixes for transcription, imports and the Hero list.**
