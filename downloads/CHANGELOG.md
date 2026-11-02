@@ -2,6 +2,12 @@
 
 What's new in each version of MediaFlowSwift, newest first.
 
+## 1.11.3 · November 2, 2026
+
+**Fixes for the SEO Agent's local model and chapters on long videos.**
+
+- **Bug fixes.** The SEO Agent with the model on this Mac, chapters on long videos, and model downloads in Settings, plus small improvements.
+
 ## 1.11.2 · November 2, 2026
 
 **Organize keeps each project in its own folder, and Export FCPXML saves every clip.**
