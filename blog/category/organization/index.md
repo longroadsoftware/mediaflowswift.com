@@ -12,7 +12,7 @@ items: [{"title": "How to Find All Video Files on Mac (and Verify Them)", "url":
 Folder structures, naming, drive labels and routines that keep footage findable years later.
 
 <ul class="category-chips">
-<li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>2</span></li>
+<li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>3</span></li>
 <li><a href="/blog/category/organization/" aria-current="page">Footage Organization</a> <span>3</span></li>
 <li><a href="/blog/category/software/">Choosing Software</a> <span>4</span></li>
 <li><a href="/blog/category/workflow/">Workflow</a> <span>7</span></li>
