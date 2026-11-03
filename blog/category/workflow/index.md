@@ -12,7 +12,7 @@ items: [{"title": "Old Archive Footage: Where to Find It and How to License It",
 From the card to the edit to the archive: shoot-day and post-production routines for small teams and solo creators.
 
 <ul class="category-chips">
-<li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>2</span></li>
+<li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>3</span></li>
 <li><a href="/blog/category/organization/">Footage Organization</a> <span>3</span></li>
 <li><a href="/blog/category/software/">Choosing Software</a> <span>4</span></li>
 <li><a href="/blog/category/workflow/" aria-current="page">Workflow</a> <span>7</span></li>

@@ -6,7 +6,15 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Mon, 02 Nov 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Tue, 03 Nov 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>SD Card as Backup for Video Footage: What to Buy, How to Spot Fakes, and How to Verify Copies</title>
+    <link>https://mediaflowswift.com/blog/2026/11/sd-card-as-backup/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/11/sd-card-as-backup/</guid>
+    <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Storage &amp; Backup</category>
+    <description>Using an SD card as backup for video footage: which speed class and capacity to buy, how to test for fake cards on a Mac, and how to verify every copy.</description>
+  </item>
   <item>
     <title>Old Archive Footage: Where to Find It and How to License It</title>
     <link>https://mediaflowswift.com/blog/2026/11/old-archive-footage/</link>
