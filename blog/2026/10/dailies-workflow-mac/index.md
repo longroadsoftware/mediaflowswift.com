@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/dailies-workflow-mac/
 published: "2026-10-30"
-updated: "2026-10-30"
+updated: "2026-11-04"
 og_image: "/images/blog/dailies-workflow-mac.png"
 title: "Dailies Workflow: Card Offload to Editor Hand-Off on Mac"
 seo_title: "Dailies Workflow on a Mac: From Card to Editor Hand-Off"
@@ -66,7 +66,7 @@ Film crews use "dailies" for the day's footage, reviewed the next day. A solo cr
 
 Verification needs to be complete, not elaborate. A Finder drag tells you the copy finished, but it doesn't compare the copy with the card. A checksum tool hashes the card file and the copy and compares them. Matching SHA-256 values mean the bytes are identical.
 
-Make a second verified copy on a different physical drive before you erase anything. On a Mac with MediaFlowSwift, that is an import and Organize to the working drive, then Archive to USB to a numbered drive. [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) walks through the sequence. MediaFlowSwift makes those copies one after the other, not to two drives at once.
+Make a second verified copy on a different physical drive before you erase anything. On a Mac with MediaFlowSwift, turn on Also copy to on the Import sheet, and each card is copied to two places at once, each copy checked against the card. Or import and Organize to the working drive, then Archive to USB to a numbered drive. [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) walks through both.
 
 The card can stay full while you review. Erasing it is a separate decision, covered in [How to Clear a Memory Card Without Losing Footage](/blog/2026/10/clear-memory-card-without-losing-footage/).
 
@@ -125,7 +125,7 @@ A useful dailies report includes:
 
 MediaFlowSwift doesn't write a report automatically during offload. Workflow → Plan & Deliver → [Generate Dailies](/manual/reports/#dailies-report) builds one on demand, organized by shooting date. It can group by scene and camera and include circle takes, ratings, timecodes and notes. It writes HTML, CSV or plain text.
 
-For a quick end-of-day message, [Day Summary](/manual/reports/#day-summary) shows clip count, duration, size, cameras and flagged audio issues, ready to copy. The app doesn't write a checksum list or an MHL file, so it can't supply that part. [How to Create a Dailies Report and a Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/) explains which output to send.
+For a quick end-of-day message, [Day Summary](/manual/reports/#day-summary) shows clip count, duration, size, cameras and flagged audio issues, ready to copy. The app writes no MHL file. Its only checksum list is the Proof Copy receipt that an import with Also copy to leaves in each place's import folder, so for the organized folders, make one yourself. [How to Create a Dailies Report and a Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/) explains which output to send.
 
 ## How do you hand off dailies to an editor?
 
@@ -159,7 +159,7 @@ OffShoot runs on macOS and Windows and has a 10-day trial. Silverstack Lab and S
 
 ### Where MediaFlowSwift fits, and where it doesn't
 
-MediaFlowSwift covers offload, organizing, review, selects and the report in one Mac app. Its limits matter for dailies. It applies no LUTs or looks, and it doesn't transcode editing proxies or upload to review platforms. It writes no checksum list or MHL file.
+MediaFlowSwift covers offload, organizing, review, selects and the report in one Mac app. Its limits matter for dailies. It applies no LUTs or looks, and it doesn't transcode editing proxies or upload to review platforms. It writes no MHL file, and no checksum list for the organized folders. An import with Also copy to does leave a Proof Copy receipt in each place's import folder, listing every file with its size and checksum.
 
 Several Macs can share projects through the [shared database](/manual/shared-database/). A database file works on either plan, and a database server that several Macs use at once is a Studio Pro feature. The app runs on Apple silicon Macs with macOS 13 or later. Windows and Intel Mac versions are coming.
 
@@ -173,6 +173,6 @@ A solo creator can skip most of it. Looks can wait for the edit, and camera audi
 
 A ski trip shot on GoPro, iPhone, drone and Nikon fits in one evening. Import each card into a project such as `2026-10-24_Ski-Trip`, with each copy checked against the card. MediaFlowSwift checks iPhone clips imported over USB as far as the phone allows. Nikon MOV or MP4 clips import, but NEF raw stills are left out, so copy those yourself.
 
-Organize to the working drive, then Archive to USB to a numbered drive. If the cameras rolled together, [Audio Waveform Sync](/manual/organizing-media/#audio-waveform-sync) lines clips up by their sound. Review by camera, rate the keepers and mark rejects. Then run Generate Dailies and export for the editor.
+For the second copy, turn on Also copy to before importing the cards (an iPhone import makes one copy), or Archive to USB to a numbered drive after you organize. If the cameras rolled together, [Audio Waveform Sync](/manual/organizing-media/#audio-waveform-sync) lines clips up by their sound. Review by camera, rate the keepers and mark rejects. Then run Generate Dailies and export for the editor.
 
 The routine is the same with any toolset: verify, copy again, organize, review, report, hand off. MediaFlowSwift puts those stages in one Mac app, with a [14-day trial](/download.html) and [plans](/#plans) for when the trial ends.
