@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/digital-asset-management-for-video-production/
 published: "2026-10-23"
-updated: "2026-10-26"
+updated: "2026-11-04"
 og_image: "/images/blog/digital-asset-management-for-video-production.png"
 title: "Digital Asset Management for Video Production: What It Means on a Mac"
 seo_title: "Digital Asset Management for Video Production on a Mac"
@@ -128,7 +128,7 @@ MediaFlowSwift is a footage manager for Macs with Apple silicon and macOS 13 or 
 
 ### What it tracks
 
-- **Verified ingest.** [Import](/manual/importing-media/) computes a SHA-256 checksum from the card and writes the copy. It then reads the whole copy back from the drive and compares. A mismatch is retried once; then the import stops and names the file. Import never deletes from the card.
+- **Verified ingest.** [Import](/manual/importing-media/) computes a SHA-256 checksum from the card and writes the copy. It then reads the whole copy back from the drive and compares. A mismatch is retried once; then the import stops and names the file. Import never deletes from the card. With Also copy to, it writes a second copy to another folder or drive in the same import and checks that one against the card too.
 - **Organize and Clear Card.** [Organize Media](/manual/organizing-media/#organizing-media-to-storage) files clips as Destination / Category / Camera / Filename and checks each copy against the import checksum. [Clear Card](/manual/organizing-media/#clear-card) deletes only clips already organized and verified at the destination.
 - **Camera metadata.** The Full Metadata tab shows what was read from the file, such as resolution, frame rate, codec, bit rate, camera and lens. GPS, drone, GoPro and iPhone data appear when present.
 - **Speech Transcription.** [Transcribe](/manual/organizing-media/#speech-transcription) saves timed text with each clip. The Transcript tab searches one clip or, with All clips ticked, every clip in the project.
@@ -151,7 +151,7 @@ All of these features are in both Studio and Studio Pro. A shared database as a 
 - It runs only on Apple silicon Macs. Windows and Intel Mac versions are not out yet.
 - Import takes MP4, MOV, M4V and AVI video. MXF, BRAW, R3D and AVCHD files are left out, and the sheet says so.
 - Camera helper files such as Sony XML or DJI SRT files are not imported, and the manual describes no XMP support.
-- It copies to one destination per import and writes no ASC MHL file. OffShoot Pro covers MHL.
+- It copies to at most two places per import and writes no ASC MHL file. OffShoot Pro covers MHL.
 - The manual describes no client review links or approval workflow. A team that needs those should look at a full DAM.
 
 If MediaFlowSwift sounds like a fit for your footage, the [download page](/download.html) has a 14-day trial, with [plans](/#plans) listed for after it ends.
