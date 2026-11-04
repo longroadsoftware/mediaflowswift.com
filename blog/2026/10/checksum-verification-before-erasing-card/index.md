@@ -178,6 +178,8 @@ A short routine works whatever tool you use.
 3. **Clear the card only when the checks pass.** Every file you need should show a matching checksum. Check outside the clip folders for anything your tool skipped.
 4. **Audit older drives now and then.** Re-run `shasum -c` on a few folders, or an `rsync -rcni` dry run between copies. That catches slow damage before both copies go bad.
 
+<figure class="guide-figure"><img src="/images/blog/checksum-verification-before-erasing-card.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Four steps: offload each card with a tool that reads the copy back and compares checksums; make a second checked copy on a separate archive drive or NAS; clear the card only once every checksum matches; and audit older drives now and then with a re-run checksum or an rsync dry run." loading="lazy"><figcaption>Repeat this routine every shoot.</figcaption></figure>
+
 Folder layout makes the routine easier; see [External Hard Drive Organization for Video](/blog/2026/10/external-hard-drive-organization-for-video/). For where the second copy should live, compare [NAS video storage](/blog/2026/10/nas-video-storage-how-to-choose/) with [LTO, NAS and cloud archives](/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/).
 
-Want the check, the organizing and safe card clearing in one Mac app? [Download MediaFlowSwift](/download.html) and try it on a real card. Plans are on the [home page](/#plans).
+MediaFlowSwift bundles that check with the organizing and card-clearing steps that follow it. [Download it](/download.html) for a 14-day trial, and see what each plan includes on the [home page](/#plans).

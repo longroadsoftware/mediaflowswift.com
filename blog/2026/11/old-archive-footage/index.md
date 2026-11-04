@@ -142,6 +142,8 @@ Work through each clip in order, and write down what you find.
 4. **Look at what's in the frame.** Recognizable people, brand logos and agency seals raise publicity, trademark or endorsement questions.
 5. **Ask in writing when unsure.** Email the archive, or ask a copyright lawyer before you build an edit around the clip.
 
+<figure class="guide-figure"><img src="/images/blog/old-archive-footage.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Five steps worked in order: identify the source and its publication date; name the specific reason the clip is usable, such as a 1930 publication date or a documented license; check the sound separately from the picture; look at what is in the frame for people, logos or seals; and ask the archive or a lawyer in writing when unsure." loading="lazy"><figcaption>Five steps to clear rights on an old archive clip.</figcaption></figure>
+
 ### Music and people inside the frame
 
 Rights in the picture aren't the only rights at stake. A newsreel can carry a copyrighted song, and a concert clip involves the performers and the songwriters. Historic Films states plainly that its licenses exclude those rights. If a license covers only the images, mute or replace the sync sound.

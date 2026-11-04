@@ -144,6 +144,8 @@ For a quick view of which folders are biggest, `du -sh /Volumes/Archive/* | sort
 
 ## How do I verify the list is complete before deleting or moving anything?
 
+<figure class="guide-figure"><img src="/images/blog/find-all-video-files-on-mac.svg" width="720" height="252" style="max-width:100%;height:auto" alt="Top row, three ways to search a Mac for video files: a Finder Kind is Movie search, a Terminal find command by file extension, and an mdfind Spotlight query. Bottom row, the verification before deleting anything: compare file counts, compare byte totals, then spot-check with a SHA-256 checksum." loading="lazy"><figcaption>Search methods, then the verification before you delete anything.</figcaption></figure>
+
 A copy that finished is not a copy that matches. Finder's progress bar tells you the files were written, not that every byte arrived intact. Check counts and totals first, then checksums.
 
 ### Compare file counts and byte totals

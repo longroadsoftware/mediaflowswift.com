@@ -76,6 +76,8 @@ Work through these causes in order, cheapest check first:
 4. **Damaged file system.** The card reports used space but shows nothing, or shows files of 0 KB. Stop writing to it and read the recovery section below.
 5. **Incomplete copy.** An interrupted copy left clips behind, so the folder on your drive is missing files the card still holds.
 
+<figure class="guide-figure"><img src="/images/blog/cant-find-video-files-on-sd-card.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Five causes checked in order: wrong folder, where the camera saved video outside DCIM; hidden items, which the Mac or PC can hide by default; a failing card reader, port or cable; a damaged file system, where the card shows used space but no files; and an incomplete copy that left clips behind." loading="lazy"><figcaption>Work through these causes in order, cheapest check first.</figcaption></figure>
+
 ## Where does each camera save video on the card?
 
 Cameras follow a shared rule for stills, called DCF, which puts photos in DCIM. Video has no single rule, so each maker uses its own layout. Open the right folder and the "missing" clips usually appear.

@@ -73,6 +73,8 @@ For a handful of clips you will edit today, Finder is fine. The risk grows with 
 
 Use a real card for both tests, not a folder of test files. Offload speed, card readers and camera folder layouts all matter.
 
+<figure class="guide-figure"><img src="/images/blog/evaluating-video-file-management-software.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Five hands-on trial tests: offload a full card and check the verified copy; see what the tool says about erasing the card; move a clip in Finder and see if relinking confirms it by content; eject and reconnect a drive; and search for a clip without using its file name." loading="lazy"><figcaption>Five pass/fail tests to run during a free trial.</figcaption></figure>
+
 ### Test 1: the verified copy
 
 Offload a full card to the drive you really use. A pass shows a result for each file, not just a green "done" banner. If a file fails, the tool should name it and stop or retry, not skip it quietly. Ask, too, whether the copy is read back from the drive rather than from the Mac's memory.

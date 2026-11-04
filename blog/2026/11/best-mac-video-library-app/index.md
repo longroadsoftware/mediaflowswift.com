@@ -67,6 +67,8 @@ A video library app earns its place by answering one question fast: where is tha
 
 Copy safety is a separate job. A library is only as good as the copies it points to, so check that side too. The [checksum verification guide](/blog/2026/10/checksum-verification-before-erasing-card/) explains why. Everything below assumes your footage is already safely on drives.
 
+<figure class="guide-figure"><img src="/images/blog/best-mac-video-library-app.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Four jobs: browse thumbnails, durations and dates for every clip; preview and step through a clip without opening an editor; search by camera, tag, note, scene or spoken words; and remember what an unplugged archive drive holds." loading="lazy"><figcaption>The four jobs a Mac video library app should do.</figcaption></figure>
+
 ## Which kinds of apps do people use as a Mac video library?
 
 People tend to reach for one of six kinds of app. Each was built for a different main job, which explains most of its strengths and gaps.
@@ -182,4 +184,4 @@ Start from the footage you have and where it lives.
 - **Professional sets with raw formats:** Silverstack XT.
 - **Solo shooter who wants copy, review and numbered archive drives in one place:** MediaFlowSwift.
 
-The [DAM guide](/blog/2026/10/digital-asset-management-for-video-production/) covers when a team needs more than any of these. For tracking down stray clips first, see [how to find all video files on a Mac](/blog/2026/10/find-all-video-files-on-mac/). If MediaFlowSwift looks like a fit, [download the 14-day trial](/download.html) and try it with one archive drive unplugged.
+The [DAM guide](/blog/2026/10/digital-asset-management-for-video-production/) covers when a team needs more than any of these. For tracking down stray clips first, see [how to find all video files on a Mac](/blog/2026/10/find-all-video-files-on-mac/). If MediaFlowSwift looks like a fit, the [14-day trial](/download.html) is worth running with one archive drive unplugged, to see what the catalog still shows.

@@ -60,6 +60,8 @@ Folder models differ in what sits at the top of the tree. A file can live in onl
 | Date-based | High volume, similar content, fast turnaround | You need every drone clip from six months and must open dozens of folders |
 | Shot-type-based | Same gear and recurring formats, such as a weekly show | One shoot spans three cameras and the context lives in your head |
 
+<figure class="guide-figure"><img src="/images/blog/how-to-organize-video-footage.svg" width="720" height="148" style="max-width:100%;height:auto" alt="Three top-level folder models: project-based, date-based and shot-type-based. Most solo creators end up with a hybrid: a date-first project folder on disk, with shot type and camera one level down." loading="lazy"><figcaption>Three folder models, and the hybrid most solo creators land on.</figcaption></figure>
+
 ## How do you choose between project, date and shot-type folders?
 
 Choosing a model starts with counting jobs, not cameras. Three questions settle it for most people.
@@ -200,4 +202,4 @@ A fuller comparison, with a pass/fail trial checklist, is in [evaluating video f
 
 Wrapped projects eventually move to numbered archive drives. The [guide to labeling and cataloging archive drives](/guides/label-and-catalog-archive-drives-for-video/) covers that step, and the sibling posts compare [NAS storage](/blog/2026/10/nas-video-storage-how-to-choose/) and [LTO, NAS and cloud archives](/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/).
 
-If a Category and Camera layout on top of your own dated shoot folders suits you, [download MediaFlowSwift](/download.html) and try it on one drive. The 14-day Studio Pro trial needs no card, and the plans are on the [pricing section](/#plans).
+If a Category and Camera layout on top of your own dated shoot folders suits you, [MediaFlowSwift's trial](/download.html) runs 14 days and needs no card. The plans are on the [pricing section](/#plans).

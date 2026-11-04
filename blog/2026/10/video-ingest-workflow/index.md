@@ -76,6 +76,8 @@ The steps are offload, verify, second copy, log, archive, the erase gate and the
 | 6. Pass the erase gate | Every file you need has a verified copy |
 | 7. Format in the camera | The camera has formatted the empty card |
 
+<figure class="guide-figure"><img src="/images/blog/video-ingest-workflow.svg" width="720" height="252" style="max-width:100%;height:auto" alt="Seven steps in fixed order: offload the whole card into a dated shoot folder; verify the copy with a checksum read back from the drive; make a second copy on another drive; log the card and its drives; archive to a numbered drive; pass the erase gate once every file has a verified copy; then format the empty card in the camera." loading="lazy"><figcaption>The seven steps of a video ingest workflow, offload to format.</figcaption></figure>
+
 ### Step 1: Offload the whole card
 
 Copy the entire card, folder structure included, into one folder per shoot. A name such as `2026-10-24_ClientShoot/A-cam_card01` sorts by date and says which card it was. Cameras write their own layouts, from a GoPro's DCIM folders to a Sony card's PRIVATE/M4ROOT, so leave the structure intact.
@@ -125,7 +127,9 @@ A failed check means the card stays full. Copy the file again, then try another 
 
 The 3-2-1 rule, as [Backblaze describes it](https://www.backblaze.com/blog/the-3-2-1-backup-strategy/), means three copies of your data on two different media, with one copy off-site. Backblaze adds that today the copies mainly need to be on two different devices. For a solo shooter, two verified drives at home is a solid start, but it is not yet 3-2-1.
 
-The off-site copy can come later. Take one archive drive to another building, or upload the footage you plan to keep. Raw cards are slow to upload. At a steady 20 Mbps upload, 512 GB takes about 57 hours. Selects and finished masters are often a better fit for the cloud. [Video Archive Storage: LTO vs NAS vs Cloud](/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/) compares the options. If a NAS holds one of your copies, see [NAS Video Storage: How to Choose](/blog/2026/10/nas-video-storage-how-to-choose/).
+The off-site copy can come later. Take one archive drive to another building, or upload the footage you plan to keep. Raw cards are slow to upload: at a steady 20 Mbps, 512 GB takes about 57 hours.
+
+Selects and finished masters are often a better fit for the cloud than raw cards. [Video Archive Storage: LTO vs NAS vs Cloud](/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/) compares the options. If a NAS holds one of your copies, see [NAS Video Storage: How to Choose](/blog/2026/10/nas-video-storage-how-to-choose/).
 
 ## Which Mac ingest tools handle the verify step?
 
@@ -176,4 +180,4 @@ The checksum list is what lets the editor check the drive without calling you. M
 
 MediaFlowSwift doesn't write that checksum list. It does write the reading part of the hand-off. Day Summary gives a quick plain-text wrap-up, Generate Dailies builds a by-day report, and Report can save a CSV clip list. NLE Template Export writes a file Final Cut Pro can import, with your categories, ratings and notes. [How to Create a Dailies Report and a Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/) explains which to send. For the folder side of the hand-off, see [How to Organize Video Footage](/blog/2026/10/how-to-organize-video-footage/).
 
-Whatever tool you use, the routine stays the same: copy, verify, copy again, log, archive, then erase. Want verification, organizing and safe card clearing in one Mac app? [Download MediaFlowSwift](/download.html) and try it on a real card. Plans are on the [home page](/#plans).
+Whatever tool you use, the routine stays the same: copy, verify, copy again, log, archive, then erase. MediaFlowSwift builds the verify, organize and Clear Card steps into that routine; the [download page](/download.html) has a 14-day trial, and [plans](/#plans) lists what each one includes.
