@@ -12,7 +12,7 @@ items: [{"title": "Old Archive Footage: Where to Find It and How to License It",
 From the card to the edit to the archive: shoot-day and post-production routines for small teams and solo creators.
 
 <ul class="category-chips">
-<li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>3</span></li>
+<li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>4</span></li>
 <li><a href="/blog/category/organization/">Footage Organization</a> <span>3</span></li>
 <li><a href="/blog/category/software/">Choosing Software</a> <span>4</span></li>
 <li><a href="/blog/category/workflow/" aria-current="page">Workflow</a> <span>7</span></li>
@@ -20,12 +20,12 @@ From the card to the edit to the archive: shoot-day and post-production routines
 
 <div class="post-list">
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-11-02">November 2, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-11-02">November 2, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/11/old-archive-footage/">Old Archive Footage: Where to Find It and How to License It</a></h2>
 <p>Where to find old archive footage, free or licensed: Library of Congress, National Archives, Prelinger, CriticalPast, Historic Films, and how rights work.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-30">October 30, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-30">October 30, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/dailies-workflow-mac/">Dailies Workflow: Card Offload to Editor Hand-Off on Mac</a></h2>
 <p>A dailies workflow for Mac shooters: organize the day&#x27;s footage, review and pick selects, write a dailies report, and hand off files your editor can open.</p>
 </article>
@@ -40,7 +40,7 @@ From the card to the edit to the archive: shoot-day and post-production routines
 <p>How to clear a memory card safely: delete vs quick vs full format, in-camera steps for Sony, GoPro and DJI, Mac and Windows erase, exFAT, and recovery.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-26">October 26, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-26">October 26, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/video-ingest-workflow/">Video Ingest Workflow: When to Erase the Card</a></h2>
 <p>A video ingest workflow from card to archive: offload, verify, second copy, log, numbered drives, and the exact point a card is safe to erase.</p>
 </article>
@@ -50,7 +50,7 @@ From the card to the edit to the archive: shoot-day and post-production routines
 <p>Can&#x27;t find video files on an SD card? See where Sony, Canon, Nikon, GoPro and DJI cameras save clips, how to search a card, and what to do if it&#x27;s damaged.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-22">October 22, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-22">October 22, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/checksum-verification-before-erasing-card/">Checksum Verification: Prove Your Card Copy Before Erasing</a></h2>
 <p>Checksum verification for video: how SHA-256, MD5 and xxHash prove a card copy, how to check one on a Mac, and what a failed check means.</p>
 </article>

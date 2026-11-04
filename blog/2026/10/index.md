@@ -17,12 +17,12 @@ items: [{"title": "How to Find All Video Files on Mac (and Verify Them)", "url":
 <p>Find all video files on a Mac with Finder, Spotlight and Terminal, catch camera formats Finder misses, and verify copies before you delete anything.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-30">October 30, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-30">October 30, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/dailies-workflow-mac/">Dailies Workflow: Card Offload to Editor Hand-Off on Mac</a></h2>
 <p>A dailies workflow for Mac shooters: organize the day&#x27;s footage, review and pick selects, write a dailies report, and hand off files your editor can open.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-29">October 29, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-29">October 29, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/video-asset-management-solo-mac-creators/">Video Asset Management for Solo Mac Creators: What You Need, What to Skip</a></h2>
 <p>Video asset management for solo Mac creators: the three jobs that matter on one Mac, the team features to skip, and the signs it is time to grow.</p>
 </article>
@@ -37,7 +37,7 @@ items: [{"title": "How to Find All Video Files on Mac (and Verify Them)", "url":
 <p>How to clear a memory card safely: delete vs quick vs full format, in-camera steps for Sony, GoPro and DJI, Mac and Windows erase, exFAT, and recovery.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-26">October 26, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-26">October 26, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/video-ingest-workflow/">Video Ingest Workflow: When to Erase the Card</a></h2>
 <p>A video ingest workflow from card to archive: offload, verify, second copy, log, numbered drives, and the exact point a card is safe to erase.</p>
 </article>
@@ -57,17 +57,17 @@ items: [{"title": "How to Find All Video Files on Mac (and Verify Them)", "url":
 <p>Digital asset management for video production explained: DAM vs MAM vs footage managers, what a video catalog tracks, and how it fits shoot to archive.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-22">October 22, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-10-22">October 22, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/checksum-verification-before-erasing-card/">Checksum Verification: Prove Your Card Copy Before Erasing</a></h2>
 <p>Checksum verification for video: how SHA-256, MD5 and xxHash prove a card copy, how to check one on a Mac, and what a failed check means.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/">Video Archive Storage: LTO vs NAS vs Cloud, With Real Five-Year Costs</a></h2>
 <p>Video archive storage compared: five-year cost per TB and restore times for LTO tape, NAS, drives and cloud, using October 2026 prices in US dollars.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 10 min read</p>
+<p class="post-meta"><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 11 min read</p>
 <h2><a href="/blog/2026/10/nas-video-storage-how-to-choose/">NAS Video Storage: How to Choose and Structure One</a></h2>
 <p>How to choose NAS video storage: network speed, capacity math from real camera bitrates, RAID levels, folder structure, verified offloads and backups.</p>
 </article>
@@ -77,7 +77,7 @@ items: [{"title": "How to Find All Video Files on Mac (and Verify Them)", "url":
 <p>How to organize an external hard drive for video: a folder tree, naming rules, the right Mac file system, verified card offloads and safe backups.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/evaluating-video-file-management-software/">Evaluating Video File Management Software: A Pass/Fail Checklist for Mac</a></h2>
 <p>A pass/fail checklist for video file management software on Mac: test verified offloads, drive tracking, search and relinking, then compare the main tools.</p>
 </article>
