@@ -47,7 +47,7 @@ The map itself is opt-in, and for a reason worth knowing before you click it:
 
 > The map itself is off until you turn on Maps in Settings › Privacy, or with the Turn On Maps button: showing a map sends the area you are looking at to Apple. Until then the locations are counted without a map.
 
-Showing a map at all means asking Apple's mapping service for tiles. That is the same [MapKit](https://developer.apple.com/documentation/mapkit) framework any Mac or iOS app uses to draw a map. For the map, it's that step that sends something to Apple (the area you're viewing), not simply having GPS data. (Place names, below, is a separate switch that does send clip coordinates.)
+Showing a map at all means asking Apple's mapping service for tiles. That is the same [MapKit](https://developer.apple.com/documentation/mapkit) framework any Mac or iOS app uses to draw a map. For the map, it's that step that sends something to Apple (the area you're viewing), not simply having GPS data. (Place names, below, is a separate switch that does send clip coordinates.) Apple's [Maps privacy page](https://www.apple.com/legal/privacy/data/en/apple-maps/) says it converts precise locations to less-exact ones within 24 hours. That page covers Apple's own Maps app; it does not say whether the same applies to maps that other apps, such as this one, draw with MapKit.
 
 With Maps off, the Shoot Map still counts and lists the locations. It just doesn't draw the map.
 
