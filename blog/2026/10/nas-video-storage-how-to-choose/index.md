@@ -58,6 +58,8 @@ Ethernet speed caps what any NAS can deliver. Gigabit Ethernet moves roughly 110
 
 One stream of 4K ProRes 422 HQ needs about 110 MB/s. That single stream fills a gigabit link on its own, while 2.5GbE carries two with room to spare. Pressure builds as you add streams: a second Mac pulling selects, a multicam timeline, or a backup job running at the same time.
 
+<figure class="guide-figure"><img src="/images/blog/nas-video-storage-how-to-choose.svg" width="720" height="252" style="max-width:100%;height:auto" alt="Top row, network speed ceilings: Gigabit Ethernet at roughly 110 to 118 megabytes per second, 2.5 gigabit Ethernet at roughly 280 to 295, and 10 gigabit Ethernet at roughly 1,000 to 1,200. Bottom row, RAID choices by bay count: a two-bay NAS uses RAID 1, while a four-bay NAS can use RAID 5, RAID 6 or RAID 10." loading="lazy"><figcaption>Network speed and bay count set what a video NAS can deliver.</figcaption></figure>
+
 ### Drive count matters as much as the link
 
 A modern 3.5-inch hard drive reads roughly 150–280 MB/s on long sequential files. The range depends on the drive's size and where on the platter the data sits. Several streams at once turn those long reads into seeking, and throughput drops sharply. More drives in the array spread the load, which is why four bays handle shared editing better than two.
