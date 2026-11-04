@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 128" width="720" height="128" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Numbered subfolders inside each dated shoot folder</title>
+<desc id="d">Five numbered subfolders in working order inside every shoot folder: 01-cards for untouched card offloads, 02-selects for keepers, 03-project for editing files, 04-proxies, and 05-exports.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#555"/></marker></defs>
+<rect x="1" y="1" width="718" height="126" rx="12" fill="#ffffff" stroke="#d6d6d6"/>
+<text x="360.0" y="26" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">Numbered subfolders inside each dated shoot folder</text>
+<text x="14" y="56" font-size="14" font-weight="normal" fill="#333" text-anchor="start">Inside every dated shoot folder:</text>
+<rect x="14.0" y="66" width="128.8" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="78.4" y="97.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">01-cards</text>
+<line x1="142.8" y1="92.0" x2="152.8" y2="92.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="154.8" y="66" width="128.8" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="219.2" y="97.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">02-selects</text>
+<line x1="283.6" y1="92.0" x2="293.6" y2="92.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="295.6" y="66" width="128.8" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="360.0" y="97.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">03-project</text>
+<line x1="424.4" y1="92.0" x2="434.4" y2="92.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="436.4" y="66" width="128.8" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="500.8" y="97.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">04-proxies</text>
+<line x1="565.2" y1="92.0" x2="575.2" y2="92.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="577.2" y="66" width="128.8" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="641.6" y="97.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">05-exports</text>
+</svg>
