@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/how-to-organize-video-footage/
 published: "2026-10-24"
-updated: "2026-10-24"
+updated: "2026-10-26"
 og_image: "/images/blog/how-to-organize-video-footage.png"
 title: "How to Organize Video Footage: Pick a Model First"
 seo_title: "How to Organize Video Footage: Choose a Folder Model"
