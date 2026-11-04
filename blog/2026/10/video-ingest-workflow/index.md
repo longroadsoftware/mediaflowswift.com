@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/video-ingest-workflow/
 published: "2026-10-26"
-updated: "2026-10-26"
+updated: "2026-11-04"
 og_image: "/images/blog/video-ingest-workflow.png"
 title: "Video Ingest Workflow: When to Erase the Card"
 seo_title: "Video Ingest Workflow: When to Erase the Memory Card"
@@ -142,7 +142,7 @@ Several Mac apps verify offloads with checksums. They differ in hash type, in wh
 | [Silverstack XT](https://pomfort.com/silverstackxt/) | Checksum verification with ASC MHL | Yes, multiple destinations | 10-day trial |
 | [habitat flow](https://habitat-flow.com/) | xxHash64 on every file; ASC MHL report | Yes, in Pro | Free plan up to 150 GB a week |
 | [MediaTools](https://mediatoolspro.com/) | SHA-256 verified ingest | Not stated on that page | Lite is free; macOS and Windows |
-| MediaFlowSwift | SHA-256, copy read back from the drive | No; the second copy comes later | 14-day trial, no card |
+| MediaFlowSwift | SHA-256, copy read back from the drive | Yes, two places with Also copy to | 14-day trial, no card |
 | Finder | No checksum comparison | No | Built in |
 
 Silverstack XT is built for on-set data managers and DITs. OffShoot also suits crews moving many cards to many drives. habitat flow and MediaTools both have free options that cover a lot of small shoots. If a client asks for an [ASC MHL](https://github.com/ascmitc/mhl-specification) file, pick a tool that writes one.
@@ -153,9 +153,9 @@ MediaFlowSwift is a Mac app by Long Road Software. Its [import](/manual/importin
 
 Organize Media then files each clip as Destination / Category / Camera / Filename and checks it against the import checksum. [Clear Card](/manual/organizing-media/#clear-card) deletes only clips already organized and verified at the destination. It reads each organized copy back in full first. On [cards laid out by the camera](/manual/organizing-media/#cards-laid-out-by-the-camera), such as Sony cards with PRIVATE/M4ROOT, it deletes nothing. It checks the whole card and says when it is safe to format in the camera.
 
-The second copy comes from [Archive to USB](/manual/project-management/#archiving-a-project-to-usb). That copies the project folder to a drive, reads every file back and compares it by checksum. Archive drives get numbers (USB #0001, USB #0002 and so on), and the app records which project went to which drive. [Manage Archive Volumes](/manual/project-management/#managing-archive-volumes) lists them. [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) shows the whole sequence.
+The second copy can come at import. Turn on Also copy to on the Import sheet and pick a second folder or drive. The card is read once, each place gets its own copy, and each copy is read back from its own drive and checked against the card. Clear Card then waits until both copies check out. A second copy can also come later, from [Archive to USB](/manual/project-management/#archiving-a-project-to-usb). That copies the project folder to a drive, reads every file back and compares it by checksum. Archive drives get numbers (USB #0001, USB #0002 and so on), and the app records which project went to which drive. [Manage Archive Volumes](/manual/project-management/#managing-archive-volumes) lists them. [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) shows the whole sequence.
 
-The limits are real. MediaFlowSwift doesn't write a card to two drives at once, and it writes no checksum list or MHL file onto the drive. It copies to drives and network shares, not to cloud storage. It runs on Apple silicon Macs with macOS 13 or later today; Windows and Intel Mac versions are coming. For a side-by-side, see [MediaFlowSwift vs OffShoot](/vs/offshoot/).
+The limits are real. MediaFlowSwift copies a card to at most two places at once, and it writes no MHL file. With Also copy to, each place gets a Proof Copy receipt listing every file's checksum. It copies to drives and network shares, not to cloud storage. It runs on Apple silicon Macs with macOS 13 or later today; Windows and Intel Mac versions are coming. For a side-by-side, see [MediaFlowSwift vs OffShoot](/vs/offshoot/).
 
 ## How does ingest change when a creator hands off to an editor?
 
@@ -178,6 +178,6 @@ A footage hand-off file is a plain text or CSV file saved next to the footage. I
 
 The checksum list is what lets the editor check the drive without calling you. Make one with `shasum`, as the [checksum post](/blog/2026/10/checksum-verification-before-erasing-card/) shows, or with a tool that writes ASC MHL.
 
-MediaFlowSwift doesn't write that checksum list. It does write the reading part of the hand-off. Day Summary gives a quick plain-text wrap-up, Generate Dailies builds a by-day report, and Report can save a CSV clip list. NLE Template Export writes a file Final Cut Pro can import, with your categories, ratings and notes. [How to Create a Dailies Report and a Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/) explains which to send. For the folder side of the hand-off, see [How to Organize Video Footage](/blog/2026/10/how-to-organize-video-footage/).
+MediaFlowSwift doesn't write that checksum list for the organized folders. An import with Also copy to does leave a Proof Copy receipt in each place's import folder, listing every file with its size and checksum. It also writes the reading part of the hand-off. Day Summary gives a quick plain-text wrap-up, Generate Dailies builds a by-day report, and Report can save a CSV clip list. NLE Template Export writes a file Final Cut Pro can import, with your categories, ratings and notes. [How to Create a Dailies Report and a Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/) explains which to send. For the folder side of the hand-off, see [How to Organize Video Footage](/blog/2026/10/how-to-organize-video-footage/).
 
 Whatever tool you use, the routine stays the same: copy, verify, copy again, log, archive, then erase. MediaFlowSwift builds the verify, organize and Clear Card steps into that routine; the [download page](/download.html) has a 14-day trial, and [plans](/#plans) lists what each one includes.
