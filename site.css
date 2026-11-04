@@ -290,6 +290,8 @@ ol.steps li { margin: 0.4rem 0; }
 .consent-buttons { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 .consent-buttons button { font: inherit; font-size: 1rem; font-weight: 600; cursor: pointer; padding: 0.55rem 1.1rem; min-width: 11rem; border: 1px solid var(--accent); border-radius: 6px; background: var(--accent); color: var(--accent-ink); }
 .consent-more { font-size: 0.95rem; margin-bottom: 0; }
+/* Phone-only line on the home and download pages; shown in the narrow-screen block below. */
+.send-to-mac { display: none; }
 .consent-change { font: inherit; font-size: inherit; font-weight: 600; cursor: pointer; background: none; border: 0; padding: 0; color: var(--accent); text-decoration: underline; text-underline-offset: 0.15em; }
 
 /* Phones (checked at 375px wide): taps at least 44px tall, the two hero
@@ -298,7 +300,16 @@ ol.steps li { margin: 0.4rem 0; }
   .hero { padding-top: 2rem; }
   .top .wrap { gap: 0.25rem; padding-bottom: 0.25rem; }
   .brand { min-height: 44px; }
-  nav.menu { gap: 0 0.25rem; margin-left: -0.5rem; }
+  /* One scrolling row instead of three wrapped rows, so the hero and its
+     Download button come up the screen on a phone. */
+  nav.menu { gap: 0 0.25rem; margin-left: -0.5rem; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  nav.menu::-webkit-scrollbar { display: none; }
+  .hero p.lead { font-size: 1.1rem; }
+  .send-to-mac { display: block; }
+  .consent-inner { padding: 0.75rem 16px 0.9rem; }
+  .consent h2 { font-size: 1.05rem; margin-bottom: 0.25rem; }
+  .consent p { font-size: 0.9rem; margin-bottom: 0.45rem; }
+  .consent-buttons button { min-width: 0; flex: 1 1 0; }
   nav.menu a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.5rem; }
   .hero .cta { display: block; text-align: center; }
   .cta.quiet { margin-left: 0; margin-top: 0.75rem; }
