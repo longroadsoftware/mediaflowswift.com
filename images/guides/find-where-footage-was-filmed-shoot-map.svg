@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+<title id="t">From a GPS clip to a pin on the Shoot Map, in MediaFlowSwift</title>
+<desc id="d">Three steps from left to right: a clip with GPS data, from a phone or drone; clips within 50 meters are clustered into one numbered pin; clicking a pin selects its clips in the media list. Below, a separate opt-in branch shows Maps off by default in Settings, turned on by the user, before any map tile is requested from Apple.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#555"/></marker></defs>
+<rect x="0.5" y="0.5" width="719" height="259" rx="10" fill="#ffffff" stroke="#dddddd"/>
+<rect x="8" y="26" width="196" height="118" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="106.0" y="65" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">1  GPS clip</text>
+<text x="106.0" y="85" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">Phone or drone footage,</text>
+<text x="106.0" y="105" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">carries GPS coordinates</text>
+<line x1="206" y1="85.0" x2="226" y2="85.0" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="229" y="26" width="196" height="118" rx="8" fill="#f4f4f4" stroke="#2a6df4" stroke-width="2.5"/>
+<text x="327.0" y="65" text-anchor="middle" font-size="15" font-weight="700" fill="#2a6df4">2  Cluster</text>
+<text x="327.0" y="85" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">Clips within 50m become</text>
+<text x="327.0" y="105" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">one numbered pin</text>
+<line x1="427" y1="85.0" x2="447" y2="85.0" stroke="#555" stroke-width="1.8" marker-end="url(#a)"/>
+<rect x="450" y="26" width="196" height="118" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="548.0" y="65" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">3  Click the pin</text>
+<text x="548.0" y="85" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">Selects its clips in</text>
+<text x="548.0" y="105" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">the media list</text>
+<rect x="8" y="166" width="704" height="80" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
+<text x="360.0" y="192" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">Maps is off until you turn it on in Settings › Privacy</text>
+<text x="360.0" y="214" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">With it off, locations are still counted and listed — no map tile is requested</text>
+<text x="360.0" y="234" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">Turning it on is the step that sends the area you're viewing to Apple</text>
+</svg>

@@ -3,14 +3,14 @@ layout: guide
 title: "How to Find a Clip by What Was Said in It on a Mac"
 description: "Transcribe your clips on-device, then search every transcript at once for a word or phrase and select the clip it's in."
 published: "2026-10-13"
-updated: "2026-10-20"
+updated: "2026-11-03"
 permalink: /guides/search-video-by-what-was-said/
 ---
 # How to Find a Clip by What Was Said in It on a Mac
 
 To find a clip by the words spoken in it, transcribe your clips in MediaFlowSwift, then open any clip's Transcript tab. Type a word or phrase into Search and tick All clips. MediaFlowSwift searches every transcript in the project at once and lists the matching lines. Clicking a result selects that clip.
 
-In the Transcript tab's Read view, clicking a line's time jumps the preview to that line. The rest of this page covers how MediaFlowSwift transcription works and what it costs you in privacy. It also covers one limit: the main toolbar search field does not search speech.
+In the Transcript tab's Read view, clicking a line's time jumps the preview to that line. Next: how MediaFlowSwift's transcription works, what it costs you in privacy, and one limit worth knowing — the toolbar search field does not search speech.
 
 ## How do I transcribe a clip?
 
@@ -78,6 +78,6 @@ MediaFlowSwift's .vtt option follows the W3C's [WebVTT specification](https://ww
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Search your own footage by what's said
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 13 or later, on a Mac with Apple silicon.
+On-device transcription and search are built into MediaFlowSwift. [Download it](/download.html) — the full app runs free for 14 days, no card required, and it needs a Mac with Apple silicon on macOS 13 or later.

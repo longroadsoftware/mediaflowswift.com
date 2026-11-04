@@ -2,7 +2,7 @@
 layout: guide
 title: "MediaFlowSwift Guides"
 description: "How-to answers for footage on a Mac: check a card copy before you erase it, keep two copies, find moved clips, label archive drives, publish to YouTube."
-updated: 2026-10-20
+updated: 2026-11-03
 permalink: /guides/
 ---
 # Guides
@@ -96,4 +96,4 @@ If a guide gets something wrong, tell us at [support@mediaflowswift.com](mailto:
 
 Looking for how a particular window works? That's the [manual](/manual/). Broader articles on NAS setups, archive storage and choosing software are on the [blog](/blog/). Stuck on something not covered here? [Support](/support.html).
 
-Want to try it? [Download MediaFlowSwift](/download.html) — the full app runs for 14 days with no card asked for, on macOS 13 or later with Apple silicon.
+Want to try it first? [Download MediaFlowSwift](/download.html): the full app is free for 14 days, no card required, provided your Mac has Apple silicon and runs macOS 13 or later.

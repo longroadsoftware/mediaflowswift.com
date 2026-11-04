@@ -3,14 +3,14 @@ layout: guide
 title: "How to Review Footage and Pick Your Selects on a Mac"
 description: "Rapid Review plays, rates and rejects clips by keyboard. Smart Selects scores each one first, so you review in quality order, not import order."
 published: "2026-10-13"
-updated: "2026-10-30"
+updated: "2026-11-03"
 permalink: /guides/review-and-pick-selects-on-a-mac/
 ---
 # How to Review Footage and Pick Your Selects on a Mac
 
 To review footage and pick selects on a Mac with MediaFlowSwift, open Rapid Review (Workflow → Review, or Cmd+Opt+R) and work by keyboard. Press J/K/L to shuttle, 1–5 to rate, F to toggle Hero, X to reject and C to mark a circle take. MediaFlowSwift then filters and sorts your clips by those ratings and tags.
 
-Rapid Review sets the star rating, the Hero and Reject tags and the circle take. Only a Maybe tag is set from outside Review. Every one of them can be filtered and sorted afterward. The rest of this page covers what each key does, and how to get your best takes to the top of the pile before you start.
+Rapid Review sets the star rating, the Hero and Reject tags and the circle take. Only a Maybe tag is set from outside Review. Every one of them can be filtered and sorted afterward. Below, every key's job, and how to get your best takes to the top of the pile before you start.
 
 ## What is Rapid Review for?
 
@@ -87,6 +87,6 @@ Category, rating and select-status changes in MediaFlowSwift go through Edit →
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Run your own review pass
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 13 or later, on a Mac with Apple silicon.
+Rapid Review and Smart Selects are part of MediaFlowSwift, the app covered here. [Download it](/download.html) for a 14-day trial of the full app, no card needed, on macOS 13 or later with Apple silicon.

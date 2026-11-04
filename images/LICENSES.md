@@ -27,3 +27,5 @@ The process diagrams in `images/guides/` are not photographs or app screenshots.
 | guides/automate-video-file-organization-on-mac.svg | One-click Organize template steps and the Destination / Category / Camera / Filename layout | /guides/automate-video-file-organization-on-mac/ |
 
 guides/review-and-pick-selects-on-a-mac.svg, guides/search-video-by-what-was-said.svg, guides/dailies-report-and-hand-off-file-for-editor.svg and guides/write-youtube-title-description-chapters-tags.svg are process diagrams made for this site by Long Road Software (2026-10-20): hand-written SVG drawn with the system font, showing only the steps their guides describe. No photographs or app screenshots.
+
+guides/find-where-footage-was-filmed-shoot-map.svg is a process diagram made for this site by Long Road Software (2026-11-03): hand-written SVG drawn with the system font, showing the GPS-clip-to-pin workflow and the Maps privacy opt-in its guide describes. No photographs or app screenshots.

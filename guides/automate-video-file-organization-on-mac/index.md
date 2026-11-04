@@ -3,7 +3,7 @@ layout: guide
 title: "How to Automate Video File Organization on Your Mac"
 description: "MediaFlowSwift sorts clips into Category and Camera folders automatically, and Workflow Templates chain that with other steps into one command."
 published: "2026-10-13"
-updated: 2026-10-20
+updated: "2026-11-03"
 permalink: /guides/automate-video-file-organization-on-mac/
 ---
 # How to Automate Video File Organization on Your Mac
@@ -87,6 +87,6 @@ Either way, nothing is applied to a clip automatically. Suggestions arrive as pr
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Put it to work on your own library
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 13 or later, on a Mac with Apple silicon.
+MediaFlowSwift is the app that runs Organize Media and the Workflow Templates described above. [Download it](/download.html) and try the full version for 14 days — no card required, macOS 13 or later on a Mac with Apple silicon.
