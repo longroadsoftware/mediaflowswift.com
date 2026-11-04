@@ -194,6 +194,8 @@ Whatever tool does the copying, the same four steps prove a card copy.
 3. **Make a second checked copy.** Use another drive or a NAS, and check that copy too.
 4. **Audit now and then.** Re-run `shasum -c`, or an `rsync -rcni` dry run between the two copies.
 
+<figure class="guide-figure"><img src="/images/blog/rsync-verify-copied-files.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Four steps: save a SHA-256 checksum list from the card in a separate read; copy with rsync, then check the copy against the list after reconnecting the drive; make a second checked copy on another drive; and audit older copies now and then with shasum or an rsync dry run." loading="lazy"><figcaption>A four-step routine to prove a card copy with rsync and shasum.</figcaption></figure>
+
 For where that second copy should live, compare [NAS video storage](/blog/2026/10/nas-video-storage-how-to-choose/) with [LTO, NAS and cloud archives](/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/). For the full shoot-day routine, see [Video Ingest Workflow](/blog/2026/10/video-ingest-workflow/). For a step-by-step look at one app's checks, see [Is It Safe to Erase Your Card After Importing on a Mac?](/guides/verify-footage-copied-before-erasing-card/)
 
-If you'd rather not script this every shoot, [download MediaFlowSwift](/download.html) and try it on a real card. Plans are on the [home page](/#plans).
+If you'd rather not script this every shoot, MediaFlowSwift builds the read-back and comparison into every import. [See the trial](/download.html), or check the [plans](/#plans) first.

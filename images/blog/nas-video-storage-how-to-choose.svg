@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 252" width="720" height="252" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Network speed and bay count set what a video NAS can deliver</title>
+<desc id="d">Top row, network speed ceilings: Gigabit Ethernet at roughly 110 to 118 megabytes per second, 2.5 gigabit Ethernet at roughly 280 to 295, and 10 gigabit Ethernet at roughly 1,000 to 1,200. Bottom row, RAID choices by bay count: a two-bay NAS uses RAID 1, while a four-bay NAS can use RAID 5, RAID 6 or RAID 10.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#555"/></marker></defs>
+<rect x="1" y="1" width="718" height="250" rx="12" fill="#ffffff" stroke="#d6d6d6"/>
+<text x="360.0" y="26" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">Network speed and bay count set what a video NAS can deliver</text>
+<text x="14" y="56" font-size="14" font-weight="normal" fill="#333" text-anchor="start">Network ceiling:</text>
+<rect x="14.0" y="66" width="222.7" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="125.3" y="88.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Gigabit</text>
+<text x="125.3" y="107.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">~110 MB/s</text>
+<line x1="236.7" y1="92.0" x2="246.7" y2="92.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="248.7" y="66" width="222.7" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="360.0" y="88.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">2.5GbE</text>
+<text x="360.0" y="107.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">~290 MB/s</text>
+<line x1="471.3" y1="92.0" x2="481.3" y2="92.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="483.3" y="66" width="222.7" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="594.7" y="88.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">10GbE</text>
+<text x="594.7" y="107.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">~1,100 MB/s</text>
+<text x="14" y="180" font-size="14" font-weight="normal" fill="#333" text-anchor="start">RAID by bay count:</text>
+<rect x="14.0" y="190" width="340.0" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="184.0" y="212.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">2 bays:</text>
+<text x="184.0" y="231.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">RAID 1</text>
+<line x1="354.0" y1="216.0" x2="364.0" y2="216.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="366.0" y="190" width="340.0" height="52" rx="8" fill="#eaf1fe" stroke="#2a6df4" stroke-width="2"/>
+<text x="536.0" y="212.0" font-size="15" font-weight="bold" fill="#2a6df4" text-anchor="middle">4 bays:</text>
+<text x="536.0" y="231.0" font-size="14" font-weight="normal" fill="#2a6df4" text-anchor="middle">RAID 5/6/10</text>
+</svg>

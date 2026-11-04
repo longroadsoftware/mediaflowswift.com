@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/digital-asset-management-for-video-production/
 published: "2026-10-23"
-updated: "2026-10-23"
+updated: "2026-10-26"
 og_image: "/images/blog/digital-asset-management-for-video-production.png"
 title: "Digital Asset Management for Video Production: What It Means on a Mac"
 seo_title: "Digital Asset Management for Video Production on a Mac"
@@ -112,6 +112,8 @@ A video DAM is easiest to understand as a lifecycle. Each stage adds data to the
 
 Verification belongs at ingest, archive and restore, not just at the first copy. A catalog that loses track between stages leaves you hunting through drives by hand.
 
+<figure class="guide-figure"><img src="/images/blog/digital-asset-management-for-video-production.svg" width="720" height="252" style="max-width:100%;height:auto" alt="Seven stages: ingest the card with a checksum-verified copy; organize clips into a folder layout; enrich with transcripts, places and proxies; review and rate clips; hand off selects to the editor; archive finished projects to numbered drives; and retrieve by searching the catalog and connecting the one drive it names." loading="lazy"><figcaption>How footage moves from shoot to archive in a video catalog.</figcaption></figure>
+
 ## What does a solo creator or small team actually need?
 
 Solo creators and small crews need the core jobs, not the enterprise extras. Those jobs are verified copies, a catalog you can search without tagging everything first, and a record of every archive drive. Multi-user permissions, client review links and approval chains belong to agencies and post houses.
@@ -152,4 +154,4 @@ All of these features are in both Studio and Studio Pro. A shared database as a 
 - It copies to one destination per import and writes no ASC MHL file. OffShoot Pro covers MHL.
 - The manual describes no client review links or approval workflow. A team that needs those should look at a full DAM.
 
-If MediaFlowSwift sounds like a fit for your footage, [download it](/download.html) and try it on a real card.
+If MediaFlowSwift sounds like a fit for your footage, the [download page](/download.html) has a 14-day trial, with [plans](/#plans) listed for after it ends.

@@ -60,6 +60,8 @@ A dailies workflow has five stages. Each stage produces one thing the next stage
 
 Film crews use "dailies" for the day's footage, reviewed the next day. A solo creator's version is smaller, but the order is the same. The first two stages protect the footage. The last three turn it into decisions.
 
+<figure class="guide-figure"><img src="/images/blog/dailies-workflow-mac.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Five stages, each depending on the one before: offload and verify every card; make a second copy on another drive; organize clips into dated shoot and camera folders; review and pick selects with ratings; then write a report and hand off to the editor." loading="lazy"><figcaption>The five stages of a dailies workflow, card to editor.</figcaption></figure>
+
 ## How much offload and verification does a dailies workflow need?
 
 Verification needs to be complete, not elaborate. A Finder drag tells you the copy finished, but it doesn't compare the copy with the card. A checksum tool hashes the card file and the copy and compares them. Matching SHA-256 values mean the bytes are identical.
@@ -173,4 +175,4 @@ A ski trip shot on GoPro, iPhone, drone and Nikon fits in one evening. Import ea
 
 Organize to the working drive, then Archive to USB to a numbered drive. If the cameras rolled together, [Audio Waveform Sync](/manual/organizing-media/#audio-waveform-sync) lines clips up by their sound. Review by camera, rate the keepers and mark rejects. Then run Generate Dailies and export for the editor.
 
-The routine is the same with any toolset: verify, copy again, organize, review, report, hand off. Want those steps in one Mac app? [Download MediaFlowSwift](/download.html) and try it on a real card. Plans are on the [home page](/#plans).
+The routine is the same with any toolset: verify, copy again, organize, review, report, hand off. MediaFlowSwift puts those stages in one Mac app, with a [14-day trial](/download.html) and [plans](/#plans) for when the trial ends.
