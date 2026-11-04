@@ -12,7 +12,7 @@ items: [{"title": "Best Mac Video Library App: Photos, Final Cut, Catalogers and
 How to judge video file management, card offload and media asset tools before you commit to one.
 
 <ul class="category-chips">
-<li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>3</span></li>
+<li><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> <span>4</span></li>
 <li><a href="/blog/category/organization/">Footage Organization</a> <span>3</span></li>
 <li><a href="/blog/category/software/" aria-current="page">Choosing Software</a> <span>4</span></li>
 <li><a href="/blog/category/workflow/">Workflow</a> <span>7</span></li>
@@ -25,7 +25,7 @@ How to judge video file management, card offload and media asset tools before yo
 <p>The best Mac video library app for footage you already have: Photos, Final Cut Pro, NeoFinder, offload tools, Silverstack XT and MediaFlowSwift compared.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-29">October 29, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-29">October 29, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/video-asset-management-solo-mac-creators/">Video Asset Management for Solo Mac Creators: What You Need, What to Skip</a></h2>
 <p>Video asset management for solo Mac creators: the three jobs that matter on one Mac, the team features to skip, and the signs it is time to grow.</p>
 </article>
@@ -35,7 +35,7 @@ How to judge video file management, card offload and media asset tools before yo
 <p>Digital asset management for video production explained: DAM vs MAM vs footage managers, what a video catalog tracks, and how it fits shoot to archive.</p>
 </article>
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 9 min read</p>
+<p class="post-meta"><a href="/blog/category/software/">Choosing Software</a> &middot; <time datetime="2026-10-21">October 21, 2026</time> &middot; 10 min read</p>
 <h2><a href="/blog/2026/10/evaluating-video-file-management-software/">Evaluating Video File Management Software: A Pass/Fail Checklist for Mac</a></h2>
 <p>A pass/fail checklist for video file management software on Mac: test verified offloads, drive tracking, search and relinking, then compare the main tools.</p>
 </article>
