@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/evaluating-video-file-management-software/
 published: "2026-10-21"
-updated: "2026-10-21"
+updated: "2026-10-26"
 og_image: "/images/blog/evaluating-video-file-management-software.png"
 title: "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac"
 seo_title: "Video File Management Software: How to Evaluate It"
