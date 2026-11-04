@@ -3,7 +3,7 @@ layout: guide
 title: "Is It Safe to Erase Your Card After Importing on a Mac?"
 description: "Checksums, not playback, prove a copy is safe. See how MediaFlowSwift checks a copy at import, at organize, and once more before Clear Card erases a card."
 published: "2026-10-13"
-updated: "2026-10-26"
+updated: "2026-11-03"
 permalink: /guides/verify-footage-copied-before-erasing-card/
 ---
 # Is It Safe to Erase Your Card After Importing on a Mac?
@@ -83,6 +83,6 @@ Don't erase the card. Try the import again. A failed check usually means a bad r
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Check your own card before you erase it
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 13 or later, on a Mac with Apple silicon.
+Clear Card's read-back and checksum match are part of MediaFlowSwift, the app this guide describes. [Download it](/download.html) and run the full app for 14 days, no card required, on macOS 13 or later with Apple silicon.

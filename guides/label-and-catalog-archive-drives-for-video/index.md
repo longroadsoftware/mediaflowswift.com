@@ -3,7 +3,7 @@ layout: guide
 title: "How to Label and Catalog Your Archive Drives for Video"
 description: "MediaFlowSwift numbers every archive drive and keeps a record of what's on it, so labeling your shelf of USB drives takes one sticker, not a spreadsheet."
 published: "2026-10-13"
-updated: "2026-10-26"
+updated: "2026-11-03"
 permalink: /guides/label-and-catalog-archive-drives-for-video/
 ---
 # How to Label and Catalog Your Archive Drives for Video
@@ -97,6 +97,6 @@ If you don't have a database set up yet, Archive to USB offers to make a plain d
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Start numbering your own drives
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 13 or later, on a Mac with Apple silicon.
+Archive to USB and its drive catalog are built into MediaFlowSwift. [Download it](/download.html) to try the complete app for 14 days — no card up front, on a Mac with Apple silicon running macOS 13 or later.

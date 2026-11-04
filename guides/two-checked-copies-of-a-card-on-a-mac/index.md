@@ -3,7 +3,7 @@ layout: guide
 title: "How to Keep Two Checked Copies of a Memory Card on a Mac"
 description: "Import and organize a card to your working drive, then archive the project to a second drive. Two checksum-verified copies, made one after the other."
 published: "2026-10-13"
-updated: 2026-10-30
+updated: "2026-11-03"
 permalink: /guides/two-checked-copies-of-a-card-on-a-mac/
 ---
 # How to Keep Two Checked Copies of a Memory Card on a Mac
@@ -118,6 +118,6 @@ Once Image Capture has handed a file over, MediaFlowSwift copies it to your impo
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Get your own second copy made
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 13 or later, on a Mac with Apple silicon.
+Import, Organize and Archive to USB are the three commands MediaFlowSwift uses for this. [Download it](/download.html); try the full app for 14 days with no card asked for, on an Apple silicon Mac with macOS 13 or later.

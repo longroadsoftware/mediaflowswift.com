@@ -49,3 +49,5 @@ The diagrams in `images/blog/` are not photographs or app screenshots. Each is a
 | blog/best-mac-video-library-app.svg | The four jobs a Mac video library app should do | /blog/2026/11/best-mac-video-library-app/ |
 | blog/old-archive-footage.svg | Five steps to clear rights on an old archive clip | /blog/2026/11/old-archive-footage/ |
 | blog/sd-card-as-backup.svg | Where an SD card fits before footage reaches its lasting copies | /blog/2026/11/sd-card-as-backup/ |
+
+guides/find-where-footage-was-filmed-shoot-map.svg is a process diagram made for this site by Long Road Software (2026-11-03): hand-written SVG drawn with the system font, showing the GPS-clip-to-pin workflow and the Maps privacy opt-in its guide describes. No photographs or app screenshots.

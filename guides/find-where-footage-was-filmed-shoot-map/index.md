@@ -1,16 +1,18 @@
 ---
 layout: guide
 title: "How to Find Where Each Clip in Your Project Was Filmed"
-description: "The Shoot Map pins every clip with GPS data by location, clustered and clickable. Turning it on sends the area you're viewing to Apple."
+description: "The Shoot Map pins every clip with GPS data by location, clustered and clickable. Once Maps is on, showing the map sends the area you're viewing to Apple."
 published: "2026-10-13"
-updated: "2026-10-26"
+updated: "2026-11-03"
 permalink: /guides/find-where-footage-was-filmed-shoot-map/
 ---
 # How to Find Where Each Clip in Your Project Was Filmed
 
 Open the Shoot Map (Workflow → Plan & Deliver → Shoot Map, or Cmd+Opt+M). Clips with GPS data appear as pins, grouped into one numbered pin per nearby location. Click a pin to see its clips and select them in the media list. Only clips that carry GPS data, usually phone and drone footage, can be placed.
 
-The rest of this page covers what the map needs, the one setting that gates it, and its limits.
+From here: what the map needs, the privacy setting that turns it on, and where it stops.
+
+<figure class="guide-figure"><img src="/images/guides/find-where-footage-was-filmed-shoot-map.svg" width="720" height="260" style="max-width:100%;height:auto" alt="Flow diagram: a clip with GPS data (phone or drone footage) feeds the Shoot Map, which clusters clips within 50 meters into one numbered pin; clicking a pin shows its clips so you can select them in the media list. A separate branch shows Maps off by default in Settings; once you turn it on, showing the map sends the area you're viewing to Apple." loading="lazy"><figcaption>Clips with GPS data become pins. The map itself is drawn only after you turn on Maps, which sends the area you're viewing to Apple. Place names is a separate switch that also sends clip coordinates, rounded to about 110 m, to Apple.</figcaption></figure>
 
 ## What does the map show?
 
@@ -20,7 +22,7 @@ The rest of this page covers what the map needs, the one setting that gates it, 
 - **Click a cluster** — highlights it in the sidebar with clip details
 - **Click a single pin** — selects that clip in the media list
 - **Select All in Browser** — selects every clip at that location, for batch editing
-- **Map styles** — Standard, Satellite or Hybrid
+- **Map styles** — Standard, Satellite or Hybrid on macOS 14 or later; on macOS 13 there is only the standard map
 - **Filters** — by Category, or by a minimum star rating
 
 The sidebar lists every location cluster, sorted by clip count, with the place name, clip count, sample filenames and category badges for each. Click one to zoom the map there.
@@ -45,7 +47,7 @@ The map itself is opt-in, and for a reason worth knowing before you click it:
 
 > The map itself is off until you turn on Maps in Settings › Privacy, or with the Turn On Maps button: showing a map sends the area you are looking at to Apple. Until then the locations are counted without a map.
 
-Showing a map at all means asking Apple's mapping service for tiles. That is the same [MapKit](https://developer.apple.com/documentation/mapkit) framework any Mac or iOS app uses to draw a map. So that step, not simply having GPS data, is the one that sends something to Apple.
+Showing a map at all means asking Apple's mapping service for tiles. That is the same [MapKit](https://developer.apple.com/documentation/mapkit) framework any Mac or iOS app uses to draw a map. For the map, it's that step that sends something to Apple (the area you're viewing), not simply having GPS data. (Place names, below, is a separate switch that does send clip coordinates.) Apple's [Maps privacy page](https://www.apple.com/legal/privacy/data/en/apple-maps/) says it converts precise locations to less-exact ones within 24 hours. That page covers Apple's own Maps app; it does not say whether the same applies to maps that other apps, such as this one, draw with MapKit.
 
 With Maps off, the Shoot Map still counts and lists the locations. It just doesn't draw the map.
 
@@ -86,6 +88,6 @@ NLE Template Export for Final Cut Pro puts the place name and GPS coordinates on
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## See your own shoot on the map
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 13 or later, on a Mac with Apple silicon.
+The Shoot Map is part of MediaFlowSwift, the app described above. [Download it](/download.html) — the full app is free to try for 14 days, no card required, and it needs macOS 13 or later and Apple silicon.
