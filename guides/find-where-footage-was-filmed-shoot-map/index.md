@@ -3,7 +3,7 @@ layout: guide
 title: "How to Find Where Each Clip in Your Project Was Filmed"
 description: "The Shoot Map pins every clip with GPS data by location, clustered and clickable. Turning it on sends the area you're viewing to Apple."
 published: "2026-10-13"
-updated: 2026-10-20
+updated: "2026-10-26"
 permalink: /guides/find-where-footage-was-filmed-shoot-map/
 ---
 # How to Find Where Each Clip in Your Project Was Filmed
