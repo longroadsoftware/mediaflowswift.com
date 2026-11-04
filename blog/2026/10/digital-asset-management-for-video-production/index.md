@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/digital-asset-management-for-video-production/
 published: "2026-10-23"
-updated: "2026-10-23"
+updated: "2026-10-26"
 og_image: "/images/blog/digital-asset-management-for-video-production.png"
 title: "Digital Asset Management for Video Production: What It Means on a Mac"
 seo_title: "Digital Asset Management for Video Production on a Mac"
