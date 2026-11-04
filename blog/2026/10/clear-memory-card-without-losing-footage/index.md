@@ -91,6 +91,8 @@ A quick format writes a new, empty file system and leaves the old data in place.
 
 A full format takes much longer because it writes to the whole card. Since Windows Vista, a full format writes zeros to the whole disk by default ([Microsoft](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/windows-server/format-command-not-write-zeros-to-disk)). The SD Association's own formatter calls its version "Overwrite format." It erases all data by overwriting the user data area ([SD Card Formatter manual](https://www.sdcard.org/pdf/SD_CardFormatterUserManualEN.pdf)). A Mac is different, as the Disk Utility section below explains.
 
+<figure class="guide-figure"><img src="/images/blog/clear-memory-card-without-losing-footage.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Three steps: a verified copy exists on a drive, checked against the card; a second checked copy ideally exists on another drive; then the card is formatted in the camera that will record on it next, which writes the folder layout that camera expects." loading="lazy"><figcaption>The safe order, before any card is cleared.</figcaption></figure>
+
 ## How do you format a memory card in the camera?
 
 In-camera formatting is the standard way to clear a card after a verified offload. Each maker documents the menu path in its own help pages. Check your model's guide if your camera isn't listed here.
