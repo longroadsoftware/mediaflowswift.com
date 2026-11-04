@@ -134,15 +134,14 @@
     var box = document.createElement("div");
     box.className = "consent";
     box.setAttribute("role", "region");
-    box.setAttribute("aria-label", "Before we count this visit");
+    box.setAttribute("aria-label", "Count this visit?");
     box.innerHTML =
       '<div class="consent-inner">' +
-      "<h2>Before we count this visit</h2>" +
-      "<p>We use Google Analytics and HeyCatch to see which pages people read and what brought " +
-      "them here. They keep a random visitor id in your browser and are told the page address, " +
-      "the buttons and links you click, where you came from, your browser and device type, " +
-      "and roughly where you are. Both are off until you say yes.</p>" +
-      "<p>Saying no does not change the site. Nothing we sell needs this.</p>" +
+      "<h2>Count this visit?</h2>" +
+      "<p>Google Analytics and HeyCatch would keep a random visitor id in your browser and be told " +
+      "the pages, the buttons and links you click, where you came from, your browser and device, " +
+      "and roughly where you are. Both stay off unless you say yes. Saying no changes nothing " +
+      "on the site.</p>" +
       '<p class="consent-buttons">' +
       '<button type="button" data-said="yes">Yes, count my visit</button>' +
       '<button type="button" data-said="no">No</button>' +
@@ -194,6 +193,29 @@
     slot.appendChild(change);
     slot.appendChild(document.createTextNode(" — no reload needed."));
   }
+
+  /* Name the two moments that matter, so the analytics can count them as
+     goals: someone pressing a download link, and someone opening checkout.
+     Only after a yes; before that, nothing is loaded to send them to. */
+  function goal(event) {
+    if (answer() !== "yes") return;
+    var el = event.target && event.target.closest && event.target.closest("a, button");
+    if (!el) return;
+    var href = el.getAttribute("href") || "";
+    var name = null, props = {};
+    if (el.hasAttribute("data-buy")) {
+      name = "checkout_opened"; props.plan = el.getAttribute("data-buy");
+    } else if (el.id === "get" || href.indexOf("lrs-downloads") !== -1) {
+      name = "trial_download_clicked";
+    } else if (href === "/download.html" || href.indexOf("/download.html") === 0) {
+      name = "download_page_clicked";
+    }
+    if (!name) return;
+    props.page = location.pathname;
+    if (hc) hc.then(function (a) { if (a && a.trackEvent) a.trackEvent(name, props); });
+    if (window.gtag) window.gtag("event", name, props);
+  }
+  document.addEventListener("click", goal, true);
 
   function start() {
     var said = answer();
