@@ -90,6 +90,8 @@ The worked example stores one copy of a 50 TB archive for five years. Drive and 
 | Backblaze B2 | about $20,850 | about $417 |
 | Wasabi | about $23,970 | about $479 |
 
+<figure class="guide-figure"><img src="/images/blog/video-archive-storage-lto-vs-nas-vs-cloud.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Approximate five-year cost per terabyte for one copy of a 50 terabyte archive: external drives on a shelf, about 55 to 60 dollars; a four-bay NAS, about 90 to 155 dollars; an LTO-9 drive and tapes, about 255 to 285 dollars; and Amazon S3 Glacier Deep Archive, about 61 dollars for storage only, rising to about 151 dollars with one full restore." loading="lazy"><figcaption>Five-year cost per terabyte for a 50 TB archive, October 2026.</figcaption></figure>
+
 The cloud rows use $0.00099 per GB-month for Deep Archive, from [Amazon S3 pricing](https://aws.amazon.com/s3/pricing/). That is about $51 a month for 50 TB. The full restore adds bulk retrieval at $0.0025 per GB and internet transfer out at $0.09 per GB, falling to $0.085 after 10 TB. [Backblaze B2](https://www.backblaze.com/cloud-storage/pricing) is $6.95 per TB-month, and [Wasabi](https://wasabi.com/pricing/faq) is $7.99.
 
 ### Where tape starts to win

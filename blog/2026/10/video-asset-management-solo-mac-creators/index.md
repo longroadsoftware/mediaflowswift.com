@@ -60,6 +60,8 @@ The first job is a verified copy. A tool computes a checksum of each file on the
 
 The second job is a catalog. You should find a clip by camera, tag, note or rating, not only by its file name. The third job is an archive record. Months later, the tool should still say which drive on the shelf holds a project.
 
+<figure class="guide-figure"><img src="/images/blog/video-asset-management-solo-mac-creators.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Three jobs: verify every card copy with a checksum; keep a catalog you can search by more than file name; and record which archive drive holds each project, even while it sits on a shelf." loading="lazy"><figcaption>The three jobs video asset management does for a solo creator.</figcaption></figure>
+
 ### Why Finder alone falls short
 
 Finder copies files but does not compare a checksum of the original with one of the copy. A damaged file can keep the right name and size. Spotlight only searches drives that are plugged in, so a shelf of archive drives is invisible to it.
