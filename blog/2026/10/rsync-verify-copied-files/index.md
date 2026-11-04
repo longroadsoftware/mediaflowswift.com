@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/rsync-verify-copied-files/
 published: "2026-10-28"
-updated: "2026-10-28"
+updated: "2026-11-04"
 og_image: "/images/blog/rsync-verify-copied-files.png"
 title: "Does rsync Verify Copied Files? What It Checks and What It Misses"
 seo_title: "Does rsync Verify Copied Files? What It Checks"
@@ -181,9 +181,9 @@ rsync is excellent for mirroring drives, syncing to a NAS or Linux server, and s
 
 MediaFlowSwift's [Clear Card](/manual/organizing-media/#clear-card) deletes only clips already organized and verified at the destination. It reads each organized copy back in full before deleting. On cards the camera laid out itself, it deletes nothing and says when the card is safe to format in the camera.
 
-MediaFlowSwift's limits matter for this comparison. The import copies to one place at a time. A second checked copy comes later, from [Archive to USB](/manual/project-management/#archiving-a-project-to-usb); see [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/).
+MediaFlowSwift's limits matter for this comparison. The import copies to one place, or to two with Also copy to, reading the card once and checking each copy against it. A second checked copy can also come later, from [Archive to USB](/manual/project-management/#archiving-a-project-to-usb); see [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/).
 
-MediaFlowSwift can organize to a mounted network share, but it doesn't sync to Linux servers over SSH. It keeps checksums inside the project rather than writing a checksum list onto the drive. Its Re-check files command compares sizes, not checksums, so for audits years later, `shasum -c` or an rsync `-c` dry run is still the tool. It runs on Apple silicon Macs, with Windows and Intel Mac versions coming.
+MediaFlowSwift can organize to a mounted network share, but it doesn't sync to Linux servers over SSH. It keeps checksums inside the project. It writes a checksum list onto the drive only for an import with Also copy to: a Proof Copy receipt in each place's import folder, listing every file with its size and checksum. Its Re-check files command compares sizes, not checksums, so for audits years later, `shasum -c` or an rsync `-c` dry run is still the tool. It runs on Apple silicon Macs, with Windows and Intel Mac versions coming.
 
 ## What's a sensible routine before erasing a card?
 
