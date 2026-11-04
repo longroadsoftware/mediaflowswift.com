@@ -147,7 +147,9 @@ This site covers verification in depth elsewhere, so here are the short version 
 
 Dedicated offload apps do this check for you. [OffShoot](https://hedge.co/products/offshoot), the app formerly known as Hedge, runs on macOS and Windows and offers a [10-day trial](https://hedge.co/products/offshoot/downloads). Imagine Products' [ShotPut Pro](https://www.imagineproducts.com/product/shotput-pro) offers verified offloads with PDF reports. Pomfort's [Silverstack](https://pomfort.com/silverstack/) is an on-set media management tool with a clip library and a free trial.
 
-MediaFlowSwift handles the check as part of import. As each file is copied, it computes a SHA-256 checksum from the card and writes the copy. Then it reads the whole copy back from the drive and compares the two. A copy that doesn't match is made once more. If it fails again, the import stops and names the file. Import never deletes anything from the card. See [Every Copy Is Checked](/manual/importing-media/#every-copy-is-checked) in the manual, and the guide on [whether it's safe to erase a card after importing](/guides/verify-footage-copied-before-erasing-card/).
+MediaFlowSwift handles the check as part of import. As each file is copied, it computes a SHA-256 checksum from the card and writes the copy, then reads the whole copy back from the drive and compares the two. A copy that doesn't match is made once more, and if it fails again, the import stops and names the file. Import never deletes anything from the card.
+
+See [Every Copy Is Checked](/manual/importing-media/#every-copy-is-checked) in the manual, and the guide on [whether it's safe to erase a card after importing](/guides/verify-footage-copied-before-erasing-card/).
 
 Import takes common video formats such as MP4 and MOV. It leaves out some, such as BRAW, R3D and Insta360's INSV, and says how many it passed over. Copy and check those files yourself.
 
@@ -166,6 +168,8 @@ Back at your Mac, copy and verify each card before you format any of them. The [
 ## Where does an SD card fit in a 3-2-1 backup?
 
 A 3-2-1 backup means three copies of your footage, on two kinds of media, with one copy kept offsite. An SD card can count as one of the three for a few days, while you build the other two. After that, its job is done: it gets cleared and goes back into rotation.
+
+<figure class="guide-figure"><img src="/images/blog/sd-card-as-backup.svg" width="720" height="128" style="max-width:100%;height:auto" alt="An SD card is a temporary first leg of the copy chain: the card holds footage briefly, a working drive gets a checked copy, a second drive gets a second checked copy, and only then is the card cleared and returned to rotation." loading="lazy"><figcaption>Where an SD card fits before footage reaches its lasting copies.</figcaption></figure>
 
 The lasting copies belong on drives. MediaFlowSwift's [Organize Media](/manual/organizing-media/#organizing-media-to-storage) files each clip as Destination / Category / Camera / Filename. It checks each copy against the checksum taken at import. [Archive to USB](/manual/project-management/#archiving-a-project-to-usb) then copies a finished project folder to a numbered drive (USB #0001, USB #0002 and so on). It reads every file back, then records where the project went. The guide to [keeping two checked copies of a card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) walks through both steps.
 
