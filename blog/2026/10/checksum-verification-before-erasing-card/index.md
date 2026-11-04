@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/checksum-verification-before-erasing-card/
 published: "2026-10-22"
-updated: "2026-10-22"
+updated: "2026-10-26"
 og_image: "/images/blog/checksum-verification-before-erasing-card.png"
 title: "Checksum Verification: Prove Your Card Copy Before Erasing"
 seo_title: "Checksum Verification: Prove a Card Copy Before Erasing"
