@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" width="640" height="220" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">Time to properly verify one full 128 GB card at 250 MB/s</title>
+<desc id="d">Two horizontal bars. Checking it yourself by hand in Finder and Terminal: copy, then read both the card and the copy to compare checksums, three full passes, about 25 minutes. MediaFlowSwift's import: copy while taking the card's checksum, then read the copy back once, two full passes, about 17 minutes. Both figures are arithmetic from the card's size and transfer speed, not a benchmark; the real figure depends on the card, the reader and the drive.</desc>
+<rect x="1" y="1" width="638" height="218" rx="12" fill="#ffffff" stroke="#d6d6d6"/>
+<text x="320" y="30" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">One full 128 GB card, copied and checked at 250 MB/s</text>
+
+<text x="24" y="76" font-size="14" fill="#222">Checking it yourself</text>
+<rect x="24" y="84" width="460" height="28" rx="4" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="474" y="103" font-size="13" fill="#333" text-anchor="end">3 full passes</text>
+<text x="494" y="103" font-size="14" font-weight="bold" fill="#222">~25 min</text>
+
+<text x="24" y="150" font-size="14" fill="#222">MediaFlowSwift import</text>
+<rect x="24" y="158" width="313" height="28" rx="4" fill="#eaf1fe" stroke="#2a6df4" stroke-width="2"/>
+<text x="327" y="177" font-size="13" fill="#2a6df4" text-anchor="end">2 full passes</text>
+<text x="347" y="177" font-size="14" font-weight="bold" fill="#222">~17 min</text>
+
+<text x="320" y="206" font-size="12" fill="#666" text-anchor="middle">Arithmetic from card size and transfer speed, not a benchmark &#8212; the real figure depends on the card, reader and drive.</text>
+</svg>
