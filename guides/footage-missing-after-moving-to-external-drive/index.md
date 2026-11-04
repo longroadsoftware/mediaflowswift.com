@@ -3,7 +3,7 @@ layout: guide
 title: "Footage Missing After Moving to an External Drive?"
 description: "MediaFlowSwift showing clips missing after moving your library to a new drive? Run Library Moved to repoint every project. Nothing is copied or deleted."
 published: "2026-10-13"
-updated: "2026-10-26"
+updated: "2026-11-03"
 permalink: /guides/footage-missing-after-moving-to-external-drive/
 ---
 # Footage Missing After Moving to an External Drive?
