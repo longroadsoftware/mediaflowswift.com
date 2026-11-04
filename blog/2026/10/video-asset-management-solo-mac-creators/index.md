@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/video-asset-management-solo-mac-creators/
 published: "2026-10-29"
-updated: "2026-10-29"
+updated: "2026-11-04"
 og_image: "/images/blog/video-asset-management-solo-mac-creators.png"
 title: "Video Asset Management for Solo Mac Creators: What You Need, What to Skip"
 seo_title: "Video Asset Management for Solo Mac Creators"
@@ -74,7 +74,7 @@ For a handful of clips you will edit today, Finder is fine. The risk grows with 
 
 Verified offload is the feature that lets you reuse a card the same day. A good tool shows a result for each file, not just a "done" banner. It also reads the copy back from the drive, not from the Mac's memory.
 
-MediaFlowSwift works this way. Its [import](/manual/importing-media/) computes SHA-256 from the card, writes the copy, then reads the whole copy back and compares. A mismatch is retried once, and then the import stops and names the file. Import never deletes anything from the card.
+MediaFlowSwift works this way. Its [import](/manual/importing-media/) computes SHA-256 from the card, writes the copy, then reads the whole copy back and compares. A mismatch is retried once, and then the import stops and names the file. Import never deletes anything from the card. Turn on Also copy to, and the same import also writes a second copy to another drive and checks it against the card.
 
 Clearing the card is a separate, deliberate step. [Clear Card](/manual/organizing-media/#clear-card) deletes only clips already organized and verified at the destination. On a card laid out by the camera, such as a Sony XAVC card, it deletes nothing. It says when the card is safe to format in the camera instead. For the reasoning behind this, read [checksum verification before erasing a card](/blog/2026/10/checksum-verification-before-erasing-card/).
 
@@ -166,7 +166,7 @@ Price models differ too. OffShoot and MediaTools Pro sell one-time licenses. Sil
 MediaFlowSwift fits a solo creator who wants each card to become an organized, reviewed and archived project. It is a weaker fit in a few cases:
 
 - It runs only on Apple silicon Macs with macOS 13 or later. Windows and Intel Mac versions are coming.
-- It copies to one destination per import, not to several drives in one job.
+- It copies to at most two places per import, not to several drives in one job.
 - It writes no ASC MHL file and does not copy to S3 or other cloud storage.
 
 The [OffShoot](/vs/offshoot/) and [habitat flow](/vs/habitat-flow/) comparisons go further.

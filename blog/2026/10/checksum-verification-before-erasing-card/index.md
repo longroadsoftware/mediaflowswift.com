@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/checksum-verification-before-erasing-card/
 published: "2026-10-22"
-updated: "2026-10-26"
+updated: "2026-11-04"
 og_image: "/images/blog/checksum-verification-before-erasing-card.png"
 title: "Checksum Verification: Prove Your Card Copy Before Erasing"
 seo_title: "Checksum Verification: Prove a Card Copy Before Erasing"
@@ -148,9 +148,9 @@ One verified copy is the minimum. Two verified copies on separate drives are saf
 
 MediaFlowSwift, made by Long Road Software, builds the first of those copies into its workflow. [Import](/manual/importing-media/#every-copy-is-checked) computes SHA-256 from the card, reads the whole copy back from the drive and compares. Organize files each clip at the destination and checks it against that checksum. [Clear Card](/manual/organizing-media/#clear-card) deletes only clips already organized and verified at the destination. It reads each organized copy back in full again just before deleting.
 
-Clear Card requires that one verified, organized copy. It doesn't require a second copy. A second checked copy comes from [Archive to USB](/manual/project-management/#archiving-a-project-to-usb), a separate step. For the details, see [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/). On cards the camera laid out itself, such as Sony cards with a PRIVATE/M4ROOT folder, Clear Card deletes nothing. It checks the whole card and says when it is safe to format in the camera.
+Clear Card requires that one verified, organized copy. A second checked copy can come at import: turn on Also copy to and pick a second folder or drive. Then Clear Card waits for both copies, reads each one back, and keeps a clip on the card while its second copy is missing or not connected. A second copy can also come later, from [Archive to USB](/manual/project-management/#archiving-a-project-to-usb). For the details, see [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/). On cards the camera laid out itself, such as Sony cards with a PRIVATE/M4ROOT folder, Clear Card deletes nothing. It checks the whole card and says when it is safe to format in the camera.
 
-Where the checksums live differs by tool. MediaFlowSwift keeps each clip's checksum inside the project and numbers its archive drives. It doesn't write a checksum list or [ASC MHL](https://github.com/ascmitc/mhl-specification) file onto the drive. Need an MHL file for a client, or a list that travels with the drive? Use a tool that writes one, or the `shasum` list above. For drive labeling, see [How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/).
+Where the checksums live differs by tool. MediaFlowSwift keeps each clip's checksum inside the project and numbers its archive drives. It doesn't write an [ASC MHL](https://github.com/ascmitc/mhl-specification) file, or a checksum list for the organized folders. An import with Also copy to does leave a Proof Copy receipt in each place's import folder, listing every file with its size and checksum. Need an MHL file for a client, or a list that travels with the drive? Use a tool that writes one, or the `shasum` list above. For drive labeling, see [How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/).
 
 ## Which checksum verification tool should you use?
 
@@ -165,7 +165,7 @@ Judge every option by three questions. Does it read the copy back and compare ch
 
 MediaFlowSwift fits after the copy as well as during it. Verified clips land in a library you can [search](/manual/managing-clips/#filtering-and-searching) by name, notes, tags, camera or scene. You can also [search transcripts](/manual/organizing-media/#speech-transcription) for what was said, play clips back, rate them, and see which numbered archive drive holds a project.
 
-MediaFlowSwift's limits are just as real. It doesn't write a card to two drives at once; the second copy comes later, from Archive to USB. It writes no MHL file, and it copies to drives and network shares, not to S3 or other cloud storage. It runs on Apple silicon Macs with macOS 13 or later today, with Windows and Intel Mac versions coming. Compare it in detail on [MediaFlowSwift vs OffShoot](/vs/offshoot/) and [MediaFlowSwift vs habitat flow](/vs/habitat-flow/).
+MediaFlowSwift's limits are just as real. It copies a card to at most two places at once, with Also copy to. It writes no MHL file, and it copies to drives and network shares, not to S3 or other cloud storage. It runs on Apple silicon Macs with macOS 13 or later today, with Windows and Intel Mac versions coming. Compare it in detail on [MediaFlowSwift vs OffShoot](/vs/offshoot/) and [MediaFlowSwift vs habitat flow](/vs/habitat-flow/).
 
 For a broader checklist, see [Evaluating Video File Management Software](/blog/2026/10/evaluating-video-file-management-software/).
 

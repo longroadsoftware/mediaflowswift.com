@@ -3,7 +3,7 @@ layout: guide
 title: "Is It Safe to Erase Your Card After Importing on a Mac?"
 description: "Checksums, not playback, prove a copy is safe. See how MediaFlowSwift checks a copy at import, at organize, and once more before Clear Card erases a card."
 published: "2026-10-13"
-updated: "2026-11-03"
+updated: "2026-11-04"
 permalink: /guides/verify-footage-copied-before-erasing-card/
 ---
 # Is It Safe to Erase Your Card After Importing on a Mac?
@@ -30,7 +30,7 @@ Clearing a card in MediaFlowSwift is a separate, deliberate step from importing.
 
 1. **Import.** As each file is copied, MediaFlowSwift computes its SHA-256 checksum from the card and writes the copy to the drive. It then reads the whole copy back from the drive, not from the Mac's memory, and compares the two. A copy that doesn't match is made once more; if it fails again, the import stops and names the file. Import never deletes anything from the card.
 2. **Organize.** MediaFlowSwift files each clip into its Category and Camera folder at the project's destination. It checks that copy against the checksum taken from the card at import.
-3. **Clear Card.** When you confirm, Clear Card reads each organized copy back in full and matches it against the recorded checksum before it deletes the card file. It never relies on the check made at organize time. It checks again, from scratch, right before anything is deleted.
+3. **Clear Card.** When you confirm, Clear Card reads each organized copy back in full and matches it against the recorded checksum before it deletes the card file. It never relies on the check made at organize time. It checks again, from scratch, right before anything is deleted. If the clip also has a second copy from Also copy to, Clear Card reads that one back too, and keeps the clip on the card unless both copies match.
 
 Formatting the card afterwards happens in the camera, not in MediaFlowSwift. By that point Clear Card has checked every clip it imported and organized from the card. As the next section covers, that is not necessarily every file on the card.
 
@@ -78,7 +78,7 @@ Don't erase the card. Try the import again. A failed check usually means a bad r
 
 ## Other guides
 
-- [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) — getting a second checked copy, one step after the first.
+- [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) — getting a second checked copy, at import or later.
 - [How to Automate Video File Organization on Your Mac](/guides/automate-video-file-organization-on-mac/) — Category and Camera folders, sorted the same way every time.
 
 [All guides](/guides/) — the full list.

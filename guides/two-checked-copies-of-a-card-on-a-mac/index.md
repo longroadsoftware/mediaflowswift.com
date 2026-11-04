@@ -1,16 +1,26 @@
 ---
 layout: guide
 title: "How to Keep Two Checked Copies of a Memory Card on a Mac"
-description: "Import and organize a card to your working drive, then archive the project to a second drive. Two checksum-verified copies, made one after the other."
+description: "Import a card to two places at once with Also copy to, or archive the project to a second drive later. Two checksum-verified copies either way."
 published: "2026-10-13"
-updated: "2026-11-03"
+updated: "2026-11-04"
 permalink: /guides/two-checked-copies-of-a-card-on-a-mac/
 ---
 # How to Keep Two Checked Copies of a Memory Card on a Mac
 
-To keep two checked copies of a card, import and organize it to your working drive with MediaFlowSwift. Then archive that project to a second drive with Archive to USB. MediaFlowSwift reads each copy back and compares checksums before it counts the copy. The two copies are made one after the other, not at the same time.
+To keep two checked copies of a card, turn on Also copy to on MediaFlowSwift's Import sheet and pick a second folder or drive. The import then copies each clip to both places at once, and reads each copy back from its own drive to check it against the card. You can also make the second copy later, by archiving the project to another drive with Archive to USB.
 
-Two checked copies in MediaFlowSwift isn't a single button. The method is two separate, verified steps, run in order, and each step proves something different. Archive to USB copies only the project folder, so clips organized outside it need one extra step, covered below. The pattern mirrors the chain-of-custody approach in the production industry's own [ASC Media Hash List specification](https://github.com/ascmitc/mhl-specification). Production and post houses use ASC MHL to prove that nothing changed between successive copies of a shoot's media.
+Either way, MediaFlowSwift reads each copy back and compares checksums before it counts the copy. The later route, Archive to USB, copies only the project folder, so clips organized outside it need one extra step, covered below. The pattern mirrors the chain-of-custody approach in the production industry's own [ASC Media Hash List specification](https://github.com/ascmitc/mhl-specification). Production and post houses use ASC MHL to prove that nothing changed between successive copies of a shoot's media.
+
+## Both copies at import: Also copy to
+
+The Import sheet has a line under where imports go: Also copy to, with a Choose… button and a box to turn it on and off. Pick any second folder or drive, such as a USB drive, a NAS share or a second SSD. The project remembers it for its next imports.
+
+The card is read once. MediaFlowSwift takes each file's SHA-256 checksum from the card as it copies it, and writes the file to both places. Each copy is then read back from its own drive, not from the Mac's memory, and compared with the card. When the import finishes, each place gets a Proof Copy receipt listing every file with its size and checksum, and the completion card says how long each place took.
+
+The second place can't be the card you are importing from, or the same folder as the first place. If both places are on the same drive, the sheet warns that it is not a real second copy, because if that drive fails, both copies are lost with it. It asks before going on.
+
+If the second place fails partway through, for example because the drive was pulled or is full, the first copy carries on. The clips without a second copy are marked, the completion card lists them by name, and Clear Card keeps them on the card. An import from an iPhone makes one copy; Also copy to is for cards, drives and folders.
 
 ## Copy one: import, then organize
 
@@ -32,9 +42,9 @@ A renamed clip isn't checked a second time, but nothing is unproved either:
 
 > The chain stays proved, because the bytes never move and the import's copy was proved.
 
-## Copy two: archive to a second drive
+## Copy two, later: archive to a second drive
 
-The second checked copy comes from archiving to a separate USB drive. Archive to USB copies the project folder, specifically:
+If you didn't use Also copy to, the second checked copy can come later, from archiving to a separate USB drive. Archive to USB copies the project folder, specifically:
 
 > Archive to USB frees your working storage by copying a finished project to a drive you can put on a shelf. It copies the whole project folder to a removable drive, checks the copy, and records where it went in the shared database.
 
@@ -66,11 +76,11 @@ Keep the original folders until the Change destination folder check has finished
 
 With the destination inside the project folder, your working drive holds one verified copy. The archive drive holds a second, independently verified one.
 
-## One after another, not at once
+## At once, or one after another
 
-MediaFlowSwift does not write a card to two drives at the same time. The sequence above is deliberate: card → working destination, checked; then working destination → archive drive, checked again. Each copy has to finish and pass its own check before the next one starts. The end result is what simultaneous offload is usually for: two checked copies on two drives. You get there a step at a time, and the card stays untouched until you clear it yourself.
+With Also copy to, both copies are made in the same import, straight from the card. Without it, the archive route works a step at a time: card → working destination, checked; then working destination → archive drive, checked again. Each copy has to finish and pass its own check before the next one starts. Both routes end with two checked copies on two drives, and the card stays untouched until you clear it yourself.
 
-<figure class="guide-figure"><img src="/images/guides/two-checked-copies-of-a-card-on-a-mac.svg" width="720" height="260" style="max-width:100%;height:auto" alt="Diagram of two checked copies made in sequence: the card; Import copies each clip, reads it back and compares SHA-256 checksums; copy one on the working drive, organized at the project's destination; Archive to USB copies the project folder, reads it back and compares; copy two on the archive drive. Only the project folder is archived, and the card stays untouched until Clear Card." loading="lazy"><figcaption>Card to working drive, then working drive to archive drive. Each copy passes its own check before the next starts.</figcaption></figure>
+<figure class="guide-figure"><img src="/images/guides/two-checked-copies-of-a-card-on-a-mac.svg" width="720" height="260" style="max-width:100%;height:auto" alt="Diagram of two checked copies made in sequence: the card; Import copies each clip, reads it back and compares SHA-256 checksums; copy one on the working drive, organized at the project's destination; Archive to USB copies the project folder, reads it back and compares; copy two on the archive drive. Only the project folder is archived, and the card stays untouched until Clear Card." loading="lazy"><figcaption>The archive route: card to working drive, then working drive to archive drive. Each copy passes its own check before the next starts.</figcaption></figure>
 
 ## If a copy doesn't check out
 
@@ -90,7 +100,9 @@ MediaFlowSwift never makes you erase the card the moment you've made these two c
 
 > Clear Card reads each organized copy back in full and matches it against the recorded checksum before it deletes the card file. It never relies on the check made at organize time.
 
-So in practice you often have three copies for a while: card, working drive, archive drive. The card copy lasts until you choose to clear the card yourself.
+When a clip has a second copy from Also copy to, Clear Card waits for both. It reads the organized copy and the second copy back at that moment, and deletes the card file only when both match. If the second drive isn't connected, the clip stays on the card, and Clear Card says why.
+
+So in practice you often have three copies for a while: card, working drive, and the second place or archive drive. The card copy lasts until you choose to clear the card yourself.
 
 ## Does this checksum chain cover an iPhone import too?
 
@@ -104,10 +116,10 @@ Once Image Capture has handed a file over, MediaFlowSwift copies it to your impo
 
 ## Read more
 
-- [Importing from a Card, Drive or Folder](/manual/importing-media/#importing-from-a-card-drive-or-folder) — the import checksum step in full
+- [Importing from a Card, Drive or Folder](/manual/importing-media/#importing-from-a-card-drive-or-folder) — the import checksum step in full, and Also copy to
 - [Importing from iPhone or Camera](/manual/importing-media/#importing-from-iphone-or-camera) — what the phone check covers and where it differs from a card
 - [How MediaFlow Verifies Copies](/manual/organizing-media/#how-mediaflow-verifies-copies) — what Organize, Clear Card and Free Up Space each check, and when
-- [Archiving a Project to USB](/manual/project-management/#archiving-a-project-to-usb) — the second checked copy, on a separate drive
+- [Archiving a Project to USB](/manual/project-management/#archiving-a-project-to-usb) — a second checked copy made later, on a separate drive
 - [Clear Card](/manual/organizing-media/#clear-card) — what has to be true before the card itself is cleared
 - [Change destination folder](/manual/organizing-media/#change-destination-folder) — pointing a project at organized media you have copied somewhere else
 
@@ -120,4 +132,4 @@ Once Image Capture has handed a file over, MediaFlowSwift copies it to your impo
 
 ## Get your own second copy made
 
-Import, Organize and Archive to USB are the three commands MediaFlowSwift uses for this. [Download it](/download.html); try the full app for 14 days with no card asked for, on an Apple silicon Mac with macOS 13 or later.
+Import with Also copy to makes both copies in one go; Organize and Archive to USB are the other route. [Download it](/download.html); try the full app for 14 days with no card asked for, on an Apple silicon Mac with macOS 13 or later.

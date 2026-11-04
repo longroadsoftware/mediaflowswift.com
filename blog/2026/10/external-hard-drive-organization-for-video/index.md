@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/external-hard-drive-organization-for-video/
 published: "2026-10-21"
-updated: "2026-10-26"
+updated: "2026-11-04"
 og_image: "/images/blog/external-hard-drive-organization-for-video.png"
 title: "External Hard Drive Organization for Video Creators"
 seo_title: "External Hard Drive Organization for Video Creators"
@@ -144,11 +144,11 @@ Dedicated offload tools that verify this way include [OffShoot](https://hedge.co
 
 ### Where does MediaFlowSwift fit?
 
-MediaFlowSwift's import computes a SHA-256 checksum from the card, writes the copy, reads the whole copy back from the drive and compares. A mismatch is retried once. If it fails again, the import stops and names the file. Importing never deletes anything from the card.
+MediaFlowSwift's import computes a SHA-256 checksum from the card, writes the copy, reads the whole copy back from the drive and compares. A mismatch is retried once. If it fails again, the import stops and names the file. Importing never deletes anything from the card. With Also copy to turned on, the same import writes a second copy to another drive and checks that one against the card too.
 
 Organize Media then files each clip and checks it against the import checksum. [Clear Card](/manual/organizing-media/#clear-card) deletes only clips that are already organized and verified at the destination. On cards laid out by the camera, such as Sony XAVC cards, Clear Card deletes nothing. It tells you instead when the card is safe to format in the camera.
 
-The limits are real. MediaFlowSwift runs only on Macs with Apple silicon and macOS 13 or later, though Windows and Intel Mac versions are coming. It writes no ASC MHL file, and it makes a second copy as a separate later step. Crews that need MHL reports or several destinations at once are better served by OffShoot or Silverstack XT. The [MediaFlowSwift vs OffShoot comparison](/vs/offshoot/) sets out the differences, and [evaluating video file management software](/blog/2026/10/evaluating-video-file-management-software/) covers the wider field.
+The limits are real. MediaFlowSwift runs only on Macs with Apple silicon and macOS 13 or later, though Windows and Intel Mac versions are coming. It writes no ASC MHL file, and one import copies a card to at most two places. Crews that need MHL reports or more destinations at once are better served by OffShoot or Silverstack XT. The [MediaFlowSwift vs OffShoot comparison](/vs/offshoot/) sets out the differences, and [evaluating video file management software](/blog/2026/10/evaluating-video-file-management-software/) covers the wider field.
 
 ## How do you decide what to keep, archive, or delete?
 
