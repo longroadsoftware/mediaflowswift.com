@@ -1,8 +1,9 @@
 ---
 layout: guide
 title: "MediaFlowSwift Guides"
+published: "2026-10-13"
 description: "How-to answers for footage on a Mac: check a card copy before you erase it, keep two copies, find moved clips, label archive drives, publish to YouTube."
-updated: "2026-11-03"
+updated: "2026-10-26"
 permalink: /guides/
 ---
 # Guides

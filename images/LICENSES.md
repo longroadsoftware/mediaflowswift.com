@@ -28,4 +28,24 @@ The process diagrams in `images/guides/` are not photographs or app screenshots.
 
 guides/review-and-pick-selects-on-a-mac.svg, guides/search-video-by-what-was-said.svg, guides/dailies-report-and-hand-off-file-for-editor.svg and guides/write-youtube-title-description-chapters-tags.svg are process diagrams made for this site by Long Road Software (2026-10-20): hand-written SVG drawn with the system font, showing only the steps their guides describe. No photographs or app screenshots.
 
-guides/find-where-footage-was-filmed-shoot-map.svg is a process diagram made for this site by Long Road Software (2026-11-03): hand-written SVG drawn with the system font, showing the GPS-clip-to-pin workflow and the Maps privacy opt-in its guide describes. No photographs or app screenshots.
+The diagrams in `images/blog/` are not photographs or app screenshots. Each is a hand-written SVG made for this site by Long Road Software (2026-11-03), drawn from the steps or figures its post already describes in words:
+
+| File | Shows | Post |
+|---|---|---|
+| blog/cant-find-video-files-on-sd-card.svg | The five causes of missing video files, cheapest check first | /blog/2026/10/cant-find-video-files-on-sd-card/ |
+| blog/checksum-verification-before-erasing-card.svg | The four-step checksum verification routine for every shoot | /blog/2026/10/checksum-verification-before-erasing-card/ |
+| blog/clear-memory-card-without-losing-footage.svg | The safe order: verified copy, second copy, format in the camera | /blog/2026/10/clear-memory-card-without-losing-footage/ |
+| blog/dailies-workflow-mac.svg | The five stages of a dailies workflow, card to editor | /blog/2026/10/dailies-workflow-mac/ |
+| blog/digital-asset-management-for-video-production.svg | The seven stages footage moves through, ingest to retrieve | /blog/2026/10/digital-asset-management-for-video-production/ |
+| blog/evaluating-video-file-management-software.svg | The five pass/fail trial tests for video file management software | /blog/2026/10/evaluating-video-file-management-software/ |
+| blog/external-hard-drive-organization-for-video.svg | The five numbered subfolders inside every dated shoot folder | /blog/2026/10/external-hard-drive-organization-for-video/ |
+| blog/find-all-video-files-on-mac.svg | Search methods, then the counts-totals-checksum verification | /blog/2026/10/find-all-video-files-on-mac/ |
+| blog/how-to-organize-video-footage.svg | The three folder models and the hybrid most solo creators use | /blog/2026/10/how-to-organize-video-footage/ |
+| blog/nas-video-storage-how-to-choose.svg | Network speed ceilings and RAID choices by NAS bay count | /blog/2026/10/nas-video-storage-how-to-choose/ |
+| blog/rsync-verify-copied-files.svg | The four-step routine to prove a card copy with rsync and shasum | /blog/2026/10/rsync-verify-copied-files/ |
+| blog/video-archive-storage-lto-vs-nas-vs-cloud.svg | Five-year cost per terabyte, drives vs NAS vs LTO vs cloud | /blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/ |
+| blog/video-asset-management-solo-mac-creators.svg | The three jobs video asset management does for a solo creator | /blog/2026/10/video-asset-management-solo-mac-creators/ |
+| blog/video-ingest-workflow.svg | The seven steps of a video ingest workflow, offload to format | /blog/2026/10/video-ingest-workflow/ |
+| blog/best-mac-video-library-app.svg | The four jobs a Mac video library app should do | /blog/2026/11/best-mac-video-library-app/ |
+| blog/old-archive-footage.svg | Five steps to clear rights on an old archive clip | /blog/2026/11/old-archive-footage/ |
+| blog/sd-card-as-backup.svg | Where an SD card fits before footage reaches its lasting copies | /blog/2026/11/sd-card-as-backup/ |

@@ -19,6 +19,6 @@
 <text x="548.0" y="105" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">select in the media list</text>
 <rect x="8" y="166" width="704" height="80" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.5"/>
 <text x="360.0" y="192" text-anchor="middle" font-size="15" font-weight="700" fill="#1d1d1f">Maps is off until you turn it on in Settings › Privacy</text>
-<text x="360.0" y="214" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">With it off, locations are still counted and listed — no map tile is requested</text>
+<text x="360.0" y="214" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">With it off, locations are still counted and listed — no map is shown</text>
 <text x="360.0" y="234" text-anchor="middle" font-size="14" font-weight="400" fill="#1d1d1f">Once it's on, showing the map sends the area you're viewing to Apple</text>
 </svg>

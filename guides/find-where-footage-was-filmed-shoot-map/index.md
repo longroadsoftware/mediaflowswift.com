@@ -3,7 +3,7 @@ layout: guide
 title: "How to Find Where Each Clip in Your Project Was Filmed"
 description: "The Shoot Map pins every clip with GPS data by location, clustered and clickable. Once Maps is on, showing the map sends the area you're viewing to Apple."
 published: "2026-10-13"
-updated: "2026-11-03"
+updated: "2026-10-26"
 permalink: /guides/find-where-footage-was-filmed-shoot-map/
 ---
 # How to Find Where Each Clip in Your Project Was Filmed
@@ -47,7 +47,7 @@ The map itself is opt-in, and for a reason worth knowing before you click it:
 
 > The map itself is off until you turn on Maps in Settings › Privacy, or with the Turn On Maps button: showing a map sends the area you are looking at to Apple. Until then the locations are counted without a map.
 
-Showing a map at all means asking Apple's mapping service for tiles. That is the same [MapKit](https://developer.apple.com/documentation/mapkit) framework any Mac or iOS app uses to draw a map. So for the map, that step, not simply having GPS data, is what sends something to Apple: the area you're viewing. (Place names, below, is a separate switch that does send clip coordinates.) For its own Maps app, Apple's [Maps privacy page](https://www.apple.com/legal/privacy/data/en/apple-maps/) says it converts precise locations to less-exact ones within 24 hours.
+Showing a map at all means asking Apple's mapping service for tiles. That is the same [MapKit](https://developer.apple.com/documentation/mapkit) framework any Mac or iOS app uses to draw a map. For the map, it's that step that sends something to Apple (the area you're viewing), not simply having GPS data. (Place names, below, is a separate switch that does send clip coordinates.)
 
 With Maps off, the Shoot Map still counts and lists the locations. It just doesn't draw the map.
 

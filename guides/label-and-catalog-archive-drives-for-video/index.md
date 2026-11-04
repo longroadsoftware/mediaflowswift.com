@@ -3,7 +3,7 @@ layout: guide
 title: "How to Label and Catalog Your Archive Drives for Video"
 description: "MediaFlowSwift numbers every archive drive and keeps a record of what's on it, so labeling your shelf of USB drives takes one sticker, not a spreadsheet."
 published: "2026-10-13"
-updated: "2026-11-03"
+updated: "2026-10-26"
 permalink: /guides/label-and-catalog-archive-drives-for-video/
 ---
 # How to Label and Catalog Your Archive Drives for Video
