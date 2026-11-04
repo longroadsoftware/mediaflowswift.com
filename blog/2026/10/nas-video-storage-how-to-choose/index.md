@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/nas-video-storage-how-to-choose/
 published: "2026-10-21"
-updated: "2026-10-21"
+updated: "2026-10-26"
 og_image: "/images/blog/nas-video-storage-how-to-choose.png"
 title: "NAS Video Storage: How to Choose and Structure One"
 seo_title: "NAS Video Storage: How to Choose, Size and Structure One"
