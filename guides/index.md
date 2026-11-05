@@ -3,7 +3,7 @@ layout: guide
 title: "MediaFlowSwift Guides"
 published: "2026-10-13"
 description: "How-to answers for footage on a Mac: check a card copy before you erase it, keep two copies, find moved clips, label archive drives, publish to YouTube."
-updated: "2026-11-03"
+updated: "2026-11-05"
 permalink: /guides/
 ---
 # Guides
@@ -79,6 +79,18 @@ The comparisons with other apps quote each app's own pages, with the date prices
 
 - **[MediaFlowSwift vs Just Using Finder and a Spreadsheet](/vs/finder-and-spreadsheet/)**
   What you give up going manual, how to check a copy by hand, and when the free way is good enough.
+
+- **[MediaFlowSwift vs ShotPut Pro](/vs/shotput-pro/)**
+  Both prove a card copy. ShotPut Pro stops at the offload and report; what MediaFlowSwift adds, and what each costs.
+
+- **[MediaFlowSwift vs Silverstack and Offload Manager](/vs/silverstack/)**
+  Pomfort's tools for DITs on set, next to MediaFlowSwift for people who shoot and edit their own footage.
+
+- **[MediaFlowSwift vs Kyno](/vs/kyno/)**
+  Both back up, check and tag footage. Where Kyno's browsing and converting fit, and where MediaFlowSwift's project flow does.
+
+- **[Hedge and OffShoot alternatives for Mac](/alternatives/hedge-offshoot/)**
+  Six apps that prove a card copy with checksums, who each is for, and prices checked on each app's own site.
 
 ## What the guides assume
 

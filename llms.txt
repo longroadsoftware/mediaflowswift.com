@@ -60,6 +60,10 @@ Honest, dated comparisons against other ways of getting footage off a card.
 - MediaFlowSwift vs OffShoot: https://mediaflowswift.com/vs/offshoot/ — both verify copies with checksums; OffShoot's strength is large-scale, multi-destination DIT transfers, MediaFlowSwift's is the review-to-archive pipeline after the copy
 - MediaFlowSwift vs habitat flow: https://mediaflowswift.com/vs/habitat-flow/ — both check a card copy before you format; habitat flow has a free tier and a cheaper entry price, MediaFlowSwift covers review, archive, reports and YouTube publishing too
 - MediaFlowSwift vs Finder and a spreadsheet: https://mediaflowswift.com/vs/finder-and-spreadsheet/ — what a manual workflow gives up, and when it is good enough
+- MediaFlowSwift vs ShotPut Pro: https://mediaflowswift.com/vs/shotput-pro/ — ShotPut Pro is an offload and PDF-report tool for Mac and Windows; MediaFlowSwift adds sorting, review, speech search and archiving after the copy
+- MediaFlowSwift vs Pomfort Silverstack and Offload Manager: https://mediaflowswift.com/vs/silverstack/ — Pomfort's tools serve DITs on set; MediaFlowSwift serves people who shoot and edit their own footage
+- MediaFlowSwift vs Kyno: https://mediaflowswift.com/vs/kyno/ — Kyno browses, logs and converts footage where it sits; MediaFlowSwift runs each card as a project from proved copy to archive
+- Hedge and OffShoot alternatives for Mac: https://mediaflowswift.com/alternatives/hedge-offshoot/ — six apps that prove a card copy with checksums, who each is for, and prices checked on each app's own site
 
 ## Key pages
 - Overview and plans: https://mediaflowswift.com/
