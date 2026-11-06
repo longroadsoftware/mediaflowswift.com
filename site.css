@@ -110,10 +110,15 @@ nav.menu a[aria-current="page"], nav.menu a.active { color: var(--ink); backgrou
 }
 
 /* ───────── Hero ───────── */
-.hero { position: relative; padding-top: 5.5rem; padding-bottom: 2rem; }
-.hero-text { max-width: 60rem; position: relative; z-index: 1; }
-.hero h1 { margin-bottom: 0.35em; }
-.hero p.lead { font-size: 1.3rem; color: var(--ink-2); max-width: 42rem; }
+.hero { position: relative; padding-top: 2.4rem; padding-bottom: 1.5rem; }
+.hero-stage {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
+  gap: 1.5rem 2.4rem; align-items: center;
+}
+.hero-text { max-width: none; position: relative; z-index: 1; }
+.hero h1 { margin-bottom: 0.3em; font-size: clamp(2.15rem, 3.5vw, 3.45rem); }
+.hero p.lead { font-size: 1.12rem; color: var(--ink-2); max-width: 36rem; }
 .rec { white-space: nowrap; display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.3rem 0.7rem 0.3rem 0.55rem; border-radius: 999px; background: rgba(255, 77, 94, 0.1); box-shadow: inset 0 0 0 1px rgba(255, 77, 94, 0.35); color: #ffb3bb; font-variant-numeric: tabular-nums; letter-spacing: 0.08em; }
 .rec::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--rec); box-shadow: 0 0 10px var(--rec); }
 @media (prefers-reduced-motion: no-preference) { .rec::before { animation: rec-blink 1.2s steps(1, end) infinite; } }
@@ -140,7 +145,8 @@ nav.menu a[aria-current="page"], nav.menu a.active { color: var(--ink); backgrou
 .hero-facts li strong { color: var(--ink); font-weight: 600; }
 
 /* The app screenshot in a Mac window, tilted back until you scroll to it */
-.hero-shot { position: relative; z-index: 1; margin: 3.5rem 0 0; perspective: 1600px; }
+.hero-shot { position: relative; z-index: 1; margin: 0; perspective: 1600px; }
+.hero > .note { position: relative; z-index: 1; margin-top: 1.4rem; max-width: 46rem; }
 .window {
   border-radius: 14px; overflow: hidden; background: #0d1017;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 40px 120px -30px rgba(0, 0, 0, 0.9), 0 0 90px -20px rgba(63, 208, 212, 0.35);
@@ -160,7 +166,7 @@ nav.menu a[aria-current="page"], nav.menu a.active { color: var(--ink); backgrou
   position: relative; border-radius: 14px; overflow: hidden;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 40px 120px -30px rgba(0, 0, 0, 0.9), 0 0 90px -20px rgba(63, 208, 212, 0.28);
 }
-.hero-photo .photo-frame img { display: block; width: 100%; height: auto; max-height: 38rem; object-fit: cover; object-position: 32% 40%; }
+.hero-photo .photo-frame img { display: block; width: 100%; height: min(32rem, 58vh); object-fit: cover; object-position: 32% 40%; }
 .hero-photo .photo-frame::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background:
@@ -551,14 +557,16 @@ article.post, article.post p, article.post li { overflow-wrap: anywhere; }
   nav.menu::-webkit-scrollbar { display: none; }
   nav.menu a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 0.7rem; font-size: 0.95rem; }
   nav.menu a[aria-current="page"], nav.menu a.active { min-height: 34px; margin: 5px 0; }
-  .hero { padding-top: 2.5rem; }
-  .hero p.lead { font-size: 1.12rem; }
+  .hero { padding-top: 1.6rem; }
+  .hero-stage { grid-template-columns: 1fr; gap: 1.25rem; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.6rem); }
+  .hero p.lead { font-size: 1.05rem; }
   .send-to-mac { display: block; }
   .hero-actions { flex-direction: column; align-items: stretch; }
   .hero .cta { display: flex; }
   .cta.quiet { margin-left: 0; margin-top: 0.75rem; }
-  .hero-shot { margin-top: 2.25rem; }
-  .hero-photo .photo-frame img { height: 16rem; object-fit: cover; object-position: 30% 42%; }
+  .hero-shot { margin-top: 0; }
+  .hero-photo .photo-frame img { height: 13.5rem; object-fit: cover; object-position: 30% 42%; }
   .window img { height: 16rem; object-fit: cover; object-position: left top; }
   .window-bar span { display: none; }
   .grid { grid-template-columns: 1fr; }
