@@ -1,0 +1,7 @@
+name = "mediaflow-contact"
+main = "src/index.js"
+compatibility_date = "2026-11-06"
+
+[[kv_namespaces]]
+binding = "RATE"
+id = "6c12922795eb4a55b01c787a737ac29d"

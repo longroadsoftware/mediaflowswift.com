@@ -155,6 +155,18 @@ nav.menu a[aria-current="page"], nav.menu a.active { color: var(--ink); backgrou
 .window img { display: block; width: 100%; height: auto; }
 .hero-shot figcaption { font-size: 0.95rem; color: var(--ink-2); margin-top: 0.9rem; text-align: center; }
 .hero-shot figcaption, .hero-shot figcaption + * { max-width: none; }
+/* The home-page photo: the work the app is for, not a screenshot of one shoot */
+.hero-photo .photo-frame {
+  position: relative; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 40px 120px -30px rgba(0, 0, 0, 0.9), 0 0 90px -20px rgba(63, 208, 212, 0.28);
+}
+.hero-photo .photo-frame img { display: block; width: 100%; height: auto; max-height: 38rem; object-fit: cover; object-position: 32% 40%; }
+.hero-photo .photo-frame::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(9, 11, 16, 0.22), transparent 24%, transparent 70%, rgba(9, 11, 16, 0.5)),
+    linear-gradient(90deg, rgba(9, 11, 16, 0.18), transparent 16%, transparent 84%, rgba(9, 11, 16, 0.22));
+}
 
 /* ───────── The seven steps, as a timeline that lights up ───────── */
 .steps-band { padding: 4.5rem 0 1rem; }
@@ -470,6 +482,9 @@ td p:last-child { margin-bottom: 0; }
 .apply .agree label { font-weight: 400; }
 .apply input:focus-visible, .apply textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .apply .cta { border: 0; cursor: pointer; font: inherit; font-weight: 600; }
+.contact-form .choice { display: block; margin: 0.35rem 0; font-weight: 400; }
+.contact-form .choice input { margin-right: 0.45rem; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 
 /* Blog: listing pages (/blog/, categories, archives) and posts (_layouts/blog.html, _layouts/post.html) */
 .blog-list h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
@@ -543,6 +558,7 @@ article.post, article.post p, article.post li { overflow-wrap: anywhere; }
   .hero .cta { display: flex; }
   .cta.quiet { margin-left: 0; margin-top: 0.75rem; }
   .hero-shot { margin-top: 2.25rem; }
+  .hero-photo .photo-frame img { height: 16rem; object-fit: cover; object-position: 30% 42%; }
   .window img { height: 16rem; object-fit: cover; object-position: left top; }
   .window-bar span { display: none; }
   .grid { grid-template-columns: 1fr; }

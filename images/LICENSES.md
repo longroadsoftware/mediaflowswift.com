@@ -4,7 +4,7 @@ All three photographs are from Envato Elements, downloaded on 2026-09-22 under M
 
 | File | Item | Author | Envato ID |
 |---|---|---|---|
-| hero-card-import.jpg, hero-card-import-900.jpg | Photographer Dumps Memory Card into Computer for Editing | bublikhaus | 5E8KMZ3 |
+| hero-card-import.jpg, hero-card-import-900.jpg, hero-offload.jpg | Photographer Dumps Memory Card into Computer for Editing | bublikhaus | 5E8KMZ3 |
 | storage-devices.jpg | Laptop with Computer Storage Devices on Desk | kostinat | V2DVGGW |
 | memory-cards.jpg | Memory Cards For Digital Storage And Data | towfiqu_barbhuyia | NDRHH9E |
 
@@ -13,6 +13,8 @@ og-image.png is not a photograph: it is drawn by `tools/make_og_image.swift` fro
 mike-williams-400/800 (.jpg, .webp) is a photograph of Mike Williams, the founder, taken by him and supplied for this site (2026-10-19). Location and camera data were removed. Use it only for the founder on the About page and footer.
 
 demo-video-poster.jpg is a frame of `videos/mediaflowswift-demo.mp4`, the MediaFlowSwift feature demo made by Long Road Software (2026-10-18): a screen recording of the app on a demo project, with On Island Time B-roll that shows no people. Metadata removed.
+
+hero-offload.jpg and hero-offload.webp are a crop of hero-card-import.jpg (the laptop screen, which showed another app, is out of frame). Camera data was removed. Same Envato licence. Used on the home page.
 
 The .webp files beside app-lake-day-grid(-1272).jpg and storage-devices.jpg are the same pictures re-encoded as WebP (cwebp -q 80, metadata removed), under the same terms as their .jpg.
 
