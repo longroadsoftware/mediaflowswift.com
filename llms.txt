@@ -71,9 +71,13 @@ Honest, dated comparisons against other ways of getting footage off a card.
 - What's new in each version: https://mediaflowswift.com/changes/
 - Manual: https://mediaflowswift.com/manual/
 - Support: https://mediaflowswift.com/support.html
+- Contact: https://mediaflowswift.com/contact.html
 - Refund policy: https://mediaflowswift.com/refunds.html
 - About (who makes it and why): https://mediaflowswift.com/about/
 - Company: https://longroadsoftware.com/
 
 ## Contact
-support@mediaflowswift.com
+https://mediaflowswift.com/contact.html
+- Help, refunds and plan changes: support@mediaflowswift.com
+- Buying: hello@longroadsoftware.com
+- Bills, invoices, receipts, payments and tax: billing@longroadsoftware.com

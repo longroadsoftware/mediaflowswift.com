@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact MediaFlowSwift</title>
+<meta name="description" content="Write to MediaFlowSwift about the app, buying a plan, or a bill. The form sends your note to the right address.">
+<link rel="canonical" href="https://mediaflowswift.com/contact.html">
+<meta property="og:site_name" content="MediaFlowSwift">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact MediaFlowSwift">
+<meta property="og:description" content="Write to us about the app, buying a plan, or a bill. The form sends your note to the right address.">
+<meta property="og:url" content="https://mediaflowswift.com/contact.html">
+<meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","email":"support@mediaflowswift.com","sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]},{"@type":"WebSite","@id":"https://mediaflowswift.com/#website","name":"MediaFlowSwift","url":"https://mediaflowswift.com/","publisher":{"@id":"https://longroadsoftware.com/#organization"}},{"@type":"ContactPage","@id":"https://mediaflowswift.com/contact.html","url":"https://mediaflowswift.com/contact.html","name":"Contact MediaFlowSwift","description":"Write to MediaFlowSwift about the app, buying a plan, or a bill. The form sends your note to the right address.","isPartOf":{"@id":"https://mediaflowswift.com/#website"},"publisher":{"@id":"https://longroadsoftware.com/#organization"}}]}
+</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="site.css">
+<script src="/site.js" defer></script>
+<!-- Analytics, off until the visitor says yes. See /privacy.html -->
+<script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="5" width="24" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h4M6 14h4M6 18h4M18 10h4M18 14h4M18 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 11l5 3-5 3z" fill="currentColor"/></svg>MediaFlowSwift</a>
+    <nav class="menu" aria-label="Site">
+      <a href="/">Overview</a>
+      <a href="/download.html">Download</a>
+      <a href="/#how">How it works</a>
+      <a href="/#plans">Plans</a>
+      <a href="/manual/">Manual</a>
+      <a href="/guides/">Guides</a>
+      <a href="/blog/">Blog</a>
+      <a href="/contact.html" aria-current="page">Contact</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<article class="doc">
+  <h1>Contact</h1>
+  <p>Write to us about the app, about buying, or about a bill. The form sends your note to the right address. We reply to the email you give, usually within two working days. Sending this does not add you to a mailing list.</p>
+
+  <form class="apply contact-form" id="contact-form" action="https://mediaflow-contact.mediaflow-licence.workers.dev" method="post">
+    <fieldset>
+      <legend>What is this about?</legend>
+      <label class="choice"><input type="radio" name="topic" value="help" required> I need help with the app</label>
+      <label class="choice"><input type="radio" name="topic" value="sales"> I want to buy, or ask about a plan</label>
+      <label class="choice"><input type="radio" name="topic" value="billing"> A bill, invoice, receipt, payment or tax</label>
+      <label class="choice"><input type="radio" name="topic" value="plan"> A refund, or a change to a plan I already pay for</label>
+      <label class="choice"><input type="radio" name="topic" value="other"> Something else</label>
+    </fieldset>
+    <p class="fine" id="route-note">Help, a refund or a plan change goes to support. A question about buying goes to hello@. A bill, invoice, receipt, payment or tax question goes to billing@.</p>
+
+    <p><label for="name">Your name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required maxlength="80"></p>
+    <p><label for="email">Email we should reply to</label>
+      <input id="email" name="email" type="email" autocomplete="email" required maxlength="120"></p>
+
+    <fieldset>
+      <legend>Are you using MediaFlowSwift?</legend>
+      <label class="choice"><input type="radio" name="usage" value="not-yet"> Not yet</label>
+      <label class="choice"><input type="radio" name="usage" value="trial"> I&rsquo;m trying it</label>
+      <label class="choice"><input type="radio" name="usage" value="paid"> I have a key</label>
+    </fieldset>
+
+    <p><label for="message">What do you want to tell us?</label>
+      <textarea id="message" name="message" rows="6" required maxlength="4000"></textarea></p>
+    <p><label for="version">Mac and app version, if this is about a problem <span class="fine">(optional)</span></label>
+      <input id="version" name="version" type="text" maxlength="120" placeholder="macOS 15, MediaFlowSwift 1.11"></p>
+
+    <p class="hp" aria-hidden="true"><label for="company_url">Leave this blank</label>
+      <input id="company_url" name="company_url" type="text" tabindex="-1" autocomplete="off"></p>
+    <input type="hidden" name="started" value="">
+
+    <p><button class="cta" type="submit">Send</button></p>
+    <p class="fine" id="contact-status" role="status"></p>
+    <p class="fine">What this form sends, and where, is on the <a href="/privacy.html#contact-form">privacy page</a>.</p>
+  </form>
+
+  <noscript>
+    <p>The form needs JavaScript. You can still write to us:</p>
+    <ul>
+      <li>Help, a refund, or a plan change: <a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></li>
+      <li>Buying: <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a></li>
+      <li>A bill, invoice, receipt, payment or tax: <a href="mailto:billing@longroadsoftware.com">billing@longroadsoftware.com</a></li>
+    </ul>
+  </noscript>
+
+  <h2>Or write directly</h2>
+  <dl class="contact">
+    <dt>Help, a refund, or a plan change</dt>
+    <dd><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></dd>
+    <dt>Buying, or a plan you have not started</dt>
+    <dd><a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a></dd>
+    <dt>A bill, invoice, receipt, payment or tax</dt>
+    <dd><a href="mailto:billing@longroadsoftware.com">billing@longroadsoftware.com</a></dd>
+  </dl>
+  <p class="note">If the app will not open, the <a href="/support.html">support page</a> lists what to try first. Prices are on the <a href="/#plans">plans</a>.</p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/contact.html">Contact</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="/contact.html">Contact us</a></span>
+  </div>
+</footer>
+<script>
+(function () {
+  var form = document.getElementById("contact-form");
+  var status = document.getElementById("contact-status");
+  var note = document.getElementById("route-note");
+  var notes = {
+    help: "This goes to support@mediaflowswift.com.",
+    sales: "This goes to hello@longroadsoftware.com.",
+    billing: "This goes to billing@longroadsoftware.com.",
+    plan: "Refunds and plan changes go to support@mediaflowswift.com, with the rest of your subscription.",
+    other: "This goes to hello@longroadsoftware.com."
+  };
+  form.started.value = String(Date.now());
+  form.addEventListener("change", function (event) {
+    if (event.target.name === "topic" && notes[event.target.value]) note.textContent = notes[event.target.value];
+  });
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var button = form.querySelector("button");
+    var data = {
+      topic: (form.topic.value || ""),
+      name: form.name.value,
+      email: form.email.value,
+      usage: (form.usage.value || ""),
+      message: form.message.value,
+      version: form.version.value,
+      company_url: form.company_url.value,
+      started: Number(form.started.value)
+    };
+    button.disabled = true;
+    status.textContent = "Sending\u2026";
+    fetch(form.action, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data)
+    }).then(function (res) {
+      return res.json().then(function (body) { return { ok: res.ok, body: body }; });
+    }).then(function (result) {
+      if (result.ok && result.body && result.body.ok) {
+        form.hidden = true;
+        status.textContent = "Sent. We\u2019ll reply to the address you gave, usually within two working days.";
+        return;
+      }
+      status.textContent = (result.body && result.body.error) || "That did not send. Use one of the addresses below.";
+      button.disabled = false;
+    }).catch(function () {
+      status.textContent = "That did not send. Use one of the addresses below.";
+      button.disabled = false;
+    });
+  });
+})();
+</script>
+</body>
+</html>
