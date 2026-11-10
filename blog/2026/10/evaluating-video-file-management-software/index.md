@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/evaluating-video-file-management-software/
 published: "2026-10-21"
-updated: "2026-10-21"
+updated: "2026-10-26"
 og_image: "/images/blog/evaluating-video-file-management-software.png"
 title: "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac"
 seo_title: "Video File Management Software: How to Evaluate It"
@@ -16,7 +16,7 @@ takeaways:
   - "A free trial with a real card, a moved file and an ejected drive tells you more than any feature list."
   - "Offload tools such as OffShoot, ShotPut Pro and habitat flow stop at a verified, reported copy; Silverstack XT and MediaFlowSwift also catalog the footage afterward."
   - "Several of these tools have a free plan or a one-time licence, so weigh price model as well as features."
-  - "MediaFlowSwift runs only on Apple silicon Macs with macOS 14 or later, copies to one destination per import and writes no MHL file."
+  - "MediaFlowSwift runs only on Apple silicon Macs with macOS 13 or later, copies to one destination per import and writes no MHL file."
 faq:
   - q: "Is it safe to erase my memory card after importing on a Mac?"
     a: "Only after the copy has been checked. A Finder drag does not compare checksums, so a damaged copy can look fine. Use software that computes a checksum of each file on the card and on the copy and compares them. Keep the card unformatted until that check passes, and ideally until a second copy exists on another drive."
@@ -73,6 +73,8 @@ For a handful of clips you will edit today, Finder is fine. The risk grows with 
 
 Use a real card for both tests, not a folder of test files. Offload speed, card readers and camera folder layouts all matter.
 
+<figure class="guide-figure"><img src="/images/blog/evaluating-video-file-management-software.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Five hands-on trial tests: offload a full card and check the verified copy; see what the tool says about erasing the card; move a clip in Finder and see if relinking confirms it by content; eject and reconnect a drive; and search for a clip without using its file name." loading="lazy"><figcaption>Five pass/fail tests to run during a free trial.</figcaption></figure>
+
 ### Test 1: the verified copy
 
 Offload a full card to the drive you really use. A pass shows a result for each file, not just a green "done" banner. If a file fails, the tool should name it and stop or retry, not skip it quietly. Ask, too, whether the copy is read back from the drive rather than from the Mac's memory.
@@ -111,7 +113,7 @@ Tag a few clips, add a note to one, and mark a favorite take. Close the tool and
 
 Fail the trial if search only matches file names. Fail it, too, if notes you typed vanish, or if you must open another player to check a result.
 
-Know exactly what each tool searches. MediaFlowSwift's [toolbar search](/manual/managing-assets/#filtering-and-searching) covers file name, notes, tags, category, camera and scene. It does not search speech. Transcripts are searched from a clip's Transcript tab, across every clip in the project ([finding a clip by what was said](/guides/search-video-by-what-was-said/)). Searching across all projects needs the optional shared database. Clips can be rated 1–5 stars and marked Hero, Maybe or Reject, and the preview steps frame by frame.
+Know exactly what each tool searches. MediaFlowSwift's [toolbar search](/manual/managing-clips/#filtering-and-searching) covers file name, notes, tags, category, camera and scene. It does not search speech. Transcripts are searched from a clip's Transcript tab, across every clip in the project ([finding a clip by what was said](/guides/search-video-by-what-was-said/)). Searching across all projects needs the optional shared database. Clips can be rated 1–5 stars and marked Hero, Maybe or Reject, and the preview steps frame by frame.
 
 ## When is a DAM overkill compared to a dedicated video organizer?
 
@@ -137,7 +139,7 @@ Score each tool yourself during a trial. The table below comes from each vendor'
 | Silverstack XT (Pomfort) | Yes, with checksum manifests | Yes | Searchable clip library, tags, smart folders, proxies, relink | 10-day free trial | Mac (native on Apple silicon) |
 | habitat flow | Yes, xxHash64 with an ASC MHL report | Pro: mirror to two drives | Projects and shooting days at offload | Free plan, up to 150 GB a week | macOS, plus a free iPhone companion |
 | MediaTools Pro | Yes, SHA-256 | Not stated | Search across drives; DaVinci Resolve import in Pro | Lite is free | macOS 12+, Windows 10+ |
-| MediaFlowSwift | Yes, SHA-256 with full read-back | No; second copy via Archive | Category and camera folders, ratings, transcripts, proxies, numbered archive drives, reports | 14-day trial, no card; no free plan | Apple silicon Macs, macOS 14+ |
+| MediaFlowSwift | Yes, SHA-256 with full read-back | No; second copy via Archive | Category and camera folders, ratings, transcripts, proxies, numbered archive drives, reports | 14-day trial, no card; no free plan | Apple silicon Macs, macOS 13+ |
 
 A few details from the vendors' pages help with the price model. [OffShoot](https://hedge.co/products/offshoot) is $169 per activation, or $249 for OffShoot Pro, each perpetual with a year of updates. A 30-day Pro rental costs $49. [ShotPut Pro for Mac](https://www.imagineproducts.com/product/shotput-pro/mac) is $169 perpetual, or $60 for a 30-day rental. [ShotPut Studio](https://www.imagineproducts.com/product/shotput-studio/mac) is $299 perpetual, or $99 for 30 days.
 
@@ -151,7 +153,7 @@ MediaFlowSwift fits a creator who wants each card to become an organized, review
 
 ### Where does MediaFlowSwift fall short?
 
-- It runs only on Macs with Apple silicon and macOS 14 or later. Windows and Intel Mac versions are coming.
+- It runs only on Macs with Apple silicon and macOS 13 or later. Windows and Intel Mac versions are coming.
 - It copies to one destination per import, not to several drives in one job.
 - It copies to drives and network shares, not to S3 or other cloud storage.
 - It writes no ASC MHL file. If a client asks for [ASC MHL](https://theasc.com/mitc/asc-media-hash-list/), OffShoot Pro or habitat flow covers it.

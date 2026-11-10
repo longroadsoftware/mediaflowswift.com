@@ -6,7 +6,111 @@
   <atom:link href="https://mediaflowswift.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Articles on storing, organizing and archiving video footage: NAS and drive setups, backups, archive tiers, and choosing the right software for the job.</description>
   <language>en-us</language>
-  <lastBuildDate>Thu, 22 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Wed, 04 Nov 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>External Hard Drives for Video Storage: A Mac Buyer&#x27;s Guide</title>
+    <link>https://mediaflowswift.com/blog/2026/11/external-hard-drives-for-video-mac/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/11/external-hard-drives-for-video-mac/</guid>
+    <pubDate>Wed, 04 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Storage &amp; Backup</category>
+    <description>How to choose external hard drives for video storage on a Mac: SSD or hard drive, which port, how much capacity per camera, and what two drives cost.</description>
+  </item>
+  <item>
+    <title>SD Card as Backup for Video Footage: What to Buy, How to Spot Fakes, and How to Verify Copies</title>
+    <link>https://mediaflowswift.com/blog/2026/11/sd-card-as-backup/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/11/sd-card-as-backup/</guid>
+    <pubDate>Tue, 03 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Storage &amp; Backup</category>
+    <description>Using an SD card as backup for video footage: which speed class and capacity to buy, how to test for fake cards on a Mac, and how to verify every copy.</description>
+  </item>
+  <item>
+    <title>Old Archive Footage: Where to Find It and How to License It</title>
+    <link>https://mediaflowswift.com/blog/2026/11/old-archive-footage/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/11/old-archive-footage/</guid>
+    <pubDate>Mon, 02 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>Where to find old archive footage, free or licensed: Library of Congress, National Archives, Prelinger, CriticalPast, Historic Films, and how rights work.</description>
+  </item>
+  <item>
+    <title>Best Mac Video Library App: Photos, Final Cut, Catalogers and Footage Managers Compared</title>
+    <link>https://mediaflowswift.com/blog/2026/11/best-mac-video-library-app/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/11/best-mac-video-library-app/</guid>
+    <pubDate>Sun, 01 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Choosing Software</category>
+    <description>The best Mac video library app for footage you already have: Photos, Final Cut Pro, NeoFinder, offload tools, Silverstack XT and MediaFlowSwift compared.</description>
+  </item>
+  <item>
+    <title>How to Find All Video Files on Mac (and Verify Them)</title>
+    <link>https://mediaflowswift.com/blog/2026/10/find-all-video-files-on-mac/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/find-all-video-files-on-mac/</guid>
+    <pubDate>Sat, 31 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Footage Organization</category>
+    <description>Find all video files on a Mac with Finder, Spotlight and Terminal, catch camera formats Finder misses, and verify copies before you delete anything.</description>
+  </item>
+  <item>
+    <title>Dailies Workflow: Card Offload to Editor Hand-Off on Mac</title>
+    <link>https://mediaflowswift.com/blog/2026/10/dailies-workflow-mac/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/dailies-workflow-mac/</guid>
+    <pubDate>Fri, 30 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>A dailies workflow for Mac shooters: organize the day&#x27;s footage, review and pick selects, write a dailies report, and hand off files your editor can open.</description>
+  </item>
+  <item>
+    <title>Video Asset Management for Solo Mac Creators: What You Need, What to Skip</title>
+    <link>https://mediaflowswift.com/blog/2026/10/video-asset-management-solo-mac-creators/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/video-asset-management-solo-mac-creators/</guid>
+    <pubDate>Thu, 29 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Choosing Software</category>
+    <description>Video asset management for solo Mac creators: the three jobs that matter on one Mac, the team features to skip, and the signs it is time to grow.</description>
+  </item>
+  <item>
+    <title>Does rsync Verify Copied Files? What It Checks and What It Misses</title>
+    <link>https://mediaflowswift.com/blog/2026/10/rsync-verify-copied-files/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/rsync-verify-copied-files/</guid>
+    <pubDate>Wed, 28 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>Does rsync verify copied files? What its built-in check covers, what -c really does, the gaps, and a shasum recipe to prove a card copy on a Mac.</description>
+  </item>
+  <item>
+    <title>How to Clear a Memory Card Without Losing Footage</title>
+    <link>https://mediaflowswift.com/blog/2026/10/clear-memory-card-without-losing-footage/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/clear-memory-card-without-losing-footage/</guid>
+    <pubDate>Tue, 27 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>How to clear a memory card safely: delete vs quick vs full format, in-camera steps for Sony, GoPro and DJI, Mac and Windows erase, exFAT, and recovery.</description>
+  </item>
+  <item>
+    <title>Video Ingest Workflow: When to Erase the Card</title>
+    <link>https://mediaflowswift.com/blog/2026/10/video-ingest-workflow/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/video-ingest-workflow/</guid>
+    <pubDate>Mon, 26 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>A video ingest workflow from card to archive: offload, verify, second copy, log, numbered drives, and the exact point a card is safe to erase.</description>
+  </item>
+  <item>
+    <title>Can&#x27;t Find Video Files on SD Card? Why Footage Hides and Where to Look</title>
+    <link>https://mediaflowswift.com/blog/2026/10/cant-find-video-files-on-sd-card/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/cant-find-video-files-on-sd-card/</guid>
+    <pubDate>Sun, 25 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Workflow</category>
+    <description>Can&#x27;t find video files on an SD card? See where Sony, Canon, Nikon, GoPro and DJI cameras save clips, how to search a card, and what to do if it&#x27;s damaged.</description>
+  </item>
+  <item>
+    <title>How to Organize Video Footage: Pick a Model First</title>
+    <link>https://mediaflowswift.com/blog/2026/10/how-to-organize-video-footage/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/how-to-organize-video-footage/</guid>
+    <pubDate>Sat, 24 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Footage Organization</category>
+    <description>How to organize video footage: compare project, date and shot-type folder models, build a hybrid, copy a naming template and migrate old footage safely.</description>
+  </item>
+  <item>
+    <title>Digital Asset Management for Video Production: What It Means on a Mac</title>
+    <link>https://mediaflowswift.com/blog/2026/10/digital-asset-management-for-video-production/</link>
+    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/digital-asset-management-for-video-production/</guid>
+    <pubDate>Fri, 23 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Choosing Software</category>
+    <description>Digital asset management for video production explained: DAM vs MAM vs footage managers, what a video catalog tracks, and how it fits shoot to archive.</description>
+  </item>
   <item>
     <title>Checksum Verification: Prove Your Card Copy Before Erasing</title>
     <link>https://mediaflowswift.com/blog/2026/10/checksum-verification-before-erasing-card/</link>

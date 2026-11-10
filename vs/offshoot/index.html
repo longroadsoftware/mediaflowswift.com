@@ -14,13 +14,14 @@
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"MediaFlowSwift vs OffShoot","description":"MediaFlowSwift and OffShoot both verify copies with checksums. See what each does better, how each is priced, and which fits your workflow.","url":"https://mediaflowswift.com/vs/offshoot/","datePublished":"2026-10-19","dateModified":"2026-10-20","mainEntityOfPage":{"@type":"WebPage","@id":"https://mediaflowswift.com/vs/offshoot/"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/"},"publisher":{"@type":"Organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware"]}}
+{"@context":"https://schema.org","@type":"Article","headline":"MediaFlowSwift vs OffShoot","description":"MediaFlowSwift and OffShoot both verify copies with checksums. See what each does better, how each is priced, and which fits your workflow.","url":"https://mediaflowswift.com/vs/offshoot/","datePublished":"2026-10-19","dateModified":"2026-11-05","mainEntityOfPage":{"@type":"WebPage","@id":"https://mediaflowswift.com/vs/offshoot/"},"isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"author":{"@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","email":"support@mediaflowswift.com","logo":"https://longroadsoftware.com/images/logo.png","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@mediaflowswift.com","availableLanguage":"en"},"sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]},"publisher":{"@id":"https://longroadsoftware.com/#organization"}}
 </script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
 <link rel="stylesheet" href="/site.css">
+<script src="/site.js" defer></script>
 <!-- Analytics, off until the visitor says yes. See /privacy.html -->
 <script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
 </head>
@@ -28,6 +29,14 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="5" width="24" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h4M6 14h4M6 18h4M18 10h4M18 14h4M18 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 11l5 3-5 3z" fill="currentColor"/></svg>MediaFlowSwift</a>
+    <details class="menu-drop">
+      <summary>Products</summary>
+      <div class="menu-panel">
+        <a href="https://mediaflowswift.com/" aria-current="page"><strong>MediaFlowSwift</strong><span>Footage manager for Mac</span></a>
+        <a href="https://checkandroll.app/"><strong>Check &amp; Roll</strong><span>RV checklists for iPhone and iPad</span></a>
+        <a href="https://longroadsoftware.com/proof-copy/"><strong>Proof Copy</strong><span>Coming soon</span></a>
+      </div>
+    </details>
     <nav class="menu" aria-label="Site">
       <a href="/">Overview</a>
       <a href="/download.html">Download</a>
@@ -35,6 +44,7 @@
       <a href="/manual/">Manual</a>
       <a href="/guides/">Guides</a>
       <a href="/blog/">Blog</a>
+      <a href="/contact.html">Contact</a>
       <a href="/support.html">Support</a>
       <a href="/about/">About</a>
     </nav>
@@ -44,7 +54,7 @@
 <main class="wrap">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/">MediaFlowSwift</a> &rsaquo; <a href="/guides/">Guides</a> &rsaquo; MediaFlowSwift vs OffShoot</nav>
 <article class="doc">
-  <p class="updated">Updated 20 October 2026 &middot; Written by <strong>Long Road Software LLC</strong>. <a href="/about/#how-we-write-these-guides">How we write these guides</a>.</p>
+  <p class="updated">Published <time datetime="2026-10-19">19 October 2026</time> &middot; Updated <time datetime="2026-11-05">5 November 2026</time> &middot; Written by <strong>Long Road Software LLC</strong>. AI writes this guide and checks it against its sources, the app and the manual; Mike does not review each one. <a href="/about/#how-we-write-these-guides">How we write these guides</a>.</p>
   <h1>MediaFlowSwift vs OffShoot: Which One Fits Your Workflow?</h1>
   <p class="vs-answer">Both prove a copy is good with a checksum, not just a finished drag. OffShoot is built for fast transfers from many sources to many destinations at once. Its Pro edition adds S3 and scripting. MediaFlowSwift is built for what happens after the copy: reviewing, organizing, archiving and publishing the footage.</p>
 
@@ -72,7 +82,7 @@
 
   <h2>What are the limits on each side?</h2>
   <ul>
-    <li>MediaFlowSwift runs only on a Mac with Apple silicon and macOS 14 or later. OffShoot runs on macOS and Windows.</li>
+    <li>MediaFlowSwift needs an Apple silicon Mac running macOS 13 or later; OffShoot runs on both macOS and Windows.</li>
     <li>MediaFlowSwift copies to drives and network shares, not to S3 or other cloud storage.</li>
     <li>MediaFlowSwift writes no MHL file. If a client or studio asks for ASC MHL, OffShoot Pro covers it.</li>
     <li>MediaFlowSwift clears one card at a time. On a card laid out by the camera, such as a Sony card, it deletes nothing and tells you when the card is safe to format in the camera.</li>
@@ -112,15 +122,17 @@
     <li><a href="/manual/organizing-media/#how-mediaflow-verifies-copies">How MediaFlow verifies copies, MediaFlowSwift manual</a></li>
   </ul>
 
-  <p><a href="/guides/">All guides</a> &middot; <a href="/vs/habitat-flow/">MediaFlowSwift vs habitat flow</a> &middot; <a href="/vs/finder-and-spreadsheet/">MediaFlowSwift vs Finder and a spreadsheet</a></p>
+  <p>Looking at other apps too? See <a href="/alternatives/hedge-offshoot/">six Hedge and OffShoot alternatives for Mac</a>, with prices.</p>
+
+  <p><a href="/guides/">All guides</a> &middot; <a href="/vs/habitat-flow/">MediaFlowSwift vs habitat flow</a> &middot; <a href="/vs/finder-and-spreadsheet/">MediaFlowSwift vs Finder and a spreadsheet</a> &middot; <a href="/vs/shotput-pro/">MediaFlowSwift vs ShotPut Pro</a> &middot; <a href="/vs/silverstack/">MediaFlowSwift vs Silverstack</a> &middot; <a href="/vs/kyno/">MediaFlowSwift vs Kyno</a></p>
 </article>
 </main>
 
 <footer>
   <div class="wrap">
     <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
-    <nav aria-label="Legal"><a href="/about/">About</a><a href="/guides/#comparing-mediaflowswift-to-other-ways-of-doing-this">Compare</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
-    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a></span>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/guides/#comparing-mediaflowswift-to-other-ways-of-doing-this">Compare</a><a href="/contact.html">Contact</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="/contact.html">Contact us</a></span>
   </div>
 </footer>
 </body>

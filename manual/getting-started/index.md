@@ -15,7 +15,7 @@ MediaFlow keeps track of the footage from a shoot. You import clips from cards, 
 
 ### System Requirements
 
-Requires macOS 14 Sonoma or later on a Mac with Apple silicon (M1 or newer). MediaFlowSwift does not run on Intel-based Macs. About MediaFlowSwift, in the MediaFlowSwift menu, says the same.
+Requires macOS 13 Ventura or later on a Mac with Apple silicon (M1 or newer). MediaFlowSwift does not run on Intel-based Macs. About MediaFlowSwift, in the MediaFlowSwift menu, says the same.
 
 ### Key Capabilities
 
@@ -123,10 +123,11 @@ The main window is divided into five areas:
 ### Sidebar (Left)
 
 - Shows the project name, the organize destination with a Change… link, and the active filters as chips
-- Library section: All Media, Favorites, Proxy queue
+- Library section: All Media, Hero, Proxy queue
 - Smart Groups section: Not at destination (clips whose file is not at the destination yet), Missing, Uncategorized, Unrated, Unreviewed, Reject candidates
 - Cameras section: the project’s camera list. Click a camera to see only its clips
 - Places section: the places your clips were shot, grouped from their GPS data. It appears only when clips have GPS data
+- With no project open, the header says No project open and these sections are replaced by a note: open a project to filter its clips
 
 ### Media List (Center)
 
@@ -134,7 +135,7 @@ The main window is divided into five areas:
 - Use the toolbar picker to switch between views
 - In Table view, click the Filename, Date or Where header to sort
 - Cmd+Click adds clips to the selection; in Table view Shift+Click selects a range
-- When clips are selected, a bar at the bottom of the list offers Organize Media, Set Category, Toggle Favorite, Rate, Select, Remove from Project and Deselect All
+- When clips are selected, a bar at the bottom of the list offers Organize Media, Set Category, Toggle Hero, Rate, Select, Remove from Project and Deselect All
 
 ### Preview Panel
 
@@ -146,7 +147,7 @@ The main window is divided into five areas:
 - Six tabs: Workflow Tools, Edit, Full Metadata, Metadata, Scene Log and Transcript. When the panel is too narrow to show them all, scroll the row of tabs sideways. The tab you last used is remembered
 - Drag the divider between the preview and this panel to give either more room; the panel can be as narrow as the tabs’ contents allow and much wider than before
 - Workflow Tools — Extract a thumbnail, mark in and out points, create a subclip, and manage and process the Proxy queue
-- Edit — Change the category, favorite flag, tags and notes of the selected clips
+- Edit — Change the category, rating, select status, tags and notes of the selected clips
 - Full Metadata — Everything read from the file, in sections you can open and close: file details; video (resolution, frame rate, codec, bit rate); color and HDR; audio; camera and lens; and, when the clip has them, GPS, weather, drone, GoPro and iPhone data
 - Metadata — A short summary: filename, type, size, date created, duration, category, Camera and Where, and the clip’s thumbnail and proxy files
 - Scene Log — Scene, shot type, take, Camera angle and Circle Take for the selected clip
@@ -160,7 +161,7 @@ The main window is divided into five areas:
 - View → Reset to Default Layout restores the standard arrangement (enabled only after a swap)
 - Drag the dividers between panels to resize them
 
-See also: [What Is MediaFlow?](#what-is-mediaflow), [Understanding the Pipeline Strip](#understanding-the-pipeline-strip), [Table and Grid Views](/manual/managing-assets/#table-and-grid-views), [Filtering and Searching](/manual/managing-assets/#filtering-and-searching)
+See also: [What Is MediaFlow?](#what-is-mediaflow), [Understanding the Pipeline Strip](#understanding-the-pipeline-strip), [Table and Grid Views](/manual/managing-clips/#table-and-grid-views), [Filtering and Searching](/manual/managing-clips/#filtering-and-searching)
 
 ## Understanding the Pipeline Strip
 
@@ -172,8 +173,8 @@ The pipeline strip shows the seven steps of a shoot and how much work each one s
 
 - Import — clips in the project. Button: Import…, the same sheet as File → Import…
 - Categorize — clips with no category (a blank category counts). Button: Auto-suggest
-- Review — clips with no star rating. Button: Rapid Review…, the same as Workflow → Review (Cmd+Opt+R)
-- Organize — clips whose file is not at the destination folder. Button: Organize N clips. A clip that is at the destination with a size mismatch counts as organized here; the Where column still shows the mismatch
+- Review — clips with no star rating. Button: Review…, the same as Workflow → Review (Cmd+Opt+R)
+- Organize — clips whose file is not at the destination folder. Button: Organize N clips, or Organize N selected clips while clips are selected, since it then copies only those. A clip that is at the destination with a size mismatch counts as organized here; the Where column still shows the mismatch
 - Free up space — the space the working-directory copies of organized clips still take on this Mac. A copy Free Up Space has deleted no longer counts, one it has moved into this Mac’s Cleanup folder counts until it is deleted, and one Restore from Cleanup puts back counts again. Button: Free Up Space…, which checks each file and shows exactly what it will reclaim
 - Archive — Pending, or the volume the project was archived to (“USB #0007”) with the date. Button: Archive…
 - Eject — removable cards and drives still mounted. Button: Eject &lt;name>, or an Eject menu when more than one is connected
@@ -208,7 +209,7 @@ The same thing used to have several names and the same name used to mean several
 - Batch Queue is now Proxy queue — the queue for thumbnails and proxies
 - Remove Selected Assets is now Remove from Project
 - Kill is now Reject. It is still stored as “Kill”
-- Favorite and Circle Take fold into Hero. A favorite becomes a Hero when the project loads; a circle take becomes a Hero rated five stars. Both flags stay in the file so an older build still reads it
+- Favorite and Circle Take fold into Hero. When a project saved by an older version opens, a favorite becomes a Hero and a circle take becomes a Hero rated five stars. Both flags stay in the file so an older build still reads it
 
 ### Where the Workflow Menu Went
 
@@ -220,7 +221,7 @@ The same thing used to have several names and the same name used to mean several
 
 > **Tip:** Searching this help for an old name still works. Type Organize Media, Sync Folder Layout, Reconnect Destination, Refresh Storage Locations, Batch Queue, Rapid Review, Kill or Circle Take and you will land on the topic that replaced it.
 
-See also: [The Analyze Hub](#the-analyze-hub), [Organizing Media to Storage](/manual/organizing-media/#organizing-media-to-storage), [Star Ratings & Selects](/manual/managing-assets/#star-ratings--selects)
+See also: [The Analyze Hub](#the-analyze-hub), [Organizing Media to Storage](/manual/organizing-media/#organizing-media-to-storage), [Star Ratings & Selects](/manual/managing-clips/#star-ratings--selects)
 
 ## The Analyze Hub
 
@@ -245,7 +246,7 @@ Each row gives the tool, one line on what running it buys you, a prerequisite co
 - Exposure — exposure and color consistency (was Exposure & Color Check)
 - Transcode — what your target NLE will struggle with (was Transcode Recommendations)
 - Continuity — multi-camera coverage gaps per scene (was Continuity Checker)
-- Audio Sync — lines up multi-camera clips by audio (was Audio Waveform Sync)
+- Audio Sync — lines up clips from cameras and sound recorders by their sound (was Audio Waveform Sync)
 
 > **Tip:** The last-run date is per project and per pass, and is recorded when you press Run. It is a preference, not project data — it never touches the .vpm file or the database.
 
@@ -309,13 +310,21 @@ See also: [Setting Up MediaFlow](/manual/setup-network/#setting-up-mediaflow), [
 
 ## About MediaFlowSwift
 
-*The version you are running, who makes MediaFlowSwift, what it needs to run, links to the website, and the open-source acknowledgements.*
+*The version you are running and whether it is the newest, the details support asks for, who makes MediaFlowSwift, what it needs to run, links to the website, and the open-source acknowledgements.*
 
-Choose MediaFlowSwift → About MediaFlowSwift. The window shows the version and build you are running and © 2026 Long Road Software LLC, the maker and seller of MediaFlowSwift. Its links open the website, the support page, the terms of use and the privacy page in your web browser; nothing is opened until you click. Settings › General › About shows the same.
+Choose MediaFlowSwift → About MediaFlowSwift. The window shows the version you are running, whether it is the newest, the details support asks for, and © 2026 Long Road Software LLC, the maker and seller of MediaFlowSwift. Its links open the website, the support page, the terms of use and the privacy page in your web browser; nothing is opened until you click. Settings › General › About shows the links, the requirements and the acknowledgements.
+
+### Updates
+
+The card under the version says “You’re on the latest version” and when MediaFlowSwift last checked, or which newer version is available, with Update… to open the Software Update window. When the last check could not reach mediaflowswift.com, it says so, and when the last successful check was. Check Now looks again straight away, as Check for Updates… in the app menu does, and, like it, waits until you have agreed to the terms. Release Notes opens what is new in your version on the What’s New page of mediaflowswift.com in your web browser; when your Mac is offline, it shows the notes that came with your version instead, where the version has them.
+
+### Details
+
+The details card lists the version, the build, your plan, whether updates are checked automatically, the folder MediaFlowSwift is installed in, and your macOS version and kind of chip. Select any of them to copy it into an email to support. Change beside the plan shows the plans; Change beside Updates opens Settings › General, where automatic checks are turned on or off. Until you have agreed to the terms, the plan is not looked up and both Change links wait.
 
 ### System Requirements
 
-Requires macOS 14 Sonoma or later on a Mac with Apple silicon (M1 or newer). MediaFlowSwift does not run on Intel-based Macs. The app is built for Apple silicon only, so on an Intel-based Mac macOS will not open it. Check the Apple menu → About This Mac: a Mac with Apple silicon names its chip there, such as Apple M1 or Apple M3.
+Requires macOS 13 Ventura or later on a Mac with Apple silicon (M1 or newer). MediaFlowSwift does not run on Intel-based Macs. The app is built for Apple silicon only, so on an Intel-based Mac macOS will not open it. Check the Apple menu → About This Mac: a Mac with Apple silicon names its chip there, such as Apple M1 or Apple M3.
 
 ### Acknowledgements
 

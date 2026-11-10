@@ -189,18 +189,18 @@ Until it can search, All Projects says what it needs in place of the results, wi
 
 > **Tip:** A project’s clips can be found once it has been saved with the database connected. Projects made before you turned the database on need Database → Migrate Projects.
 
-See also: [Shared Database Overview](#shared-database-overview), [Database File or Database Server?](#database-file-or-database-server), [Migrating Projects to the Database](#migrating-projects-to-the-database), [One Mac at a Time on a Database File](#one-mac-at-a-time-on-a-database-file), [Filtering and Searching](/manual/managing-assets/#filtering-and-searching), [Searching All Projects Finds Nothing](/manual/troubleshooting/#searching-all-projects-finds-nothing), [Importing from a Card, Drive or Folder](/manual/importing-media/#importing-from-a-card-drive-or-folder)
+See also: [Shared Database Overview](#shared-database-overview), [Database File or Database Server?](#database-file-or-database-server), [Migrating Projects to the Database](#migrating-projects-to-the-database), [One Mac at a Time on a Database File](#one-mac-at-a-time-on-a-database-file), [Filtering and Searching](/manual/managing-clips/#filtering-and-searching), [Searching All Projects Finds Nothing](/manual/troubleshooting/#searching-all-projects-finds-nothing), [Importing from a Card, Drive or Folder](/manual/importing-media/#importing-from-a-card-drive-or-folder)
 
 ## Finding Duplicate Files
 
-*List files with identical content across projects and see how much space the extra copies use.*
+*List clips of the same file across projects and see how much space the extra copies use.*
 
 1. Choose Database → Find Duplicates
-2. MediaFlow looks through every project in the database for files with identical contents
+2. MediaFlow looks through every project in the database for clips of the same file: the same contents as Organize or Migrate Projects recorded them, or, without that, the same file name, size and capture date. Subclips and clips taken out of their project are not counted
 3. Results are grouped. Each group shows how many copies there are, the size of each, and the space you could reclaim
 4. Each group lists every copy with its location and project
 
-Click Refresh to scan again after you make changes. Find Duplicates needs a connected database. It only reports; it does not delete anything.
+Click Refresh to scan again after you make changes. Find Duplicates needs a connected database. It only reports; it does not delete anything. To merge two clips of one file in the open project, use Projects → Find Clips Added Twice….
 
 See also: [Shared Database Overview](#shared-database-overview), [Storage Dashboard](#storage-dashboard)
 
@@ -285,7 +285,7 @@ See also: [Shared Database Overview](#shared-database-overview), [One Mac at a T
 
 A database server lets several Macs use the shared database at the same time. The server keeps the records itself; nothing on this Mac is copied to or from it. The server must be PostgreSQL, free database software: one you already run will do, and Set Up a Server… starts one for you. If you already have one, fill in the fields. If you do not, Set Up a Server… walks you through making one in about ten minutes. The button is in Settings › Storage under either store, so you can prepare a server before switching to it. MediaFlow does not install anything on the server itself: the guide saves one file, docker-compose.yml, which the server’s container app runs. The guide shows the port the server will answer on, which is the one in the Port field, and offers to put it back to 5432 if it is something else; use that same port when you connect.
 
-> **Warning:** The connection to the server is not encrypted. Use it only on a home or studio network you trust, and never forward the server’s port to the internet.
+> **Warning:** While Encryption is Off, the connection to the server is not encrypted: anyone on the same network can read the records it carries. Settings › Storage says “Not encrypted” beside the connection status. Turn Encryption on, or use Off only on a home or studio network you trust, and never forward the server’s port to the internet.
 
 ### The fields
 
@@ -293,10 +293,11 @@ A database server lets several Macs use the shared database at the same time. Th
 - Port — 5432 unless you changed it
 - Database and User — the names the setup guide creates are filled in for you. Change them to match an existing server
 - Password — kept in your Keychain, never in preferences and never in the saved setup. What you type is saved when you press Return in the field, click Test Connection, click Set Up a Server… or close Settings, and only if it differs from what the field showed; typing and then deleting it changes nothing. Leaving it blank keeps the saved password: to remove it, click Remove Saved Password… beside the field, which asks first. If macOS would not let MediaFlow read the saved password, the field is blank, reads “Saved, but withheld by macOS” and says so under it, in Settings › Storage and in the setup wizard alike; the note goes once macOS lets MediaFlow read it. If macOS will not let MediaFlow save a password you typed, the form says so and the one saved before stays in use
+- Encryption — “Encrypted” encrypts the connection, so no one on the network can read it, but does not check the server’s certificate; a server made with Set Up a Server… works with this. “Encrypted and verified” also checks that the server is the one named in Host, with a certificate for that name this Mac trusts: the safest choice, for a server whose certificate comes from a certificate authority or from your own one installed on this Mac. “Off” is what earlier versions did. With either of the first two, a server that offers no encryption is refused, never used unencrypted. Choose the same on every Mac
 
 Changes take effect without restarting: when Test Connection succeeds, and when you close Settings, MediaFlow connects to the server the fields now describe. When a message says the name was found, the Host is right and the Port is what to check: it must be the number the server was started with, the one before the colon on the ports line of docker-compose.yml.
 
-The fields save as you type. On every other Mac, enter the same host, port and password; there is nothing to copy.
+The fields save as you type. On every other Mac, enter the same host, port, password and Encryption; there is nothing to copy.
 
 ### Every Mac on the same version
 
@@ -315,12 +316,15 @@ A successful test says Connected, with the server’s version number, such as 16
 - “…could not be found on the network” — the Host name is wrong. MediaFlow tries the name as typed and then with .local on the end, which is what most server names on a home network need; when that works, Test Connection corrects the Host field and says so. Otherwise use the server’s address
 - “MediaFlow could not read the saved password from your Keychain” — the password is saved, but macOS would not hand it to this copy without asking you. macOS asks once when the app’s signature changes, as it did at 1.10.19, when MediaFlowSwift took its Apple Developer ID; every update since carries the same signature, so macOS knows the app and does not ask again. macOS cannot ask while the app is still opening, so MediaFlow tries again by itself a moment after its window appears: enter your Mac password when macOS asks, and click Always Allow. If you dismissed the question, choose Database → Enable & Connect Database (Reconnect Database while it is connected) to be asked again
 - “Nothing is listening at…” — the server is not running, or the port is wrong
+- “…does not offer encryption” — Encryption is on, and the server was not started with encryption. For a server made with Set Up a Server…, click Save Updated Server File… and redeploy the server from that file. Or set Encryption to Off, on a network you trust
+- “…could not verify its certificate” — Encryption is Encrypted and verified, and the server’s certificate is not for the name in Host, or not from an authority this Mac trusts. A server made with Set Up a Server… has a certificate of its own: choose Encrypted for it
 - “macOS is keeping MediaFlowSwift off your local network…” — macOS has told MediaFlowSwift so. It often follows an update. Click Open Local Network Settings…, turn MediaFlowswift off and on again, and MediaFlowSwift connects by itself within a few seconds
 - “…did not answer… macOS may be keeping MediaFlow off your local network” — macOS asks your leave before an app may reach other devices on your network, and refuses silently until you give it. Open System Settings › Privacy & Security › Local Network and turn MediaFlowswift on; if it is already on, turn it off and on again
 - “…could not be found on the network” — the host name is wrong. Try the address instead
 - “…did not answer within 10 seconds” — a firewall is blocking the port, or the server does not allow connections from this Mac
 - “…is not reachable from this network” — this Mac is on a different network from the server
 - “…closed the connection” — the server is configured to refuse this Mac
+- “The server asked for the password in plain text…” or “… as an MD5 hash…” — MediaFlow did not send the password: a server that asks for it this way could be something else on the network pretending to be yours. If it is your own server, set it to sign in with SCRAM (scram-sha-256 in place of password or md5 in its pg_hba.conf) and set the user’s password again. A server made with Set Up a Server… already signs in this way
 - A message from the server itself, such as “password authentication failed” — the password, database or user is not what the server expects
 
 ### Set Up a Server…
@@ -464,7 +468,7 @@ With a database file, each Mac works on its own copy of the file and writes it b
 
 ### How the turns are kept
 
-A Mac that connects leaves a small file beside the database, mediaflow.session.lock. It names the person and the Mac and says since when. The Mac brings it up to date every minute while it is connected. When it disconnects, goes to sleep or quits, it writes its copy of the database back and then removes the file. If writing the copy back fails, the file is removed all the same, and the projects this Mac saved during its turn are noted and synced again the next time it connects.
+A Mac that connects leaves a small file beside the database, mediaflow.session.lock. It names the person and the Mac and says since when. The Mac brings it up to date every minute while it is connected. When it disconnects, goes to sleep or quits, it writes its copy of the database back and then removes the file. Before writing it back, every change still waiting beside the copy is merged into it; if that can’t be done, the copy is not written back. If writing the copy back fails or is refused, the file is removed all the same, and the projects this Mac saved during its turn are noted and synced again the next time it connects. Database → Reconnect Database does the same as disconnecting and connecting: it writes the copy back first.
 
 ### When another Mac has the database
 
@@ -479,9 +483,15 @@ While you work without it, MediaFlow does not ask again each time it reconnects 
 
 If a Mac crashes, or loses its connection to the file without disconnecting, its file stops being brought up to date. Once another Mac has seen it stand still for five minutes, counted on that Mac’s own clock so that two Macs set to slightly different times cannot mislead each other, it takes the database over and says whose it was: “Sam’s MacBook Pro (Sam Rivera) had the shared database but stopped checking in at 10:42, so this Mac has taken it over.” A file that stopped more than a quarter of an hour ago is taken over at once. The takeover is written to the log (Help → Show Log). Anything that Mac had not written back is not in the database; its project files still have it. When that Mac next connects, its own copy of the database, which may hold that work, is set aside rather than replaced, and it says so when the copy holds work the file lacks (see Database File or Database Server?). The same Mac, opened again after a crash, takes its own turn back at once.
 
-If a Mac finds that another took the database over while it was away, it stops using the database without writing its copy over the other Mac’s, and says so. Every project it saved during its turn, and the open one, syncs again when it next connects.
+If a Mac finds that another took the database over while it was away, it stops using the database without writing its copy over the other Mac’s, and says so. That includes finding its file gone, because the other Mac has already finished and removed its own; the message then names Another Mac. Every project it saved during its turn, and the open one, syncs again when it next connects.
 
-> **Tip:** If the file beside the database cannot be written, MediaFlow connects anyway, as before, and says so. Until it can, make sure no other Mac uses the database at the same time. Every Mac needs this version or later: an older one does not look for the file.
+Every time a Mac writes its copy back, it leaves its mark in the database file. A Mac never writes its copy over a file that another Mac has written back since it last took it, however recent its own changes look: the copy is kept, and the projects it saved are noted and synced again from your project files. When it next connects, it takes the newer file, and its own copy is set aside, as above. Every Mac needs this version or later for that check: an older one leaves no mark of its own.
+
+### When the file beside the database can’t be written
+
+If MediaFlow can’t leave its file beside the database, for example because the network share isn’t connected yet or doesn’t let this Mac write to it, this Mac doesn’t use the shared file: without that file, two Macs could overwrite each other’s work. Instead it opens its own copy of the database, the one from its last turn, only to look at. All Projects and search work from that copy, and the status line reads Database file offline (viewing this Mac’s copy). Nothing is written into that copy and it is never written back to the shared file. Your projects open and save to their project files as usual, and the changes you save are noted and go to the database the next time this Mac connects with its turn, as in Working Offline and Syncing Later. When the network share comes back, MediaFlow connects by itself. If this Mac has no copy yet, the status line reads Database file offline. MediaFlow says so in a message only when the share is connected and the file still can’t be written, so that you can check that this Mac may write to the share.
+
+> **Tip:** Every Mac needs this version or later: an older one does not look for the file.
 
 See also: [Database File or Database Server?](#database-file-or-database-server), [Working Offline and Syncing Later](#working-offline-and-syncing-later), [Shared Database Overview](#shared-database-overview), [Database Connection Issues](/manual/troubleshooting/#database-connection-issues)
 

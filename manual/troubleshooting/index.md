@@ -163,6 +163,7 @@ Open Settings › Storage and click Test Connection. It shows the server’s ver
 - “… did not answer within 10 seconds” — Something between this Mac and the server, often a firewall, is dropping the connection. Check that the server allows connections from this Mac
 - “… is not reachable from this network.” — This Mac has no route to the server. Check your network or VPN
 - “… closed the connection” — The server is set to refuse this Mac. Whoever runs the server needs to allow this Mac’s address in pg_hba.conf
+- “The server asked for the password in plain text…” or “… as an MD5 hash…” — MediaFlow did not send the password: a server that asks for it this way could be something else on the network pretending to be yours. If it is your own server, whoever runs it sets it to sign in with SCRAM (scram-sha-256 in pg_hba.conf) and sets the password again. A server made with Set Up a Server… already signs in this way
 - A message in the server’s own words, such as a failed password or a database or role that does not exist — Correct the Password, Database or User field
 
 If there is no server yet, Set Up a Server… walks you through making one.
@@ -190,7 +191,8 @@ A database file is for one Mac at a time. Each Mac works on its own local copy a
 - Connected, Synced — All is well
 - Connecting…, Reconnecting…, Waiting for the network share… — MediaFlow is trying; give it a moment
 - Sleeping, Disconnected — The connection was closed for sleep, or by Disable & Disconnect
-- Database file offline — The drive or share that holds the database file is not connected
+- Database file offline — The drive or share that holds the database file is not connected, or the file beside it that keeps other Macs out couldn’t be written (see One Mac at a Time on a Database File). Changes are noted and synced when this Mac connects
+- Database file offline (viewing this Mac’s copy) — The same, and All Projects and search show this Mac’s own copy of the database, only to look at. Projects still save to their files; their changes go to the database when this Mac connects. A project whose file can’t be found is not opened from that copy, since its changes would have nowhere to be saved; open it once the share is back
 - Connection failed: … — The reason follows the colon
 - In use on …, Waiting for … — Another Mac has the database file; see One Mac at a Time on a Database File
 - Working without the database — You chose to work without it while another Mac had it. Changes are noted and synced when this Mac connects

@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/nas-video-storage-how-to-choose/
 published: "2026-10-21"
-updated: "2026-10-21"
+updated: "2026-10-26"
 og_image: "/images/blog/nas-video-storage-how-to-choose.png"
 title: "NAS Video Storage: How to Choose and Structure One"
 seo_title: "NAS Video Storage: How to Choose, Size and Structure One"
@@ -57,6 +57,8 @@ A NAS is also one copy, not a backup, however many drives it holds. This guide c
 Ethernet speed caps what any NAS can deliver. Gigabit Ethernet moves roughly 110–118 MB/s in practice, 2.5GbE roughly 280–295 MB/s, and 10GbE roughly 1,000–1,200 MB/s. Camera bitrates are quoted in megabits, so divide by 8 to compare. A GoPro HERO13 Black tops out at 120 Mb/s, about 15 MB/s, according to [GoPro's tech specs](https://gopro.com/en/us/shop/cameras/buy/hero13black/CHDHX-131-master.html). Apple's [ProRes white paper](https://www.apple.com/final-cut-pro/docs/Apple_ProRes.pdf) lists ProRes 422 HQ at 220 Mb/s for 1080p and 884 Mb/s for 3840×2160, both at 29.97 fps.
 
 One stream of 4K ProRes 422 HQ needs about 110 MB/s. That single stream fills a gigabit link on its own, while 2.5GbE carries two with room to spare. Pressure builds as you add streams: a second Mac pulling selects, a multicam timeline, or a backup job running at the same time.
+
+<figure class="guide-figure"><img src="/images/blog/nas-video-storage-how-to-choose.svg" width="720" height="252" style="max-width:100%;height:auto" alt="Top row, network speed ceilings: Gigabit Ethernet at roughly 110 to 118 megabytes per second, 2.5 gigabit Ethernet at roughly 280 to 295, and 10 gigabit Ethernet at roughly 1,000 to 1,200. Bottom row, RAID choices by bay count: a two-bay NAS uses RAID 1, while a four-bay NAS can use RAID 5, RAID 6 or RAID 10." loading="lazy"><figcaption>Network speed and bay count set what a video NAS can deliver.</figcaption></figure>
 
 ### Drive count matters as much as the link
 
@@ -176,4 +178,4 @@ Cloud storage is the other offsite option. [Backblaze's pricing page](https://ww
 
 NAS snapshots undo accidental deletions and overwrites, which is worth having. A snapshot lives on the same disks as the original, so a dead enclosure or a stolen NAS takes both. Treat snapshots as undo, not backup. The test for a real backup is simple: could you lose the NAS entirely and still recover every clip?
 
-If you want verified imports, organizing to a NAS share, Clear Card and numbered archive drives in one Mac app, [download MediaFlowSwift](/download.html). It runs on Apple silicon Macs with macOS 14 or later, and the [plans](/#plans) start with a 14-day Studio Pro trial that needs no card.
+If you want verified imports, organizing to a NAS share, Clear Card and numbered archive drives in one Mac app, [download MediaFlowSwift](/download.html). It runs on Apple silicon Macs with macOS 13 or later, and the [plans](/#plans) start with a 14-day Studio Pro trial that needs no card.

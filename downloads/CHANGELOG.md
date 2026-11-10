@@ -2,6 +2,46 @@
 
 What's new in each version of MediaFlowSwift, newest first.
 
+## 1.11.4 · November 9, 2026
+
+**Pick your model from a list, and choose what Organize copies.**
+
+- **Pick your model from a list.** Settings › Analysis lists the models installed on this Mac, so you choose one instead of typing its name.
+- **Organize All or Organize Selected.** When some clips are selected, Organize asks whether to copy the whole project or only those clips.
+- **Bug fixes.** Create Project From Folder, Clear Card, split archives, the Storage Warning and Prepare for YouTube, plus small improvements throughout.
+
+## 1.11.3 · November 2, 2026
+
+**Fixes for the SEO Agent's local model and chapters on long videos.**
+
+- **Bug fixes.** The SEO Agent with the model on this Mac, chapters on long videos, and model downloads in Settings, plus small improvements.
+
+## 1.11.2 · November 2, 2026
+
+**Organize keeps each project in its own folder, and Export FCPXML saves every clip.**
+
+- **Each project in its own folder.** When you Organize into a share or a year folder, MediaFlow files the clips in a folder named after the project and shows you the whole path first.
+- **Export FCPXML saves every clip.** Export FCPXML… writes all of a project’s clips, with Scene Log markers where you have them, and tells you where the file went.
+- **Bug fixes.** Photo imports from folders and notices at the top of the window, plus small improvements.
+
+## 1.11.1 · October 29, 2026
+
+**Fixes for transcription, imports and the Hero list.**
+
+- **Bug fixes.** Transcribe and Prepare for YouTube, the camera choice in the Import sheet, the Hero list after the database reconnects, and banners at the top of the window, plus small improvements.
+
+## 1.11 · October 26, 2026
+
+**Encrypted database connections, macOS 13 Ventura, and a clearer About window.**
+
+- **Encrypted database connections.** Settings › Storage now has an Encryption choice for your database server, and shows "Not encrypted" while it is off. A server made with Set Up a Server… starts encrypted, and your database password goes only to a server that signs in safely or whose certificate was checked.
+- **Runs on macOS 13 Ventura.** Macs with Apple silicon that are still on macOS 13 can now run MediaFlow.
+- **You choose when it checks for updates.** MediaFlow asks once before it looks for new versions. The switch is in Settings › Privacy, beside the other online features. Updates come only from mediaflowswift.com.
+- **About shows whether you're up to date.** About MediaFlowSwift says if a newer version is out, with Update… and Release Notes, plus a card of details ready to copy into an email to support.
+- **Grid works with the keyboard and VoiceOver.** With Keyboard Navigation on in System Settings, Tab into the Grid, move with the arrow keys, and select a range with Shift. VoiceOver reads each card and says which are selected.
+- **Space plays the preview.** After you click a clip in the project window, Space plays and pauses its preview.
+- **Bug fixes.** Fixes for sharing projects between Macs, editor exports and timecode, Free Up Space, updates and Revert, duplicate clips and privacy, plus small improvements throughout.
+
 ## 1.10.49 · October 18, 2026
 
 **Camera timecode in your edits, checked iPhone imports, and safer updates and archives.**

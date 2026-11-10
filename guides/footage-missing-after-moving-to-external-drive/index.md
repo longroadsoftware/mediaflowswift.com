@@ -3,7 +3,7 @@ layout: guide
 title: "Footage Missing After Moving to an External Drive?"
 description: "MediaFlowSwift showing clips missing after moving your library to a new drive? Run Library Moved to repoint every project. Nothing is copied or deleted."
 published: "2026-10-13"
-updated: 2026-10-20
+updated: "2026-11-03"
 permalink: /guides/footage-missing-after-moving-to-external-drive/
 ---
 # Footage Missing After Moving to an External Drive?
@@ -81,6 +81,6 @@ Library Moved is for a library you moved in one go. If just a handful of clips a
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Fix your own missing footage
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
+Library Moved ships in MediaFlowSwift, the app this guide is about. [Download it](/download.html); the full app runs 14 days with no card asked for, provided your Mac has Apple silicon and macOS 13 or later.

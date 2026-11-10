@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/checksum-verification-before-erasing-card/
 published: "2026-10-22"
-updated: "2026-10-22"
+updated: "2026-10-26"
 og_image: "/images/blog/checksum-verification-before-erasing-card.png"
 title: "Checksum Verification: Prove Your Card Copy Before Erasing"
 seo_title: "Checksum Verification: Prove a Card Copy Before Erasing"
@@ -163,9 +163,9 @@ Judge every option by three questions. Does it read the copy back and compare ch
 - **[habitat flow](https://habitat-flow.com/)** uses xxHash64 and saves an ASC MHL report. It has a free plan up to 150 GB a week; Pro copies to two drives at once.
 - **[MediaTools](https://mediatoolspro.com/)** ingests with SHA-256 verification on macOS and Windows. The Lite version is free.
 
-MediaFlowSwift fits after the copy as well as during it. Verified clips land in a library you can [search](/manual/managing-assets/#filtering-and-searching) by name, notes, tags, camera or scene. You can also [search transcripts](/manual/organizing-media/#speech-transcription) for what was said, play clips back, rate them, and see which numbered archive drive holds a project.
+MediaFlowSwift fits after the copy as well as during it. Verified clips land in a library you can [search](/manual/managing-clips/#filtering-and-searching) by name, notes, tags, camera or scene. You can also [search transcripts](/manual/organizing-media/#speech-transcription) for what was said, play clips back, rate them, and see which numbered archive drive holds a project.
 
-MediaFlowSwift's limits are just as real. It doesn't write a card to two drives at once; the second copy comes later, from Archive to USB. It writes no MHL file, and it copies to drives and network shares, not to S3 or other cloud storage. It runs on Apple silicon Macs with macOS 14 or later today, with Windows and Intel Mac versions coming. Compare it in detail on [MediaFlowSwift vs OffShoot](/vs/offshoot/) and [MediaFlowSwift vs habitat flow](/vs/habitat-flow/).
+MediaFlowSwift's limits are just as real. It doesn't write a card to two drives at once; the second copy comes later, from Archive to USB. It writes no MHL file, and it copies to drives and network shares, not to S3 or other cloud storage. It runs on Apple silicon Macs with macOS 13 or later today, with Windows and Intel Mac versions coming. Compare it in detail on [MediaFlowSwift vs OffShoot](/vs/offshoot/) and [MediaFlowSwift vs habitat flow](/vs/habitat-flow/).
 
 For a broader checklist, see [Evaluating Video File Management Software](/blog/2026/10/evaluating-video-file-management-software/).
 
@@ -178,6 +178,8 @@ A short routine works whatever tool you use.
 3. **Clear the card only when the checks pass.** Every file you need should show a matching checksum. Check outside the clip folders for anything your tool skipped.
 4. **Audit older drives now and then.** Re-run `shasum -c` on a few folders, or an `rsync -rcni` dry run between copies. That catches slow damage before both copies go bad.
 
+<figure class="guide-figure"><img src="/images/blog/checksum-verification-before-erasing-card.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Four steps: offload each card with a tool that reads the copy back and compares checksums; make a second checked copy on a separate archive drive or NAS; clear the card only once every checksum matches; and audit older drives now and then with a re-run checksum or an rsync dry run." loading="lazy"><figcaption>Repeat this routine every shoot.</figcaption></figure>
+
 Folder layout makes the routine easier; see [External Hard Drive Organization for Video](/blog/2026/10/external-hard-drive-organization-for-video/). For where the second copy should live, compare [NAS video storage](/blog/2026/10/nas-video-storage-how-to-choose/) with [LTO, NAS and cloud archives](/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/).
 
-Want the check, the organizing and safe card clearing in one Mac app? [Download MediaFlowSwift](/download.html) and try it on a real card. Plans are on the [home page](/#plans).
+MediaFlowSwift bundles that check with the organizing and card-clearing steps that follow it. [Download it](/download.html) for a 14-day trial, and see what each plan includes on the [home page](/#plans).

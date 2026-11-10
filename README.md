@@ -5,7 +5,8 @@ The public website for MediaFlowSwift, served by GitHub Pages from the `main` br
 - `index.html` — overview, how it works, plans
 - `support.html`, `privacy.html`, `terms.html`
 - `about/index.html` — About (`/about/`): who makes MediaFlowSwift and why, and what it promises about files. Uses absolute links to `/site.css` and site pages because it lives in a folder. No photo yet; add one as its own change
-- `site.css` — the one stylesheet (light and dark)
+- `site.css` — the one stylesheet (dark only). The header is `position: sticky`, so the menu stays on screen on every page, and `scroll-padding-top` keeps `/#plans`-style jumps clear of it
+- `site.js` — loaded (defer) on every page and layout: header shadow and progress line, the home page's lit menu link for the section on screen, scroll-in reveals, the hero's REC timecode. Optional: with it off, every page still reads and works
 - `paddle-config.js` — the plans, price ids and client-side tokens for sandbox and live; edit prices here and nowhere else
 - `pricing.js` — the Plans section: local prices from Paddle, monthly/yearly toggle, Buy buttons opening Paddle's overlay checkout
 - `thanks.html` — where Paddle sends a buyer; shows the licence key from the licence service

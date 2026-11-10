@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 252" width="720" height="252" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<title id="t">The seven steps of a video ingest workflow, offload to format</title>
+<desc id="d">Seven steps in fixed order: offload the whole card into a dated shoot folder; verify the copy with a checksum read back from the drive; make a second copy on another drive; log the card and its drives; archive to a numbered drive; pass the erase gate once every file has a verified copy; then format the empty card in the camera.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#555"/></marker></defs>
+<rect x="1" y="1" width="718" height="250" rx="12" fill="#ffffff" stroke="#d6d6d6"/>
+<text x="360.0" y="26" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">The seven steps of a video ingest workflow, offload to format</text>
+<text x="14" y="56" font-size="14" font-weight="normal" fill="#333" text-anchor="start">Offload to archive:</text>
+<rect x="14.0" y="66" width="164.0" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="96.0" y="97.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">1. Offload</text>
+<line x1="178.0" y1="92.0" x2="188.0" y2="92.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="190.0" y="66" width="164.0" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="272.0" y="97.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">2. Verify</text>
+<line x1="354.0" y1="92.0" x2="364.0" y2="92.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="366.0" y="66" width="164.0" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="448.0" y="88.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">3. Second</text>
+<text x="448.0" y="107.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">copy</text>
+<line x1="530.0" y1="92.0" x2="540.0" y2="92.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="542.0" y="66" width="164.0" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="624.0" y="97.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">4. Log</text>
+<text x="14" y="180" font-size="14" font-weight="normal" fill="#333" text-anchor="start"></text>
+<rect x="14.0" y="190" width="222.7" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="125.3" y="221.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">5. Archive</text>
+<line x1="236.7" y1="216.0" x2="246.7" y2="216.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="248.7" y="190" width="222.7" height="52" rx="8" fill="#f4f4f4" stroke="#555" stroke-width="1.2"/>
+<text x="360.0" y="212.0" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">6. Erase</text>
+<text x="360.0" y="231.0" font-size="14" font-weight="normal" fill="#222" text-anchor="middle">gate</text>
+<line x1="471.3" y1="216.0" x2="481.3" y2="216.0" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+<rect x="483.3" y="190" width="222.7" height="52" rx="8" fill="#eaf1fe" stroke="#2a6df4" stroke-width="2"/>
+<text x="594.7" y="212.0" font-size="15" font-weight="bold" fill="#2a6df4" text-anchor="middle">7. Format in</text>
+<text x="594.7" y="231.0" font-size="14" font-weight="normal" fill="#2a6df4" text-anchor="middle">camera</text>
+</svg>

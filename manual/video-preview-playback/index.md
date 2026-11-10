@@ -20,7 +20,7 @@ Select a video clip to load it in the preview panel. The controls appear below t
 - Time display — Current position and total length in minutes and seconds, for example 1:05 / 12:30
 - Pop-out button — Open the video in its own window
 
-Press Space to play or pause after clicking the preview, so that it has keyboard focus, as for I and O. Elsewhere in the window, such as the clip list or a text field, Space keeps its usual job. At the end of a clip, Play and Space start it again from the start.
+Press Space to play or pause the video in the preview, whatever you clicked last: a clip in the list or the Grid, a tab, the preview itself. While you are typing in a text field, such as notes or the search field, Space types a space. With a photo showing, or no clip, Space does what it always did. At the end of a clip, Play and Space start it again from the start.
 
 > **Tip:** Use frame stepping for precise positioning when extracting thumbnails or creating subclips.
 
@@ -70,11 +70,11 @@ A subclip added to the project takes the category, camera, scene, shot, take, ca
 
 A subclip keeps the clip’s own format: a .mov stays a .mov and an .mp4 stays an .mp4. The picture and sound are copied as they are, so there is no loss of quality and it is quick. For a clip where that is not possible, the part is encoded afresh at high quality instead, and the notice says so. The name says where the part lies in the clip, for example GX010042_subclip_0m12s-0m41s.MP4, so several subclips of one clip never collide. In the working folder, a subclip whose name is already taken, by a file or by a clip of the project that still records it, gets _1 added to its name.
 
-The export shows in the progress panel at the bottom-right of the window and in the Workflow Tools tab, each with a Cancel button, and carries on if you switch tabs or select another clip. Cancel stops it and keeps nothing of it, not even over a file you chose to replace. One subclip is made at a time. If MediaFlowSwift quits while it is making one, the unfinished file is hidden, and is removed the next time a subclip is saved under that name.
+The export shows in the progress panel at the bottom-right of the window and in the Workflow Tools tab, each with a Cancel button, and carries on if you switch tabs or select another clip. Cancel stops it and keeps nothing of it, not even over a file you chose to replace. One subclip is made at a time. If MediaFlowSwift quits while it is making one, the unfinished file is hidden, and is removed the next time a subclip is saved under that name. Quit, and closing the window or the project, ask first while one is being made; see Quitting While Something Is Running in Saving Projects.
 
 ### Subclips in the Project
 
-In the Table, a clip with subclips has an arrow at the left of its row and a label such as “2 subclips”. Click the arrow to see them beneath it, in order of their in-points, each labeled with its range, such as 0:12–0:41. In the Grid, each subclip is a card of its own with a Subclip badge; hold the pointer over the badge to see the clip it came from. With a subclip selected, the metadata panel shows “Subclip of” and the clip’s name with the range, and a Show Parent button that selects that clip, clearing the search and the filter first when they hide it. See Table and Grid Views.
+In the Table, a clip with subclips has an arrow at the left of its row and a label such as “2 subclips”. Click the arrow to see them beneath it (on macOS 13 there is no arrow, and they are always shown beneath it), in order of their in-points, each labeled with its range, such as 0:12–0:41. In the Grid, each subclip is a card of its own with a Subclip badge; hold the pointer over the badge to see the clip it came from. With a subclip selected, the metadata panel shows “Subclip of” and the clip’s name with the range, and a Show Parent button that selects that clip, clearing the search and the filter first when they hide it. See Table and Grid Views.
 
 If you remove the clip a subclip was cut from, the subclip stays in the project as an ordinary clip on its own row, and the metadata panel says its parent is not in this project. Move to Project, Duplicate, Relink and Archive keep the link when the clip goes too. A project saved by an older version of MediaFlowSwift drops the links, and its subclips become ordinary clips.
 
@@ -82,13 +82,13 @@ If you remove the clip a subclip was cut from, the subclip stays in the project 
 
 In the Workflow Tools tab, click Mark In (I) or Mark Out (O) to set a mark at the current playback position. You can also press I or O after clicking the preview panel, so that it has keyboard focus. The marked range is highlighted on the seek slider, the In, Out and Duration times are listed in the tab, and the Create Subclip button shows the duration. Click Clear in the Workflow Tools tab to remove both marks.
 
-See also: [Video Playback Controls](#video-playback-controls), [Table and Grid Views](/manual/managing-assets/#table-and-grid-views), [Processing the Proxy Queue](/manual/batch-operations/#processing-the-proxy-queue)
+See also: [Video Playback Controls](#video-playback-controls), [Table and Grid Views](/manual/managing-clips/#table-and-grid-views), [Processing the Proxy Queue](/manual/batch-operations/#processing-the-proxy-queue)
 
 ## Reviewing Clips with the Keyboard
 
 *A keyboard-driven review sheet for playing, rating, rejecting and accepting proposals on clips, one after another.*
 
-Rapid Review is a focused review sheet for evaluating clips quickly. Use the keyboard to play, rate, favorite, reject and move through your footage without touching the mouse. Open it from Workflow → Review (Cmd+Opt+R) or from the Rapid Review… button on the pipeline strip’s Review segment. Press ? at any time for an on-screen list of these keys.
+Review is a focused sheet for evaluating clips quickly. Use the keyboard to play, rate, mark Hero, reject and move through your footage without touching the mouse. Open it from Workflow → Review (Cmd+Opt+R) or from the Review… button on the pipeline strip’s Review segment. Press ? at any time for an on-screen list of these keys.
 
 ### Playback Controls
 
@@ -103,7 +103,7 @@ Rapid Review is a focused review sheet for evaluating clips quickly. Use the key
 
 - 1–5 — Set star rating (1 through 5 stars)
 - 0 — Clear rating
-- F — Toggle favorite
+- F — Toggle Hero. Taking Hero off also takes off the favorite and the circle take
 - X — Toggle Reject
 - C — Toggle circle take
 
@@ -130,7 +130,7 @@ Both keys do what the menu commands do: you can undo them, MediaFlow re-files an
 
 ### Auto-Advance
 
-With auto-advance on, rating a clip with 1–5, making it a favorite with F, rejecting it with X, or pressing A or R moves to the next clip after a short delay. Taking a favorite or a Reject off, clearing the rating with 0, or pressing C stays on the clip. The last rating or mark you give a clip decides, so pressing X twice quickly stays put instead of skipping a clip, and Up or Down Arrow during the delay goes only where you asked. Auto-advance starts on; press T to turn it off or on, and MediaFlow remembers your choice. The Auto indicator in the bottom bar is green while it is on.
+With auto-advance on, rating a clip with 1–5, marking it Hero with F, rejecting it with X, or pressing A or R moves to the next clip after a short delay. Taking Hero or a Reject off, clearing the rating with 0, or pressing C stays on the clip. The last rating or mark you give a clip decides, so pressing X twice quickly stays put instead of skipping a clip, and Up or Down Arrow during the delay goes only where you asked. Auto-advance starts on; press T to turn it off or on, and MediaFlow remembers your choice. The Auto indicator in the bottom bar is green while it is on.
 
 ### Review Queue
 
@@ -140,7 +140,7 @@ The queue stays as it was until you close Review. A clip you rate while only unr
 
 > **Tip:** For the fastest selects workflow: click the Review segment of the pipeline strip to show only unrated clips, open Review, and use 1–5 to rate each clip.
 
-See also: [Video Playback Controls](#video-playback-controls), [Extracting Thumbnails and Subclips](#extracting-thumbnails-and-subclips), [Star Ratings & Selects](/manual/managing-assets/#star-ratings--selects), [Keyboard Shortcuts Reference](/manual/keyboard-shortcuts/#keyboard-shortcuts-reference)
+See also: [Video Playback Controls](#video-playback-controls), [Extracting Thumbnails and Subclips](#extracting-thumbnails-and-subclips), [Star Ratings & Selects](/manual/managing-clips/#star-ratings--selects), [Keyboard Shortcuts Reference](/manual/keyboard-shortcuts/#keyboard-shortcuts-reference)
 
 <div class="chapter-nav" role="navigation" aria-label="Chapters">
 <a rel="prev" href="/manual/organizing-media/">&larr; Organizing Media</a>

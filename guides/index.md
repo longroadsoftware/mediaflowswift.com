@@ -1,8 +1,9 @@
 ---
 layout: guide
 title: "MediaFlowSwift Guides"
+published: "2026-10-13"
 description: "How-to answers for footage on a Mac: check a card copy before you erase it, keep two copies, find moved clips, label archive drives, publish to YouTube."
-updated: 2026-10-20
+updated: "2026-11-05"
 permalink: /guides/
 ---
 # Guides
@@ -79,9 +80,21 @@ The comparisons with other apps quote each app's own pages, with the date prices
 - **[MediaFlowSwift vs Just Using Finder and a Spreadsheet](/vs/finder-and-spreadsheet/)**
   What you give up going manual, how to check a copy by hand, and when the free way is good enough.
 
+- **[MediaFlowSwift vs ShotPut Pro](/vs/shotput-pro/)**
+  Both prove a card copy. ShotPut Pro stops at the offload and report; what MediaFlowSwift adds, and what each costs.
+
+- **[MediaFlowSwift vs Silverstack and Offload Manager](/vs/silverstack/)**
+  Pomfort's tools for DITs on set, next to MediaFlowSwift for people who shoot and edit their own footage.
+
+- **[MediaFlowSwift vs Kyno](/vs/kyno/)**
+  Both back up, check and tag footage. Where Kyno's browsing and converting fit, and where MediaFlowSwift's project flow does.
+
+- **[Hedge and OffShoot alternatives for Mac](/alternatives/hedge-offshoot/)**
+  Six apps that prove a card copy with checksums, who each is for, and prices checked on each app's own site.
+
 ## What the guides assume
 
-- **Your Mac:** MediaFlowSwift runs on macOS 14 or later, on a Mac with Apple silicon.
+- **Your Mac:** MediaFlowSwift runs on macOS 13 or later, on a Mac with Apple silicon.
 - **Your plan:** most guides work on either plan. YouTube publishing and the database server several Macs share need Studio Pro.
 - **Your storage:** cards, external drives and shared drives you already own.
 - **Your privacy:** features that send anything off your Mac, such as maps or place names, are off until you turn them on. Settings › Privacy lists each one.
@@ -96,4 +109,4 @@ If a guide gets something wrong, tell us at [support@mediaflowswift.com](mailto:
 
 Looking for how a particular window works? That's the [manual](/manual/). Broader articles on NAS setups, archive storage and choosing software are on the [blog](/blog/). Stuck on something not covered here? [Support](/support.html).
 
-Want to try it? [Download MediaFlowSwift](/download.html) — the full app runs for 14 days with no card asked for, on macOS 14 or later with Apple silicon.
+Want to try it first? [Download MediaFlowSwift](/download.html): the full app is free for 14 days, no card required, provided your Mac has Apple silicon and runs macOS 13 or later.

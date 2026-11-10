@@ -36,7 +36,9 @@ A project organizes into one destination, on every Mac that shares it, and it be
 
 Free Up Space, Restore from Cleanup and Re-file folders by category say the same. The re-filing that follows a category change is left out on a Mac that can’t reach the destination, because the organized files are where this Mac can’t move them; a notice says so once for each project each time MediaFlow is opened, and names the menu item to use on the Mac that has them.
 
-Clips organized while the share was mounted under another name, such as “Media-1”, keep that name in where their files are. Once the share is back under its own name they read Missing until you point them at their files with Workflow → Repair → Relink Missing Media….
+To move the folder of a project other Macs share, move or copy it in the Finder to a folder every Mac reaches, such as one on a network share. Then, on one Mac, choose Workflow → Repair → Change destination folder…, choose the folder at its new place, and answer Point at New Destination. The other Macs that share the project get the new destination and the clips’ new places with the project’s other changes: there is nothing to repair on them. If you choose the same folder on another Mac as well, nothing changes and MediaFlow says it is already the destination, even when that Mac has the share mounted under another name. Choosing a different folder there asks first, names the Mac that set the destination, and makes the folder you choose the destination for every Mac.
+
+A clip on a network share is found under the name the share has on each Mac, as the destination is: one organized while the share was mounted as “Media-1” is found under “Media” on a Mac that has the share under its own name, and the other way round. The project keeps each path as it was written, so a Mac that reads it under another name changes nothing for the others. A Mac that has both connected, an old “Media” beside “Media-1”, looks under the name each clip was written with; if clips read Not on this Mac there, eject both in the Finder and connect the share again.
 
 If the clips came from a memory card, the Clear Card review opens when you click Done. Nothing is deleted unless you confirm it there.
 
@@ -117,11 +119,13 @@ Changing the destination never copies, moves or deletes a file. On its own it ch
 
 The destination is the project’s, for every Mac that shares it, and belongs to the Mac that set it. When another Mac set it, MediaFlow asks first whether to replace it and names that Mac; the folder you choose then becomes the destination on every Mac, that one included, and belongs to this Mac. When this Mac can’t reach the destination, Organize Media offers the same change as Change Project Destination…; see When This Mac Can’t Reach the Destination in Organizing Media to Storage.
 
+Choosing the folder that is already the destination changes nothing, and MediaFlow says so, also when this Mac has its share mounted under another name, such as “Media-1” for “Media”. No clip is pointed at this Mac’s name for the share, so every Mac that shares the project goes on finding them. The one exception is a stopped check of moved clips, described next: choosing the same folder again continues it.
+
 ### If you moved your organized media
 
 When the media itself has moved, for example to a new drive or because a share now mounts under a different path, the clips still point at the old paths and read Missing. After you change the destination, MediaFlow looks for each organized clip in the new destination, in the same folder it had under the old one and with the same size. If it finds any, it asks whether to point the project at them, and tells you how many it found out of how many were organized.
 
-Same folder and same size is not proof that a file is the one you organized: cameras that split long recordings into chapters produce files of exactly the same size. So a clip that has a checksum recorded from when it was organized is read in full, and followed only if its contents are identical. The question tells you how much data that is before you agree. Over a network it can take a while. You can stop the check: clips already checked stay pointed at the new destination, and choosing Change destination folder again with the same folder continues with the rest. Clips with no recorded checksum are followed on folder and size alone.
+Same folder and same size is not proof that a file is the one you organized: cameras that split long recordings into chapters produce files of exactly the same size. So a clip that has a checksum recorded from when it was organized is read in full, and followed only if its contents are identical. The question tells you how much data that is before you agree. Over a network it can take a while. You can stop the check: clips already checked stay pointed at the new destination. To check the rest, choose Change destination folder again with the same folder before you quit MediaFlow. After that, the rest stay pointed at the old folder; find them with Relink Missing Media, below. Clips with no recorded checksum are followed on folder and size alone.
 
 When it finishes, MediaFlow lists any clip that was in the right place but whose contents differ from what was organized, or that could not be read. Those are left as they were.
 
@@ -209,15 +213,15 @@ When some of the copies were read back in full when they were organized, and not
 - Check Again (the default) — reads every organized copy in full, as before.
 - Use the Earlier Check — skips reading those organized copies. Each must still be at the same place, the same size and the same date to the second as when Organize read it back; one that has changed is read in full anyway. The copy being removed from this Mac or the card is always read and must match the checksum recorded at organize time.
 
-Copies with no earlier check to use are always read in full: copies organized with read-back off or by an earlier version, clips moved within one drive, clips pointed at another file since (by Relink, Library Moved, Move Project and the like), copies changed or on another drive or server since, and every copy when MediaFlow can’t ask the database whether another project uses them. When some copies do have an earlier check, the sheet says how many have none and how much they hold. The same choice applies to deleting staged files in the same run.
+Copies with no earlier check to use are always read in full: copies organized with read-back off or by an earlier version, clips moved within one drive, clips pointed at another file since (by Relink, Library Moved, Move Project and the like), copies changed or on another drive or server since, copies on a share whose size has changed since, and every copy when MediaFlow can’t ask the database whether another project uses them. When some copies do have an earlier check, the sheet says how many have none and how much they hold. The same choice applies to deleting staged files in the same run.
 
-> **Warning:** Using the earlier check trusts the drive: damage since the copies were organized that changes neither their size nor their date would go unnoticed, as would a change of the same size written within the same second they were checked, and the copies on this Mac would still be removed. When in doubt, choose Check Again. See How MediaFlow Verifies Copies.
+> **Warning:** Using the earlier check trusts the drive: damage since the copies were organized that changes neither their size nor their date would go unnoticed, as would a change of the same size written within the same second they were checked, and the copies on this Mac would still be removed. A new network drive set up under the old one’s name, with the library copied over and its share exactly the same size, would pass for the old one too. When in doubt, or after replacing a network drive, choose Check Again. See How MediaFlow Verifies Copies.
 
 ### Staging and deleting
 
 The first two groups are moved into Documents → MediaFlow Projects → Cleanup → &lt;Project Name>, beside the Imports folder, on this Mac. Nothing is sent over to the destination to be staged. An imported copy that is already on the destination’s drive (in an import folder there) is moved into a Cleanup → &lt;Project Name> folder on that drive instead, a quick move on the drive itself. Staged files are not deleted, and Restore from Cleanup can bring them back.
 
-Moving a copy into Cleanup on the same disk frees no space by itself: the space comes back when you delete the staged files, from the third group, in this run or a later one. A card original moved here frees the card at once and takes space on this Mac until you delete it. A file that comes to this Mac from another disk (a card, or an import folder on another drive) is copied, and the copy here is read back and matched against the checksum recorded at organize time before the original is removed; if this Mac hasn’t room for all of them, the sheet says so before anything is moved. The pipeline strip’s Free up space value keeps counting a copy staged on this Mac until it is deleted.
+Moving a copy into Cleanup on the same disk frees no space by itself: the space comes back when you delete the staged files, from the third group, in this run or a later one. A card original moved here frees the card at once and takes space on this Mac until you delete it. A file that comes to this Mac from another disk (a card, or an import folder on another drive) is copied, and the copy here is read back and matched against the checksum recorded at organize time before the original is removed; if this Mac hasn’t room for all of them, the sheet says so before anything is moved. If this Mac fills up during the run anyway (another app writing to it meanwhile), the file being copied and the ones after it that would come here are kept where they were, and the run says so. The pipeline strip’s Free up space value keeps counting a copy staged on this Mac until it is deleted.
 
 Earlier versions staged everything in the Cleanup folder on the destination’s drive. Files staged there are still listed in the third group, deleted from there, and restored from there.
 
@@ -309,7 +313,7 @@ A .MP4 owns the .LRV proxy and .THM thumbnail that share its name; they are list
 5. At the moment of deleting, it also checks that the card file is still the one it checked, with the same size and date, and that the organized copy is still the one it read back. If either has changed since, the card file is kept; scan the card again to check it. If the drive holding the copy disconnects and reconnects during the run, the clips not yet deleted are kept too, to be safe, and the reason says so
 6. When it finishes, click Eject to eject the card, or Done
 
-Only one card is cleared at a time: while one is clearing, or waiting for you to confirm its deletion, Clear Card for another card is refused, with a message naming the card being cleared. A list of everything that was removed is written to the card’s MISC folder as cleared-files-&lt;date and time>.txt. Each cleared clip is also marked in the project so the Import sheet does not offer it again. Emptied folders such as 100GOPRO are left on the card on purpose.
+Only one card is cleared at a time: while one is clearing, or waiting for you to confirm its deletion, Clear Card for another card is refused, with a message naming the card being cleared. A list of everything that was removed is written to the card’s MISC folder as cleared-files-&lt;date and time>.txt. Each cleared clip is also marked in the project so the Import sheet does not offer it again, and in the shared database when it can be written; when it can’t, for example while only this Mac’s copy can be looked at, the result says so, and the list on the card is the record. Emptied folders such as 100GOPRO are left on the card on purpose.
 
 > **Warning:** A memory card has no Trash. Cleared files are erased at once and cannot be recovered. Clear Card will not run while an import, organize, archive, relink or the Proxy queue is running, and it refuses a card that is mounted read-only.
 
@@ -474,9 +478,9 @@ Reading every organized copy again takes about as long as organizing did, and ov
 - Check Again — reads each organized copy in full, as before. The surest choice, and the default
 - Use the Earlier Check — the copy on this Mac is still read in full and must match the checksum recorded at organize time, but the organized copy is not read. MediaFlow only looks at it: it must be at the same place, the same size, and have the same date to the second as when it was read back
 
-The earlier check is offered only for a copy that was read back in full when it was organized, is still on the same drive or the same share of the same server, and that nothing else uses: no other clip in the project and, as the database says, no other project. A clip pointed at another file since (Relink, Library Moved, Move Project, Move to Editing Drive and back, a new destination, a restore from an archive, re-filing by category) keeps no earlier check: the file it points at now was never read back by Organize, even when it is a copy with the same name, size and date on a new server. These are always read in full: copies organized with read-back off, copies organized by an earlier version, clips moved within one drive, copies whose size or date has changed since, and every copy when MediaFlow can’t ask the database (with no database, or when it doesn’t answer). When some copies do have an earlier check, the sheet and the question say how many have none and their size.
+The earlier check is offered only for a copy that was read back in full when it was organized, is still on the same drive or the same share of the same server, with that share the same size as then, and that nothing else uses: no other clip in the project and, as the database says, no other project. A clip pointed at another file since (Relink, Library Moved, Move Project, Move to Editing Drive and back, a new destination, a restore from an archive, re-filing by category) keeps no earlier check: the file it points at now was never read back by Organize, even when it is a copy with the same name, size and date on a new server. These are always read in full: copies organized with read-back off, copies organized by an earlier version, clips moved within one drive, copies whose size or date has changed since, copies on a share whose size has changed since (given bigger disks, say; on a server whose shares all draw on one pool of disks, a share’s size can change as the others fill up, so there the earlier check may seldom be offered), and every copy when MediaFlow can’t ask the database (with no database, or when it doesn’t answer). When some copies do have an earlier check, the sheet and the question say how many have none and their size.
 
-> **Warning:** The trade-off: Use the Earlier Check trusts that the drive has kept each copy as it was. Damage on the drive since it was organized that changes neither the size nor the date would go unnoticed, and so would a change of the same size written within the same second the copy was checked; the copies on this Mac would still be removed. When in doubt, or if the drive has had problems, choose Check Again.
+> **Warning:** The trade-off: Use the Earlier Check trusts that the drive has kept each copy as it was. Damage on the drive since it was organized that changes neither the size nor the date would go unnoticed, and so would a change of the same size written within the same second the copy was checked; the copies on this Mac would still be removed. A new network drive set up under the old one’s name, with the library copied over and its share exactly the same size as the old one’s, would pass for the old one too. When in doubt, after replacing a network drive, or if the drive has had problems, choose Check Again.
 
 See also: [Organizing Media to Storage](#organizing-media-to-storage), [Clear Card](#clear-card), [Freeing Up Space](#freeing-up-space), [The Settings Window, Tab by Tab](/manual/setup-network/#the-settings-window-tab-by-tab)
 
@@ -641,7 +645,7 @@ Or choose Workflow → Plan & Deliver → Shoot Map from the menu bar.
 - Click a cluster — Highlights it in the sidebar with clip details
 - Click a single pin — Selects the clip in the media list
 - Select All in Browser — Selects all clips at a location for batch editing
-- Map styles — Switch between Standard, Satellite, and Hybrid views
+- Map styles (macOS 14 and later) — Switch between Standard, Satellite, and Hybrid views; on macOS 13 the map is the standard one
 
 ### Filters
 
@@ -749,6 +753,8 @@ To transcribe one clip, select it, open the Transcript tab of the metadata panel
 - Export — save the transcript as SubRip (.srt) or WebVTT (.vtt) subtitles, or as plain text with timecodes. The file is named after the clip
 - Transcribe Again — replaces the transcript with a new one. Your corrections are replaced too
 
+A recognition that has not answered within two minutes plus three times the length of the audio being transcribed is stopped and counts as no speech. During an import that audio is at most the first 90 seconds of each clip. When the length of the audio cannot be read, there is no time limit.
+
 ### Where the Audio Goes
 
 MediaFlow recognizes speech on this Mac when the Mac has an on-device model for your system language. When it does not, nothing is transcribed unless you have turned on online speech recognition in Settings › Privacy; with that on, the audio is sent to Apple. The Transcript tab says which applies before you start. No API key is needed either way.
@@ -789,33 +795,43 @@ See also: [GPS Scene Detection](#gps-scene-detection), [NLE Template Export](/ma
 
 ## Audio Waveform Sync
 
-*Synchronize multi-camera clips by cross-correlating their audio waveforms.*
+*Line up clips recorded at the same time, from cameras or a sound recorder, by their sound.*
 
-Audio Waveform Sync uses normalized cross-correlation to find the time offset between clips recorded simultaneously from different cameras. By analyzing the audio tracks, it determines exactly how many seconds one clip leads or lags another.
+Audio Sync finds how far apart in time your clips were started by comparing their sound. Use it to line up several cameras, or a sound recorder’s file (a .WAV, for example) with your camera clips, before you set up a multi-camera edit in your NLE.
 
-### How It Works
+### Which Clips It Compares
 
-1. Audio is extracted from each video clip and downsampled to 8 kHz mono
-2. A coarse search finds the approximate offset by sliding one waveform over the other
-3. A refinement pass narrows down to sample-accurate alignment
-4. Results show the offset, confidence level, and sync quality for each pair
+- Select two or more clips first to compare just those. With fewer than two selected, it compares every clip with sound in the project.
+- Video clips and audio-only files (WAV, MP3, AAC, M4A) are both included. Photos are skipped.
+- Clips can be any length: one can sit inside the other, they can overlap only partly at either end, or be exactly the same length. They need to share at least five seconds of sound, or half the shorter clip if it is under ten seconds.
 
 ### How to Use
 
-1. Open a project with at least 2 video clips
+1. Optionally select the clips you want to line up
 2. Choose Workflow → Analyze… → Audio Sync
-3. Review the results showing offset and confidence for each clip pair
-4. Use the offsets when setting up a multi-camera edit in your NLE
+3. Watch its progress in the panel at the bottom-right; click Cancel there to stop it at any time
+4. Review each pair: where the second clip starts on the first one’s timeline, for example “C0001.MOV starts 12.345s after ZOOM0001.WAV”
+5. Use the offsets when setting up a multi-camera edit in your NLE
 
-### Quality Levels
+### Confidence
 
-- Excellent (>80%) — Strong audio match, reliable sync point
-- Good (50–80%) — Reasonable match, may need manual verification
-- Poor (&lt;50%) — Weak correlation, clips may not share common audio
+Each pair’s confidence says how clearly its best match beats the next best. When the best match is not at least twice as good as any other, Audio Sync says “Couldn’t find a confident match” and gives no offset, rather than one you might trust by mistake. That is what you will see for clips that don’t share any sound, or whose sound repeats, such as a steady beat.
 
-> **Tip:** For best results, ensure all cameras were recording simultaneously with ambient audio. Clips with very different audio content (for example, one indoors, one outdoors) will produce poor correlation.
+- Excellent (above 80%) — the best match is more than five times as good as any other
+- Good (above 50%) — more than twice as good; worth a quick check in your NLE
+- No match — no offset is given
 
-Audio sync requires video clips with audio tracks. Photo-only clips are skipped.
+### How It Works
+
+1. Each clip’s sound is read once and boiled down to how its loudness rises and falls, 100 times a second
+2. Every possible offset between two clips is tried at once
+3. A confident match is then refined to an eighth of a millisecond using 20 seconds of each clip
+
+Audio Sync never holds whole clips in memory: about a third of a megabyte per hour of sound, so it works on long recordings and big projects. It only shows offsets; it changes nothing in your project. If you open another project before it finishes, its results aren’t shown; open the project again and run it again.
+
+> **Tip:** For best results, have every camera record sound, even a camera you will not use the sound from. A clap or a slate at the start of each take gives Audio Sync something sharp to line up.
+
+A clip with no sound track, or whose sound can’t be read, is listed under Couldn’t Be Compared with the reason, and the other clips are compared as usual.
 
 See also: [Smart Selects](#smart-selects), [NLE Template Export](/manual/reports/#nle-template-export)
 
@@ -863,7 +879,7 @@ Clip cards show the filename, duration, scene, and star rating. Unplaced Clips l
 
 The storyboard is stored in the .vpm project file. It is a planning aid only and cannot be exported. To hand structure to your editor, use NLE Template Export or Export FCPXML.
 
-See also: [Shot List](#shot-list), [NLE Template Export](/manual/reports/#nle-template-export), [Star Ratings & Selects](/manual/managing-assets/#star-ratings--selects)
+See also: [Shot List](#shot-list), [NLE Template Export](/manual/reports/#nle-template-export), [Star Ratings & Selects](/manual/managing-clips/#star-ratings--selects)
 
 ## Import Field Notes
 
@@ -893,7 +909,7 @@ If the camera clock and your watch disagree, adjust the TZ offset stepper (−12
 - Adds the tag to the clip’s Tags if not already present
 - If the tag contains hero, selects, or best and the clip is unrated, sets a 5-star rating
 
-See also: [Working with Tags](/manual/tags-categories/#working-with-tags), [Editing Clip Metadata](/manual/managing-assets/#editing-clip-metadata), [Star Ratings & Selects](/manual/managing-assets/#star-ratings--selects)
+See also: [Working with Tags](/manual/tags-categories/#working-with-tags), [Editing Clip Metadata](/manual/managing-clips/#editing-clip-metadata), [Star Ratings & Selects](/manual/managing-clips/#star-ratings--selects)
 
 ## Clip Classifier, Second Pass (Tier 1)
 
@@ -1051,7 +1067,7 @@ Edits made in the Scene Log tab are saved at once and cannot be undone with Edit
 See also: [Shot List](#shot-list), [Continuity](#continuity), [Dailies Report](/manual/reports/#dailies-report), [Reviewing Clips with the Keyboard](/manual/video-preview-playback/#reviewing-clips-with-the-keyboard), [NLE Template Export](/manual/reports/#nle-template-export)
 
 <div class="chapter-nav" role="navigation" aria-label="Chapters">
-<a rel="prev" href="/manual/managing-assets/">&larr; Managing Assets</a>
+<a rel="prev" href="/manual/managing-clips/">&larr; Managing Clips</a>
 <a href="/manual/">All chapters</a>
 <a rel="next" href="/manual/video-preview-playback/">Video Preview &amp; Playback &rarr;</a>
 </div>

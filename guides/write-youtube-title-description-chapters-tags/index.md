@@ -3,14 +3,14 @@ layout: guide
 title: "How to Write Your YouTube Title, Chapters and Tags"
 description: "MediaFlowSwift transcribes your finished video and drafts a title, description, chapters and tags from it. You edit the draft before anything goes live."
 published: "2026-10-13"
-updated: "2026-10-20"
+updated: "2026-11-03"
 permalink: /guides/write-youtube-title-description-chapters-tags/
 ---
 # How to Write Your YouTube Title, Chapters and Tags
 
 To write a YouTube title, description, chapters and tags in MediaFlowSwift, choose Workflow → Prepare for YouTube…, pick your exported video, and click Transcribe. Then click Write with the SEO Agent. The agent drafts five titles, a description, chapters and tags from the transcript and a short brief you fill in.
 
-You edit the draft, upload the video yourself in YouTube Studio, then apply the finished words to the uploaded video from MediaFlowSwift. The rest of this page covers each step and what gets checked before anything can go live. It also covers what's sent where while the draft is being written.
+You edit the draft, upload the video yourself in YouTube Studio, then apply the finished words to the uploaded video from MediaFlowSwift. Below: each step, what gets checked before anything goes live, and exactly what's sent where while the draft is being written.
 
 ## What does Prepare for YouTube work on?
 
@@ -96,6 +96,6 @@ The manual's warning about the SEO agent's draft:
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Draft your own YouTube title and chapters
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
+Prepare for YouTube and the SEO Agent are part of MediaFlowSwift. [Download it](/download.html); the full app is free to try for 14 days, no card needed, provided your Mac runs macOS 13 or later on Apple silicon.

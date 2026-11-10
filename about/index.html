@@ -17,13 +17,14 @@
 {"@context":"https://schema.org","@type":"Person","name":"Mike Williams","jobTitle":"Founder, Long Road Software LLC","url":"https://mediaflowswift.com/about/","image":"https://mediaflowswift.com/images/mike-williams-800.jpg","worksFor":{"@id":"https://longroadsoftware.com/#organization"},"sameAs":["https://www.youtube.com/@onislandtimeRV"]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","email":"support@mediaflowswift.com","sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]},{"@type":"WebSite","@id":"https://mediaflowswift.com/#website","name":"MediaFlowSwift","url":"https://mediaflowswift.com/","publisher":{"@id":"https://longroadsoftware.com/#organization"}},{"@type":"AboutPage","@id":"https://mediaflowswift.com/about/","url":"https://mediaflowswift.com/about/","name":"About MediaFlowSwift — who makes it, and why","description":"Who makes MediaFlowSwift and why: a Tennessee company, one engineer, who wrote it for his own footage, and what the app promises about your files.","isPartOf":{"@id":"https://mediaflowswift.com/#website"},"publisher":{"@id":"https://longroadsoftware.com/#organization"}}]}
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","email":"support@mediaflowswift.com","logo":"https://longroadsoftware.com/images/logo.png","contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"support@mediaflowswift.com","availableLanguage":"en"},"sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]},{"@type":"WebSite","@id":"https://mediaflowswift.com/#website","name":"MediaFlowSwift","url":"https://mediaflowswift.com/","publisher":{"@id":"https://longroadsoftware.com/#organization"}},{"@type":"AboutPage","@id":"https://mediaflowswift.com/about/","url":"https://mediaflowswift.com/about/","name":"About MediaFlowSwift — who makes it, and why","description":"Who makes MediaFlowSwift and why: a Tennessee company, one engineer, who wrote it for his own footage, and what the app promises about your files.","isPartOf":{"@id":"https://mediaflowswift.com/#website"},"publisher":{"@id":"https://longroadsoftware.com/#organization"}}]}
 </script>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
 <link rel="stylesheet" href="/site.css">
+<script src="/site.js" defer></script>
 <!-- Analytics, off until the visitor says yes. See /privacy.html -->
 <script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
 </head>
@@ -31,6 +32,14 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="5" width="24" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h4M6 14h4M6 18h4M18 10h4M18 14h4M18 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 11l5 3-5 3z" fill="currentColor"/></svg>MediaFlowSwift</a>
+    <details class="menu-drop">
+      <summary>Products</summary>
+      <div class="menu-panel">
+        <a href="https://mediaflowswift.com/" aria-current="page"><strong>MediaFlowSwift</strong><span>Footage manager for Mac</span></a>
+        <a href="https://checkandroll.app/"><strong>Check &amp; Roll</strong><span>RV checklists for iPhone and iPad</span></a>
+        <a href="https://longroadsoftware.com/proof-copy/"><strong>Proof Copy</strong><span>Coming soon</span></a>
+      </div>
+    </details>
     <nav class="menu" aria-label="Site">
       <a href="/">Overview</a>
       <a href="/download.html">Download</a>
@@ -39,6 +48,7 @@
       <a href="/manual/">Manual</a>
       <a href="/guides/">Guides</a>
       <a href="/blog/">Blog</a>
+      <a href="/contact.html">Contact</a>
       <a href="/support.html">Support</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/about/" aria-current="page">About</a>
@@ -61,7 +71,7 @@
     </div>
   </div>
 
-  <h2>Where it came from</h2>
+  <h2>Where did MediaFlowSwift come from?</h2>
   <p>The cameras for that channel added up: two GoPros, then a third, and on top of that two iPhones and a Nikon.</p>
   <p>For a long time only the GoPro video went up to the GoPro service and came back down. Grouping projects was a mess. Uploading a large number of files could take days. Errors were common, and so was lost footage. The only confirmation that an upload had finished was on the camera itself, and the errors along the way left real doubt about whether every clip had made it.</p>
   <p>The iPhones were a separate mess. Getting video and pictures off them was hard, and he never quite mastered that.</p>
@@ -83,7 +93,7 @@
   <p>Your footage stays in ordinary folders that any app can read, on the drives and network shares you chose. The app has no account and collects no usage data; apart from checking for updates and checking your licence key, it talks to no outside service until you turn one on, and Settings &rsaquo; Privacy lists what each one sends. When something fails, it says which file, why, and what to do. That is the whole promise: not that drives never fail, but that a file which fails its check is left where it is.</p>
 
   <h2>How do I get in touch?</h2>
-  <p>Questions, problems, refunds and ideas all go to <a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a>; the <a href="/support.html">support page</a> says what helps most. For anything else, write to <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a>. The company&rsquo;s own page is <a href="https://longroadsoftware.com/">longroadsoftware.com</a>.</p>
+  <p>Use the <a href="/contact.html">contact form</a> and it sends the note to the right address. Help, problems, refunds and a change to a plan you already pay for go to <a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a>. Buying goes to <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a>. A bill, invoice, receipt, payment or tax question goes to <a href="mailto:billing@longroadsoftware.com">billing@longroadsoftware.com</a>. The <a href="/support.html">support page</a> says what helps most when something is broken. The company&rsquo;s own page is <a href="https://longroadsoftware.com/">longroadsoftware.com</a>.</p>
 
   <h2 id="how-we-write-these-guides">How do you write the guides?</h2>
   <p>The how-to guides under <a href="/guides/">Guides</a> are written by AI for Long Road Software LLC, then checked against the current app and manual before they are published. Mike does not personally review each one. If a guide gets something wrong, please tell us at <a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a>.</p>
@@ -94,8 +104,8 @@
 <footer>
   <div class="wrap">
     <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
-    <nav aria-label="Legal"><a href="/about/">About</a><a href="/guides/#comparing-mediaflowswift-to-other-ways-of-doing-this">Compare</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
-    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a></span>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/guides/#comparing-mediaflowswift-to-other-ways-of-doing-this">Compare</a><a href="/contact.html">Contact</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="/contact.html">Contact us</a></span>
   </div>
 </footer>
 </body>

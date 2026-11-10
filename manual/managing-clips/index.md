@@ -1,11 +1,11 @@
 ---
 layout: manual
-title: "Managing Assets — MediaFlowSwift Manual"
+title: "Managing Clips — MediaFlowSwift Manual"
 description: "Browse your media as a table with sortable columns or as a grid of thumbnail cards, and switch between them."
-permalink: /manual/managing-assets/
+permalink: /manual/managing-clips/
 generated: tools/import-guide.sh
 ---
-# Managing Assets
+# Managing Clips
 
 ## Table and Grid Views
 
@@ -17,8 +17,8 @@ The media list shows the clips in the project that match the current filter. Use
 
 - One row per clip, with columns: Thumbnail, Filename, Type, Date, Duration, Category, Camera, Where, Audio, Rating, Select, Notes
 - Click the Filename, Date, Where, Audio, Rating, Select or Notes header to sort by that column; click again to reverse the order. MediaFlow remembers the column and direction you chose, in every project and the next time you open the app; until you choose one, the list is sorted by Date, newest first
-- A GoPro splits a long recording into several files, such as GX012324 and GX022324. In the Table they appear as one row: the first chapter, with a label such as “2 chapters · 20:54” giving the count and the total length. Click the arrow at the left of the row to show the other chapters beneath it. The recording stays together whatever column you sort by. Each row is still one file: rating, tagging or playing the first row affects that file only, so expand the row to work on the others. Files are grouped only when they come from the same camera, are the same kind of file and were made within a day of each other. To list every file on its own row, turn off Group Chapters of One Recording in the Filter menu
-- A clip you made subclips of with Create Subclip… Add to This Project has an arrow too, and a label such as “2 subclips”. Its subclips are beneath it, in order of where they start in the clip, each labeled with its range, such as 0:12–0:41, whatever column you sort by. A GoPro recording’s first chapter shows its other chapters first and then its own subclips; a later chapter’s subclips are under that chapter’s own arrow, inside the recording. When a search or filter shows a subclip but not the clip it came from, or that clip has been removed from the project, the subclip is on a row of its own with a Subclip label; hold the pointer over the label to see where it came from
+- A GoPro splits a long recording into several files, such as GX012324 and GX022324. In the Table they appear as one row: the first chapter, with a label such as “2 chapters · 20:54” giving the count and the total length. Click the arrow at the left of the row to show the other chapters beneath it; on macOS 13 there is no arrow, and the other chapters are always shown as rows beneath it. The recording stays together whatever column you sort by. Each row is still one file: rating, tagging or playing the first row affects that file only, so expand the row to work on the others. Files are grouped only when they come from the same camera, are the same kind of file and were made within a day of each other. To list every file on its own row, turn off Group Chapters of One Recording in the Filter menu
+- A clip you made subclips of with Create Subclip… Add to This Project has an arrow too (on macOS 13, none: its subclips are always shown), and a label such as “2 subclips”. Its subclips are beneath it, in order of where they start in the clip, each labeled with its range, such as 0:12–0:41, whatever column you sort by. A GoPro recording’s first chapter shows its other chapters first and then its own subclips; a later chapter’s subclips are under that chapter’s own arrow, inside the recording. When a search or filter shows a subclip but not the clip it came from, or that clip has been removed from the project, the subclip is on a row of its own with a Subclip label; hold the pointer over the label to see where it came from
 - Sorting by Filename follows Finder’s order, so clip2 comes before clip10, and keeps the chapters of one GoPro recording together: a GoPro splits a long recording into files such as GX012324 and GX022324, and MediaFlow lists them one after the other instead of sending the second to the end
 - A Category or Camera shown in italics with a confidence badge is a proposal from import analysis. Click the cell to accept it
 - Right-click any row for the context menu
@@ -44,10 +44,11 @@ Most commands act on the selected clips: batch editing, organizing, rating, movi
 - Shift+Click selects every clip between the one you last clicked and this one, in Table and Grid view alike. Shift+Click again, further up or down, re-measures from that same starting clip. Cmd+Shift+Click adds the range to what is already selected
 - Cmd+A selects every clip the current filter shows. While you are typing in a field, Cmd+A selects the text in that field instead
 - Delete removes the selected clips from the project while you are working in the clip list or grid, as File → Remove from Project does. While you are typing in a field, Delete only deletes text
+- In Grid view, with Keyboard Navigation turned on in System Settings, Tab reaches the cards. The arrow keys then select the card to the left or right, above or below, and Shift with an arrow key selects the range, as Shift+Click does. VoiceOver reads each card as a button and says which cards are selected
 
 ### The Selection Bar
 
-While anything is selected, a bar at the bottom of the media list shows how many clips are selected and offers Organize Media, Set Category, Toggle Favorite, Rate, Select (Hero, Maybe or Reject) and Remove from Project. When selected clips carry import proposals, it also offers buttons to accept them. Click Deselect All to clear the selection.
+While anything is selected, a bar at the bottom of the media list shows how many clips are selected and offers Organize Media, Set Category, Toggle Hero, Rate, Select (Hero, Maybe or Reject) and Remove from Project. When selected clips carry import proposals, it also offers buttons to accept them. Click Deselect All to clear the selection.
 
 See also: [Table and Grid Views](#table-and-grid-views), [Context Menu Actions](#context-menu-actions), [Star Ratings & Selects](#star-ratings--selects)
 
@@ -61,7 +62,7 @@ Right-click a clip to act on it. If the clip is part of a selection, the action 
 - Add to Proxy queue / Remove from Proxy queue — Queue the clips for thumbnail and proxy generation, or take them out
 - Set Category — Assign a category (B-roll, Interview, Skip (don’t copy), and so on)
 - Set Camera — Assign the camera that shot the clips. Clear Camera, at the bottom of this submenu, removes the camera
-- Mark Favorite / Unfavorite — Set or remove the favorite flag
+- Mark Hero / Clear Hero — Mark the clips Hero, or take Hero off. Clear Hero also takes off the favorite ★ and the circle take, which both mean Hero
 - Clear Notes — Erase the notes on the clips
 - Remove from Project — Take the clips out of the project. The files on disk are kept
 - Move to Project… — Transfer the clips to a different project
@@ -95,7 +96,7 @@ Type in the search field in the toolbar, or press Cmd+F to put the cursor there.
 
 ### Sidebar
 
-- Library — All Media, Favorites, Proxy queue
+- Library — All Media, Hero, Proxy queue
 - Smart Groups — Not at destination (clips whose file is not at the organize destination), Missing, Uncategorized, Unrated, Unreviewed (clips with an import proposal nobody has confirmed), Reject candidates
 - Cameras — the clips shot by one camera
 - Places — the clips shot at one place. Shown when clips have GPS data
@@ -105,7 +106,7 @@ Type in the search field in the toolbar, or press Cmd+F to put the cursor there.
 Click the filter menu in the toolbar (its label shows the current filter) to choose:
 
 - All Media — Show everything
-- Favorites — Show only favorites
+- Hero — Show only clips marked Hero. A clip with the favorite ★ but no Hero mark is not listed
 - Proxy queue — Show only queued clips
 - Category — Pick one of the project’s categories
 - Scene — Pick a scene logged in the Scene Log
@@ -125,14 +126,14 @@ See also: [Table and Grid Views](#table-and-grid-views), [Understanding the Pipe
 
 ## Editing Clip Metadata
 
-*Change the category, favorite flag, tags and notes of one clip or many from the Edit tab of the metadata panel.*
+*Change the category, rating, select status, tags and notes of one clip or many from the Edit tab of the metadata panel.*
 
 Select one or more clips, then open the Edit tab in the metadata panel.
 
 ### Single Clip
 
 - Category — Choose a category from the menu. It is applied immediately
-- Favorite — Turn the favorite flag on or off
+- Rating and Select — Rate the clip, or mark it Hero, Maybe or Reject
 - Tags — Type a tag and press Enter or comma to add it. Click the X on a tag to remove it
 - Notes — Type freeform notes in the text box
 
@@ -145,7 +146,7 @@ The tab also shows the clip’s Camera and Where, which you cannot edit here. To
 When several clips are selected, the Edit tab shows batch operations. Each one applies when you click its button:
 
 - Apply Category — Set the chosen category on all selected clips
-- Mark Favorite / Unfavorite — Set or remove the favorite flag on all of them
+- Rating and Select — Rate all of them, or mark them all Hero, Maybe or Reject
 - Add Tags — Add the typed tags to the tags each clip already has
 - Replace Tags — Replace every selected clip’s tags with the typed ones
 - Clear Tags — Remove all tags from the selected clips
@@ -159,9 +160,9 @@ See also: [Working with Tags](/manual/tags-categories/#working-with-tags), [Work
 
 *Find the video files that are in a project more than once, compare the clips side by side, and keep one or both.*
 
-A video file can end up in a project twice: imported again from the same card, say, or imported again while the project’s file was out of reach and the first import came back into it later. Each copy is a clip of its own, with its own camera name, category, rating and notes.
+A video file can end up in a project twice: imported again from the same card, say, or added by a version of MediaFlow from before clips brought back from the shared database were merged with the ones the project had. Each copy is a clip of its own, with its own camera name, category, rating and notes.
 
-1. Choose Projects → Find Clips Added Twice… (or click Compare Them on the notice that says some clips came in twice)
+1. Choose Projects → Find Clips Added Twice…
 2. Each group shows the clips of one file side by side: whether its file is complete, camera, category, rating, notes, tags, favorite, where the file is and when the clip was added. What differs is in bold
 3. Click Keep This One under the clip to keep (the one marked Recommended has a complete file), and confirm. Or click Keep Both to leave the group as it is
 
@@ -245,6 +246,10 @@ Edit → Undo (Cmd+Z) and Edit → Redo (Cmd+Shift+Z) reverse and re-apply metad
 - Removing clips from the project (they can be re-imported)
 
 Undo restores the previous values and saves the project. When the undone step changed the category of an organized clip, MediaFlow also moves the copy at the destination back into the matching folder, in the background.
+
+Undo also puts the circle take back as it was before the step. A circle take you set or cleared after that step, with C in Review or in the Scene Log tab, goes back too, so check it after you undo.
+
+Undo belongs to the project you made the change in. Opening, creating or closing a project, opening the same one again, Revert to Saved, or a project opening again from the shared database starts its undo history afresh, so Undo never changes a project you didn’t make the change in. If a step from another project ever reaches Undo, nothing is changed and a message says so. While a project may only be read, Undo changes nothing, renamed or removed categories and cameras included, and the step stays for later.
 
 See also: [Editing Clip Metadata](#editing-clip-metadata), [Star Ratings & Selects](#star-ratings--selects), [Auto-Suggest Categories](/manual/tags-categories/#auto-suggest-categories)
 

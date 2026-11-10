@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
 <link rel="stylesheet" href="site.css">
+<script src="/site.js" defer></script>
 <!-- Analytics, off until the visitor says yes. See /privacy.html -->
 <script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
 </head>
@@ -28,6 +29,14 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="5" width="24" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h4M6 14h4M6 18h4M18 10h4M18 14h4M18 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 11l5 3-5 3z" fill="currentColor"/></svg>MediaFlowSwift</a>
+    <details class="menu-drop">
+      <summary>Products</summary>
+      <div class="menu-panel">
+        <a href="https://mediaflowswift.com/" aria-current="page"><strong>MediaFlowSwift</strong><span>Footage manager for Mac</span></a>
+        <a href="https://checkandroll.app/"><strong>Check &amp; Roll</strong><span>RV checklists for iPhone and iPad</span></a>
+        <a href="https://longroadsoftware.com/proof-copy/"><strong>Proof Copy</strong><span>Coming soon</span></a>
+      </div>
+    </details>
     <nav class="menu" aria-label="Site">
       <a href="/">Overview</a>
       <a href="/download.html">Download</a>
@@ -36,6 +45,7 @@
       <a href="/manual/">Manual</a>
       <a href="/guides/">Guides</a>
       <a href="/blog/">Blog</a>
+      <a href="/contact.html">Contact</a>
       <a href="/support.html" aria-current="page">Support</a>
       <a href="/privacy.html">Privacy</a>
       <a href="/about/">About</a>
@@ -46,13 +56,14 @@
 <main class="wrap">
 <article class="doc">
   <h1>Support</h1>
-  <p>One address for everything: questions, problems, refunds and ideas.</p>
+  <p>Problems, refunds and ideas: <a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a>. A bill or a payment: <a href="mailto:billing@longroadsoftware.com">billing@longroadsoftware.com</a>. Buying: <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a>. The <a href="/contact.html">contact form</a> sends each note to the right one of those.</p>
   <dl class="contact">
     <dt>Email</dt>
     <dd><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></dd>
     <dt>Reply time</dt>
     <dd>Usually within two working days.</dd>
   </dl>
+  <p class="note support-new">New to MediaFlowSwift? It is a footage manager for Mac video creators: it offloads cards, organizes the clips and proves every copy before anything is removed. <a href="/download.html">Download the 14-day free trial</a> (no card), or <a href="/#plans">see the plans</a>.</p>
 
   <h2>Reporting a problem</h2>
   <p>In the app, choose <strong>Help &rsaquo; Report a Problem&hellip;</strong>. It gathers what helps find a fault &mdash; the version, what the app was doing, the end of its log, and any crash macOS recorded &mdash; and takes out your name, your drives, your folders and file names before showing you every word. Then click <strong>Email Report&hellip;</strong>: it opens a message to us in your own mail app with the report in it, for you to read and send. Nothing goes until you press Send, and we reply to the address you send from. Copy Report and Save&hellip; are there too, if you would rather send it another way.</p>
@@ -66,7 +77,7 @@
   <h2 id="wont-open">If MediaFlowSwift won&rsquo;t open</h2>
   <p>Go through these in order; one of them usually finds the problem.</p>
   <ol class="steps">
-    <li><strong>Check your Mac.</strong> MediaFlowSwift needs macOS 14 Sonoma or later on a Mac with Apple silicon (M1 or newer). Choose <strong>Apple menu &rsaquo; About This Mac</strong>: the <em>Chip</em> line should name an Apple M chip, and the <em>macOS</em> line should say 14 or higher. If you see a <em>Processor</em> line naming Intel instead, this Mac cannot run MediaFlowSwift.</li>
+    <li><strong>Check your Mac.</strong> MediaFlowSwift needs an Apple silicon Mac (M1 or newer) running macOS 13 Ventura or later. Choose <strong>Apple menu &rsaquo; About This Mac</strong>: the <em>Chip</em> line should name an Apple M chip, and the <em>macOS</em> line should say 13 or higher. If you see a <em>Processor</em> line naming Intel instead, this Mac cannot run MediaFlowSwift.</li>
     <li><strong>Check the download finished.</strong> If the file name still ends in .download, .crdownload or .part, it did not. If you still have the zip, select it in Finder, choose <strong>File &rsaquo; Get Info</strong>, and compare its size with the one on the <a href="/download.html">download page</a>. If it is smaller, or the zip will not unzip, download it again.</li>
     <li><strong>Unzip it in Finder, then move it to Applications.</strong> Double-click the zip in Finder; that makes the app, named <strong>MediaFlowswift</strong>. (Safari may have unzipped it for you already, leaving the app in Downloads; that is fine.) Drag the app into your Applications folder and open it from there. Other unzip apps can leave hidden files inside the app, and macOS then says it is damaged.</li>
     <li><strong>Open it the ordinary way.</strong> Double-click it. The first time, macOS says it is an app downloaded from the internet and asks whether to open it: click <strong>Open</strong>. MediaFlowSwift is signed with our Apple Developer ID and notarized by Apple, so you do not need to right-click and choose Open, or click Open Anyway in Privacy &amp; Security settings.</li>
@@ -79,9 +90,9 @@
     <dt>&ldquo;MediaFlowswift&rdquo; can&rsquo;t be opened because Apple cannot check it for malicious software. On newer macOS: Apple could not verify &ldquo;MediaFlowswift&rdquo; is free of malware.</dt>
     <dd>A copy from this site should never show this, because Apple has already checked it. The copy you have came from somewhere else or was changed. Move it to the Trash and download it again from the <a href="/download.html">download page</a> on mediaflowswift.com.</dd>
     <dt>You can&rsquo;t use this version of the application &ldquo;MediaFlowswift&rdquo; with this version of macOS.</dt>
-    <dd>Your Mac is running a version of macOS older than 14. Every Mac with Apple silicon can take macOS 14 or later: install it with Software Update in System Settings (System Preferences on older versions), then open MediaFlowSwift again.</dd>
+    <dd>Your Mac is running a version of macOS older than 13. Every Mac with Apple silicon can take macOS 13 or later: install it with Software Update in System Settings (System Preferences on older versions), then open MediaFlowSwift again.</dd>
     <dt>You can&rsquo;t open the application &ldquo;MediaFlowswift&rdquo; because it is not supported on this type of Mac.</dt>
-    <dd>This Mac has an Intel processor. MediaFlowSwift runs only on Macs with Apple silicon today. An Intel Mac version is coming: <a href="/#coming">get an email when it is ready</a>.</dd>
+    <dd>This Mac has an Intel processor. MediaFlowSwift runs only on Macs with Apple silicon today. An Intel Mac version is coming: <a href="/#coming">we&rsquo;ll notify you when it&rsquo;s ready</a>.</dd>
     <dt>&ldquo;MediaFlowswift&rdquo; quit unexpectedly.</dt>
     <dd>The app started and then stopped. Click <strong>Reopen</strong>. If it stops again, macOS keeps a report of each time: in Finder choose <strong>Go &rsaquo; Go to Folder&hellip;</strong>, type <code>~/Library/Logs/DiagnosticReports</code> and press Return, and attach the newest file whose name starts with MediaFlowswift to your email. It is plain text, so you can read it before you send it. The <strong>Report&hellip;</strong> button in macOS&rsquo;s message sends a report to Apple, not to us. If the app opens on a later try, <strong>Help &rsaquo; Report a Problem&hellip;</strong> adds a summary of its recent crashes to the report, with your names taken out.</dd>
   </dl>
@@ -123,8 +134,8 @@
 <footer>
   <div class="wrap">
     <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
-    <nav aria-label="Legal"><a href="/about/">About</a><a href="/guides/#comparing-mediaflowswift-to-other-ways-of-doing-this">Compare</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
-    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="mailto:hello@longroadsoftware.com">hello@longroadsoftware.com</a></span>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/guides/#comparing-mediaflowswift-to-other-ways-of-doing-this">Compare</a><a href="/contact.html">Contact</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <span class="founder"><picture><source srcset="/images/mike-williams-400.webp" type="image/webp"><img class="founder-thumb" src="/images/mike-williams-400.jpg" width="32" height="32" loading="lazy" alt="Mike Williams, who makes MediaFlowSwift, outdoors under palm trees"></picture>Made by Mike, who also films <a href="https://www.youtube.com/@onislandtimeRV">On Island Time</a> &middot; Questions? <a href="/contact.html">Contact us</a></span>
   </div>
 </footer>
 </body>

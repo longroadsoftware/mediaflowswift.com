@@ -3,14 +3,14 @@ layout: guide
 title: "How to Create a Dailies Report and a Hand-Off File"
 description: "Generate Dailies builds a by-day report for a director to read. A separate export hands your organization to an editor's software."
 published: "2026-10-13"
-updated: "2026-10-20"
+updated: "2026-11-03"
 permalink: /guides/dailies-report-and-hand-off-file-for-editor/
 ---
 # How to Create a Dailies Report and a Hand-Off File
 
 To create a dailies report in MediaFlowSwift, choose Workflow → Plan & Deliver → Generate Dailies. The report is for a director or producer to read, organized by shooting day, with circle takes, ratings and notes. For a hand-off file your editor's software imports, use Workflow → Plan & Deliver → NLE Template Export or Report instead.
 
-Which hand-off command to use depends on which editing application your editor uses. A report and a hand-off file are two different jobs, and MediaFlowSwift keeps them as two different commands. The rest of this page is which one to run, and what each produces.
+Which hand-off command to use depends on which editing application your editor uses. A report and a hand-off file are two different jobs, and MediaFlowSwift keeps them as two different commands. What follows is which command to run, and exactly what each one produces.
 
 ## How do I create the dailies report?
 
@@ -73,6 +73,6 @@ The Final Cut Pro export is the one built to carry your organization (categories
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Send your first report or hand-off file
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
+Generate Dailies and NLE Template Export are both built into MediaFlowSwift, the app covered above. [Download it](/download.html) for a 14-day trial of the full app — no card needed, running on macOS 13 or later with Apple silicon.

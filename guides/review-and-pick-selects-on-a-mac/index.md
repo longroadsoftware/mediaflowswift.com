@@ -3,31 +3,31 @@ layout: guide
 title: "How to Review Footage and Pick Your Selects on a Mac"
 description: "Rapid Review plays, rates and rejects clips by keyboard. Smart Selects scores each one first, so you review in quality order, not import order."
 published: "2026-10-13"
-updated: "2026-10-20"
+updated: "2026-11-03"
 permalink: /guides/review-and-pick-selects-on-a-mac/
 ---
 # How to Review Footage and Pick Your Selects on a Mac
 
-To review footage and pick selects on a Mac with MediaFlowSwift, open Rapid Review (Workflow → Review, or Cmd+Opt+R) and work by keyboard. Press J/K/L to shuttle, 1–5 to rate, F to favorite, X to reject and C to mark a circle take. MediaFlowSwift then filters and sorts your clips by those ratings and tags.
+To review footage and pick selects on a Mac with MediaFlowSwift, open Rapid Review (Workflow → Review, or Cmd+Opt+R) and work by keyboard. Press J/K/L to shuttle, 1–5 to rate, F to toggle Hero, X to reject and C to mark a circle take. MediaFlowSwift then filters and sorts your clips by those ratings and tags.
 
-Rapid Review sets the star rating, the Reject tag and the circle take. A Hero or Maybe tag is set from outside Review. Every one of them can be filtered and sorted afterward. The rest of this page covers what each key does, and how to get your best takes to the top of the pile before you start.
+Rapid Review sets the star rating, the Hero and Reject tags and the circle take. Only a Maybe tag is set from outside Review. Every one of them can be filtered and sorted afterward. Below, every key's job, and how to get your best takes to the top of the pile before you start.
 
 ## What is Rapid Review for?
 
-> Rapid Review is a focused review sheet for evaluating clips quickly. Use the keyboard to play, rate, favorite, reject and move through your footage without touching the mouse.
+> Rapid Review is a focused review sheet for evaluating clips quickly. Use the keyboard to play, rate, mark Hero, reject and move through your footage without touching the mouse.
 
 Press `?` at any time in Rapid Review for an on-screen list of the keys. The keys you'll use most:
 
 - **J / K / L** — shuttle reverse / stop / forward, pressing repeatedly to speed up (1×, 2×, 4×, 8×)
 - **1–5** — set a star rating; **0** clears it
-- **F** — toggle favorite
+- **F** — toggle Hero
 - **X** — toggle Reject; **C** toggles circle take
 - **A** — accept the category and camera MediaFlowSwift proposed for this clip at import; **R** marks it a reject candidate
 - **Down / Up Arrow** — next / previous clip in the queue
 
 J, K and L as play-reverse, stop and play-forward are a long-standing editing convention. Apple documents the three keys in its [Final Cut Pro keyboard shortcuts guide](https://support.apple.com/guide/final-cut-pro/keyboard-shortcuts-ver90ba5929/mac). Blackmagic Design lists the same three keys in its [DaVinci Resolve 11 keyboard shortcuts](https://documents.blackmagicdesign.com/SupportNotes/DaVinci_Resolve_11_Mac_Keyboard_Shortcuts.pdf).
 
-With auto-advance on (the default; press T to toggle it), Rapid Review moves to the next clip after a short delay. Rating a clip, favoriting it or rejecting it triggers the move, and so does pressing A or R. Taking a favorite or Reject back off, clearing a rating, or pressing C keeps you on the clip instead. A double-tap then never skips you past a clip you're still deciding on.
+With auto-advance on (the default; press T to toggle it), Rapid Review moves to the next clip after a short delay. Rating a clip, marking it Hero or rejecting it triggers the move, and so does pressing A or R. Taking Hero or a Reject back off, clearing a rating, or pressing C keeps you on the clip instead. A double-tap then never skips you past a clip you're still deciding on.
 
 ## What do Hero, Maybe and Reject mean?
 
@@ -67,7 +67,7 @@ Smart Selects also proposes circle takes on its own:
 
 Run Smart Selects, accept what looks right, then open Rapid Review on what's left. Rapid Review is where you make the calls a score can't.
 
-<figure class="guide-figure"><img src="/images/guides/review-and-pick-selects-on-a-mac.svg" width="720" height="260" style="max-width:100%;height:auto" alt="Process diagram in four steps: 1, narrow the queue by filtering by category, scene or camera, or by showing unrated clips; 2, optionally run Smart Selects, which scores five measures and suggests ratings you accept; 3, review in Rapid Review with J/K/L to shuttle, 1–5 to rate, F to favorite, X to reject and C for a circle take; 4, sort and filter by star rating and by select status Hero, Maybe or Reject. A note says rating and select-status changes undo with Edit, Undo (Cmd+Z)." loading="lazy"><figcaption>The selects workflow in MediaFlowSwift: narrow the queue, let Smart Selects score it, rate by keyboard in Rapid Review, then sort by what you decided.</figcaption></figure>
+<figure class="guide-figure"><img src="/images/guides/review-and-pick-selects-on-a-mac.svg" width="720" height="260" style="max-width:100%;height:auto" alt="Process diagram in four steps: 1, narrow the queue by filtering by category, scene or camera, or by showing unrated clips; 2, optionally run Smart Selects, which scores five measures and suggests ratings you accept; 3, review in Rapid Review with J/K/L to shuttle, 1–5 to rate, F to toggle Hero, X to reject and C for a circle take; 4, sort and filter by star rating and by select status Hero, Maybe or Reject. A note says rating and select-status changes undo with Edit, Undo (Cmd+Z)." loading="lazy"><figcaption>The selects workflow in MediaFlowSwift: narrow the queue, let Smart Selects score it, rate by keyboard in Rapid Review, then sort by what you decided.</figcaption></figure>
 
 ## Can I undo these changes?
 
@@ -76,9 +76,9 @@ Category, rating and select-status changes in MediaFlowSwift go through Edit →
 ## Read more
 
 - [Reviewing Clips with the Keyboard](/manual/video-preview-playback/#reviewing-clips-with-the-keyboard) — every Rapid Review key, and how auto-advance decides when to move on
-- [Star Ratings & Selects](/manual/managing-assets/#star-ratings--selects) — ratings, Hero/Maybe/Reject, and where each one shows up in the app
+- [Star Ratings & Selects](/manual/managing-clips/#star-ratings--selects) — ratings, Hero/Maybe/Reject, and where each one shows up in the app
 - [Smart Selects](/manual/organizing-media/#smart-selects) — the five quality measures and how circle takes get proposed
-- [Undo and Redo](/manual/managing-assets/#undo-and-redo) — what can and can't be undone after a review session
+- [Undo and Redo](/manual/managing-clips/#undo-and-redo) — what can and can't be undone after a review session
 
 ## Other guides
 
@@ -87,6 +87,6 @@ Category, rating and select-status changes in MediaFlowSwift go through Edit →
 
 [All guides](/guides/) — the full list.
 
-## Try it on your own footage
+## Run your own review pass
 
-MediaFlowSwift is the Mac app this guide describes. [Download it](/download.html) and the full app runs for 14 days, with no card asked for — macOS 14 or later, on a Mac with Apple silicon.
+Rapid Review and Smart Selects are part of MediaFlowSwift, the app covered here. [Download it](/download.html) for a 14-day trial of the full app, no card needed, on macOS 13 or later with Apple silicon.

@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/external-hard-drive-organization-for-video/
 published: "2026-10-21"
-updated: "2026-10-21"
+updated: "2026-10-26"
 og_image: "/images/blog/external-hard-drive-organization-for-video.png"
 title: "External Hard Drive Organization for Video Creators"
 seo_title: "External Hard Drive Organization for Video Creators"
@@ -83,6 +83,8 @@ Archive/
 
 Numbered prefixes keep the folders in working order: card offloads first, exports last. The 01-cards folder is the one that protects you. It holds an untouched copy of every card, one subfolder per card, so drone footage never mixes with camera footage. Date-first shoot names keep shoots in time order, and the slug after the date says what's inside.
 
+<figure class="guide-figure"><img src="/images/blog/external-hard-drive-organization-for-video.svg" width="720" height="128" style="max-width:100%;height:auto" alt="Five numbered subfolders in working order inside every shoot folder: 01-cards for untouched card offloads, 02-selects for keepers, 03-project for editing files, 04-proxies, and 05-exports." loading="lazy"><figcaption>The numbered subfolders inside each dated shoot folder.</figcaption></figure>
+
 MediaFlowSwift uses its own layout rather than this exact tree. Organize Media files each clip as Destination / Category / Camera / Filename. The destination can be any folder you choose for the project, including a dated shoot folder on an external drive. The [Organizing Media chapter](/manual/organizing-media/) and the [guide to automating video file organization](/guides/automate-video-file-organization-on-mac/) show how that works.
 
 ### A simpler tree for non-video files
@@ -146,7 +148,7 @@ MediaFlowSwift's import computes a SHA-256 checksum from the card, writes the co
 
 Organize Media then files each clip and checks it against the import checksum. [Clear Card](/manual/organizing-media/#clear-card) deletes only clips that are already organized and verified at the destination. On cards laid out by the camera, such as Sony XAVC cards, Clear Card deletes nothing. It tells you instead when the card is safe to format in the camera.
 
-The limits are real. MediaFlowSwift runs only on Macs with Apple silicon and macOS 14 or later, though Windows and Intel Mac versions are coming. It writes no ASC MHL file, and it makes a second copy as a separate later step. Crews that need MHL reports or several destinations at once are better served by OffShoot or Silverstack XT. The [MediaFlowSwift vs OffShoot comparison](/vs/offshoot/) sets out the differences, and [evaluating video file management software](/blog/2026/10/evaluating-video-file-management-software/) covers the wider field.
+The limits are real. MediaFlowSwift runs only on Macs with Apple silicon and macOS 13 or later, though Windows and Intel Mac versions are coming. It writes no ASC MHL file, and it makes a second copy as a separate later step. Crews that need MHL reports or several destinations at once are better served by OffShoot or Silverstack XT. The [MediaFlowSwift vs OffShoot comparison](/vs/offshoot/) sets out the differences, and [evaluating video file management software](/blog/2026/10/evaluating-video-file-management-software/) covers the wider field.
 
 ## How do you decide what to keep, archive, or delete?
 
@@ -215,4 +217,4 @@ Fragmentation affects the two differently. SSDs are largely unaffected by fragme
 
 TRIM lets an SSD reclaim freed space and keep its write speed up. Apple's internal SSDs trim automatically. External SSDs vary. [The Eclectic Light Company](https://eclecticlight.co/2025/11/13/does-that-ssd-trim-and-why-is-it-important/) reports that SATA-based external SSDs usually don't trim by default. NVMe drives on Thunderbolt or USB4 should trim when formatted as APFS.
 
-Want verified imports, Category and Camera folders, Clear Card and numbered archive drives in one Mac app? [Download MediaFlowSwift](/download.html) for a Mac with Apple silicon. The 14-day Studio Pro trial needs no card, and the plans are listed on the [pricing section](/#plans).
+Want verified imports, Category and Camera folders, Clear Card and numbered archive drives in one Mac app? [MediaFlowSwift's 14-day Studio Pro trial](/download.html) needs no card. It requires Apple silicon and macOS 13 or later; the plans are listed on the [pricing section](/#plans).

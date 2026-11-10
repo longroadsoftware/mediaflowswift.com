@@ -21,6 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
 <link rel="stylesheet" href="site.css">
+<script src="/site.js" defer></script>
 <!-- Analytics, off until the visitor says yes. See /privacy.html -->
 <script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
 </head>
@@ -28,6 +29,14 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/"><svg viewBox="0 0 28 28" aria-hidden="true"><rect x="2" y="5" width="24" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 10h4M6 14h4M6 18h4M18 10h4M18 14h4M18 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 11l5 3-5 3z" fill="currentColor"/></svg>MediaFlowSwift</a>
+    <details class="menu-drop">
+      <summary>Products</summary>
+      <div class="menu-panel">
+        <a href="https://mediaflowswift.com/" aria-current="page"><strong>MediaFlowSwift</strong><span>Footage manager for Mac</span></a>
+        <a href="https://checkandroll.app/"><strong>Check &amp; Roll</strong><span>RV checklists for iPhone and iPad</span></a>
+        <a href="https://longroadsoftware.com/proof-copy/"><strong>Proof Copy</strong><span>Coming soon</span></a>
+      </div>
+    </details>
     <nav class="menu" aria-label="Site">
       <a href="/">Overview</a>
       <a href="/download.html">Download</a>
@@ -36,6 +45,7 @@
       <a href="/manual/">Manual</a>
       <a href="/guides/">Guides</a>
       <a href="/blog/">Blog</a>
+      <a href="/contact.html">Contact</a>
       <a href="/support.html">Support</a>
       <a href="/privacy.html" aria-current="page">Privacy</a>
       <a href="/about/">About</a>
@@ -46,10 +56,10 @@
 <main class="wrap">
 <article class="doc">
   <h1>Privacy</h1>
-  <p class="updated">Last updated 23 October 2026. &ldquo;We&rdquo; and &ldquo;us&rdquo; on this page mean Long Road Software LLC, which makes MediaFlowSwift. This page describes the app; it says the same as Settings &rsaquo; Privacy inside MediaFlowSwift, which is the authoritative list and changes with the app.</p>
+  <p class="updated">Last updated 10 November 2026. &ldquo;We&rdquo; and &ldquo;us&rdquo; on this page mean Long Road Software LLC, which makes MediaFlowSwift. This page describes the app; it says the same as Settings &rsaquo; Privacy inside MediaFlowSwift, which is the authoritative list and changes with the app.</p>
 
   <h2>The short version</h2>
-  <p>MediaFlowSwift works on your Mac and your own network. It has no account and collects no usage data or analytics. Your media, projects and database stay on your Mac and on your network. It contacts us for two things only: to ask whether there is a newer version, and, once you have entered a licence key, to check that key. Both are described below.</p>
+  <p>MediaFlowSwift works on your Mac and your own network. It has no account and collects no usage data or analytics. Your media, projects and database stay on your Mac and on your network. It contacts us for two things only: to ask whether there is a newer version (from version 1.11, once you say yes or when you ask), and, once you have entered a licence key, to check that key. Both are described below.</p>
   <p>A few features need a service run by another company. Each one is <strong>off until you turn it on</strong> in Settings &rsaquo; Privacy, which shows what is sent, to whom, and what for. You can turn any of them off again at any time.</p>
 
   <h2>Services you can turn on</h2>
@@ -83,7 +93,7 @@
   <div class="tablewrap">
   <table>
     <tr><th>Connection</th><th>When</th><th>What is sent</th></tr>
-    <tr><td>Checking for a new version</td><td>Shortly after launch, then every few hours (every half hour while the site cannot be reached)</td><td>A request for one small file that names the newest version; nothing about you or your Mac goes with it. Installing an update downloads the new copy from this site and checks it is exactly the file promised and signed by us.</td></tr>
+    <tr><td>Checking for a new version</td><td>From version 1.11, only once you say yes. The app asks you once; the switch in Settings &rsaquo; Privacy, also in Settings &rsaquo; General, changes the answer. While it is on: shortly after launch, when the Mac wakes, then every few hours (every half hour while the site cannot be reached). On or off: whenever you choose Check for Updates&hellip; in the app menu or Check Now in About MediaFlowSwift. Versions before 1.11 look without asking.</td><td>A request for one small file that names the newest version; nothing about you or your Mac goes with it beyond what any website sees, your internet address. When there is a new version, its list of changes is read from this site too. Installing an update downloads the new copy from this site and checks it is exactly the file promised and signed by us.</td></tr>
     <tr><td>Licence check</td><td>Nothing until you enter a licence key. Then when you enter it, once a day after that, when you click Check now, and when you release a Mac</td><td><p>Entering the key sends the key, a one-way code made from this Mac&rsquo;s hardware id (the same for every user account on this Mac, and never the hardware id itself), and the Mac&rsquo;s name as you see it in System Settings. The daily check, Check now and release send the key and that code only.</p><p>Until an account first activated by an earlier version of the app has moved to that code, its checks, and Release this Mac, also send the random id that version made for it, so that its place on the key can be freed. The answer is your plan, when it renews or ends, and the Macs that hold seats &mdash; each one&rsquo;s name and when it last checked in. No email, no account name, nothing about your projects. The key and the answer are kept in your Keychain.</p><p>The licence service keeps the key, the plan and when it renews or ends, Paddle&rsquo;s ids for the purchase, a one-way hash of the buying email, and for each Mac the code it checks in with, the Mac&rsquo;s name, when it was activated and when it last checked in. If support changes a key &mdash; frees a Mac&rsquo;s place, switches a key off, switches it back on &mdash; or if a payment is charged back, that is kept with the key as well.</p></td></tr>
   </table>
   </div>
@@ -113,11 +123,20 @@
 
   <p id="analytics-choice">Analytics on this site is off until you say yes. With JavaScript on, this line says what you chose and lets you change it.</p>
 
+  <p>When you press the Download button, the link goes through a small counter of ours (on Cloudflare) that adds one to that day&rsquo;s download total, then sends you on to the file on GitHub. It sets no cookie and keeps nothing about you: no IP address, no visitor id. Updates the app installs itself do not go through it.</p>
+
   <p>GitHub, as the host, keeps ordinary server logs of requests (IP address, page requested, time) under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub&rsquo;s privacy statement</a>. Fonts are loaded from Google Fonts, which receives the request for the font files.</p>
+
+  <h2 id="contact-form">Contact form</h2>
+  <p>The <a href="/contact.html">contact form</a> sends what you type: your name, the email you want a reply at, what the note is about, whether you already use MediaFlowSwift, your message, and the Mac or app version if you give one. A small service of ours on Cloudflare sends that as an ordinary email. Help, a refund, or a change to a plan you already pay for goes to support@mediaflowswift.com. A question about buying goes to hello@longroadsoftware.com. A bill, invoice, receipt, payment or tax question goes to billing@longroadsoftware.com. Anything else goes to hello@. Cloudflare sees the request, including your IP address, the way it does for any page it serves. We do not add you to a mailing list, and we do not keep a copy apart from that email. To have the email deleted, write to <a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a>.</p>
 
   <h2 id="email-list">Email list</h2>
   <p>You can ask to be emailed when a Long Road Software product is ready, using the form on its page, or by ticking the marketing box at Paddle checkout. Either way the list is kept by <a href="https://kit.com/">Kit</a>, our email service, under <a href="https://kit.com/privacy">Kit&rsquo;s privacy policy</a>. Kit keeps your email address, which list you joined and when, and, for each email we send, whether it was opened and which links were clicked. A website sign-up is added only after you click the link in Kit&rsquo;s confirmation email.</p>
   <p>We use the address only for Long Road Software news, we do not sell or share it, and every email has an unsubscribe link that removes you at once. To be removed by hand, write to the address under Questions.</p>
+
+  <h2 id="creator-program">Creator program</h2>
+  <p>If you apply to our creator program, the form sends <a href="https://kit.com/">Kit</a>, our email service (Kit, Inc., USA), everything you enter: your name, email and YouTube channel link; about how many subscribers you have; what you film, what you shoot on and which editor you use (and, where you pick &ldquo;other&rdquo;, what you typed); which operating system you edit on, and its version if you give it; about how many cards or clip folders you handle a week; how you back up your footage; your biggest footage headache, in your own words; and that you ticked the box agreeing to the program terms. Kit stores it and sends our emails to applicants, under <a href="https://kit.com/privacy">Kit&rsquo;s privacy policy</a>. As with the email list, Kit also records, for each email we send, whether it was opened and which links were clicked. An application counts only after you click the link in Kit&rsquo;s confirmation email.</p>
+  <p>We use it only to review your application and to write to you about the program; we do not sell or share it. To be removed, reply to any email from us and ask, or write to the address under Questions.</p>
 
   <h2>Purchases</h2>
   <p>Payment is handled by Paddle, our merchant of record: the checkout, your card and billing details, receipts and tax are theirs, under <a href="https://www.paddle.com/legal/privacy">Paddle&rsquo;s privacy policy</a>. Paddle tells our licence service about the purchase so that a key can be made; the thank-you page fetches that key with the transaction number. We never see card numbers. Paddle.js, the checkout script, loads on the home page only.</p>
@@ -131,7 +150,7 @@
 <footer>
   <div class="wrap">
     <span>&copy; 2026 <a href="https://longroadsoftware.com/">Long Road Software LLC</a> &middot; MediaFlowSwift</span>
-    <nav aria-label="Legal"><a href="/about/">About</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
+    <nav aria-label="Legal"><a href="/about/">About</a><a href="/contact.html">Contact</a><a href="/support.html">Support</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms of service</a><a href="/refunds.html">Refund policy</a><a href="mailto:support@mediaflowswift.com">support@mediaflowswift.com</a></nav>
   </div>
 </footer>
 </body>
