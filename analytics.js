@@ -205,7 +205,7 @@
     var name = null, props = {};
     if (el.hasAttribute("data-buy")) {
       name = "checkout_opened"; props.plan = el.getAttribute("data-buy");
-    } else if (el.id === "get" || href.indexOf("lrs-downloads") !== -1) {
+    } else if (el.id === "get" || href === "/get" || href.indexOf("lrs-downloads") !== -1) {
       name = "trial_download_clicked";
     } else if (href === "/download.html" || href.indexOf("/download.html") === 0) {
       name = "download_page_clicked";
