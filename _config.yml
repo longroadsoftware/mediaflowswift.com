@@ -1,6 +1,7 @@
 title: MediaFlowSwift
 url: https://mediaflowswift.com
 baseurl: ""
+repository: longroadsoftware/mediaflowswift.com
 markdown: kramdown
 kramdown:
   input: GFM
