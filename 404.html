@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <script>
-/* Short links: /a to /z and /0 to /9 are HeyCatch campaign links. GitHub Pages
-   cannot redirect, so this page sends them on to the home page with the
+/* Short links: /a to /z and /0 to /9 are HeyCatch campaign links. Since the
+   move to Cloudflare (2026-11-11) cloudflare/worker.js redirects them on the
+   server; this is only the fallback, sending them on to the home page with the
    campaign in the address. Nothing is counted unless the visitor says yes
    to analytics there. */
 (function () {
