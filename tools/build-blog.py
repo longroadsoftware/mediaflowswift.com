@@ -340,7 +340,8 @@ feed = f"""<?xml version="1.0" encoding="UTF-8"?>
 """
 out.append(("blog/feed.xml", feed))
 
-# Sitemap block: /blog/, category pages, posts. Archive pages are noindex and stay out.
+# Sitemap block: /blog/, category pages, posts. Archive pages, noindexed posts and merged
+# posts (canonical_url points elsewhere) stay out.
 sitemap_path = os.path.join(ROOT, "sitemap.xml")
 sitemap = open(sitemap_path, encoding="utf-8").read()
 if SITEMAP_BEGIN not in sitemap or SITEMAP_END not in sitemap:
@@ -351,7 +352,7 @@ for k in cats:
     ps = [p for p in posts if p["category"] == k]
     if ps:
         entries.append((f"{SITE}/blog/category/{k}/", max(p["updated_d"] for p in ps)))
-entries += [(SITE + p["url"], p["updated_d"]) for p in posts]
+entries += [(SITE + p["url"], p["updated_d"]) for p in posts if not p.get("noindex") and not p.get("canonical_url")]
 block = "\n".join(f"  <url><loc>{loc}</loc><lastmod>{d}</lastmod></url>" for loc, d in entries)
 start = sitemap.index(SITEMAP_BEGIN) + len(SITEMAP_BEGIN)
 sitemap = sitemap[:start] + "\n" + block + "\n  " + sitemap[sitemap.index(SITEMAP_END):]

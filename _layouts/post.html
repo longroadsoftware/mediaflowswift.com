@@ -15,8 +15,8 @@
 <title>{{ full_title | escape }}</title>
 <meta name="description" content="{{ page.description | escape }}">
 <meta name="keywords" content="{{ page.keywords | escape }}">
-<meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta name="robots" content="{% if page.noindex %}noindex, follow{% else %}index, follow, max-image-preview:large{% endif %}">
+<link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
 <link rel="alternate" type="application/rss+xml" title="MediaFlowSwift Blog" href="{{ site.url }}/blog/feed.xml">
 <meta property="og:site_name" content="MediaFlowSwift">
 <meta property="og:type" content="article">
