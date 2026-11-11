@@ -117,7 +117,7 @@
       // The button goes through our download counter (lrs-downloads), which adds one to a daily total,
       // skips Mike and Sheri, stores nothing about the visitor, and redirects to the GitHub Release copy.
       // The app's updater keeps using m.url, so updates are never counted.
-      get.href = "https://lrs-downloads.mediaflow-licence.workers.dev/mediaflowswift";
+      get.href = "/get"; // = lrs-downloads Worker on our own domain (route mediaflowswift.com/get)
       get.rel = "nofollow";
       get.removeAttribute("aria-disabled");
       get.textContent = "Download MediaFlowSwift " + m.version;
