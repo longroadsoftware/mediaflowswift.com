@@ -2,7 +2,8 @@
 layout: post
 permalink: /blog/2026/10/external-hard-drive-organization-for-video/
 published: "2026-10-21"
-updated: "2026-10-26"
+updated: "2026-11-11"
+noindex: true
 og_image: "/images/blog/external-hard-drive-organization-for-video.png"
 title: "External Hard Drive Organization for Video Creators"
 seo_title: "External Hard Drive Organization for Video Creators"

@@ -2,7 +2,8 @@
 layout: post
 permalink: /blog/2026/10/find-all-video-files-on-mac/
 published: "2026-10-31"
-updated: "2026-10-31"
+updated: "2026-11-11"
+canonical_url: "https://mediaflowswift.com/blog/2026/10/cant-find-video-files-on-sd-card/"
 og_image: "/images/blog/find-all-video-files-on-mac.png"
 title: "How to Find All Video Files on Mac (and Verify Them)"
 seo_title: "How to Find All Video Files on a Mac and Verify Them"
@@ -46,6 +47,8 @@ sources:
   - title: "Free up storage space on Mac, Apple Support"
     url: "https://support.apple.com/en-us/102624"
 ---
+**Update:** We folded this into our deeper guide, [Can't Find Video Files on SD Card? Why Footage Hides and Where to Look](/blog/2026/10/cant-find-video-files-on-sd-card/). This page stays up for the search terms it already reaches, but start there for the fuller walkthrough.
+
 To find all video files on a Mac, start with a Finder search for Kind is Movie, then widen it. Search camera formats by extension, look inside Photos, iMovie and Final Cut libraries, and filter out proxies and render files. Then check the list with file counts, byte totals and checksums before you move or delete anything.
 
 The steps below work for one Mac or a stack of archive drives. Most of them use tools already on your Mac: Finder, Spotlight and Terminal.
