@@ -1,5 +1,6 @@
 ---
 layout: post
+noindex: true
 permalink: /blog/2026/10/how-to-organize-video-footage/
 published: "2026-10-24"
 updated: "2026-10-26"
