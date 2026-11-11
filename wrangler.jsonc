@@ -1,0 +1,16 @@
+// Cloudflare Worker that serves mediaflowswift.com (moved from GitHub Pages, 2026-11-11).
+// Cloudflare builds it on every push: `bundle exec jekyll build` writes _site, then `npx wrangler deploy`.
+{
+  "name": "mediaflowswift-site",
+  "main": "cloudflare/worker.js",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./_site",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "not_found_handling": "none"
+  },
+  "observability": { "enabled": false }
+}

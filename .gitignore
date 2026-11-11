@@ -1,1 +1,5 @@
 .claude/
+_site/
+.wrangler/
+vendor/
+.bundle/
