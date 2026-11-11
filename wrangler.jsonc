@@ -4,8 +4,10 @@
   "name": "mediaflowswift-site",
   "main": "cloudflare/worker.js",
   "compatibility_date": "2026-11-01",
-  "workers_dev": true,
-  "preview_urls": true,
+  // Served only at mediaflowswift.com (www 301s there by a zone redirect rule); no workers.dev copy.
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [{ "pattern": "mediaflowswift.com/*", "zone_name": "mediaflowswift.com" }],
   "assets": {
     "directory": "./_site",
     "binding": "ASSETS",
