@@ -2,7 +2,8 @@
 layout: post
 permalink: /blog/2026/10/clear-memory-card-without-losing-footage/
 published: "2026-10-27"
-updated: "2026-10-27"
+updated: "2026-11-11"
+canonical_url: "https://mediaflowswift.com/blog/2026/10/checksum-verification-before-erasing-card/"
 og_image: "/images/blog/clear-memory-card-without-losing-footage.png"
 title: "How to Clear a Memory Card Without Losing Footage"
 seo_title: "How to Clear a Memory Card Without Losing Footage"
@@ -60,6 +61,8 @@ sources:
   - title: "Silverstack XT, Pomfort (checked October 2026)"
     url: "https://pomfort.com/silverstackxt/"
 ---
+**Update:** We folded this into our deeper guide, [Checksum Verification: Prove Your Card Copy Before Erasing](/blog/2026/10/checksum-verification-before-erasing-card/). This page stays up for the search terms it already reaches, but start there for the fuller walkthrough.
+
 To clear a memory card without losing footage, copy every clip to a drive and verify the copy first. Then format the card in the camera that will record on it next. A format clears the whole card at once and rebuilds the folders the camera expects. Deleting clips or erasing on a computer is a fallback.
 
 This guide covers how to clear a card. It explains what delete, quick format and full format do, with in-camera steps for a Sony a7 III, GoPro and DJI drones. It also covers erasing on a Mac or Windows PC, picking exFAT or FAT32, and what to do after a format you didn't mean.
