@@ -10,7 +10,7 @@
 // (cloudflare/traffic.js, D1 `lrs-traffic`, daily totals only; LON-3645) and serve those totals at
 // /api/traffic-stats to the KPI report. Counting never slows or breaks a page: it runs after the
 // response (waitUntil) and every error is caught.
-import { landingFor, recordVisit, chicagoDate, carryParams, rewriteLinks, stats } from "./traffic.js";
+import { landingFor, recordVisit, chicagoDate, carryParams, rewriteLinks, stats, mustAsk } from "./traffic.js";
 
 const SITE = "mediaflowswift.com";
 
@@ -40,9 +40,15 @@ function safeEqual(a, b) {
   return d === 0;
 }
 
+/** Tell analytics.js whether this visitor must be asked first (EU, EEA, UK, Switzerland, or unknown). */
+function markRegion(resp, request) {
+  const ask = mustAsk(request.cf && request.cf.country) ? "1" : "0";
+  return new HTMLRewriter().on("script[data-ga]", { element(el) { el.setAttribute("data-ask", ask); } }).transform(resp);
+}
+
 /** A page went out: count the landing (if it is one) and carry its source on internal links. */
 function page(resp, request, env, ctx, status) {
-  const out = withHeaders(resp, status);
+  const out = markRegion(withHeaders(resp, status), request);
   if ((status || resp.status) !== 200 || request.method !== "GET") return out;
   let landing = null;
   try {
@@ -103,7 +109,7 @@ export default {
     }
 
     const nf = await asset(env, url, "/404.html");
-    if (nf) return withHeaders(nf, 404);
+    if (nf) return markRegion(withHeaders(nf, 404), request);
     return new Response("Not found", { status: 404 });
   },
 };

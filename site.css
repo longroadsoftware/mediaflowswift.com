@@ -335,6 +335,8 @@ footer a { color: var(--ink-2); }
 footer a:hover { color: var(--ink); }
 footer .listing-badge { order: 4; flex-basis: 100%; }
 footer .listing-badge img { display: block; width: 230px; height: auto; border-radius: 10px; }
+footer .consent-optout { order: 5; flex-basis: 100%; margin: 0; font-size: 0.9rem; }
+footer .consent-optout .consent-change { color: var(--ink-2); font-weight: 400; }
 footer .founder { flex-basis: 100%; order: 3; font-size: 0.9rem; display: flex; align-items: center; gap: 0.6rem; }
 .founder-thumb { flex: 0 0 auto; border-radius: 50%; box-shadow: 0 0 0 2px var(--line-2); }
 
