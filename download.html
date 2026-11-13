@@ -118,6 +118,11 @@
       // skips Mike and Sheri, stores nothing about the visitor, and redirects to the GitHub Release copy.
       // The app's updater keeps using m.url, so updates are never counted.
       get.href = "/get"; // = lrs-downloads Worker on our own domain (route mediaflowswift.com/get)
+      // Pass on where this visit came from (src/med/cmp, added to our links by the site Worker; no cookie),
+      // so the counter can add the download to that source's daily total.
+      var from = new URLSearchParams(location.search), carry = new URLSearchParams();
+      ["src", "med", "cmp"].forEach(function (k) { if (from.get(k)) carry.set(k, from.get(k)); });
+      if (carry.toString()) get.href += "?" + carry.toString();
       get.rel = "nofollow";
       get.removeAttribute("aria-disabled");
       get.textContent = "Download MediaFlowSwift " + m.version;

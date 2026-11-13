@@ -12,7 +12,16 @@
     "directory": "./_site",
     "binding": "ASSETS",
     "html_handling": "none",
-    "not_found_handling": "none"
+    "not_found_handling": "none",
+    // The Worker also runs for files, so a landing on /faq.html etc. is counted too (cloudflare/traffic.js).
+    "run_worker_first": true
+  },
+  // Who sent us visitors: daily totals only (LON-3645). Schema: cloudflare/traffic-schema.sql.
+  // Secret TRAFFIC_STATS_KEY (wrangler secret put; Mac Keychain lrs-traffic-stats) guards /api/traffic-stats.
+  "d1_databases": [{ "binding": "TRAFFIC", "database_name": "lrs-traffic", "database_id": "535b9ac4-7a9a-4482-9af7-f4f3280d6755" }],
+  "vars": {
+    // Mike & Sheri's home internet, not counted as visitors (same list as lrs-downloads EXCLUDE_IPS).
+    "EXCLUDE_IPS": "50.42.107.18/32,2001:1960:6800:88df::/64"
   },
   "observability": { "enabled": false }
 }
