@@ -202,3 +202,13 @@ export async function stats(db, days) {
   const d = await db.prepare(`SELECT day, site, who, source, medium, campaign, country, device, n FROM downloads WHERE day >= ?1 ORDER BY day, n DESC`).bind(since).all();
   return { since, visits: v.results, downloads: d.results };
 }
+
+// Where the law asks for a yes before analytics cookies (Mike, 2026-11-13): the EU, the rest of the
+// EEA, the UK (with its crown dependencies and Gibraltar) and Switzerland. An unknown country
+// (no cf data, Tor "T1", "XX") is asked too: when in doubt, ask.
+const ASK = new Set(("AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE " +
+  "IS LI NO GB GG JE IM GI CH").split(" "));
+export function mustAsk(country) {
+  const c = String(country || "").toUpperCase();
+  return !/^[A-Z]{2}$/.test(c) || c === "XX" || c === "T1" || ASK.has(c);
+}

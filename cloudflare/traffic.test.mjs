@@ -1,7 +1,7 @@
 // node --test cloudflare/traffic.test.mjs
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { sourceOf, mapHost, landingFor, whoIs, isPageLink, tagHref, carryParams, deviceOf } from "./traffic.js";
+import { mustAsk, sourceOf, mapHost, landingFor, whoIs, isPageLink, tagHref, carryParams, deviceOf } from "./traffic.js";
 
 const HOME = "50.42.107.18/32,2001:1960:6800:88df::/64";
 const ENV = { EXCLUDE_IPS: HOME };
@@ -89,4 +89,9 @@ test("carry params come from the landing, or are passed on from the link", () =>
   assert.equal(carryParams(new URL("https://m.com/x"), null), "");
   assert.equal(deviceOf(PHONE), "mobile");
   assert.equal(deviceOf(MAC), "desktop");
+});
+
+test("the notice is asked in the EU, EEA, UK and Switzerland, and when the country is unknown", () => {
+  for (const c of ["DE", "fr", "IE", "GB", "CH", "NO", "IS", "LI", "JE", "GI", "", null, "XX", "T1", "zzz"]) assert.equal(mustAsk(c), true, String(c));
+  for (const c of ["US", "CA", "ZA", "AU", "NZ", "MX", "BR", "IN", "JP"]) assert.equal(mustAsk(c), false, c);
 });

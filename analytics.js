@@ -1,11 +1,16 @@
-/* Analytics, off until the visitor says yes.
+/* Analytics. In the EU, the rest of the EEA, the UK and Switzerland it is off
+   until the visitor says yes (Mike, 2026-11-13: ask only where the law asks).
 
-   No Google or HeyCatch code is in any page of this site. This file loads
-   Google Analytics and HeyCatch only after a visitor presses Yes on the
-   notice, and remembers
-   the answer in localStorage, which sets no cookie of its own. No answer
-   counts as no: closing the page, ignoring the notice, or a browser that
-   blocks storage all leave analytics off.
+   No Google or HeyCatch code is in any page of this site; this file loads them.
+   The site's Cloudflare Worker sets data-ask on this script tag from the
+   visitor's country: "1" = ask first (EU/EEA/UK/CH, or country unknown),
+   "0" = elsewhere. No data-ask (a copy served some other way) = ask first.
+
+   Where we ask: nothing loads until the visitor presses Yes on the notice; no
+   answer counts as no. Elsewhere: Google Analytics and HeyCatch load without a
+   notice, unless the browser sends Global Privacy Control or Do Not Track, or
+   the visitor has turned it off ("Don't count my visits" in the footer, or the
+   privacy page). Answers are kept in localStorage, which sets no cookie.
 
    Pages load it with the measurement id on the tag:
      <script src="/analytics.js" data-ga="G-XXXXXXX" defer></script>
@@ -19,6 +24,11 @@
   var privacyUrl = (tag && tag.getAttribute("data-privacy")) || "/privacy.html";
   var store = "analytics-consent";
   var loaded = false;
+  /* Ask first unless the Worker said this visitor is outside the EU/EEA/UK/CH. */
+  var mustAsk = !(tag && tag.getAttribute("data-ask") === "0");
+  /* The browser's own "don't track me" settings (Global Privacy Control, Do Not Track). */
+  var browserSaysNo = navigator.globalPrivacyControl === true ||
+    navigator.doNotTrack === "1" || window.doNotTrack === "1";
 
   /* HeyCatch (heycatch.ai): visits, clicks and where visitors came from,
      for our marketing. Same yes as Google Analytics. The key is a public
@@ -172,23 +182,34 @@
     if (!slot) return;
     var said = answer();
     if (said !== "yes" && said !== "no") {
-      slot.textContent = showing
-        ? "You have not answered yet. Analytics is off; the notice at the bottom of the page asks."
-        : "We have not asked you yet.";
-      return;
+      if (mustAsk) {
+        slot.textContent = showing
+          ? "You have not answered yet. Analytics is off; the notice at the bottom of the page asks."
+          : "We have not asked you yet.";
+        return;
+      }
+      if (browserSaysNo) {
+        slot.textContent = "Your browser asks sites not to track you, so analytics is off. ";
+        said = "no";
+      } else {
+        slot.textContent = "Analytics is on for this visit (outside the EU, UK and Switzerland we don't ask first). ";
+        said = "yes";
+      }
+    } else {
+      slot.textContent = said === "yes"
+        ? "You said yes to analytics on this site. "
+        : "You said no to analytics on this site. Nothing is sent. ";
     }
-    slot.textContent = said === "yes"
-      ? "You said yes to analytics on this site. "
-      : "You said no to analytics on this site. Nothing is sent. ";
     var change = document.createElement("button");
     change.type = "button";
     change.className = "consent-change";
-    change.textContent = said === "yes" ? "Change to no" : "Change to yes";
+    change.textContent = said === "yes" ? "Turn it off" : "Turn it on";
     change.addEventListener("click", function () {
-      var now = answer() === "yes" ? "no" : "yes";
+      var now = counting() ? "no" : "yes";
       remember(now);
       if (now === "yes") load(); else stop();
       showChoice();
+      showOptOut();
     });
     slot.appendChild(change);
     slot.appendChild(document.createTextNode(" — no reload needed."));
@@ -197,8 +218,12 @@
   /* Name the two moments that matter, so the analytics can count them as
      goals: someone pressing a download link, and someone opening checkout.
      Only after a yes; before that, nothing is loaded to send them to. */
+  function counting() {
+    return loaded && !window["ga-disable-" + id];
+  }
+
   function goal(event) {
-    if (answer() !== "yes") return;
+    if (!counting()) return;
     var el = event.target && event.target.closest && event.target.closest("a, button");
     if (!el) return;
     var href = el.getAttribute("href") || "";
@@ -217,11 +242,47 @@
   }
   document.addEventListener("click", goal, true);
 
+  /* Outside the EU/UK/CH there is no notice, so every page's footer carries the way out. */
+  var optOut = null;
+  function showOptOut() {
+    if (mustAsk) return;
+    var footer = document.querySelector("footer .wrap") || document.querySelector("footer");
+    if (!footer) return;
+    if (!optOut) {
+      optOut = document.createElement("p");
+      optOut.className = "consent-optout";
+      footer.appendChild(optOut);
+    }
+    optOut.textContent = "";
+    if (counting()) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "consent-change";
+      b.textContent = "Don\u2019t count my visits";
+      b.addEventListener("click", function () {
+        remember("no");
+        stop();
+        showOptOut();
+        showChoice();
+      });
+      optOut.appendChild(b);
+    } else {
+      optOut.appendChild(document.createTextNode("Your visits aren\u2019t counted by analytics. "));
+      var a = document.createElement("a");
+      a.href = privacyUrl;
+      a.textContent = "Privacy";
+      optOut.appendChild(a);
+    }
+  }
+
   function start() {
     var said = answer();
     if (said === "yes") load();
-    else if (said !== "no") ask();
+    else if (said === "no") { /* stays off */ }
+    else if (mustAsk) ask();
+    else if (!browserSaysNo) load();
     showChoice();
+    showOptOut();
   }
 
   if (document.body) start();
