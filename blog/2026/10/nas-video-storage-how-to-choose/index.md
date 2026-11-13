@@ -1,5 +1,6 @@
 ---
 layout: post
+noindex: true
 permalink: /blog/2026/10/nas-video-storage-how-to-choose/
 published: "2026-10-21"
 updated: "2026-10-26"
