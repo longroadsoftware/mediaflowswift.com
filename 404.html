@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <script>
-/* Short links: /a to /z and /0 to /9 are HeyCatch campaign links. GitHub Pages
-   cannot redirect, so this page sends them on to the home page with the
+/* Short links: /a to /z and /0 to /9 are HeyCatch campaign links. Since the
+   move to Cloudflare (2026-11-11) cloudflare/worker.js redirects them on the
+   server; this is only the fallback, sending them on to the home page with the
    campaign in the address. Nothing is counted unless the visitor says yes
    to analytics there. */
 (function () {
@@ -22,7 +23,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
 <link rel="stylesheet" href="/site.css">
 <script src="/site.js" defer></script>
-<!-- Analytics, off until the visitor says yes. See /privacy.html -->
+<!-- Analytics: asks first in the EU, EEA, UK and Switzerland; elsewhere on unless turned off. See /privacy.html -->
 <script src="/analytics.js" data-ga="G-392DG1V9T5" defer></script>
 </head>
 <body>

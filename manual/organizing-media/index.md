@@ -759,6 +759,8 @@ A recognition that has not answered within two minutes plus three times the leng
 
 MediaFlow recognizes speech on this Mac when the Mac has an on-device model for your system language. When it does not, nothing is transcribed unless you have turned on online speech recognition in Settings › Privacy; with that on, the audio is sent to Apple. The Transcript tab says which applies before you start. No API key is needed either way.
 
+The on-device model is part of macOS, not of MediaFlow, and not every Mac has it yet. A new or freshly set-up Mac, or one that has never used Dictation, may not. When it is missing, Transcribe does nothing to your clips and says “This Mac has no on-device speech model for” your language, then how to turn on online recognition. To get the model instead, turn on Dictation in System Settings › Keyboard for the language you speak in your clips; macOS downloads the model for it in the background. Then click Transcribe again.
+
 > **Tip:** Clear speech with little background noise gives the best results.
 
 See also: [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac), [Clip Classifier, Second Pass (Tier 1)](#clip-classifier-second-pass-tier-1), [Proposals: What Import Analysis Suggests](#proposals-what-import-analysis-suggests)

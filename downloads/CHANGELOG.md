@@ -2,6 +2,14 @@
 
 What's new in each version of MediaFlowSwift, newest first.
 
+## 1.11.4 · November 9, 2026
+
+**Pick your model from a list, and choose what Organize copies.**
+
+- **Pick your model from a list.** Settings › Analysis lists the models installed on this Mac, so you choose one instead of typing its name.
+- **Organize All or Organize Selected.** When some clips are selected, Organize asks whether to copy the whole project or only those clips.
+- **Bug fixes.** Create Project From Folder, Clear Card, split archives, the Storage Warning and Prepare for YouTube, plus small improvements throughout.
+
 ## 1.11.3 · November 2, 2026
 
 **Fixes for the SEO Agent's local model and chapters on long videos.**

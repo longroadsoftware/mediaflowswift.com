@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mediaflowswift.com/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://mediaflowswift.com/download.html</loc><lastmod>2026-11-03</lastmod></url>
-  <url><loc>https://mediaflowswift.com/changes/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://mediaflowswift.com/changes/</loc><lastmod>2026-11-09</lastmod></url>
   <!-- manual: written by tools/import-guide.sh, do not edit by hand -->
   <url><loc>https://mediaflowswift.com/manual/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://mediaflowswift.com/manual/getting-started/</loc><lastmod>2026-10-26</lastmod></url>
@@ -45,7 +45,7 @@
   <url><loc>https://mediaflowswift.com/contact.html</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://mediaflowswift.com/refunds.html</loc><lastmod>2026-09-24</lastmod></url>
   <url><loc>https://mediaflowswift.com/terms.html</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://mediaflowswift.com/privacy.html</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://mediaflowswift.com/privacy.html</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://mediaflowswift.com/creators/</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://mediaflowswift.com/about/</loc><lastmod>2026-11-03</lastmod></url>
   <!-- blog: written by tools/build-blog.py, do not edit by hand -->

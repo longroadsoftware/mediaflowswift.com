@@ -1,11 +1,22 @@
 title: MediaFlowSwift
 url: https://mediaflowswift.com
+baseurl: ""
+repository: longroadsoftware/mediaflowswift.com
 markdown: kramdown
 kramdown:
   input: GFM
   auto_ids: true
   hard_wrap: false
+include:
+  - _headers
+  - _redirects
 exclude:
   - README.md
+  - Gemfile
+  - Gemfile.lock
+  - wrangler.jsonc
+  - cloudflare
+  - vendor
+  - node_modules
   - images/LICENSES.md
   - tools
