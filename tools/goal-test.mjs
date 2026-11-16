@@ -105,7 +105,22 @@ t.click(link("/#plans", { "data-buy": "pro" }));
 ok("other links: names", names(t, "hc") === "download_clicked,download_page_clicked,checkout_opened");
 ok("checkout: plan is on the event", t.sent.filter(s => s[1] === "checkout_opened")[0][2].plan === "pro");
 
-// 7 a no: nothing is sent and nothing is held
+// 7 the download page adds the visitor's source to the link: still the download, and the held click keeps it
+t = run(); await tick();
+ev = t.click(link("/get?src=youtube&med=video"));
+ok("with a source: sent", names(t, "hc") === "download_clicked" && names(t, "ga") === "download_clicked");
+ok("with a source: not held when ready", ev.prevented === false);
+t = run({ slow: true });
+ev = t.click(link("/get?src=youtube&med=video&cmp=launch"));
+ok("with a source, loading: held", ev.prevented === true);
+t.release(); await tick(); await tick();
+ok("with a source, loading: sent", names(t, "hc") === "download_clicked");
+ok("with a source, loading: goes to the full address", t.win.location.href === "https://mediaflowswift.com/get?src=youtube&med=video&cmp=launch");
+t = run(); await tick();
+t.click(link("/getting-started.html"));
+ok("a page whose name starts with get: nothing sent", t.sent.length === 0);
+
+// 8 a no: nothing is sent and nothing is held
 t = run({ stored: "no" }); await tick();
 ev = t.click(link("/get"));
 ok("no: nothing sent", t.sent.length === 0);

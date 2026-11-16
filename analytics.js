@@ -255,7 +255,8 @@
     if (!el) return;
     var href = el.getAttribute("href") || "";
     var name = null, props = {};
-    var downloading = href === "/get" || href.indexOf("lrs-downloads") !== -1;
+    /* download.html adds ?src=...&med=...&cmp=... to /get when the visitor's source was carried in. */
+    var downloading = href === "/get" || href.indexOf("/get?") === 0 || href.indexOf("lrs-downloads") !== -1;
     if (el.hasAttribute("data-buy")) {
       name = "checkout_opened"; props.plan = el.getAttribute("data-buy");
     } else if (downloading) {
