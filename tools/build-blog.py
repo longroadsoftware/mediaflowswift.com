@@ -317,6 +317,8 @@ def rfc822(d):
 
 rss_items = []
 for p in posts:
+    if p.get("noindex"):
+        continue
     rss_items.append(f"""  <item>
     <title>{esc(p["title"])}</title>
     <link>{SITE}{p["url"]}</link>
@@ -333,7 +335,7 @@ feed = f"""<?xml version="1.0" encoding="UTF-8"?>
   <atom:link href="{SITE}/blog/feed.xml" rel="self" type="application/rss+xml"/>
   <description>{esc(data["description"])}</description>
   <language>en-us</language>
-  <lastBuildDate>{rfc822(max(p["updated_d"] for p in posts))}</lastBuildDate>
+  <lastBuildDate>{rfc822(max(p["updated_d"] for p in posts if not p.get("noindex")))}</lastBuildDate>
 {chr(10).join(rss_items)}
 </channel>
 </rss>
@@ -351,7 +353,7 @@ for k in cats:
     ps = [p for p in posts if p["category"] == k]
     if ps:
         entries.append((f"{SITE}/blog/category/{k}/", max(p["updated_d"] for p in ps)))
-entries += [(SITE + p["url"], p["updated_d"]) for p in posts]
+entries += [(SITE + p["url"], p["updated_d"]) for p in posts if not p.get("noindex")]
 block = "\n".join(f"  <url><loc>{loc}</loc><lastmod>{d}</lastmod></url>" for loc, d in entries)
 start = sitemap.index(SITEMAP_BEGIN) + len(SITEMAP_BEGIN)
 sitemap = sitemap[:start] + "\n" + block + "\n  " + sitemap[sitemap.index(SITEMAP_END):]
