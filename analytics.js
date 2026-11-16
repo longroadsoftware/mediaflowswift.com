@@ -249,6 +249,7 @@
      The button is not a download until its address is the download counter
      (/get on our own domain): before the version loads it still points at
      the plans. */
+  var held = null;   /* the download link whose click is being held, if any */
   function goal(event) {
     if (!counting()) return;
     var el = event.target && event.target.closest && event.target.closest("a, button");
@@ -271,11 +272,16 @@
        then go anyway so a stuck script never blocks the download. */
     if (downloading && !hcApi && hc && leavesThisTab(event, el) && event.cancelable) {
       event.preventDefault();
+      /* A second press while the first is still held is the same download:
+         count it once. The first press is already on its way. */
+      if (held === el) return;
+      held = el;
       var url = el.href;
       var left = false;
       function go() {
         if (left) return;
         left = true;
+        held = null;
         window.location.href = url;
       }
       hc.then(function (a) {

@@ -120,7 +120,20 @@ t = run(); await tick();
 t.click(link("/getting-started.html"));
 ok("a page whose name starts with get: nothing sent", t.sent.length === 0);
 
-// 8 a no: nothing is sent and nothing is held
+// 8 an impatient second press while the first is held: one download, counted once
+t = run({ slow: true });
+const once = link("/get");
+ev = t.click(once);
+const again = t.click(once);
+ok("pressed twice: the second press does not leave either", again.prevented === true);
+ok("pressed twice: Google Analytics hears of one", names(t, "ga") === "download_clicked");
+t.release(); await tick(); await tick();
+ok("pressed twice: HeyCatch hears of one", names(t, "hc") === "download_clicked");
+ok("pressed twice: the download starts", t.win.location.href === "https://mediaflowswift.com/get");
+ev = t.click(once);
+ok("pressed again later (the tab stayed): counted as a new press", names(t, "hc") === "download_clicked,download_clicked" && ev.prevented === false);
+
+// 9 a no: nothing is sent and nothing is held
 t = run({ stored: "no" }); await tick();
 ev = t.click(link("/get"));
 ok("no: nothing sent", t.sent.length === 0);
