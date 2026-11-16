@@ -107,7 +107,7 @@
     eventCallback: function (event) {
       if (event.name === "checkout.completed") {
         var txn = event.data && (event.data.transaction_id || event.data.id);
-        say("Payment complete. Fetching your licence key\\u2026");
+        say("Payment complete. Fetching your licence key…");
         setTimeout(function () { window.location.href = thanksUrl(txn); }, 1500);
       }
       if (event.name === "checkout.error" || event.name === "checkout.payment-error") console.warn(event.name, event);
