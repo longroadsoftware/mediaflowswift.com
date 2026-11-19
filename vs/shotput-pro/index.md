@@ -1,7 +1,7 @@
 ---
 layout: guide
-title: "MediaFlowSwift vs ShotPut Pro: Which One Fits Your Workflow?"
-description: "ShotPut Pro and MediaFlowSwift both prove a card copy with checksums. See what each does better, what each costs in US dollars, and which fits how you work."
+title: "ShotPut Pro Alternative: MediaFlowSwift vs ShotPut Pro"
+description: "Looking for a ShotPut Pro alternative? See how MediaFlowSwift compares to ShotPut Pro, what each app does better, what each costs, and which fits how you work."
 published: "2026-11-05"
 permalink: /vs/shotput-pro/
 ---
@@ -19,7 +19,7 @@ ShotPut Pro describes itself as making "[lightning fast verified offloads and me
 
 ShotPut Pro is built for the person on set whose job is the offload. It writes PDF offload reports with thumbnails, writes ASC MHL files, lets you pick the checksum, and saves destinations as presets. It runs on Windows as well as on Mac, and on Intel Macs as well as Apple silicon. Imagine Products has sold it for years, and many DITs and assistant editors already know it.
 
-## What does MediaFlowSwift do better?
+## ShotPut Pro alternative: what MediaFlowSwift does better
 
 ShotPut Pro's own page centres on offloading, checking and reporting. It does not describe reviewing or sorting clips. MediaFlowSwift covers the work after the copy:
 
