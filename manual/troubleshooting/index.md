@@ -79,9 +79,9 @@ See also: [Connecting to a Database Server](/manual/shared-database/#connecting-
 
 ## Reporting a Problem
 
-*Put together a report of what went wrong, with personal details taken out, to email to support from your own mail app, copy or save.*
+*Tell support what went wrong. Send to Support delivers it, with what helps find the fault and personal details taken out.*
 
-Choose Help → Report a Problem…, or click Report a Problem… where it is offered: on an error message, and under the list of files that failed in a copy. Say what happened and what you were doing, and leave an email address if you would like a reply. MediaFlowSwift adds what helps find a fault, and shows you the whole report before anything else happens. You can change any of it.
+Choose Help → Report a Problem…, or click Report a Problem… where it is offered: on an error message, and under the list of files that failed in a copy. Say what happened and what you were doing, and click Send to Support. The email address for a reply is filled in from Settings › General; you can change it for this report, or leave it empty, though then no one can write back. MediaFlowSwift adds what helps find a fault. Open What’s Sent to read the whole report before it goes, choose whether crash reports and the end of the log go with it, and change any of it.
 
 ### What Is in a Report
 
@@ -99,13 +99,11 @@ It errs on the side of taking out too much. It cannot know a name it has never b
 
 ### Sending It
 
-Email Report… opens a new message to support@mediaflowswift.com in your own mail app, with the report exactly as it is in the window, for you to read and send. A short report is filled in for you. A longer one, which most are once the log is in, would not fit in a new message in every mail app, so the message asks you to paste it in (⌘V) from the clipboard. Short or long, Email Report… always puts the report on the clipboard. If no message appears (Mail shows only its window for adding an email account when none is set up in it), paste the report into an email to support@mediaflowswift.com from wherever you read your email. MediaFlowSwift itself makes no connection: the report goes only if you send the message, from your own email, so support can reply to you there.
+Send to Support delivers the report straight to the people who make MediaFlowSwift, over an encrypted connection to Long Road Software’s report relay, which holds it until support collects it. The window then shows a reference such as R-12; quote it if you write about the same problem later. A reply comes to the email address you gave, usually within two working days. Nothing is sent until you click Send to Support, and nothing else goes with the report.
 
-If your Mac opens email links in a web browser rather than a mail app, as it does once Gmail or another webmail is chosen for email, the browser may show no message at all; and if no app is set to open them, nothing opens. So in either case MediaFlowSwift does not hand the message over: the report is on the clipboard, and the window says where to send it. Copy Address puts support@mediaflowswift.com on the clipboard in its place, to paste into To:, and Copy Report puts the report back, to paste into the message. If your webmail does open email links, Open in (your browser) Anyway starts a new message to support there with only a subject line, and you paste the report in. The report itself never goes into the link: a webmail turns the link into a web address, which your browser keeps in its history. If that does not open either, the window says so, and the report is still on the clipboard.
+The first time, MediaFlowSwift asks before it sends anything: saying yes turns on Sending to support in Settings › Privacy, where you can turn it off again. While it is off, the next Send to Support asks again.
 
-Copy Report puts the text on the clipboard; Save… writes it to a file, if you would rather attach it to an email; sending it however you like is up to you. Help → Contact Support… and a plan change’s Email Support… work the same way when your Mac opens email links in a browser or in nothing: an alert puts the subject line and your version details, or the request, on the clipboard, with Copy Address, Copy Details (or Copy Request) and Open in (your browser) Anyway. See Contacting Support.
-
-A Mac that MediaFlowSwift’s maker has set up for its own testing shows a Send button as well, which hands a report to the maker’s own report relay. A customer’s copy has no relay and needs none: Email Report… is the way to send a report, and MediaFlowSwift never sends one on its own.
+If sending does not work, for instance with no internet connection, the window says why and the report is still there. Other Ways has Email Report…, which opens a new message to support@mediaflowswift.com in your own mail app with the report in it (a long report goes on the clipboard, for you to paste into the message with ⌘V); Copy Report; and Save…, which writes it to a file. If your Mac opens email links in a web browser, or in nothing, Email Report… puts the report on the clipboard instead and the window says where to send it, with Copy Address and, for a webmail that takes email links, Open in (your browser) Anyway.
 
 ### After a Crash
 
@@ -121,19 +119,25 @@ See also: [Contacting Support](#contacting-support), [Database Connection Issues
 
 ## Contacting Support
 
-*Write to support from your own mail app, or read the support page on the website. MediaFlowSwift sends nothing itself.*
+*Ask a question or suggest a feature from inside the app, and get the answer by email. Or read the support page on the website.*
 
-Choose Help → Contact Support… to write to support@mediaflowswift.com. It opens a new message in your own mail app, addressed to support, with this copy’s version and build, your macOS version and your Mac’s chip filled in at the bottom: the first things support needs to know. Nothing else about you, your Mac or your projects is in it. Write your question above them and send it as you would any email; support replies to the address you send from. We aim to reply within two working days.
+Choose Help → Contact Support…. Pick Get Help to ask how to do something, or Suggest a Feature to tell us about something you would like MediaFlowSwift to do. Write a subject and your message, check the email address for the reply (filled in from Settings › General), and click Send to Support. It goes straight to the people who make MediaFlowSwift, and the window shows a reference such as R-12. We aim to reply within two working days. Every feature request is read and kept on the list we plan from; we can’t promise when, or whether, one is built.
 
-If your Mac opens email links in a web browser, as it does once Gmail or another webmail is chosen for email, or in no app at all, MediaFlowSwift does not start the message there, since the browser may show no message to send. An alert says so instead, and puts the subject line and those details on the clipboard. Copy Address puts support@mediaflowswift.com on the clipboard in their place, to paste into To:, and Copy Details puts the details back. If your webmail does take email links, Open in (your browser) Anyway starts a new message to support there with only the subject in it, for you to paste the details into.
+Unless you turn it off, this copy’s version and build, your macOS version and your Mac’s chip go with your message: the first things support needs to know. Nothing else about you, your Mac or your projects is in it. What’s Sent shows exactly what goes. As with a problem report, the first Send to Support asks before anything is sent, and saying yes turns on Sending to support in Settings › Privacy.
 
-Choose Help → Support Website to open mediaflowswift.com’s support page in your web browser, with answers to common questions.
+### Your Email for Replies
 
-Something went wrong? Help → Report a Problem… puts together what support needs to find a fault, with personal details taken out, and Email Report… there hands it to your mail app in the same way, and puts it on the clipboard too; Copy Report and Save… are there to send it yourself. See Reporting a Problem.
+Settings › General › Support holds the email address support writes back to, so you type it once. It is used only when you send a problem report or a message to support, and goes nowhere else. If you leave it empty, the first address you send with is kept there for next time.
 
-> **Tip:** If no message appears (Mail shows only its window for adding an email account when none is set up in it), or you write from webmail that is not set up as your Mac’s mail app, write to support@mediaflowswift.com from wherever you read your email. Include the version shown in Settings › General.
+### Other Ways
 
-Neither item makes a connection of its own: the message goes only when you send it, and the page is fetched by your browser. Settings › Privacy lists both.
+Other Ways → Email Instead… opens your message in your own mail app, addressed to support@mediaflowswift.com, for you to send; support replies to the address you send from. Before you have agreed to the terms of use, Help → Contact Support… does this straight away. If your Mac opens email links in a web browser, or in no app at all, an alert says so instead and puts your message on the clipboard, with Copy Address and, for a webmail that takes email links, Open in (your browser) Anyway.
+
+Help → Support Website opens mediaflowswift.com’s support page in your web browser, with answers to common questions.
+
+Something went wrong? Help → Report a Problem… sends what support needs to find a fault, with personal details taken out. See Reporting a Problem.
+
+> **Tip:** You can always write to support@mediaflowswift.com from wherever you read your email. Include the version shown in Settings › General.
 
 See also: [Reporting a Problem](#reporting-a-problem), [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac)
 
