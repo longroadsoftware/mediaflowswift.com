@@ -3,7 +3,7 @@ layout: guide
 title: "MediaFlowSwift Guides"
 published: "2026-10-13"
 description: "How-to answers for footage on a Mac: check a card copy before you erase it, keep two copies, find moved clips, label archive drives, publish to YouTube."
-updated: "2026-11-05"
+updated: "2026-11-16"
 permalink: /guides/
 ---
 # Guides
@@ -21,6 +21,7 @@ The guides are grouped by the moment you need them. That means before you erase 
 | Fix clips that show as missing after a drive change | [Footage Missing After a Move](/guides/footage-missing-after-moving-to-external-drive/) |
 | Stop sorting folders by hand | [Automate File Organization](/guides/automate-video-file-organization-on-mac/) |
 | Know which shelf drive holds an old project | [Label and Catalog Archive Drives](/guides/label-and-catalog-archive-drives-for-video/) |
+| Bring a drive you filled by hand into MediaFlow | [Bring Your Existing Archive Drives into MediaFlow](/guides/bring-existing-archive-drives-into-mediaflow/) |
 | Get from 300 clips to your best 30 | [Review and Pick Selects](/guides/review-and-pick-selects-on-a-mac/) |
 | Find the clip where someone said a phrase | [Search by What Was Said](/guides/search-video-by-what-was-said/) |
 | Send a director a day's report, or an editor a file | [Dailies Report and Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/) |
@@ -47,6 +48,9 @@ The guides are grouped by the moment you need them. That means before you erase 
 
 - **[How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/)**
   Every archive drive gets a number, and the app keeps the record of what went where. One sticker per drive, not a spreadsheet.
+
+- **[Bring Your Existing Archive Drives into MediaFlow](/guides/bring-existing-archive-drives-into-mediaflow/)**
+  Catalog a drive you filled by hand, so Search finds its clips and MediaFlow says which drive to fetch. No footage on it is changed.
 
 ## Reviewing, finding and handing off footage
 
