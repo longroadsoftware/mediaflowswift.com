@@ -7,6 +7,8 @@
  * Environment: production, unless the page URL carries ?sandbox=1. There is no silent default:
  * an environment whose token or price ids are blank shows a plain notice instead of prices.
  * Sandbox and live are separate accounts, so ids from one never work in the other.
+ * Forever (one-time) ids are optional: while either tier's is blank, the Forever choice stays hidden
+ * and monthly and yearly sell as before.
  */
 window.MediaFlowPaddle = (function () {
   var environments = {
@@ -14,16 +16,16 @@ window.MediaFlowPaddle = (function () {
       token: "test_d722e70ada0734b95ca60bcd10d",
       licenceService: "https://mediaflow-licence.mediaflow-licence.workers.dev", // the sandbox Worker, deployed 2026-09-23
       prices: {
-        studio: { month: "pri_01m4mgp3bc5b6nfmng3m14z1st", year: "pri_01m4mgp3s30ryms10xj4k56jk8" },
-        pro:    { month: "pri_01m4mgp59ad0rdbw6fcx24hsnw", year: "pri_01m4mgp5yt268k9bd4pp242nvh" }
+        studio: { month: "pri_01m4mgp3bc5b6nfmng3m14z1st", year: "pri_01m4mgp3s30ryms10xj4k56jk8", forever: "pri_01m7v1bp0w5ke4mydhngr3qad4" },
+        pro:    { month: "pri_01m4mgp59ad0rdbw6fcx24hsnw", year: "pri_01m4mgp5yt268k9bd4pp242nvh", forever: "pri_01m7v1bpbwktcyrhvnnr8g4afz" }
       }
     },
     production: {
       token: "live_f5b3acbcf166c01adb719e99b9a", // client-side token "mediaflowswift.com", Long Road Software LLC account, made 2026-10-11
       licenceService: "https://mediaflow-licence-production.mediaflow-licence.workers.dev",
       prices: {
-        studio: { month: "pri_01m4mhm37z25v41ja1x2pa76ks", year: "pri_01m4mhm3q1q66zjeze0f8g4aqa" },
-        pro:    { month: "pri_01m4mhm4xr2es76r2xadgpp0d1", year: "pri_01m4mhm5fyefrj2wh81j3pqwh0" }
+        studio: { month: "pri_01m4mhm37z25v41ja1x2pa76ks", year: "pri_01m4mhm3q1q66zjeze0f8g4aqa", forever: "" },
+        pro:    { month: "pri_01m4mhm4xr2es76r2xadgpp0d1", year: "pri_01m4mhm5fyefrj2wh81j3pqwh0", forever: "" }
       }
     }
   };
@@ -81,5 +83,11 @@ window.MediaFlowPaddle = (function () {
     return null;
   }
 
-  return { tiers: tiers, environmentName: environmentName, environment: environment, isSandbox: isSandbox, missing: missing };
+  /** True when every tier has a one-time Forever price id in this environment. */
+  function hasForever() {
+    var env = environment();
+    return tiers.every(function (t) { return env.prices[t.id] && env.prices[t.id].forever; });
+  }
+
+  return { tiers: tiers, environmentName: environmentName, environment: environment, isSandbox: isSandbox, missing: missing, hasForever: hasForever };
 })();

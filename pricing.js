@@ -1,4 +1,4 @@
-/* Plans section: local prices from Paddle, a monthly/yearly toggle, and Buy buttons that open
+/* Plans section: local prices from Paddle, a monthly/yearly/forever toggle, and Buy buttons that open
  * Paddle's overlay checkout for exactly the price shown. Reads paddle-config.js.
  * Only Paddle's own formatted prices (before tax, matching the catalog) are displayed; nothing is calculated or reformatted here. */
 (function () {
@@ -9,6 +9,7 @@
   var pers = document.querySelectorAll("[data-per]");
   var choices = document.querySelectorAll(".billing-choice");
   var period = "year";
+  var per = { month: "a month", year: "a year", forever: "once" };
   var prices = {}; // price id -> Paddle's formatted price before tax
   var ready = false;
 
@@ -32,7 +33,7 @@
       var id = priceId(el.getAttribute("data-price-for"));
       el.textContent = prices[id] || "…";
     });
-    pers.forEach(function (el) { el.textContent = period === "month" ? "a month" : "a year"; });
+    pers.forEach(function (el) { el.textContent = per[period]; });
     choices.forEach(function (c) { c.setAttribute("aria-pressed", String(c.getAttribute("data-period") === period)); });
     buttons.forEach(function (b) { b.disabled = !ready || !prices[priceId(b.getAttribute("data-buy"))]; });
   }
@@ -68,6 +69,7 @@
     cfg.tiers.forEach(function (t) {
       items.push({ priceId: env.prices[t.id].month, quantity: 1 });
       items.push({ priceId: env.prices[t.id].year, quantity: 1 });
+      if (cfg.hasForever()) items.push({ priceId: env.prices[t.id].forever, quantity: 1 });
     });
     // No address: Paddle works out the visitor's country and currency itself.
     Paddle.PricePreview({ items: items }).then(function (result) {
@@ -93,6 +95,8 @@
   var missing = cfg.missing();
   if (missing) return refuse(missing);
   if (!window.Paddle) return refuse("the payment script did not load");
+  // The Forever choice appears only once both one-time prices exist in this environment.
+  choices.forEach(function (c) { if (c.getAttribute("data-period") === "forever") c.hidden = !cfg.hasForever(); });
 
   if (cfg.isSandbox()) {
     Paddle.Environment.set("sandbox");
@@ -103,7 +107,7 @@
     eventCallback: function (event) {
       if (event.name === "checkout.completed") {
         var txn = event.data && (event.data.transaction_id || event.data.id);
-        say("Payment complete. Fetching your licence key\u2026");
+        say("Payment complete. Fetching your licence key…");
         setTimeout(function () { window.location.href = thanksUrl(txn); }, 1500);
       }
       if (event.name === "checkout.error" || event.name === "checkout.payment-error") console.warn(event.name, event);
