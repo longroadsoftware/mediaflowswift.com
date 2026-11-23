@@ -1,5 +1,6 @@
 ---
 layout: post
+noindex: true
 permalink: /blog/2026/10/video-ingest-workflow/
 published: "2026-10-26"
 updated: "2026-10-26"

@@ -37,6 +37,9 @@
   var hcKey = "hck_pk_Gmk9VtzfQcURl2mN-gu8HUT-wZgRafmM";
   var hcUrl = "https://esm.sh/@heycatch/sdk@0.8.3";
   var hc = null;
+  /* The resolved HeyCatch object. A .then() on an already-settled promise
+     still runs later, and a download click leaves the page in that gap. */
+  var hcApi = null;
 
   function loadHeyCatch() {
     if (hc) {
@@ -53,6 +56,7 @@
         persistence: "localStorage",
         respectDnt: true
       });
+      hcApi = m.analytics;
       return m.analytics;
     }).catch(function () { return null; });
   }
@@ -215,30 +219,80 @@
     slot.appendChild(document.createTextNode(" — no reload needed."));
   }
 
-  /* Name the two moments that matter, so the analytics can count them as
-     goals: someone pressing a download link, and someone opening checkout.
-     Only after a yes; before that, nothing is loaded to send them to. */
   function counting() {
     return loaded && !window["ga-disable-" + id];
   }
 
+  /* Send a named event. HeyCatch first, and only if it is already loaded:
+     calling it through .then() lets a download navigation cancel the send. */
+  function track(name, props) {
+    if (hcApi && hcApi.trackEvent) hcApi.trackEvent(name, props);
+    else if (hc) hc.then(function (a) { if (a && a.trackEvent) a.trackEvent(name, props); });
+    if (window.gtag) window.gtag("event", name, props);
+  }
+
+  /* A click that stays on this page (new tab, modified click) must not be
+     held. Only a plain left click in this tab leaves immediately. */
+  function leavesThisTab(event, el) {
+    if (event.button !== 0) return false;
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return false;
+    var target = el.getAttribute("target");
+    if (target && target !== "_self") return false;
+    return true;
+  }
+
+  /* Name the moments that matter, so the analytics can count them as goals:
+     someone pressing the real download, and someone opening checkout.
+     HeyCatch's download funnel looks for the event name download_clicked.
+     A link to the download page is a different, earlier step.
+     Only while counting is on; otherwise nothing is loaded to send them to.
+     The button is not a download until its address is the download counter
+     (/get on our own domain): before the version loads it still points at
+     the plans. */
+  var held = null;   /* the download link whose click is being held, if any */
   function goal(event) {
     if (!counting()) return;
     var el = event.target && event.target.closest && event.target.closest("a, button");
     if (!el) return;
     var href = el.getAttribute("href") || "";
     var name = null, props = {};
+    /* download.html adds ?src=...&med=...&cmp=... to /get when the visitor's source was carried in. */
+    var downloading = href === "/get" || href.indexOf("/get?") === 0 || href.indexOf("lrs-downloads") !== -1;
     if (el.hasAttribute("data-buy")) {
       name = "checkout_opened"; props.plan = el.getAttribute("data-buy");
-    } else if (el.id === "get" || href === "/get" || href.indexOf("lrs-downloads") !== -1) {
-      name = "trial_download_clicked";
+    } else if (downloading) {
+      name = "download_clicked";
     } else if (href === "/download.html" || href.indexOf("/download.html") === 0) {
       name = "download_page_clicked";
     }
     if (!name) return;
     props.page = location.pathname;
-    if (hc) hc.then(function (a) { if (a && a.trackEvent) a.trackEvent(name, props); });
-    if (window.gtag) window.gtag("event", name, props);
+    /* A same-tab download leaves this page at once. If HeyCatch is not
+       ready yet, hold the navigation a moment so the event can leave,
+       then go anyway so a stuck script never blocks the download. */
+    if (downloading && !hcApi && hc && leavesThisTab(event, el) && event.cancelable) {
+      event.preventDefault();
+      /* A second press while the first is still held is the same download:
+         count it once. The first press is already on its way. */
+      if (held === el) return;
+      held = el;
+      var url = el.href;
+      var left = false;
+      function go() {
+        if (left) return;
+        left = true;
+        held = null;
+        window.location.href = url;
+      }
+      hc.then(function (a) {
+        if (a && a.trackEvent) a.trackEvent(name, props);
+        go();
+      });
+      window.setTimeout(go, 400);
+      if (window.gtag) window.gtag("event", name, props);
+      return;
+    }
+    track(name, props);
   }
   document.addEventListener("click", goal, true);
 

@@ -56,14 +56,6 @@
     <description>A dailies workflow for Mac shooters: organize the day&#x27;s footage, review and pick selects, write a dailies report, and hand off files your editor can open.</description>
   </item>
   <item>
-    <title>Video Asset Management for Solo Mac Creators: What You Need, What to Skip</title>
-    <link>https://mediaflowswift.com/blog/2026/10/video-asset-management-solo-mac-creators/</link>
-    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/video-asset-management-solo-mac-creators/</guid>
-    <pubDate>Thu, 29 Oct 2026 12:00:00 +0000</pubDate>
-    <category>Choosing Software</category>
-    <description>Video asset management for solo Mac creators: the three jobs that matter on one Mac, the team features to skip, and the signs it is time to grow.</description>
-  </item>
-  <item>
     <title>Does rsync Verify Copied Files? What It Checks and What It Misses</title>
     <link>https://mediaflowswift.com/blog/2026/10/rsync-verify-copied-files/</link>
     <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/rsync-verify-copied-files/</guid>
@@ -80,28 +72,12 @@
     <description>How to clear a memory card safely: delete vs quick vs full format, in-camera steps for Sony, GoPro and DJI, Mac and Windows erase, exFAT, and recovery.</description>
   </item>
   <item>
-    <title>Video Ingest Workflow: When to Erase the Card</title>
-    <link>https://mediaflowswift.com/blog/2026/10/video-ingest-workflow/</link>
-    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/video-ingest-workflow/</guid>
-    <pubDate>Mon, 26 Oct 2026 12:00:00 +0000</pubDate>
-    <category>Workflow</category>
-    <description>A video ingest workflow from card to archive: offload, verify, second copy, log, numbered drives, and the exact point a card is safe to erase.</description>
-  </item>
-  <item>
     <title>Can&#x27;t Find Video Files on SD Card? Why Footage Hides and Where to Look</title>
     <link>https://mediaflowswift.com/blog/2026/10/cant-find-video-files-on-sd-card/</link>
     <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/cant-find-video-files-on-sd-card/</guid>
     <pubDate>Sun, 25 Oct 2026 12:00:00 +0000</pubDate>
     <category>Workflow</category>
     <description>Can&#x27;t find video files on an SD card? See where Sony, Canon, Nikon, GoPro and DJI cameras save clips, how to search a card, and what to do if it&#x27;s damaged.</description>
-  </item>
-  <item>
-    <title>How to Organize Video Footage: Pick a Model First</title>
-    <link>https://mediaflowswift.com/blog/2026/10/how-to-organize-video-footage/</link>
-    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/how-to-organize-video-footage/</guid>
-    <pubDate>Sat, 24 Oct 2026 12:00:00 +0000</pubDate>
-    <category>Footage Organization</category>
-    <description>How to organize video footage: compare project, date and shot-type folder models, build a hybrid, copy a naming template and migrate old footage safely.</description>
   </item>
   <item>
     <title>Digital Asset Management for Video Production: What It Means on a Mac</title>
@@ -126,14 +102,6 @@
     <pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
     <category>Storage &amp; Backup</category>
     <description>Video archive storage compared: five-year cost per TB and restore times for LTO tape, NAS, drives and cloud, using October 2026 prices in US dollars.</description>
-  </item>
-  <item>
-    <title>NAS Video Storage: How to Choose and Structure One</title>
-    <link>https://mediaflowswift.com/blog/2026/10/nas-video-storage-how-to-choose/</link>
-    <guid isPermaLink="true">https://mediaflowswift.com/blog/2026/10/nas-video-storage-how-to-choose/</guid>
-    <pubDate>Wed, 21 Oct 2026 12:00:00 +0000</pubDate>
-    <category>Storage &amp; Backup</category>
-    <description>How to choose NAS video storage: network speed, capacity math from real camera bitrates, RAID levels, folder structure, verified offloads and backups.</description>
   </item>
   <item>
     <title>External Hard Drive Organization for Video Creators</title>

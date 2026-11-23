@@ -1,5 +1,6 @@
 ---
 layout: post
+noindex: true
 permalink: /blog/2026/10/video-asset-management-solo-mac-creators/
 published: "2026-10-29"
 updated: "2026-10-29"
