@@ -16,8 +16,8 @@ window.MediaFlowPaddle = (function () {
       token: "test_d722e70ada0734b95ca60bcd10d",
       licenceService: "https://mediaflow-licence.mediaflow-licence.workers.dev", // the sandbox Worker, deployed 2026-09-23
       prices: {
-        studio: { month: "pri_01m4mgp3bc5b6nfmng3m14z1st", year: "pri_01m4mgp3s30ryms10xj4k56jk8", forever: "" },
-        pro:    { month: "pri_01m4mgp59ad0rdbw6fcx24hsnw", year: "pri_01m4mgp5yt268k9bd4pp242nvh", forever: "" }
+        studio: { month: "pri_01m4mgp3bc5b6nfmng3m14z1st", year: "pri_01m4mgp3s30ryms10xj4k56jk8", forever: "pri_01m7v1bp0w5ke4mydhngr3qad4" },
+        pro:    { month: "pri_01m4mgp59ad0rdbw6fcx24hsnw", year: "pri_01m4mgp5yt268k9bd4pp242nvh", forever: "pri_01m7v1bpbwktcyrhvnnr8g4afz" }
       }
     },
     production: {
