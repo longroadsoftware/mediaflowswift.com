@@ -3,6 +3,7 @@ layout: guide
 title: "MediaFlowSwift vs Kyno: Which One Fits Your Workflow?"
 description: "Kyno and MediaFlowSwift both back up, check and organize footage. See what each does better, what each costs in US dollars, and which fits how you work."
 published: "2026-11-05"
+updated: "2026-11-22"
 permalink: /vs/kyno/
 ---
 # MediaFlowSwift vs Kyno: Which One Fits Your Workflow?
@@ -59,9 +60,9 @@ Both apps let you log and tag clips. MediaFlowSwift adds steps that Kyno's own p
 
 A dash means the feature is not offered, or is not listed on that app's own pages.
 
-MediaFlowSwift's Studio plan is $49.99 a year, and Studio Pro is $99.99 a year. Both are also sold monthly, at $4.99 and $9.99. The full app runs free for 14 days, with no card needed. One key covers up to three Macs.
+MediaFlowSwift's Studio plan is $49.99 a year, and Studio Pro is $99.99 a year. Both are also sold monthly, at $4.99 and $9.99. Prefer to pay once? Studio Forever is $149 and Studio Pro Forever is $299, each a one-time payment that includes every future Mac app update. Either covers up to three computers — the same key would also cover a Windows computer if we ever ship one. A refund or a chargeback ends the key. The full app also runs free for 14 days, with no card needed.
 
-In US dollars, as listed on [Kyno's pricing page](https://lesspain.software/kyno/pricing/) on 5 November 2026: Kyno is $159 once and Kyno Premium is $349 once. Each includes a year of updates. Another year of updates is $79 for Kyno or $169 for Premium. If you don't renew, you keep the version you have and still get bug fixes for it. Student prices are $59 and $99. There is a free trial, but no free tier. Kyno's site doesn't say how long the trial lasts.
+In US dollars, as listed on [Kyno's pricing page](https://lesspain.software/kyno/pricing/), checked 22 November 2026: Kyno is $159 once and Kyno Premium is $349 once. Each includes a year of updates. Another year of updates is $79 for Kyno or $169 for Premium. If you don't renew, you keep the version you have and still get bug fixes for it. Student prices are $59 and $99. There is a free trial, but no free tier. Kyno's site doesn't say how long the trial lasts.
 
 ## Which one should you pick?
 
@@ -71,7 +72,7 @@ Pick Kyno if you want to browse, log and convert footage where it sits, need MHL
 
 <ul class="vs-sources">
   <li><a href="https://lesspain.software/kyno/features/">Kyno features, lesspain.software</a></li>
-  <li><a href="https://lesspain.software/kyno/pricing/">Kyno pricing, lesspain.software</a> (prices checked 5 November 2026)</li>
+  <li><a href="https://lesspain.software/kyno/pricing/">Kyno pricing, lesspain.software</a> (prices checked 22 November 2026)</li>
   <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard (FIPS 180-4), NIST</a></li>
   <li><a href="/manual/organizing-media/#how-mediaflow-verifies-copies">How MediaFlow verifies copies, MediaFlowSwift manual</a></li>
 </ul>

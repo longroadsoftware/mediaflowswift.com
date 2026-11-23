@@ -3,6 +3,7 @@ layout: guide
 title: "MediaFlowSwift vs Silverstack: A Mac Alternative to Pomfort"
 description: "Looking for a Silverstack alternative for Mac? See how MediaFlowSwift compares to Pomfort's Silverstack XT and Offload Manager, what each costs, and which fits you."
 published: "2026-11-05"
+updated: "2026-11-22"
 permalink: /vs/silverstack/
 ---
 # MediaFlowSwift vs Silverstack and Offload Manager: Which One Fits You?
@@ -57,12 +58,12 @@ Silverstack XT can sort, rate, label and search clips too, so the difference her
 
 A dash means the feature is not offered, or is not listed on that app's own pages.
 
-MediaFlowSwift's Studio plan is $49.99 a year, and Studio Pro is $99.99 a year. Both are also sold monthly, at $4.99 and $9.99. The full app runs free for 14 days, with no card needed. One key covers up to three Macs.
+MediaFlowSwift's Studio plan is $49.99 a year, and Studio Pro is $99.99 a year. Both are also sold monthly, at $4.99 and $9.99. Prefer to pay once? Studio Forever is $149 and Studio Pro Forever is $299, each a one-time payment that includes every future Mac app update. Either covers up to three computers — the same key would also cover a Windows computer if we ever ship one. A refund or a chargeback ends the key. The full app also runs free for 14 days, with no card needed.
 
-In US dollars, as listed in Pomfort's store on 5 November 2026, before any tax:
+In US dollars, as listed in Pomfort's store, checked 22 November 2026, before any tax:
 
 - **[Offload Manager](https://pomfort.com/store/offloadmanager/licenses/):** $49 for 14 days, $75 for a month, or $199 for a year with that year's updates. Each is paid once and is not renewed automatically. There is a free 10-day trial and no free tier.
-- **[Silverstack XT](https://pomfort.com/store/silverstack/licenses/):** $899 a year as a subscription that renews unless you cancel. It is also sold for $109 for 10 days, $199 for a month or $359 for two months. There is a free trial and no free tier.
+- **[Silverstack XT](https://pomfort.com/store/silverstackxt/licenses/):** $899 a year as a subscription that renews unless you cancel. Pomfort also sells short-term licences from the same store page; its prices sit behind a page tab we could not read as plain text, so we aren't repeating a number here. There is a free trial and no free tier.
 
 ## Which one should you pick?
 
@@ -73,8 +74,8 @@ Pick Offload Manager or Silverstack XT if you are a DIT, or you hand media to a 
 <ul class="vs-sources">
   <li><a href="https://pomfort.com/offloadmanager/">Offload Manager product page, Pomfort</a></li>
   <li><a href="https://pomfort.com/silverstack/">Silverstack XT product page, Pomfort</a></li>
-  <li><a href="https://pomfort.com/store/offloadmanager/licenses/">Offload Manager licences, Pomfort store</a> (prices checked 5 November 2026)</li>
-  <li><a href="https://pomfort.com/store/silverstack/licenses/">Silverstack XT licences, Pomfort store</a> (prices checked 5 November 2026)</li>
+  <li><a href="https://pomfort.com/store/offloadmanager/licenses/">Offload Manager licences, Pomfort store</a> (prices checked 22 November 2026)</li>
+  <li><a href="https://pomfort.com/store/silverstackxt/licenses/">Silverstack XT licences, Pomfort store</a> (checked 22 November 2026; short-term licence prices sit behind a page tab we could not read as plain text)</li>
   <li><a href="https://theasc.com/mitc/asc-media-hash-list/">ASC Media Hash List, American Society of Cinematographers</a></li>
   <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard (FIPS 180-4), NIST</a></li>
   <li><a href="/manual/organizing-media/#how-mediaflow-verifies-copies">How MediaFlow verifies copies, MediaFlowSwift manual</a></li>

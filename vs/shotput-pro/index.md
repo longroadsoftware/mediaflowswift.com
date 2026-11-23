@@ -3,6 +3,7 @@ layout: guide
 title: "ShotPut Pro Alternative: MediaFlowSwift vs ShotPut Pro"
 description: "Looking for a ShotPut Pro alternative? See how MediaFlowSwift compares to ShotPut Pro, what each app does better, what each costs, and which fits how you work."
 published: "2026-11-05"
+updated: "2026-11-22"
 permalink: /vs/shotput-pro/
 ---
 # MediaFlowSwift vs ShotPut Pro: Which One Fits Your Workflow?
@@ -57,9 +58,9 @@ ShotPut Pro's own page centres on offloading, checking and reporting. It does no
 
 A dash means the feature is not offered, or is not listed on that app's own pages.
 
-MediaFlowSwift's Studio plan is $49.99 a year, and Studio Pro is $99.99 a year. Both are also sold monthly, at $4.99 and $9.99. The full app runs free for 14 days, with no card needed. One key covers up to three Macs.
+MediaFlowSwift's Studio plan is $49.99 a year, and Studio Pro is $99.99 a year. Both are also sold monthly, at $4.99 and $9.99. Prefer to pay once? Studio Forever is $149 and Studio Pro Forever is $299, each a one-time payment that includes every future Mac app update. Either covers up to three computers — the same key would also cover a Windows computer if we ever ship one. A refund or a chargeback ends the key. The full app also runs free for 14 days, with no card needed.
 
-In US dollars, as listed on [ShotPut Pro's Mac page](https://imagineproducts.com/product/shotput-pro/mac) on 5 November 2026: a perpetual licence is $169. Extended update coverage is $59 a year per licence, or $70 a year paid as you go. A 30-day rental is $60. There is no free tier. The demo allows 10 offloads within 30 days. The licence is for one computer at a time.
+In US dollars, as listed on [ShotPut Pro's Mac page](https://imagineproducts.com/product/shotput-pro/mac), checked 22 November 2026: a perpetual licence is $169. Extended update coverage is $59 a year per licence, or $70 a year paid as you go. A 30-day rental is $60. There is no free tier. The demo allows 10 offloads within 30 days. The licence is for one computer at a time.
 
 ## Which one should you pick?
 
@@ -69,7 +70,7 @@ Pick ShotPut Pro if your job ends at the offload and you need ASC MHL, PDF trans
 
 <ul class="vs-sources">
   <li><a href="https://imagineproducts.com/product/shotput-pro">ShotPut Pro product page, Imagine Products</a></li>
-  <li><a href="https://imagineproducts.com/product/shotput-pro/mac">ShotPut Pro for Mac, prices, demo limits and release notes</a> (prices checked 5 November 2026)</li>
+  <li><a href="https://imagineproducts.com/product/shotput-pro/mac">ShotPut Pro for Mac, prices, demo limits and release notes</a> (prices checked 22 November 2026)</li>
   <li><a href="https://theasc.com/mitc/asc-media-hash-list/">ASC Media Hash List, American Society of Cinematographers</a></li>
   <li><a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">Secure Hash Standard (FIPS 180-4), NIST</a></li>
   <li><a href="/manual/organizing-media/#how-mediaflow-verifies-copies">How MediaFlow verifies copies, MediaFlowSwift manual</a></li>
