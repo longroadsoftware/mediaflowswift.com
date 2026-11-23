@@ -3,24 +3,25 @@ layout: guide
 title: "Hedge and OffShoot Alternatives for Mac: Six Apps Compared"
 description: "Looking for an alternative to Hedge's OffShoot on a Mac? Six apps that check a card copy with checksums, who each is for, and what each costs in US dollars."
 published: "2026-11-05"
+updated: "2026-11-22"
 permalink: /alternatives/hedge-offshoot/
 ---
 # Hedge and OffShoot Alternatives for Mac: Six Ways to Prove a Card Copy
 
 <p class="vs-answer">OffShoot is the copy app from Hedge; many people still call it "Hedge". Every app below proves a card copy with a checksum, not just a finished drag in Finder. They differ in who they are built for: a DIT on a film set, an assistant editor, or someone who shoots and edits their own footage. We make MediaFlowSwift, so it is listed first, but we have tried to be fair to the rest.</p>
 
-All prices below are in US dollars, as listed on each app's own site on 5 November 2026.
+All prices below are in US dollars, as listed on each app's own site, checked 22 November 2026. Two of them &mdash; OffShoot's per-activation price and Silverstack XT's short-term licences &mdash; sit behind an on-page calculator or tab we could not read as plain text, so we describe those without repeating an old number; see each app's own store for its price today.
 
 ## Why look for an OffShoot alternative?
 
-OffShoot is a fast, well-made offload tool. It copies many sources to many destinations in one job, writes ASC MHL in its Pro edition, and runs on Mac and Windows. OffShoot is $169 and OffShoot Pro is $249 per activation, each with a year of updates, after a 10-day trial ([hedge.co](https://hedge.co/products/offshoot)). People look elsewhere when they want something cheaper or free, a subscription instead of a one-time price, or help with the work that comes after the copy. Our [MediaFlowSwift vs OffShoot](/vs/offshoot/) page goes into detail.
+OffShoot is a fast, well-made offload tool. It copies many sources to many destinations in one job, writes ASC MHL in its Pro edition, and runs on Mac and Windows. It's sold as perpetual, per-activation licences across three tiers (Solo, OffShoot and OffShoot Pro), each with a year of included updates ([hedge.co](https://hedge.co/products/offshoot)). People look elsewhere when they want something cheaper or free, a subscription instead of a one-time price, or help with the work that comes after the copy. Our [MediaFlowSwift vs OffShoot](/vs/offshoot/) page goes into detail.
 
 ## 1. MediaFlowSwift: for people who shoot and edit their own footage
 
 MediaFlowSwift proves every copy with SHA-256, then keeps going. It gives each clip a category, files it into Category and Camera folders, and lets you review clips with star ratings and tags. It frees up space only after every clip is proved copied. You can search clips by what was said in them, and it archives to numbered drives with a record of what went where. Studio Pro drafts YouTube titles, descriptions, chapters and tags.
 
 - **Not for you if:** you need an MHL file or a DIT-style transfer report, or you work on an Intel Mac or Windows. Those versions are not out yet. It also copies each import to one destination; the second copy comes when you archive.
-- **Price:** Studio is $49.99 a year and Studio Pro is $99.99 a year, or $4.99 and $9.99 a month. There is a 14-day free trial with no card, and one key covers up to three Macs.
+- **Price:** Studio is $49.99 a year and Studio Pro is $99.99 a year, or $4.99 and $9.99 a month. Prefer to pay once? Studio Forever is $149 and Studio Pro Forever is $299, each a one-time payment that includes every future Mac app update &mdash; the same key would also cover a Windows computer if we ever ship one, and a refund or a chargeback ends the key. There is a 14-day free trial with no card, and one key covers up to three Macs.
 
 ## 2. ShotPut Pro: a long-standing offload tool for Mac and Windows
 
@@ -43,7 +44,7 @@ Offload Manager copies to several destinations at once with xxHash, MD5 or SHA-1
 Silverstack XT adds a clip library with more than 100 metadata fields per clip to Offload Manager's copying. It also adds SDI playback, scopes, QC notes, custom PDF reports, and ALE, CSV and XML exports for editorial.
 
 - **Not for you if:** you don't work on a film set. It is far more than a solo creator needs, and it is priced for productions.
-- **Price:** $899 a year as a subscription, or $109 for 10 days, $199 for a month or $359 for two months, before tax ([pomfort.com](https://pomfort.com/store/silverstack/licenses/)).
+- **Price:** $899 a year as a subscription, before tax. Pomfort also sells short-term licences from the same store page, but we couldn't read those prices as plain text to recheck them ([pomfort.com](https://pomfort.com/store/silverstackxt/licenses/)).
 - **More:** [MediaFlowSwift vs Silverstack and Offload Manager](/vs/silverstack/)
 
 ## 5. Kyno: browse, log and convert footage where it sits
@@ -71,8 +72,8 @@ You can copy a card in Finder and check it by hand. Finder alone doesn't run a c
 <div class="tablewrap">
 <table class="compare">
   <tr><th>App</th><th>Mac and Windows</th><th>MHL</th><th>Sorts and reviews clips</th><th>Lowest price to keep</th></tr>
-  <tr><td>MediaFlowSwift</td><td>Apple silicon Mac only</td><td>&mdash;</td><td>&#10003;</td><td>$49.99 a year</td></tr>
-  <tr><td>OffShoot</td><td>&#10003;</td><td>Pro</td><td>&mdash;</td><td>$169 once</td></tr>
+  <tr><td>MediaFlowSwift</td><td>Apple silicon Mac only</td><td>&mdash;</td><td>&#10003;</td><td>$49.99 a year, or $149 once</td></tr>
+  <tr><td>OffShoot</td><td>&#10003;</td><td>Pro</td><td>&mdash;</td><td>Priced via calculator (not shown)</td></tr>
   <tr><td>ShotPut Pro</td><td>&#10003;</td><td>&#10003;</td><td>&mdash;</td><td>$169 once</td></tr>
   <tr><td>Offload Manager</td><td>Mac</td><td>&#10003;</td><td>&mdash;</td><td>$199 a year</td></tr>
   <tr><td>Silverstack XT</td><td>Mac</td><td>&#10003;</td><td>&#10003;</td><td>$899 a year</td></tr>
@@ -93,10 +94,10 @@ For a DIT on a film set, look at Silverstack XT, Offload Manager or ShotPut Pro.
   <li><a href="https://hedge.co/products/offshoot">OffShoot product and pricing page, hedge.co</a></li>
   <li><a href="https://imagineproducts.com/product/shotput-pro/mac">ShotPut Pro for Mac, imagineproducts.com</a></li>
   <li><a href="https://pomfort.com/offloadmanager/">Offload Manager, pomfort.com</a> and <a href="https://pomfort.com/store/offloadmanager/licenses/">its licences</a></li>
-  <li><a href="https://pomfort.com/silverstack/">Silverstack XT, pomfort.com</a> and <a href="https://pomfort.com/store/silverstack/licenses/">its licences</a></li>
+  <li><a href="https://pomfort.com/silverstack/">Silverstack XT, pomfort.com</a> and <a href="https://pomfort.com/store/silverstackxt/licenses/">its licences</a></li>
   <li><a href="https://lesspain.software/kyno/features/">Kyno features</a> and <a href="https://lesspain.software/kyno/pricing/">pricing, lesspain.software</a></li>
   <li><a href="https://habitat-flow.com">habitat flow, habitat-flow.com</a></li>
 </ul>
-<p>All prices checked 5 November 2026.</p>
+<p>All prices checked 22 November 2026, except OffShoot's per-activation price and Silverstack XT's short-term licences, which sit behind an on-page calculator or tab we could not read as plain text; see each app's own store.</p>
 
 [All guides](/guides/) &middot; [MediaFlowSwift vs OffShoot](/vs/offshoot/)
