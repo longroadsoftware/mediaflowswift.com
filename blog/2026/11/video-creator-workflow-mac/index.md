@@ -126,9 +126,9 @@ In version 1.12 the public video goes up in YouTube Studio, uploaded by you. Aft
 
 ### Uploading from inside the app
 
-MediaFlowSwift also has an Upload tab, which sends the finished video to your channel from the app. Version 1.12 calls that upload a private copy for review. The reason is an old Google rule. For years, a video uploaded through an app that Google had not audited was locked to private. Google's [revision history](https://developers.google.com/youtube/data/revision_history) says that rule ended on November 2, 2026. Version 1.12 was written under the old rule, so it still points you to YouTube Studio for the public video.
+MediaFlowSwift also has an Upload tab, which sends the finished video to your channel from the app. Uploading is part of Studio Pro, and it needs a Google Cloud project of your own. Version 1.12 calls that upload a private copy for review. The reason is an old Google rule. For years, a video uploaded through a Google Cloud project that had not passed Google's audit was locked to private. Google's [revision history](https://developers.google.com/youtube/data/revision_history) says that rule ended on November 2, 2026. Version 1.12 was written under the old rule, so it still points you to YouTube Studio for the public video.
 
-A later version of MediaFlowSwift will upload the public video directly from the app, with no Google Cloud project to set up. There is no date for it yet.
+A later version of MediaFlowSwift will upload the public video directly from the app. There is no date for it yet.
 
 ### What the writing agent needs
 
