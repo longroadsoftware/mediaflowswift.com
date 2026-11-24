@@ -2,6 +2,18 @@
 
 What's new in each version of MediaFlowSwift, newest first.
 
+## 1.12 · November 23, 2026
+
+**Intel Mac support, the Brand Kit, and a second copy as you import.**
+
+- **Runs on Intel Macs.** MediaFlowSwift is now one download that runs natively on Intel Macs and on Apple silicon.
+- **The Brand Kit.** Keep one copy of your intros, outros and music beds, and use them in any project without copying them again.
+- **A second copy as you import.** Import can copy each clip to a second drive or folder as it goes, and Finish Second Copy makes any it couldn’t.
+- **Catalog your archive drives.** File › Catalog Archive Drive… brings in a drive you filled by hand, so Search finds its clips. Nothing on the drive is moved.
+- **Prepare for YouTube in your voice.** Save your channel’s voice once, tell the SEO Agent what to say about each video, and pick a separate model for writing.
+- **Send to Support.** Report a Problem and Contact Support now send straight to us from the app, with personal details taken out.
+- **Bug fixes.** Organize, Free Up Space and Clear Card, database connections, cataloging drives and Search, plus small improvements throughout.
+
 ## 1.11.4 · November 9, 2026
 
 **Pick your model from a list, and choose what Organize copies.**
