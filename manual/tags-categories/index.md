@@ -16,8 +16,14 @@ A category says what kind of clip this is. Each clip has one. When you organize 
 ### Default Categories
 
 - Uncategorized — What a newly imported clip has until you change it
-- A-roll, B-roll, Establishing Shot, Interview, Cutaway, Time-lapse, Slow Motion, Product Shot, Action Shot, Behind the Scenes, Outtake
-- Skip (don’t copy) — A special category that Organize Media never copies. It is stored as “Do Not Copy”
+- A-roll, B-roll, Interview, Time-lapse, Slow Motion, Product Shot, Action Shot, Behind the Scenes, Outtake
+- Shot types — Establishing Shot, Master Shot, Close-Up, Insert, Point of View, Reaction and Cutaway
+- Way Stop — A stop along a trip: fuel, a rest area, a roadside attraction, an overnight stay. It is not a shot type: it says where on the journey a clip was filmed, not how it is framed
+- Skip (don’t copy) — A special category that Organize Media never copies, and that the files for an editor leave out. It is stored as “Do Not Copy”
+
+### Category or Edit-Note Tag?
+
+Use a category for what a clip is: a close-up, a reaction, a way stop. It decides the folder the clip is filed in, and each clip has one. Use an edit-note tag for how you mean to cut it: a J cut, a dissolve, a freeze frame. A clip can carry several, and they reach Final Cut as keywords. Working with Tags lists them.
 
 ### Assigning a Category
 
@@ -29,7 +35,7 @@ If the project has a destination, MediaFlow then moves the clip’s organized fi
 
 ### Changing the List
 
-The Edit tab only offers the categories the project already has. The list belongs to the project and is stored in the project file. To add, rename, retire or remove a category, open the project and go to Settings › Categories. A new category then appears in the Category picker and the Set Category menu.
+The Edit tab only offers the categories the project already has. The list belongs to the project and is stored in the project file. To add, rename, retire or remove a category, open the project and go to Settings › Categories. A new category then appears in the Category picker and the Set Category menu. A project made before the shot types and Way Stop were built in keeps its own list until you click Add Standard Shot Types there.
 
 > **Tip:** Workflow → Analyze… → Categories proposes a category for each uncategorized clip.
 
@@ -46,6 +52,10 @@ Tags are free-form labels you can attach to clips. Unlike categories (one per cl
 - Select a clip and go to the Edit tab
 - Type in the tag field and press Enter or comma to add
 - Multiple tags can be added at once by separating with commas
+
+### Edit-Note Tags
+
+Below the tag field, the Edit tab offers ready-made tags for how a clip will be cut: J Cut (audio lead), L Cut, Dissolve, Cross Cut and Freeze Frame. Click one to add it. Typing “audio lead” or “j cut” gives J Cut (audio lead), so the same note is always spelled the same way. Like every tag, they reach Final Cut as keywords when you export.
 
 ### Removing Tags
 
@@ -97,17 +107,21 @@ Uncategorized and Skip (don’t copy) are marked “built in”. Organize relies
 
 Click Also use for new projects. The next project you create starts with this list instead of the built-in one.
 
+### Standard shot types and Way Stop
+
+New projects start with five shot types (Master Shot, Close-Up, Insert, Point of View and Reaction) and with Way Stop, the category for a stop along a trip. A project made before those were built in is not changed by itself: click Add Standard Shot Types to add the ones it is missing, Way Stop among them. Nothing else in the list changes, and clicking it again adds nothing. If you saved a list for new projects, Add Them for New Projects adds the missing ones to that list too, keeping the rest as you left it.
+
 See also: [Working with Categories](#working-with-categories), [What Happens to Files When You Change a Category](#what-happens-to-files-when-you-change-a-category), [Auto-Suggest Categories](#auto-suggest-categories), [The Settings Window, Tab by Tab](/manual/setup-network/#the-settings-window-tab-by-tab)
 
 ## What Happens to Files When You Change a Category
 
-*Changing a clip’s category applies at once and moves its organized copy to the matching folder in the background.*
+*Changing a clip’s category applies at once and, when MediaFlow has its record of organizing the clip, moves its organized copy to the matching folder in the background.*
 
-Organize files each clip in a folder named after its category. When you change a clip’s category in the main window, the change applies at once, and MediaFlow then moves the clip’s organized copy into the folder for the new category. You do not start this and you do not confirm it.
+Organize files each clip in a folder named after its category. When you change a clip’s category in the main window, the change applies at once, and MediaFlow then moves the clip’s organized copy into the folder for the new category, when it has its record of organizing that clip. You do not start this and you do not confirm it.
 
 ### When it happens
 
-- The project has a destination, and the clip’s file is already inside it. A clip that has not been organized yet has nothing to move; it is filed by its current category when you organize it
+- The project has a destination, the clip’s file is already inside it, and MediaFlow has its record of organizing the clip. A clip that has not been organized yet has nothing to move; it is filed by its current category when you organize it. Any other clip keeps its file where it is: your own files that a project uses where they are, clips organized by early versions of MediaFlow, which kept no such record, and clips Organize found already in their place. Their category changes, their file doesn’t move, and nothing is said about it
 - You change the category of one clip, change it for a selection, or accept a proposed category
 - Undoing a category change moves the file back the same way
 
@@ -121,7 +135,7 @@ The row also stays if you open another project before the move finishes. The fil
 
 ### Putting things right
 
-Choose Workflow → Repair → Re-file folders by category. It checks every organized file in the project and moves each one into the folder its current category calls for. Use it after a failed move, for example when the destination was not connected, and after renaming a category in Settings › Categories, which does not move files by itself.
+Choose Workflow → Repair → Re-file folders by category. It checks every organized file in the project and moves each one into the folder its current category calls for, but only when MediaFlow has its record of organizing it. Your own files that a project uses where they are stay where they are, and so do clips organized by early versions of MediaFlow or found already in their place by Organize; Re-file says how many it left. Use it after a failed move, for example when the destination was not connected, and after renaming a category in Settings › Categories, which does not move files by itself.
 
 ### When two projects share media
 
@@ -137,7 +151,7 @@ The Categories pass saves you from categorizing clips one at a time. Choose Work
 
 ### Signals
 
-- Filename keywords — interview, broll, aroll, timelapse, hyperlapse, slowmo, bts, outtake, establishing, cutaway, product, action, dnc, and similar
+- Filename keywords — interview, broll, aroll, timelapse, hyperlapse, slowmo, bts, outtake, establishing, cutaway, closeup, pointofview, mastershot, waystop, reaction, product, action, dnc, and similar. The short forms CU, POV, INS and MS count only as a word of their own, as in A001_CU_01
 - Learned history — what you assigned before to clips from the same camera, or with a similar duration (needs at least 3 camera samples or 5 duration samples)
 - Frame rate — 100 fps and above suggests Slow Motion; 5 fps and below suggests Time-lapse
 - Duration — under 3 seconds suggests Skip (don’t copy), stored as “Do Not Copy”, because the clip is probably accidental. Length alone suggests nothing else

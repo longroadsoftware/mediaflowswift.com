@@ -27,6 +27,8 @@ You do not type a filename. MediaFlow names the file after the project file, as 
 - FCPXML (Final Cut Pro) — A Final Cut Pro import file with one event per category and, on every clip, its tags, rating, select status, scene and shot, notes and camera
 - EDL CSV (Resolve / Premiere) — A spreadsheet-style clip list with bin-style column names, file paths, rating and select status. It is a list to read beside your clips, or to map if your editor imports metadata from a spreadsheet; it is not a timeline, and no editor needs it to open your clips
 
+The two hand-off formats, FCPXML and EDL CSV, leave out the clips set to Skip (don’t copy), as every file for an editor does. Why is in Choosing an Export for Your Editor.
+
 ### What the PDF and HTML Reports Contain
 
 - Project summary: total files, total duration and total size
@@ -55,11 +57,17 @@ Hand-off files come from three commands in Workflow → Plan & Deliver: Report (
 ### What Each File Carries
 
 - NLE Template Export → Final Cut Pro (.fcpxml) — A library with events and keyword collections from the fields you choose. On every clip: tags, star rating, select status and the favorite mark, scene, shot and circle take as keywords plus one marker at the clip start with scene, shot, take and camera angle, an audio-quality marker (low, clipping or silent), the place name, notes, camera and GPS coordinates. Metadata Options switch each kind off, except place, camera and coordinates, which always travel.
-- Report → FCPXML (Final Cut Pro) — One event per category. On every clip: tags, star rating, select status and the favorite mark, scene, shot and circle take as keywords plus one marker with scene, shot, take and camera angle, notes and camera. No place, coordinates or audio flags, and no options: every clip, with everything on.
-- Export FCPXML… — The same file as Report → FCPXML, limited to clips that have a scene or shot type, named after the project with _markers.
+- Report → FCPXML (Final Cut Pro) — One event per category. On every clip: tags, star rating, select status and the favorite mark, scene, shot and circle take as keywords plus one marker with scene, shot, take and camera angle, notes and camera. No place, coordinates or audio flags, and no options: every clip but those set to Skip (don’t copy), with everything on.
+- Export FCPXML… — The same file as Report → FCPXML, with every clip but those set to Skip (don’t copy), named after the project with _markers.
 - NLE Template Export → DaVinci Resolve (.edl) — An edit decision list: one cut per clip, one after another from 01:00:00:00, each with its length at the clip’s own frame rate (drop frame for 29.97 and 59.94), under a bin line for each group the Organization picker makes. Each cut’s source timecodes are the camera’s own: from the timecode recorded on the clip’s first frame to its end. The reel name is the one the camera recorded with its timecode, or else the clip’s file name without its extension, in the 8 capital letters, digits and underscores an EDL allows; two different names never share a reel. Every clip’s full name and camera are on comment lines. Scene, shot and take, place, coordinates, notes and rating are written as comment lines too. An EDL carries no file paths, so the editor must already have the clips to match the cuts against. Tags, select status and audio flags are not in the file at all.
 - NLE Template Export → CSV (Universal) (.csv) — One row per clip: bin, filename, duration in seconds, category, camera, place and coordinates, plus the scene, shot, take, camera angle, circle take, rating, select status, favorite, notes, tags and audio-quality columns you leave on. No file paths.
 - Report → EDL CSV (Resolve / Premiere) (.csv) — One row per clip with bin-style column names: Tape Name (the camera), Clip Name, Comment (the notes), Scene (holds the category), Shot/Take (holds the tags), Duration (at the clip’s own frame rate), File Path, File Size, Resolution, Codec, Frame Rate, Rating and Select Status. Scene, shot and take numbers from the Scene Log are not in it.
+
+### Clips Left Out, and Clips This Mac Can’t Reach
+
+Every file for an editor leaves out the clips set to Skip (don’t copy): both Final Cut Pro files, the .edl and the CSV lists made for an editor. MediaFlow never copies those clips, so their files stay wherever they were imported, often on another Mac, and an editor would show each one as missing media. No event, bin or keyword is made for the category either. Export FCPXML… and NLE Template Export say how many were left out in the message that names the file, for example “Exported 141 clips to Trip_Final_Cut_Pro.fcpxml. 47 clips set to Skip (don’t copy) were left out.” To send such a clip to your editor, give it another category first.
+
+The same message says when this Mac can’t reach the file of a clip that was exported: a clip in the Missing group, or one that reads Volume not connected, On another Mac, Not on this Mac or not downloaded from the cloud in the Where column. The file is saved all the same, and an editor on this Mac shows those clips as missing until it can reach their files. Connect the drive, download the files or relink the clips, then export again if their place has changed.
 
 ### What an EDL Is
 
@@ -82,7 +90,7 @@ The NLE Template Export creates a structured project file that you can import in
 3. Select your target NLE: Final Cut Pro, DaVinci Resolve, or CSV
 4. Set the organization, clip filter and metadata options
 5. Click Preview to see the file MediaFlow would write, if you like
-6. Click Export… and choose where to save
+6. Click Export… and choose where to save. A message names the file and stays until you close it, with a Show in Finder button. It says how many clips were exported, how many set to Skip (don’t copy) were left out, and how many exported clips have a file this Mac can’t reach. If the file could not carry something as it is, a warning says so and stays too
 
 ### Final Cut Pro (FCPXML)
 
@@ -130,11 +138,13 @@ The CSV export creates a spreadsheet-compatible file with all clip metadata orga
 - Favorites Only — Export only clips with the favorite ★. F, Toggle Hero and Mark Hero set it along with Hero; Hero chosen from Select alone does not count. Taking Hero off, or choosing Maybe, Reject or Clear in Select, removes it
 - Selected Only — Export only the currently selected clips in the media list
 
+Clips set to Skip (don’t copy) are left out whichever filter you choose, Selected Only too, because they were never copied and an editor could not find their files. The top of the sheet counts them, for example “141 clips available · 47 set to Skip (don’t copy) are left out”, and Preview shows the count for the file it would write, with how many of its clips this Mac can’t reach.
+
 ### Metadata Options
 
 Choose what travels with each clip: Notes, Scene/Shot, Ratings, Audio Flags and Tags. Turn off anything you do not want in your NLE. The .edl never carries Tags or Audio Flags, whichever way those two are set.
 
-Workflow → Plan & Deliver → Export FCPXML… is a separate, simpler command. It writes the same Final Cut Pro file as Report → FCPXML (one event per category, with each clip’s keywords, marker, notes and camera), but only for clips that have a scene or shot type, and names it after the project with _markers.
+Workflow → Plan & Deliver → Export FCPXML… is a separate, simpler command. It writes the same Final Cut Pro file as Report → FCPXML (one event per category, with each clip’s keywords, marker, notes and camera) for every clip but those set to Skip (don’t copy), and names it after the project with _markers. Clips with no scene, shot or take from the Scene Log are included too; they just have no scene marker. The save window opens in the project’s folder, and a message that stays until you close it names the file and says how many clips it holds, how many were left out and how many this Mac can’t reach, with Show in Finder. When every clip is set to Skip (don’t copy), a warning says so and nothing is saved.
 
 See also: [Choosing an Export for Your Editor](#choosing-an-export-for-your-editor), [Generating Reports](#generating-reports), [Format Conformance Checker](/manual/organizing-media/#format-conformance-checker)
 

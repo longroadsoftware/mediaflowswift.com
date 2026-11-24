@@ -11,30 +11,47 @@ generated: tools/import-guide.sh
 
 *Copy clips into Category and Camera folders at the project destination, with every copy checksummed and verified.*
 
-Organize Media copies your clips into a tidy folder layout at the project destination. The destination can be any folder: a network share, an external drive, a RAID, or a folder on this Mac. The layout is Destination / Category / Camera / Filename.
+Organize Media copies your clips into a tidy folder layout at the project destination. The destination can be any folder: a network share, an external drive, a RAID, or a folder on this Mac. The layout is Destination / Category / Camera / Filename. Each category and camera name makes one folder: a slash, colon, backslash, question mark, asterisk, quotation mark, angle bracket or vertical bar in it becomes an underscore, spaces and dots at either end are left off, and a long name is cut to 120 characters, or fewer in a script such as Japanese whose letters take more room. So Trip: Maui goes in a folder called Trip_ Maui.
 
 ### Organizing
 
-1. Choose Workflow → Organize Media…, or right-click clips and choose Organize Media. With clips selected it copies the selection; with nothing selected it copies the whole project. If the project has no destination yet, a folder picker opens first
-2. Check the confirmation. It shows the scope (selection or whole project), the number of clips, the total size, the destination and its free space
-3. To send this copy somewhere else, open the destination menu. It lists the project’s own destination, your default from Settings, places you have organized to before, and Choose… for any other folder
+1. Choose Workflow → Organize Media…, click the Organize button in the pipeline strip, or click Organize Media in the bar under selected clips. Each offers the whole project. To copy only some clips, right-click them and choose Organize Media. If the project has no destination yet, a folder picker opens first
+2. Check the confirmation. It shows the scope (selection or whole project), the number of clips, the total size, the destination and its free space. When some clips are selected, but not all, it has two buttons: Organize All N, the default, copies the whole project, and Organize N Selected copies only the selected clips. A clip left selected never shrinks the copy without your choosing it
+3. To send this copy somewhere else, open the destination menu. It lists the project’s own destination, your default from Settings, places you have organized to before, and Choose… for any other folder. A folder you pick there that isn’t named after the project holds the project’s own folder: see The Project’s Own Folder, below
 4. A different destination is a one-off: the project keeps pointing where it did. Tick “Make this the project destination” when you want the change to stick. When another Mac set the project’s destination, the box names it: ticking it replaces that Mac’s choice for every Mac that shares the project
-5. Click Organize Media. MediaFlow creates the category and camera folders, copies each file, and verifies each copy
-6. When the progress window finishes, click Done. Each copied clip now reads “At destination” in the Where column, with a green check
+5. Click Organize Media (Organize All N or Organize N Selected when clips are selected). MediaFlow creates the category and camera folders, copies each file, and verifies each copy
+6. When the progress window finishes, click Done. Each copied clip now reads “At destination” in the Where column, with a green check. Hover over it to see which folder of the destination the clip is in (named only when the clip is inside the project’s destination), with the folder’s full path when this Mac can reach it; right-click it and choose Show in Finder to see the file
 
-The confirmation can also warn you. Organize is disabled when the destination does not have enough free space. An orange line appears when the destination is on this Mac’s own drive while your setup points somewhere else — your default destination in Settings › Storage is on another drive or a share, or, with no default destination, you use a network share — since that usually means the drive or share was not connected; if you meant to use it, check that it is connected. When your default destination is on this Mac, or everything you do is, there is no warning. With a shared database set up, so that other Macs share your projects, an orange line says instead when the destination is on this Mac, or on a drive connected to it, where those Macs can’t organize. Another orange line counts clips that still carry an unconfirmed proposal; organizing does not apply proposals.
+The confirmation can also warn you. Organize is disabled when the destination does not have enough free space; with clips selected, each button is judged on its own, so the selected clips can still be organized when the whole project would not fit. An orange line appears when the destination is on this Mac’s own drive while your setup points somewhere else — your default destination in Settings › Storage is on another drive or a share, or, with no default destination, you use a network share — since that usually means the drive or share was not connected; if you meant to use it, check that it is connected. When your default destination is on this Mac, or everything you do is, there is no warning. With a shared database set up, so that other Macs share your projects, an orange line says instead when the destination is on this Mac, or on a drive connected to it, where those Macs can’t organize. Another orange line counts clips that still carry an unconfirmed proposal; organizing does not apply proposals.
 
-Clips that read On another Mac or Not on this Mac are left out of the copy, and the confirmation says how many. This Mac cannot read them. Organize them on the Mac they were imported on.
+Clips that read On another Mac or Not on this Mac are left out of the copy, and the confirmation says how many. This Mac cannot read them. Organize them on the Mac they were imported on. If one is already in the destination, hover over it to see where the project records it: the folder, and the Mac or share it is on.
+
+### The Project’s Own Folder
+
+Organize puts the category folders (A-roll, B-roll and the rest) directly inside the destination, so the destination should be a folder named after the project. Otherwise those folders would sit loose at the top of a share or a year folder, mixed with every other project. Letter case doesn’t matter. MediaFlow never adds or picks a year folder: where the project’s folder sits, such as Video Production › 2026, is your choice.
+
+- Pick a folder that isn’t named after the project, such as Video Production › 2026 for a project called Tippy, and the confirmation uses Video Production › 2026 › Tippy instead, shows its whole path, and says whether it will be created or is already there. When the project has no destination yet, it says that too. Organize Media then makes the folder and copies into it. Use this folder anyway copies straight into the folder you picked
+- When the folder you pick already holds a folder named after the project, that one is used, not a second one
+- A folder already named after the project is used as it is: never Tippy › Tippy
+- When the name is close to the project’s but not the same, such as Tippy 2026, tippy-video or a name with a space at the end, or the folder is already Tippy › Tippy, MediaFlow doesn’t guess. It asks which you mean, with Use “Tippy 2026” and Use “Tippy 2026/Tippy” (for Tippy › Tippy, Use “Tippy/Tippy” and Use “2026/Tippy”, the outer folder), and copies nothing until you answer
+- A folder named after another of your projects, such as Video Production › 2026 › Tippy picked for Rockwood, never holds this project’s folder without asking. MediaFlow says whose folder it is, picks no answer for you, and copies nothing until you answer
+- The places in the destination menu and your default destination count as folders you pick
+- A project whose destination already isn’t named after it, such as the top of a share, is asked about once, before its next Organize or Re-file. Use “Video Production/Rockwood”: from Organize, that folder becomes the project’s destination once the copy is done, unless clips with MediaFlow’s record of organizing them are already at the top of the old destination: then the copy goes into it this once, the destination stays where it was, and the next Re-file asks again and moves them; from Re-file, or the re-filing after a category change, the clips at the top of the old destination that MediaFlow has its record of organizing are moved into it, and it becomes the destination once those have all moved; clips there without that record stay where they are and don’t hold it back (see below). If the re-file is cancelled, a clip can’t be moved or another Mac is working on the project, the destination stays where it was and you’re asked again at the next Re-file. Use this folder anyway is remembered for that folder on this Mac, so you aren’t asked again on it until the destination changes
+- The re-filing that follows a category change waits for that answer instead of moving files. If you cancel, it stays waiting until you answer or MediaFlow is opened again, and a notice says how to answer: Change destination folder… or Re-file folders by category in Workflow → Repair. Answering there ends the wait once the answer has taken effect: at once for Use this folder anyway, and for the project’s folder once it has been made. If it can’t be made, the re-filing keeps waiting
+- If the project’s folder can’t be made, for example because the share isn’t connected or a file of the project’s name is in the way, no clip is moved, the destination stays where it was and a warning says so: connect the drive or share, then choose Re-file folders by category again. MediaFlow waits only a moment for a share that is asleep. If it doesn’t answer in that time, the warning says the folder may still appear there later; it isn’t the destination unless you choose it again
+- When the folder you chose isn’t there yet but its drive or share is connected, the project’s folder is made with the folders it goes in, as Organize Media makes a destination. Nothing is made for a share that isn’t connected
+
+Each change of a project’s destination is written to the log with the old and new folder. Re-file moves only clips inside the destination, and the clips organized at the top of the old destination when you answer as above, in both cases only those MediaFlow has its record of organizing (see Re-file folders by category). Clips organized there by early versions of MediaFlow, or found already in their place, stay at the top of the old destination, outside the project’s new folder. It says how many organized clips it left somewhere else, instead of No moves needed: move those in the Finder, then use Change destination folder… as described there.
 
 ### When This Mac Can’t Reach the Destination
 
-A project organizes into one destination, on every Mac that shares it, and it belongs to the Mac that set it: the Mac that started the project, until one changes it. A destination on a network share is found on each Mac however the share is mounted there, such as “Media-1” beside an older “Media”: a dash and one or two digits is how macOS numbers a second mount of a share, so a share called “Studio-2024” is a name of its own. When this Mac can’t reach the destination, because it is on another Mac’s own disk or on a share or drive that isn’t connected here, Organize Media copies nothing and never asks for another folder in its place. A folder on another Mac’s own disk, or on a drive connected to it, is that Mac’s even when a folder at the same place is on this Mac: they are different disks, and organizing here would split the project’s media. Two accounts on the same Mac share its disk. MediaFlow knows which Mac set the destination when the project was started, or its destination chosen, in this version; for an older project it doesn’t, and a folder that is at the destination’s place on this Mac is organized into, as before. MediaFlow says whose destination it is and where, for example “This project organizes into “Beach Day” in Downloads on Studio MacBook Pro, which this Mac can’t reach.”, and offers:
+A project organizes into one destination, on every Mac that shares it, and it belongs to the Mac that set it: the Mac that started the project, until one changes it. A destination on a network share is found on each Mac however the share is mounted there, such as “Media-1” beside an older “Media”: a dash and one or two digits is how macOS numbers a second mount of a share, so a share called “Studio-2024” is a name of its own. When this Mac can’t reach the destination, because it is on another Mac’s own disk, on a share or drive that isn’t connected here, or in another account’s home folder on this Mac, Organize Media copies nothing and never asks for another folder in its place. A folder on another Mac’s own disk, or on a drive connected to it, is that Mac’s even when a folder at the same place is on this Mac: they are different disks, and organizing here would split the project’s media. Two accounts on the same Mac share its disk, so either organizes into a folder both reach, such as one in /Users/Shared. A destination in another account’s home folder on this Mac is not such a folder: this account can’t reach it, so MediaFlow copies nothing and names the account. Organize while logged in as that account, or change the project’s destination to a folder both accounts reach, such as one in /Users/Shared or on a network share. MediaFlow knows which Mac set the destination when the project was started, or its destination chosen, in this version; for an older project it doesn’t, and a folder that is at the destination’s place on this Mac is organized into, as before, unless it is in another account’s home folder. MediaFlow says whose destination it is and where, for example “This project organizes into “Beach Day” in Downloads on Studio MacBook Pro, which this Mac can’t reach.”, and offers:
 
 - Connect to the share — when the destination is on the network share chosen in Settings › Network and it isn’t connected. Once it is, Organize Media carries on. Another share is connected in the Finder
-- Change Project Destination… — choose a folder every Mac reaches, such as one on a network share. When another Mac set the destination, MediaFlow first asks whether to replace it and names that Mac. Clips already organized follow when they are found at the new place, as described in Change destination folder
-- Cancel — and organize on the Mac that has the destination
+- Change Project Destination… — choose a folder every Mac reaches, such as one on a network share; for two accounts on one Mac, a folder both reach, such as one in /Users/Shared. When another Mac set the destination, MediaFlow first asks whether to replace it and names that Mac. Clips already organized follow when they are found at the new place, as described in Change destination folder
+- Cancel — and organize on the Mac that has the destination, or logged in as the account whose home folder it is in
 
-Free Up Space, Restore from Cleanup and Re-file folders by category say the same. The re-filing that follows a category change is left out on a Mac that can’t reach the destination, because the organized files are where this Mac can’t move them; a notice says so once for each project each time MediaFlow is opened, and names the menu item to use on the Mac that has them.
+Free Up Space, Restore from Cleanup and Re-file folders by category say the same. The re-filing that follows a category change is left out on a Mac that can’t reach the destination, because the organized files are where this Mac can’t move them; a notice says so once for each project each time MediaFlow is opened, and names the menu item to use on the Mac that has them, or logged in as the account whose home folder they are in.
 
 To move the folder of a project other Macs share, move or copy it in the Finder to a folder every Mac reaches, such as one on a network share. Then, on one Mac, choose Workflow → Repair → Change destination folder…, choose the folder at its new place, and answer Point at New Destination. The other Macs that share the project get the new destination and the clips’ new places with the project’s other changes: there is nothing to repair on them. If you choose the same folder on another Mac as well, nothing changes and MediaFlow says it is already the destination, even when that Mac has the share mounted under another name. Choosing a different folder there asks first, names the Mac that set the destination, and makes the folder you choose the destination for every Mac.
 
@@ -64,7 +81,7 @@ The checksum is recorded with the clip. Clear Card relies on it later, so leave 
 
 ### Moving Within One Drive
 
-When a clip’s imported copy is on the same drive as the destination and still matches the checksum its import took from the card (the same size, not changed since), Organize renames it into place instead of copying it: seconds, and no extra space. Nothing is copied, so nothing is read back; the import already proved those bytes against the card. A rename never replaces a file already there and never crosses to another drive: if it can’t be done, the clip is copied and checked as above. Only clips still waiting to be organized are moved, and only into the project’s own destination: a one-off copy somewhere else, a clip already organized, and a project sharing its files with another project are always copied.
+When a clip’s imported copy is on the same drive as the destination and still matches the checksum its import took from the card (the same size, not changed since), Organize renames it into place instead of copying it: seconds, and no extra space. Nothing is copied, so nothing is read back; the import already proved those bytes against the card. A rename never replaces a file already there and never crosses to another drive: if it can’t be done, the clip is copied and checked as above. Only clips still waiting to be organized are moved, and only into the project’s own destination: a one-off copy somewhere else, a clip already organized, and a project sharing its files with another project are always copied. So is a clip whose import folder holds a Proof Copy receipt, which an import set to make a second copy usually leaves, even when the second drive wasn’t connected, so the receipt still finds every file it lists.
 
 A clip imported by this version already carries the checksum its import took from the card. Organize checks the bytes it reads from the imported copy against that checksum, so the organized copy is proved against the card itself. If they differ while the imported copy’s size and date are unchanged, the imported copy has been damaged: the clip is reported as failed, no copy is left at the destination, and the clip stays where it is. A clip changed on purpose since the import is checked afresh, as before.
 
@@ -85,11 +102,11 @@ Workflow → Repair → Tidy Up Destination… lists what earlier Organize runs 
 
 ### Default destination
 
-Settings › Storage › Organize Media › “Default destination for new projects” fills in the destination for a project that has none. A project’s own destination always wins once it has one.
+Settings › Storage › Organize Media › “Default destination for new projects” fills in the destination for a project that has none, as a folder named after the project inside the default, such as Video Production › 2026 › Tippy. New Project uses it only for a project made on another drive or share than the default, such as on this Mac’s own drive: a project made in the default destination, in a folder inside it or elsewhere on its drive or share keeps its media in its own project folder, with the project file. A project’s own destination always wins once it has one.
 
 ### Keeping the folder layout in sync
 
-When you change the category or the camera of an organized clip, MediaFlow moves its copy at the destination into the matching folder. This happens in the background, keeps any edit you make meanwhile, and only interrupts you if a file fails to move or you open another project before the move could be saved. While any of these moves is still running, even when a later one has finished, MediaFlow holds back its automatic check of where your clips are, so a clip caught between two folders is not marked Missing. To bring the whole project into line at once, for example after an interrupted move or a relink, choose Workflow → Repair → Re-file folders by category.
+When you change the category or the camera of an organized clip, MediaFlow moves its copy at the destination into the matching folder, when it has its record of organizing that clip (see Re-file folders by category below). This happens in the background, keeps any edit you make meanwhile, and only interrupts you if a file fails to move or you open another project before the move could be saved. While any of these moves is still running, even when a later one has finished, MediaFlow holds back its automatic check of where your clips are, so a clip caught between two folders is not marked Missing. To bring the whole project into line at once, for example after an interrupted move or a relink, choose Workflow → Repair → Re-file folders by category.
 
 ### Cancelling a long operation
 
@@ -101,6 +118,8 @@ Importing, Organize and Relink have progress windows of their own. Every other l
 
 > **Tip:** Clips in the Skip (don’t copy) category are never copied. The category is stored as “Do Not Copy” in the .vpm file and the database; only the label changed.
 
+Because they are never copied, clips set to Skip (don’t copy) are not counted as work for Organize: they are left out of the Organize count on the pipeline and of the Not at destination group, and their Where reads Skipped — not copied. When any are left out, the Organize step says so, for example “3 clips set to Skip (don’t copy) are left out”. A skipped clip that was never copied keeps its file where it is: it has no copy at the destination, so Free Up Space and Clear Card never remove its file. A clip copied before it was set to skip is at the destination, and they treat it like any other organized clip. Change a clip to another category and it is Organize’s work again straight away.
+
 Organize is part of the Studio plan; see Plans and Pricing.
 
 See also: [Change destination folder](#change-destination-folder), [Re-check files](#re-check-files), [Freeing Up Space](#freeing-up-space), [Clear Card](#clear-card), [Network Drive Settings for Working Away from Home](/manual/setup-network/#network-drive-settings-for-working-away-from-home)
@@ -109,11 +128,15 @@ See also: [Change destination folder](#change-destination-folder), [Re-check fil
 
 *Point the project at a different destination folder, and follow organized clips that have moved there. No files are copied or moved.*
 
-The project destination is where Organize Media copies clips. It is shown under the project name in the sidebar. Hover over it for the full path; “Not set” appears in orange when there is none. The destination is first chosen when the project is created — see Creating a New Project.
+The project destination is where Organize Media copies clips. It is shown under the project name in the sidebar in plain words: the folder, and the network share, drive or Mac it is on, such as Organizes into “Beach Day” on the network share “Media”. When this Mac can reach the destination, hover over it for the full path, and click it to see the folder in the Finder. When this Mac can’t reach the destination, the words say so, such as “not connected to this Mac”, or name the Mac it is on or the account whose home folder it is in. The line is then fainter, there is nothing to click, and hovering over it says it can’t be shown in the Finder. “Not set” appears in orange when there is none. The destination is first chosen when the project is created — see Creating a New Project.
+
+When the destination is not the folder the project file is in, or a folder inside it, a note under that line says so: Media for this project is in “Beach Day” on the network share “Media”, not next to the project file. When this Mac can reach the media, hover over the note for both folders in full, and click Show in Finder under it to see the media. The inspector shows the same line and note in its Metadata tab, and when no clip is selected. A project made before MediaFlow kept the two together shows the note too: nothing is wrong with it, and its clips are where the note says.
 
 1. Click Change… next to the destination in the sidebar, or choose Workflow → Repair → Change destination folder…
-2. Choose the new folder
+2. Choose the new folder. When it isn’t named after the project, MediaFlow asks: Use “&lt;folder>/&lt;project>”, the default, makes the project’s own folder inside it (or uses the one already there); Use this folder anyway keeps your folder; Cancel changes nothing
 3. MediaFlow saves the new destination in the project and reports “Destination location updated.”
+
+If the project’s own folder can’t be made, for example because the share isn’t connected or doesn’t answer in time, the destination isn’t changed and a warning says so: connect the drive or share, then choose Change destination folder… again. MediaFlow waits only a moment for a share that is asleep, so when it doesn’t answer in time the folder may still appear there later. A file named after the project is never taken for its folder.
 
 Changing the destination never copies, moves or deletes a file. On its own it changes only where new organizing goes; clips you organized earlier still point at the files in the old folder unless you accept the offer described next.
 
@@ -203,6 +226,7 @@ Two checks, at two moments. A quick one decides what the sheet lists; a thorough
 - Before a listed file is moved, MediaFlow reads it in full and compares its SHA-256 with the organized copy’s. They must match each other, and match the checksum recorded when the clip was organized, if there is one. The organized copy is read in full too, unless you chose Use the Earlier Check (below).
 - A file that cannot be proven is left exactly where it is. The summary lists each one with the reason: the organized copy could not be reached, the two do not match byte for byte, or the file has changed since it was organized.
 - A file is never compared with itself. If the “local copy” and the organized copy turn out to be one file under two names, it is kept.
+- A card or source-folder original whose clip was imported with Also copy to on is moved only when its second copy is read back in full too and matches the checksum taken from the card, as Clear Card asks (see Clear Card). Use the Earlier Check never skips this. When the same card file was imported into more than one project and another import made its own second copy, that copy is read back too, and a reason about it names that project. If a second copy can’t be proved, the original stays where it is and the summary says why.
 
 Reading the organized copies takes time, more so over a network: expect roughly as long as organizing the same clips took, and over a phone connection it uses your data. The progress window shows “Checking and moving” and can be cancelled between files.
 
@@ -239,7 +263,7 @@ A file goes back only to a place this Mac has had it. When two Macs share a proj
 
 ### Re-file folders by category
 
-Workflow → Repair → Re-file folders by category (called Sync Folder Layout in earlier versions) moves every organized file at the destination into the folder that matches its current category and camera. Single edits re-file themselves in the background, so you need this only to catch up after an interrupted move or a relink. A clip on a card laid out by the camera (see Clear Card) is never moved: it stays where it is, and MediaFlow says why.
+Workflow → Repair → Re-file folders by category (called Sync Folder Layout in earlier versions) moves every organized file at the destination into the folder that matches its current category and camera. Single edits re-file themselves in the background, so you need this only to catch up after an interrupted move or a relink. A clip on a card laid out by the camera (see Clear Card) is never moved: it stays where it is, and MediaFlow says why. Only clips MediaFlow has its record of organizing are moved: the check it records when it organizes a clip. Your own files that a project uses where they are, such as those of a project made with Create Project From Folder, stay in your folders, and so do clips organized by early versions of MediaFlow, which kept no such record, and clips Organize found already in their place, for which it records none. MediaFlow says how many it left.
 
 ### The End of Day Wrap template
 
@@ -253,7 +277,7 @@ See also: [Organizing Media to Storage](#organizing-media-to-storage), [Re-check
 
 ## Clear Card
 
-*Delete clips from a memory card only after each one is organized, the card file checks out, and its organized copy is read back in full and matches.*
+*Delete clips from a memory card only after each one is organized, the card file checks out, and its organized copy (and its second copy, if one was asked for at import) is read back in full and matches.*
 
 Clear Card empties a memory card safely. It lists every clip on the card, works out which ones already have an organized copy it can vouch for, and lets you delete only those. Clearing is always a separate, deliberate step from importing.
 
@@ -284,11 +308,17 @@ Every kept row is locked, with the reason shown next to it. There is no select-a
 The Check menu chooses between two modes.
 
 - Verified (full SHA-256), the default — reads each card file in full and compares its checksum with the checksum recorded when the clip was organized. It also checks that the organized copy is still present and is the same size as the card file.
-- Standard (path and size) — matches on the import path and the size only. Its review is much faster because it never reads the card file, and it will not act on a card that mounted under a different name.
+- Standard (path and size) — matches on the import path and the size only. Its review is much faster because it does not read the card file, and it will not act on a card that mounted under a different name. Each card file you choose is read in full when you confirm instead, and must match the recorded checksum, so a new clip that reuses an old clip’s name and size on a formatted card stays on the card.
 
-Whichever mode you choose, nothing is deleted on the review alone. When you confirm, Clear Card first reads each selected clip’s organized copy back in full (the sheet shows “Checking copies…”) and matches it against the checksum recorded when the clip was organized, or, when none was recorded, against the card file itself. This matters because a copy made with read-back verification off (in Settings › Storage) was only spot-checked, and a copy can be damaged later without changing size. Reading the copies back takes about as long as copying them did.
+Whichever mode you choose, nothing is deleted on the review alone. When you confirm, Clear Card first reads each selected clip’s organized copy back in full (the sheet shows “Checking copies…”) and matches it against the checksum recorded when the clip was organized, or, when none was recorded, against the card file itself. This matters because a copy made with read-back verification off (in Settings › Storage) was only spot-checked, and a copy can be damaged later without changing size. Reading the copies back takes about as long as copying them did. In Standard mode, Clear Card also reads each selected card file in full at this point, so confirming takes about twice as long.
 
 A clip whose organized copy does not match, has gone, cannot be read, or is only a placeholder for a file in iCloud or another cloud service stays on the card. When the run finishes, the sheet lists each one by name with the reason. Organize the clip again, then clear the card.
+
+### Clips with a second copy
+
+A clip imported with Also copy to on (see Where Imports Go) leaves the card only when both its copies are proved: the organized copy and the second copy. When you confirm, Clear Card reads the second copy back in full from its own drive as well, and it must match the checksum taken from the card; at the moment of deleting, it must still be the file that was read. So checking takes longer for these clips: each has two or more copies to read back. When the same card file was imported into more than one project and each import made its own second copy, every one of those copies is read back before the file leaves the card, and a reason about another project’s copy names that project. A clip imported without a second copy is decided by its organized copy alone, as before.
+
+When the second copy can’t be proved, the clip stays on the card and the reason is shown in plain words: the drive holding the second copy isn’t connected, the import couldn’t make the second copy, it isn’t there any more, or it reads back different from the card. Connect the drive and try again. On a card laid out by the camera (below), a clip with a second copy counts as checked only when that copy matches too.
 
 ### Cards Laid Out by the Camera
 
@@ -308,8 +338,8 @@ A .MP4 owns the .LRV proxy and .THM thumbnail that share its name; they are list
 
 1. Review the list. Click Rescan if you have connected the destination or organized more clips since the scan
 2. Click the red Delete button. A confirmation restates the clip count, the file count, the total size and the file types, and has a checkbox you must tick before it enables
-3. MediaFlow reads each organized copy back in full (“Checking copies…”), as described above. Click Cancel to stop: stopped while copies are being checked, nothing is deleted; stopped while deleting, the clips not yet reached stay on the card
-4. MediaFlow checks again that each file is inside the card’s DCIM folder immediately before deleting it, and asks the drive holding its organized copy to finish writing it. A clip whose copy’s drive cannot be asked is kept, and the reason is listed
+3. MediaFlow reads each organized copy back in full (“Checking copies…”), and each second copy, as described above, and in Standard mode each card file too. Click Cancel to stop: stopped while copies are being checked, nothing is deleted; stopped while deleting, the clips not yet reached stay on the card
+4. MediaFlow checks again that each file is inside the card’s DCIM folder immediately before deleting it, and asks the drive holding its organized copy, and the drive holding its second copy, to finish writing them. A clip whose copy’s drive cannot be asked is kept, and the reason is listed
 5. At the moment of deleting, it also checks that the card file is still the one it checked, with the same size and date, and that the organized copy is still the one it read back. If either has changed since, the card file is kept; scan the card again to check it. If the drive holding the copy disconnects and reconnects during the run, the clips not yet deleted are kept too, to be safe, and the reason says so
 6. When it finishes, click Eject to eject the card, or Done
 
@@ -317,7 +347,7 @@ Only one card is cleared at a time: while one is clearing, or waiting for you to
 
 > **Warning:** A memory card has no Trash. Cleared files are erased at once and cannot be recovered. Clear Card will not run while an import, organize, archive, relink or the Proxy queue is running, and it refuses a card that is mounted read-only.
 
-See also: [Freeing Up Space](#freeing-up-space), [Organizing Media to Storage](#organizing-media-to-storage), [The Import Sheet and Completion Card](/manual/importing-media/#the-import-sheet-and-completion-card)
+See also: [Freeing Up Space](#freeing-up-space), [Organizing Media to Storage](#organizing-media-to-storage), [The Import Sheet and Completion Card](/manual/importing-media/#the-import-sheet-and-completion-card), [Where Imports Go](/manual/importing-media/#where-imports-go)
 
 ## Proposals: What Import Analysis Suggests
 
@@ -353,17 +383,19 @@ Choose a different category yourself. The proposal disappears, and a category yo
 - Category Learning, on this Mac — every category you assign is remembered by camera and clip length. Settings › Categories shows the totals, and Reset Pattern Memory clears them
 - Shared corrections, in the shared database — each proposal you confirm or correct is recorded for every Mac on that database. Later proposals for similar clips follow what you actually chose, and a category reads High only where you have nearly always agreed. Reset Pattern Memory does not clear these
 
-See also: [Clip Classifier, Second Pass (Tier 1)](#clip-classifier-second-pass-tier-1), [Using a Model to Suggest Categories](#using-a-model-to-suggest-categories), [Auto-Suggest Categories](/manual/tags-categories/#auto-suggest-categories), [What Happens to Files When You Change a Category](/manual/tags-categories/#what-happens-to-files-when-you-change-a-category), [Reviewing Clips with the Keyboard](/manual/video-preview-playback/#reviewing-clips-with-the-keyboard)
+See also: [Clip Classifier, Second Pass (Tier 1)](#clip-classifier-second-pass-tier-1), [Using AI to Suggest Categories](#using-ai-to-suggest-categories), [Auto-Suggest Categories](/manual/tags-categories/#auto-suggest-categories), [What Happens to Files When You Change a Category](/manual/tags-categories/#what-happens-to-files-when-you-change-a-category), [Reviewing Clips with the Keyboard](/manual/video-preview-playback/#reviewing-clips-with-the-keyboard)
 
-## Using a Model to Suggest Categories
+## Using AI to Suggest Categories
 
 *An optional model can refine category proposals; it runs only when enabled in Settings and ticked for that import.*
 
 A vision model can look at three frames from each clip and pick one of your project’s own categories. It refines the proposals import analysis already makes. Its answers are proposals like any other: shown for review, never applied by themselves.
 
-It is off unless you do two things: turn on “Use a model to suggest categories” in Settings › Analysis, and tick “Ask a model to suggest categories” in the Import sheet for that import. The checkbox always starts unticked and applies to that import only.
+It is off unless you do two things: turn on “Use AI to suggest categories” in Settings › Analysis, and tick “Ask AI to suggest categories” in the Import sheet for that import. The checkbox always starts unticked and applies to that import only.
 
 ### Which model
+
+Settings › Analysis has two model choices, each with its own provider and model. Sorting clips, under Import Analysis, is the one that suggests categories; it looks at frames, so it needs a model that sees pictures. Writing for YouTube, further down, is the one the SEO Agent writes with; see The SEO Agent. Choosing one never changes the other. They share the API keys, the local Server address and the daily limit.
 
 - On this Mac — free and private. Frames never leave this Mac. Slow: about a minute a clip, in the background
 - Claude, ChatGPT or Gemini — answers in a second or two and costs money for every clip
@@ -372,18 +404,24 @@ It is off unless you do two things: turn on “Use a model to suggest categories
 
 ### Setting up a paid provider
 
-1. In Settings › Analysis, turn on “Use a model to suggest categories”
-2. Choose the provider under Model runs, then a Model. A note under the picker describes each one
+1. In Settings › Analysis, turn on “Use AI to suggest categories”
+2. Under Sorting clips, choose the provider in Model runs, then a Model. A note under the picker describes each one
 3. Create an API key using the link shown, paste it into API key and click Save
 4. Set “Stop after” to the most you are willing to spend in a day
 
+The Model list holds the models whose prices MediaFlow knows, because the daily limit depends on them. Once a key is saved, MediaFlow asks the provider which models your account has: a model your account lacks is marked “not on this account”, and a line says how many others the account has. That request carries your key and nothing else. Click the round arrow beside Model to ask again.
+
+For Claude, the list has Claude Sonnet 5 and Claude Opus 5.5. Opus 5.5 is Anthropic’s strongest model and costs about twice as much. It always thinks briefly before it answers, so each clip or writing pass takes a little longer. Sorting asks it to keep that thinking short; writing leaves it at Anthropic’s usual setting.
+
+Click Test to send the chosen model one short question, with nothing of yours in it, and see how quickly it answers, or why it didn’t: a rejected key, a model your account lacks, or the spending limit. The provider bills it like any other request, and it counts toward the daily limit. Under Sorting clips, Test is available once “Use AI to suggest categories” is on in Settings › Analysis; under Writing for YouTube, once “A model that writes your YouTube title, description and tags” is on in Settings › Privacy.
+
 ### The daily limit
 
-The limit is checked before every clip, so it is never exceeded. It starts at $1.00 a day. When it is reached the pass stops; clips it did not reach keep the proposal they had. The line below shows clips and spending today, and Reset sets it back to zero. The amounts are MediaFlow’s estimates; your provider’s bill is the final word.
+The limit is checked before every clip, so it is never exceeded. It is one limit for sorting and writing together, shown under whichever of them uses a paid provider. It starts at $1.00 a day. When it is reached the pass stops; clips it did not reach keep the proposal they had. The line below shows clips and spending today, and Reset sets it back to zero. The amounts are MediaFlow’s estimates; your provider’s bill is the final word.
 
 ### API keys
 
-Keys are kept in your Keychain, never in preferences or the saved setup. Settings shows a masked key with Replace… and Remove.
+Keys are kept in your Keychain, never in preferences or the saved setup. Settings shows a masked key with Replace… and Remove. There is one key for each provider: a key saved under Sorting clips is the one Writing for YouTube uses with that provider, and the other way round.
 
 ### If the checkbox is missing or dimmed
 
@@ -406,26 +444,36 @@ MediaFlow talks to a model server running on this Mac. The setup assistant in Se
 
 ### Set it up
 
-1. In Settings › Analysis, turn on “Use a model to suggest categories” and set Model runs to On this Mac
+1. In Settings › Analysis, turn on “Use AI to suggest categories” and set Model runs to On this Mac
 2. Click Download Ollama… and install it, or click Copy Homebrew command and run it in Terminal. Then click Check again
 3. If Ollama is installed but not running, click Start Ollama. It takes about fifteen seconds
-4. Pick a model from the suggestions and click Download. This is a one-time download of several gigabytes
+4. Pick a model from the suggestions and click Download, or click Get a model… beside Model. This is a one-time download of several gigabytes
 5. Click Run the check. MediaFlow asks the model one question to confirm it can answer in the format it needs
-6. When the assistant reads “Ready”, tick “Ask a model to suggest categories” in the Import sheet for an import you want it to look at
+6. When the assistant reads “Ready”, tick “Ask AI to suggest categories” in the Import sheet for an import you want it to look at
 
 ### Choosing a model
 
-The suggestions are sized to this Mac’s memory. The default is comfortable with 16 GB of memory or more; the larger ones judge better and want 24 GB or 32 GB. Each line shows the download size.
+Model lists the models the server at the Server address already has. Each line says whether the model sees pictures, which it needs to suggest categories from a clip’s frames; whether it thinks first, which makes it slow for writing; and its size. Click the round arrow beside Model to read the list again after you add a model.
+
+Sorting clips and Writing for YouTube each choose their own model from the same list, and both use the one Server address. For Sorting clips, choose one that sees pictures; one that thinks first works, more slowly. For Writing for YouTube, any model will do, since it reads text only, but choose one that doesn’t think first. The list of models on this Mac marks the ones that do, and if you choose the thinking edition of Qwen 3-VL there, a warning under Model names its instruct edition. You can sort with a model that sees pictures and write with a smaller, faster one.
+
+Get a model… lists the models MediaFlow recommends for this Mac’s memory and downloads the one you choose, with a progress bar, then chooses it for the job whose Model it is beside. The default is comfortable with 16 GB of memory or more; the larger ones judge better and want 24 GB or 32 GB. Each line shows the download size. Each of them sees pictures and answers without thinking first, so it suits sorting and writing alike. Downloading from MediaFlow needs Ollama; with another server, search in it for the model by name, such as Qwen 3-VL 8B, instead.
+
+The recommended Qwen models are their instruct editions, such as qwen3-vl:8b-instruct. The plain qwen3-vl:8b is the thinking edition: it thinks at length before every answer, so a clip takes minutes and the SEO Agent takes many times longer to write. If you choose the thinking edition of a recommended Qwen model, a warning under Model says so and names the instruct edition to choose instead: for writing, because the SEO Agent takes many times longer; for sorting, because each clip takes minutes. To get a model MediaFlow doesn’t recommend, run ollama pull and its name in Terminal, then click the round arrow and choose it in Model.
+
+### Test a choice
+
+Click Test, under Sorting clips or Writing for YouTube, to ask the chosen model one short question, with nothing of yours in it. It says in plain words how that went: how many seconds it took to answer; that the model thinks before every answer, and which model to choose instead; that the server doesn’t have the model; or that no model server is answering, and what to start. Under Sorting clips it asks the way sorting does, leaving the model to think as much as it likes, so a model that thinks first is said to, however quickly it answered one short question. The first answer after a while includes loading the model, so test again to see its usual speed. The list then shows the result beside the model’s name, under the choice you tested.
 
 ### If the check fails
 
-Models below about 8 billion parameters usually cannot hold a structured answer. Click Download a different model and try a larger one.
+Models below about 8 billion parameters usually cannot hold a structured answer. Download a larger one from the suggestions, or choose another in Model.
 
 ### Using another server
 
-Any server that speaks the same protocol works, such as LM Studio. Enter its address in Server and the model’s name in Model. Ollama is on port 11434 and LM Studio on 1234.
+Any server that speaks the same protocol works, such as LM Studio. Enter its address in Server, then choose the model in Model. LM Studio 0.4 and later say whether each model sees pictures and thinks first; other servers give the names alone. Ollama is on port 11434 and LM Studio on 1234.
 
-See also: [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac), [Using a Model to Suggest Categories](#using-a-model-to-suggest-categories), [Proposals: What Import Analysis Suggests](#proposals-what-import-analysis-suggests), [Clip Classifier, Second Pass (Tier 1)](#clip-classifier-second-pass-tier-1)
+See also: [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac), [Using AI to Suggest Categories](#using-ai-to-suggest-categories), [Proposals: What Import Analysis Suggests](#proposals-what-import-analysis-suggests), [Clip Classifier, Second Pass (Tier 1)](#clip-classifier-second-pass-tier-1)
 
 ## How MediaFlow Verifies Copies
 
@@ -457,9 +505,9 @@ Every check in this topic reads with the Mac’s file cache turned off, and ever
 Only files in the state “Verified at destination” can be deleted, and there is no override. In both modes of the Check picker, the clip must have a recorded checksum, and its organized copy must be reachable now and be exactly the size of the card file.
 
 - Verified (full SHA-256), the default — also reads every card file in full and compares its SHA-256 with the recorded checksum. This proves the card file is the file that was organized
-- Standard (path and size) — matches the card file to the clip by its original path and size. Fast, but it never reads the bytes. A file matched only by name and size is kept
+- Standard (path and size) — matches the card file to the clip by its original path and size. The review is fast because it does not read the card file; the card file is read when you confirm instead. A file matched only by name and size is kept
 
-Whichever mode you choose, when you confirm, Clear Card reads each organized copy back in full and matches it against the recorded checksum before it deletes the card file. It never relies on the check made at organize time.
+Whichever mode you choose, when you confirm, Clear Card proves each card file is the file that was organized (its SHA-256 matches the recorded checksum), and reads each organized copy back in full and matches it against the recorded checksum, before it deletes the card file. It never relies on the check made at organize time. A card that was formatted can hold a new clip with an old clip’s name and size; it fails this check and stays on the card.
 
 ### Free Up Space
 
@@ -478,7 +526,7 @@ Reading every organized copy again takes about as long as organizing did, and ov
 - Check Again — reads each organized copy in full, as before. The surest choice, and the default
 - Use the Earlier Check — the copy on this Mac is still read in full and must match the checksum recorded at organize time, but the organized copy is not read. MediaFlow only looks at it: it must be at the same place, the same size, and have the same date to the second as when it was read back
 
-The earlier check is offered only for a copy that was read back in full when it was organized, is still on the same drive or the same share of the same server, with that share the same size as then, and that nothing else uses: no other clip in the project and, as the database says, no other project. A clip pointed at another file since (Relink, Library Moved, Move Project, Move to Editing Drive and back, a new destination, a restore from an archive, re-filing by category) keeps no earlier check: the file it points at now was never read back by Organize, even when it is a copy with the same name, size and date on a new server. These are always read in full: copies organized with read-back off, copies organized by an earlier version, clips moved within one drive, copies whose size or date has changed since, copies on a share whose size has changed since (given bigger disks, say; on a server whose shares all draw on one pool of disks, a share’s size can change as the others fill up, so there the earlier check may seldom be offered), and every copy when MediaFlow can’t ask the database (with no database, or when it doesn’t answer). When some copies do have an earlier check, the sheet and the question say how many have none and their size.
+The earlier check is offered only for a copy that was read back in full when it was organized, is still on the same drive or the same share of the same server, with that share the same size as then, and that nothing else uses: no other clip in the project and, as the database says, no other project. A clip pointed at another file since (Relink, Library Moved, Move Project, Move to Editing Drive and back, a new destination, a restore from an archive, re-filing by category) keeps no earlier check: the file it points at now was never read back by Organize, even when it is a copy with the same name, size and date on a new server. These are always read in full: copies organized with read-back off, copies organized by an earlier version, clips moved within one drive, copies whose size or date has changed since, copies on a share whose size has changed since (given bigger disks, say; on a server whose shares all draw on one pool of disks, or have a quota, a share’s size can change as the others fill up or the quota is changed, and with a quota it can be different for another account, so there the earlier check may seldom be offered), and every copy when MediaFlow can’t ask the database (with no database, or when it doesn’t answer). When some copies do have an earlier check, the sheet and the question say how many have none and their size.
 
 > **Warning:** The trade-off: Use the Earlier Check trusts that the drive has kept each copy as it was. Damage on the drive since it was organized that changes neither the size nor the date would go unnoticed, and so would a change of the same size written within the same second the copy was checked; the copies on this Mac would still be removed. A new network drive set up under the old one’s name, with the library copied over and its share exactly the same size as the old one’s, would pass for the old one too. When in doubt, after replacing a network drive, or if the drive has had problems, choose Check Again.
 
@@ -745,6 +793,8 @@ Transcribe turns the speech in your video clips into text using Apple’s speech
 
 To transcribe one clip, select it, open the Transcript tab of the metadata panel and click Transcribe This Clip.
 
+Every Transcribe button, here, in the Transcript tab and in Prepare for YouTube, asks macOS for permission the first time. If speech recognition is not allowed, MediaFlow says so instead of transcribing: turn on MediaFlowswift in System Settings › Privacy & Security › Speech Recognition, then click Transcribe again. The whole recording is transcribed, every stretch of speech in it, even when it ends in music or silence.
+
 ### The Transcript tab
 
 - Read — the clip’s lines in order, each with its time. Click a time to jump the preview to that line
@@ -753,7 +803,7 @@ To transcribe one clip, select it, open the Transcript tab of the metadata panel
 - Export — save the transcript as SubRip (.srt) or WebVTT (.vtt) subtitles, or as plain text with timecodes. The file is named after the clip
 - Transcribe Again — replaces the transcript with a new one. Your corrections are replaced too
 
-A recognition that has not answered within two minutes plus three times the length of the audio being transcribed is stopped and counts as no speech. During an import that audio is at most the first 90 seconds of each clip. When the length of the audio cannot be read, there is no time limit.
+A recognition that has not answered within two minutes plus three times the length of the audio being transcribed is stopped. In Publish, Transcribe then says so; elsewhere it counts as no speech. During an import that audio is at most the first 90 seconds of each clip. When the length of the audio cannot be read, there is no time limit.
 
 ### Where the Audio Goes
 

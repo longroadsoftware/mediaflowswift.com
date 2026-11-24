@@ -15,15 +15,29 @@ Prepare for YouTube works on the finished video you exported from your editor, n
 
 1. Choose Workflow → Prepare for YouTube…
 2. Click Choose Video… and pick the exported video. MediaFlow shows its length and format. The file is only read; it is never changed and never sent anywhere
-3. Click Transcribe. A long video takes a few minutes. The line under the button says whether the audio stays on this Mac
-4. Fill in Your brief with what only you know: who the video is for, the tone you want, and anything the description must include, one item per line, such as links, credits or a call to action
-5. Click Write with the SEO Agent. See The SEO Agent for what it does and what it sends. If a title, description or tags are already there, MediaFlow asks before replacing them
-6. Edit anything you like. Click one of the other titles to use it instead. The checklist updates as you type
-7. Click Open YouTube Studio… and upload the video there, with any title for now. Then click Apply to the Video I Uploaded…, confirm the video in the sheet, and click Apply. Or click Copy Title, Copy Description and Copy Tags in turn, or the small Copy beside each field, and paste each into the upload page; the chapters are added to the end of the description when you copy it
+3. Click Transcribe, and allow speech recognition the first time macOS asks. A long video takes a few minutes. The line under the button says whether the audio stays on this Mac
+4. At the top of Your brief, choose your channel from the Channel menu, or None. The first time, click Save as New… and describe your channel once: see Your Channel’s Voice under The SEO Agent. A new video starts with the channel you chose last
+5. Fill in the rest of Your brief with what only you know about this video: who it is for, the tone for this video if it differs from the channel’s, and anything the description must include, one item per line, such as credits or a call to action. Under those, say what to say: the story of this video, the points to cover, and corrections for anything said wrong on camera; see What to Say under The SEO Agent. Each is a box under its name, with a grey example in it until you type; the example is never saved or sent
+6. Under Links under the description, add this video’s links: the products in it, the guests featured and related videos. See Links Under the Description, below
+7. Click Write with the SEO Agent. See The SEO Agent for what it does and what it sends. If a title, description or tags are already there, MediaFlow asks before replacing them
+8. Edit anything you like. Click one of the other titles to use it instead. The checklist updates as you type
+9. Click Open YouTube Studio… and upload the video there, with any title for now. Then click Apply to the Video I Uploaded…, confirm the video in the sheet, and click Apply. Or click Copy Title, Copy Description and Copy Tags in turn, or the small Copy beside each field, and paste each into the upload page; the links and chapters are added to the end of the description when you copy it
 
-Open YouTube Studio… only opens a page in your browser, when you click it; MediaFlow sends nothing. Apply needs the YouTube sign-in described under Setting Up Your Google Client, which takes about ten minutes once. The Upload tab, last of the tabs and marked advanced, is a separate, optional path: until MediaFlowSwift can sign you in through its own verified Google project, a video sent from there is a private copy for review, not the public video. See Uploading to YouTube.
+Open YouTube Studio… only opens a page in your browser, when you click it; MediaFlow sends nothing. Apply needs the YouTube sign-in described under Setting Up Your Google Client, which takes about ten minutes once. The Upload tab, last of the tabs and marked advanced, is a separate, optional path: while the Google project you signed in through has not passed Google’s audit, a video sent from there is a private copy for review, not the public video. See Uploading to YouTube.
 
 Your draft is saved in the project’s folder, in Publish/publish-draft.json, a moment after each change and when you close the window. It moves, archives and restores with the project. A project that has not been saved yet has no folder, and the window says the draft cannot be kept until it has one. Choosing a different video clears the transcript, the chapters and the thumbnail’s frame, because they belong to the video they came from.
+
+### Links Under the Description
+
+Links have their own list, under Your brief. Each has a kind, a name and a web address: a product goes under Gear in this video, a featured guest under Featured, a related video under Watch next, and anything else under More links. The links every video carries, such as your website, your social pages and your shop, are saved once in the channel voice. They go under Find us after the agent writes with that voice, as the sign-off does: a description you write yourself, without the agent, gets your video’s links but not the voice’s. Once the agent has written with a voice, a change to that voice’s links goes in straight away, without writing again; another voice’s links go in the next time the agent writes with it. MediaFlow puts the links under the description itself, word for word, grouped by kind under those short headings, above the chapters and your sign-off. A kind with no links is left out. The Links box on the Words tab shows them as they will read.
+
+When you are signed in to YouTube, Add From Your Uploads… lists your channel’s recent uploads, and each one you add goes under Watch next with its title. Each shows whether it is public, unlisted or private; viewers can’t open a private one. Nothing is written to YouTube.
+
+A web address must start with https:// or http://, then a site name with a dot in it (such as example.com), with no spaces and no &lt; or >. A link whose address cannot be used is left out of the description, and the checklist marks it as something to fix: Apply and Upload wait until you fix the address or remove the link, under Links or in the channel voice. The links count toward the 5,000 characters YouTube allows. The agent is told only the links’ names, so it can say the links are below; it never writes a web address itself. One it writes in the description that is not one of your links, a link’s site name (such as example.com for example.com/shop) or in Must include is taken out, and the note under Write with the SEO Agent says which. That is any address starting https://, http:// or www., and any site name such as example.org. A file’s or a program’s name, such as clip.mov or Node.js, is left alone, and so is a site name ending like a file or a program (such as mysite.app).
+
+If a description has affiliate links, switch on This description has affiliate links in the channel voice, and write your disclosure in your own words. After the agent writes with that voice, MediaFlow puts it at the top of the links. It does not write the wording for you.
+
+YouTube makes the links in a video’s description clickable only once your channel has its advanced features, which come with a good channel history or by verifying your identity in YouTube Studio. Until then they show as plain text. In a Short’s description, YouTube never makes links clickable. Links typed into Must include before there was a list stay there and still work.
 
 > **Tip:** You can use the checklist without the agent. Type your own title, description and tags, set the main phrase, and it checks them the same way.
 
@@ -59,7 +73,7 @@ MediaFlow reads the video first and writes back what it read with only these cha
 
 The video is recorded as published, in Publish/upload-state.json in the project’s folder and in your shared database if you use one, with YouTube’s upload time: the Results tab lists it and reads its views and watch time, as for a video uploaded from here. Clicking Apply again marks the same video and updates it, so you can fix a title or add captions later. The Upload tab shows the video as uploaded, with Open This Video in YouTube Studio. An unfinished upload of the same file from the Upload tab is let go when you apply, and MediaFlow says so.
 
-> **Tip:** Applying costs about 100 of your Google Cloud project’s 10,000 daily units, and about 450 more with captions: the words are 50, the thumbnail 50, listing the caption tracks 50 and a new caption track 400, or 450 to replace an earlier MediaFlowSwift track (500 with the listing). Finding the video costs 3. Statistics, read from the Results tab, need the two read-only permissions as before.
+> **Tip:** Applying costs about 100 of your Google Cloud project’s 10,000 daily units, and about 450 more with captions: the words are 50, the thumbnail 50, listing the caption tracks 50 and a new caption track 400, or 450 to replace an earlier MediaFlowSwift track (500 with the listing). Finding the video costs 3. Statistics, read from the Results tab, need read-only permission to see your YouTube Analytics reports and, only with Sending to YouTube off, read-only permission to see your YouTube account.
 
 ### If Something Is Refused
 
@@ -75,44 +89,74 @@ See also: [Preparing a Video for YouTube](#preparing-a-video-for-youtube), [Sett
 
 *A model writes your title, description, chapters and tags in three passes, and checks its own work against YouTube’s rules before you see it.*
 
-SEO means being found: in YouTube’s search, and chosen from the list of results. The agent works only from your video’s transcript and your brief. It is told never to invent facts, names, numbers or links, and never to promise what the video does not deliver.
+SEO means being found: in YouTube’s search, and chosen from the list of results. The agent works only from your video’s transcript, your brief and your channel’s voice. It is told never to invent facts, names, numbers or links, and never to promise what the video does not deliver.
 
 ### What It Does
 
 1. Reads the transcript and works out what the video is, who it is for, and the main phrase: the few words someone would most likely type to find it
-2. Writes a first draft: five titles that take different approaches, a description, chapters at the points where the subject changes, tags, and three suggestions for the words on the thumbnail
-3. Checks the draft against the checklist, is given every fault it found, re-reads the draft as a viewer would, and revises. It always revises once, and again if something that must be fixed remains
+2. Writes a first draft: five titles that take different approaches, a description, chapters at the points where the subject changes, tags, and three suggestions for the words on the thumbnail. On a video longer than ten minutes it aims for a chapter every three to five minutes, to the end, and asks for no more than 20, so on a video longer than 100 minutes they are further apart
+3. Checks the draft against the checklist, is given every fault it found, re-reads the draft as a viewer would, and revises. It always revises once, and again if something that must be fixed remains or its chapters stop before halfway through a long video
 
-The window shows each pass as it happens, and afterwards a line saying what the agent changed on its last revision. A revision that makes the draft worse is not used. Anything still wrong at the end shows in the checklist for you to fix: you have the last word. If the model’s chapters break YouTube’s rules and cannot be repaired, none are added and the Chapters field says why. If your API key is rejected, the spending limit is reached, or the Privacy switch is turned off while it is working, the agent stops and says so.
+The window shows each pass as it happens, whether the model is thinking or writing, and the time so far. Stop stops it. Once there is a draft, Stop keeps the latest one, as a revision that cannot finish does, and the window says so; before then, Stop leaves the window as it was. Afterwards a line says what the agent changed on its last revision. A revision that makes the draft worse is not used, and one that loses every chapter keeps the chapters the draft had. Anything still wrong at the end shows in the checklist for you to fix: you have the last word. Each chapter is asked for at a time shown in the transcript, and starts where what is said there starts; a chapter at a moment where nothing is said is left out, except the first, which stays at 0:00 even when the video opens with no talk. If the model’s chapters break YouTube’s rules and cannot be repaired, none are added and the Chapters field says why. If your API key is rejected, the spending limit is reached, or the Privacy switch is turned off while it is working, the agent stops and says so.
+
+### Your Channel’s Voice
+
+Every video on a channel is written the same way: who you are, how you talk, the segments you always do, the sign-off and the hashtags. Save that once as a channel voice and the agent writes every video in it. Click Save as New… at the top of Your brief, give the channel a name, and fill in what applies; every box but the name can be left empty. Edit… changes the voice chosen, for every video that uses it the next time it is written. Voices are kept on this Mac, for every project, in Channel Voices in MediaFlowSwift’s Application Support folder.
+
+- Who we are — one or two sentences about the people on camera
+- How we talk — the channel’s usual tone. Tone for this video, in the brief, takes its place for one video
+- Who it is for — the channel’s usual audience. Who it is for, in the brief, takes its place for one video
+- Recurring segments — one per line. When the transcript has one, the agent names it in the description
+- A title in our style — an example the agent learns from, not a template it fills in
+- Sign-off — put at the end of every description word for word, except the characters &lt; and >, which YouTube does not accept
+- Hashtags — up to three, on the description’s last line. When you copy or apply the description, the chapters go in above the sign-off, so the hashtags stay last
+- Avoid — kept to on every video, together with the brief’s own Avoid
+- Links on every video — your website, social pages and shop, under Find us, and This description has affiliate links, with your own disclosure. Like the sign-off, they go in after the agent writes. See Links Under the Description, under Preparing a Video for YouTube
+
+MediaFlow adds the sign-off and hashtags to the description itself, after the agent writes: a model can drop or reword them. They are never sent to the model. Writing again puts them in once, not twice, unless the agent ends a sentence of its own with your sign-off: then it can show twice, so delete one. So can hashtags the agent puts straight onto its last word with no space, as in Pine Hollow.#rvlife; that is rare. If you edit them out, the checklist says so. The draft keeps a copy of the voice it was written with, so if the voice has changed since, or another channel is chosen, Your brief says which one the words were written with.
+
+### What to Say
+
+You know things the transcript doesn’t say clearly: what the story of this video is, which moments matter, and where you misspoke on camera. Tell the agent in your own words, in the last three boxes of Your brief. It is told to keep to them, and the checklist watches for the wrong words in a correction, but a model can still miss one, so read what it writes.
+
+- The story — one or two lines, such as Alex drove up alone after work and deer came right up to our site. The agent is told to lead every title and the description’s first sentence with it
+- Points to cover — one per line, such as 3 likes and 3 dislikes. The agent is told to cover each one the transcript supports
+- Corrections — one per line, such as On camera we said Pine Lake; it’s Cedar Lake. A correction wins over the transcript: the agent is told to use the right fact and never write the wrong one
+
+Write a correction as we said this; it’s that, or this → that, or this should be that, or it’s that, not this. Then the checklist watches for the wrong words: if they are still in the title or the description, chapters included, it is a must-fix item, the agent is told to fix it when it revises, and Apply and Upload wait until it is fixed. Your channel’s sign-off and hashtags at the end are not checked, because MediaFlow adds them itself. If the checklist is wrong about one, change the line or delete it. A correction written another way, such as the dump station was actually $20, still goes to the agent, but the checklist cannot watch for it. So does this should be that when this starts with the, a, our or the like, as in the dump station should be $20, because then this is what the line is about, not the wrong words; put wrong words that start that way in quotation marks. When a line starts with said, called or wrote and the right words repeat the wrong ones, as in Said Norris; it’s Norris Lake, the first word is read as part of the wrong words, as it is in a name like Says Creek, so the checklist looks for Said Norris, not Norris. When it is not part of the name, start the line with we said or I said.
 
 ### Which Model
 
-The agent uses the model chosen in Settings › Analysis: the model on this Mac, or Claude, ChatGPT or Gemini with your own API key. A paid provider writes noticeably better than a small model on this Mac, takes about a minute, and costs a few cents for a video. The model on this Mac is free and private but slow: allow ten to twenty minutes for a video, with the window showing which pass it is on. A small model sometimes cannot finish the revision. When that happens you get its first draft, the window says so, and the checklist shows what is left to fix. The daily spending limit in Settings › Analysis applies, and the agent stops before a request that would pass it.
+The agent uses the model chosen under Writing for YouTube in Settings › Analysis: the model on this Mac, or Claude, ChatGPT or Gemini with your own API key. That is its own choice, apart from the model that sorts clips: writing reads text only, so it needs no model that sees pictures, and you can sort on this Mac and write with a paid provider, or the other way round. After an update from an earlier version it starts as the model you used before, until you change it. A paid provider writes noticeably better than a small model on this Mac, takes about a minute, and costs a few cents for a video. The model on this Mac is free and private but slow: allow ten to twenty minutes for a video, and longer for a long one, because the model reads the whole transcript before it writes and a slower Mac takes longer to read it. The window shows which pass it is on and the time so far. A small model sometimes cannot finish the revision. When that happens you get the latest draft, the window says so, and the checklist shows what is left to fix. The daily spending limit in Settings › Analysis applies, and the agent stops before a request that would pass it.
+
+If the model doesn’t answer, the window says which model it asked and what to do next. A pass has no time limit while the model is still thinking or writing: the agent gives up only when the model goes quiet, saying nothing for a minute, or before its first word, while it reads the transcript, for two minutes, or at least five with the model on this Mac, and longer for a long transcript, which a slower Mac takes longer to read. Gemini answers all at once rather than as it writes, so with Gemini each pass has three minutes. A thinking model on this Mac, such as qwen3-vl:8b, thinks at length before every answer, so a video takes many times longer: choose its instruct edition, such as qwen3-vl:8b-instruct, under Writing for YouTube in Settings › Analysis. If you choose the thinking edition of Qwen 3-VL there, a warning under Model says so, and the list of models on this Mac marks the other models that think first. To know before you start, click Test under Writing for YouTube: it asks the model one short question and says how quickly it answered, or that it thinks before every answer and which model to choose instead.
 
 ### What Is Sent, and to Whom
 
-With the model on this Mac, nothing leaves it. If you have pointed the local model at another computer on your network in Settings › Analysis, the transcript, the video’s length, your brief and the drafts go to that computer and no further; an address on the internet is refused. With a paid provider, the agent sends the transcript of the video you chose, the video’s length, your brief, and then its own drafts for revision, to that provider. It never sends the video, its file name, or anything else in the project.
+With the model on this Mac, nothing leaves it. If you have pointed the local model at another computer on your network in Settings › Analysis, the transcript, the video’s length, your brief, the channel voice and the drafts go to that computer and no further; an address on the internet is refused. With a paid provider, the agent sends the transcript of the video you chose, the video’s length, your brief with what to say, the names of your links (never their web addresses), the channel voice you chose (but not its sign-off, hashtags, link addresses or affiliate disclosure), and then its own drafts for revision, to that provider. It never sends the video, its file name, or anything else in the project.
 
-This is off until you turn it on. In Settings › Privacy, switch on “A model that writes your YouTube title, description and tags”. While it is off and a paid provider is chosen, Write with the SEO Agent tells you where the switch is and sends nothing.
+This is off until you turn it on. In Settings › Privacy, switch on “A model that writes your YouTube title, description and tags”. While it is off and a paid provider is chosen, Write with the SEO Agent tells you where the switch is and sends nothing. Under the switch, Now says which provider and model writing is set to at the moment.
 
 > **Warning:** Read what it writes before you publish it. The agent works from a transcript, and speech recognition mishears names, places and technical words. A wrong name in a title is your name on a mistake.
 
 Writing with the agent is part of Studio Pro; see Plans and Pricing. The plan puts no monthly limit on it: a paid provider bills your own account, within the daily spending limit you set, and a model on this Mac costs nothing.
 
-See also: [Preparing a Video for YouTube](#preparing-a-video-for-youtube), [The Publishing Checklist](#the-publishing-checklist), [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac), [Using a Model to Suggest Categories](/manual/organizing-media/#using-a-model-to-suggest-categories)
+See also: [Preparing a Video for YouTube](#preparing-a-video-for-youtube), [The Publishing Checklist](#the-publishing-checklist), [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac), [Using AI to Suggest Categories](/manual/organizing-media/#using-ai-to-suggest-categories)
 
 ## The Publishing Checklist
 
 *What the checklist checks, which items YouTube enforces and which are advice.*
 
-The checklist beside the editor runs on whatever is in the fields, whether you or the agent wrote it. A red item is something YouTube enforces or that breaks a feature. A grey item is advice.
+The checklist beside the editor runs on whatever is in the fields, whether you or the agent wrote it. A red item is something YouTube enforces, that breaks a feature, or that you asked for in your brief. A grey item is advice.
 
 ### Must Fix
 
 - Title — not empty, and no more than 100 characters
-- Description — not empty, and no more than 5,000 characters, chapters included
+- Description — not empty, and no more than 5,000 characters, links and chapters included
 - The characters &lt; and > — YouTube does not accept them in a title or a description
 - Your brief — every line under Must include appears in the description, word for word
+- Links — every link under Links, and in the channel voice, has a web address that starts with https:// or http://, then a site name with a dot in it, with no spaces, &lt; or >. One that cannot be used is left out of the description
+- Corrections — the wrong words from a line under Corrections are not in the title or the description, chapters included, except your channel’s sign-off and hashtags at the end, which MediaFlow adds itself
 - Chapters — the first starts at 0:00, there are at least three, none is shorter than 10 seconds, and none starts after the video ends. If any of these fails, YouTube shows no chapters at all
 - Tags — no more than 500 characters in total, counted the way YouTube counts: commas included, and two extra for each tag that contains a space
 
@@ -121,7 +165,10 @@ The checklist beside the editor runs on whatever is in the fields, whether you o
 - Title length — past about 60 characters a title is cut off in search results, so the words that matter come first
 - Main phrase — it appears in the title, early, and in the first 150 characters of the description, which is the part shown before “more”
 - Capitals — a title written entirely in capitals is harder to scan
+- Chapters on a long video — on a video longer than ten minutes, the last chapter starts in the second half and no stretch without a chapter is longer than a quarter of the video, so viewers can find their way through all of it. When its own chapters stop before halfway, the SEO Agent revises its draft again
 - Tags — there are some, and none is repeated. Tags matter less than the title and description; they help with alternate wordings and misspellings
+- Your channel’s sign-off and hashtags — still in the description after you edit it, when the words were written with a channel voice
+- Affiliate disclosure — the channel voice says the description has affiliate links but has no disclosure written
 
 The limits are YouTube’s. The advice is long-standing common ground about YouTube search, not a promise of how a video will rank.
 
@@ -129,25 +176,37 @@ See also: [Preparing a Video for YouTube](#preparing-a-video-for-youtube), [The 
 
 ## Making a Thumbnail
 
-*Pick a frame from your finished video, put a few words over it, and export a thumbnail that meets YouTube’s specification.*
+*Pick a frame from your finished video, put a few words over it, simply or in the bold Place style, and export a thumbnail that meets YouTube’s specification.*
 
 The Thumbnail tab of Prepare for YouTube makes the picture that goes with your title. It works from the finished video you chose; the video is only read. Nothing leaves this Mac.
 
 1. Choose Workflow → Prepare for YouTube…, choose your finished video if you have not, and click the Thumbnail tab
 2. Drag the Frame slider to the moment you want. The picture follows roughly while you drag and settles on the exact frame when you let go
-3. Or click Suggest Frames. MediaFlow looks through the video, leaving out the first and last twentieth where titles, fades and end cards live, and offers frames with the sharpest first. Click one to use it
-4. Type the words. Press Return for a second line; two lines is the most. If the SEO agent has written for this video, its suggestions appear as buttons under the field
-5. Choose where the words sit, their colour, and whether they have a dark band behind them. Size makes them smaller than the largest that fits
-6. Click Export Thumbnail…. MediaFlow offers the project’s Publish folder
+3. Or click Suggest Frames. MediaFlow looks through the video, leaving out the first and last twentieth where titles, fades and end cards live, and offers 24 frames in a strip, the sharpest first, each with its time. Click one to use it
+4. Look nearby then offers the frames 1, 2 and 4 seconds either side of the one you clicked, the sharpest first: for when the moment is right but the frame is a little soft. Click one to use it
+5. Choose a style: Simple, a headline anywhere on the frame, or Place, described below
+6. Type the words. Press Return for a second line; two lines is the most. If the SEO agent has written for this video, its suggestions appear as buttons under the field
+7. In Simple, choose where the words sit, their colour, and whether they have a dark band behind them. In either style, Size makes the headline smaller than the largest that fits
+8. Click Export Thumbnail…. MediaFlow offers the project’s Publish folder
+
+### The Place Style
+
+Place is the layout of a good travel or review thumbnail. The name is big, in a colour, with a dark outline (a white one if the name is black), on two lines if you press Return. Under it goes a smaller white line, about a third of the size, such as the state. Below them sits a badge, a rounded tag in red, yellow, blue or green, for a segment you always do, and a short hook goes in the top corner on the other side. Darken shades one side of the frame, left, right or bottom, so the words read over any picture, and the words sit on that side. None leaves the frame as it is.
+
+- Everything is measured and made smaller to fit rather than cut off, and nothing overlaps
+- The bottom-right corner is always left empty, because YouTube shows the video’s length there
+- The line under the name, the badge and the hook are one line each
+- The SEO agent’s suggestions appear under the name, the badge and the hook too. Click one to use it
+- With a channel voice chosen in the brief, its recurring segments are offered under the badge. When you choose Place and the badge is empty, it starts as the first segment the video mentions
 
 ### What Is Exported
 
-A JPEG, 1280 by 720 pixels, the 16:9 shape YouTube asks for, and under its 2 MB limit: MediaFlow lowers the JPEG quality a step at a time until the file fits, which for nearly every frame means not at all. A vertical or square video is cropped to its middle, never squashed.
+A JPEG, 1920 by 1080 pixels, the 16:9 shape YouTube asks for, and under its 2 MB limit. YouTube accepts 1280 by 720 at the least; the larger picture looks sharper on a TV. MediaFlow lowers the JPEG quality a step at a time until the file fits, which for nearly every frame means not at all. A vertical or square video is cropped to its middle, never squashed.
 
 ### Words That Can Be Read
 
 - The words are as large as will fit, and are shrunk to fit rather than cut off
-- They have an outline in the opposite tone, so they hold against any picture. With the band off, a soft shadow lifts them off a bright background
+- They have a dark outline, or a white one around black words, so they hold against any picture. In Simple with the band off, a soft shadow lifts them off a bright background
 - A thumbnail is seen small, often on a phone. Past about four words MediaFlow adds a note, because more is not read
 - Let the words add to the title rather than repeat it: the stake, the result or the surprise. That is what the agent’s suggestions aim for, and they are only offered; your own words are never replaced
 
@@ -161,7 +220,7 @@ See also: [Preparing a Video for YouTube](#preparing-a-video-for-youtube), [The 
 
 ### A Private Copy for Review
 
-The Upload tab is the advanced, optional path, and what it sends is a private copy for review. Uploading goes through a Google Cloud project of your own, and Google restricts every video uploaded through a project made since July 2020 that has not passed its audit to private viewing, whatever visibility or publish time you choose. A project you made for yourself has not passed it. The lock cannot be lifted in YouTube Studio, and there is nothing to appeal. Only an audited project avoids it, for the uploads that come after, and a video already locked stays locked: Google’s own advice is to upload it again. Until MediaFlowSwift can sign you in through its own verified Google project, treat an upload from here as a private copy for review, which you can see in YouTube Studio.
+The Upload tab is the advanced, optional path, and what it sends is a private copy for review. Uploading goes through the Google project you signed in through, MediaFlowSwift’s own or yours if you use your own Google Cloud project, and Google restricts every video uploaded through a project made since July 2020 that has not passed its audit to private viewing, whatever visibility or publish time you choose. A project you made for yourself has not passed it. The lock cannot be lifted in YouTube Studio, and there is nothing to appeal. Only an audited project avoids it, for the uploads that come after, and a video already locked stays locked: Google’s own advice is to upload it again. Until the project you signed in through has passed it, treat an upload from here as a private copy for review, which you can see in YouTube Studio.
 
 The public video is uploaded in YouTube Studio. Click Open YouTube Studio… in the Into YouTube Studio strip above the tabs of Prepare for YouTube, upload the file there, and paste in the title, description and tags that Copy puts on the clipboard. See Preparing a Video for YouTube.
 
@@ -201,9 +260,9 @@ Either way MediaFlow lets that sign-in go, and the video’s details and any upl
 
 ### Signing In Again Without Signing Out
 
-While you are signed in, the Upload tab shows Sign In Again… beside Sign Out. It opens Google in your browser, as signing in does, and asks for what the switches in Settings › Privacy allow now. Use it to add the statistics permissions, to add the permission to upload after signing in for statistics only, or to choose another account. Unfinished uploads are kept, and Continue the Upload… carries on afterwards. Wherever MediaFlow says a sign-in lacks a permission, or that another account is needed, it offers the same button beside the message. It asks only for what the switches allow now: with Uploading off, the new sign-in will not upload, and when you turn Uploading on, MediaFlow asks you to sign in again for it.
+While you are signed in, the Upload tab shows Sign In Again… beside Sign Out. It opens Google in your browser, as signing in does, and asks for what the switches in Settings › Privacy allow now. Use it to add permission to read statistics, to add the permission to upload after signing in for statistics only, or to choose another account. Unfinished uploads are kept, and Continue the Upload… carries on afterwards. Wherever MediaFlow says a sign-in lacks a permission, or that another account is needed, it offers the same button beside the message. It asks only for what the switches allow now: with Uploading off, the new sign-in will not upload, and when you turn Uploading on, MediaFlow asks you to sign in again for it.
 
-If you untick the permission to upload at Google, tick only one of the two read-only permissions, or the sign-in does not finish, the sign-in you had is kept as it was and nothing new is kept. Unticking both read-only permissions is allowed: the new sign-in then uploads, without statistics. Signing in again does not cancel the permission you gave before, because Google cancels everything one account gave MediaFlow together, the new sign-in included; Sign Out later cancels it all. If you chose another account, you can remove MediaFlow from the first one at myaccount.google.com/permissions. The same goes for another account whose Sign In Again could not be used: MediaFlow does not hand that one back while your earlier sign-in is kept, so it may still list MediaFlow there.
+If you untick the permission to upload at Google, tick only half of what statistics need, or the sign-in does not finish, the sign-in you had is kept as it was and nothing new is kept. Unticking the statistics permission is allowed: the new sign-in then uploads, without statistics. Signing in again does not cancel the permission you gave before, because Google cancels everything one account gave MediaFlow together, the new sign-in included; Sign Out later cancels it all. If you chose another account, you can remove MediaFlow from the first one at myaccount.google.com/permissions. The same goes for another account whose Sign In Again could not be used: MediaFlow does not hand that one back while your earlier sign-in is kept, so it may still list MediaFlow there.
 
 ### An Upload Begun with Another Account
 
@@ -273,16 +332,16 @@ The Results tab of Prepare for YouTube shows the videos published with MediaFlow
 
 ### Reading Statistics from YouTube
 
-This is off until you turn it on, and it needs two read-only permissions of its own.
+This is off until you turn it on, and it needs read-only permission to see your YouTube Analytics reports. With Sending to YouTube off, it also needs read-only permission to see your YouTube account.
 
 1. Turn on Reading your videos’ statistics from YouTube in Settings › Privacy
 2. In your Google Cloud project, under APIs & Services › Library, enable YouTube Analytics API as well as YouTube Data API v3
-3. On the Upload tab, click Sign In Again… if you are signed in, or Sign In to YouTube… if not. There is no need to sign out: unfinished uploads are kept, and Continue the Upload… carries on afterwards. Google now asks for two more permissions, both read-only: View your YouTube account, and View YouTube Analytics reports for your YouTube content. If you untick both at Google you can still upload, and the Results tab tells you statistics were not allowed, with Sign In Again… beside it. Ticking only one is no use, so MediaFlow keeps nothing new and asks you to sign in again. A sign-in you already had is kept as it was; otherwise the new one is handed back, because Google cannot take back one permission alone
+3. On the Upload tab, click Sign In Again… if you are signed in, or Sign In to YouTube… if not. There is no need to sign out: unfinished uploads are kept, and Continue the Upload… carries on afterwards. With Sending to YouTube on, Google now asks for one more permission, read-only: View YouTube Analytics reports for your YouTube content. If you untick it at Google you can still upload, and the Results tab tells you statistics were not allowed, with Sign In Again… beside it. With Sending to YouTube off, Google asks for two read-only permissions instead, that one and View your YouTube account, because the permission to send, which already sees your channel, is not asked for. Ticking only one of those two is no use, so MediaFlow keeps nothing new and asks you to sign in again. A sign-in you already had is kept as it was; otherwise the new one is handed back, because Google cannot take back one permission alone
 4. On the Results tab, click Read from YouTube Now
 
-MediaFlow asks Google which channel you signed in to, then sends the YouTube IDs of the videos your database records as published with MediaFlow, and the span of dates from the first upload to today. Nothing else. The two permissions would allow reading your whole channel; MediaFlow asks only about those videos. If your database is shared with someone who publishes to another channel, answers about their videos are set aside, not kept as yours. Neither permission can change or delete anything.
+MediaFlow asks Google which channel you signed in to, then sends the YouTube IDs of the videos your database records as published with MediaFlow, and the span of dates from the first upload to today. Nothing else. These permissions would allow reading your whole channel; MediaFlow asks only about those videos. If your database is shared with someone who publishes to another channel, answers about their videos are set aside, not kept as yours. Reading statistics changes and deletes nothing.
 
-You can turn on statistics without sending anything: with only that switch on, sign-in asks for the two read-only permissions alone, and the Upload tab says the sign-in cannot upload. To apply details or upload later, turn on Sending to YouTube and click Sign In Again….
+You can turn on statistics without sending anything: with only that switch on, sign-in asks for the two read-only permissions alone (View your YouTube account, and View YouTube Analytics reports), and the Upload tab says the sign-in cannot upload. To apply details or upload later, turn on Sending to YouTube and click Sign In Again….
 
 ### What Is Read and Kept
 

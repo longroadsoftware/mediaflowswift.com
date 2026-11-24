@@ -65,6 +65,10 @@ A clip on a network share or another network drive is read across the network as
 
 Making a proxy reads the whole clip once, so expect roughly a third of the clip’s length over a wireless connection; after that, playback does not depend on the network. The original is never changed. A wired connection to the drive helps playback of the originals themselves, in MediaFlowSwift and in your editor.
 
+### Clips This Mac Decodes Slowly
+
+Some Macs have no video hardware for some kinds of HEVC video, such as the 10-bit HEVC that iPhones and many cameras record for HDR. macOS then decodes such a clip with the processor: it still plays and still gets its thumbnails, analysis and proxy, more slowly, and a large clip may stutter. When the preview is playing such a clip and it has no proxy, the badge at the top-left says Decoded by the processor, with the same Make Proxy and All Clips. A proxy is a small copy on this Mac that plays smoothly; the original is never changed.
+
 See also: [Using the Proxy Queue](#using-the-proxy-queue), [Extracting Thumbnails and Subclips](/manual/video-preview-playback/#extracting-thumbnails-and-subclips)
 
 <div class="chapter-nav" role="navigation" aria-label="Chapters">

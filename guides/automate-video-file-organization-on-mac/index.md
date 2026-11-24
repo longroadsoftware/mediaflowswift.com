@@ -78,7 +78,7 @@ Either way, nothing is applied to a clip automatically. Suggestions arrive as pr
 - [Workflow Templates](/manual/organizing-media/#workflow-templates) — the three built-in templates and how to build a routine around them
 - [Using the Proxy Queue](/manual/batch-operations/#using-the-proxy-queue) and [Processing the Proxy Queue](/manual/batch-operations/#processing-the-proxy-queue) — batch thumbnail and proxy generation
 - [Importing from a Card, Drive or Folder](/manual/importing-media/#importing-from-a-card-drive-or-folder) — the "Ask a Model to Suggest Categories" checkbox quoted above, and what each option sends
-- [Using a Model to Suggest Categories](/manual/organizing-media/#using-a-model-to-suggest-categories) — the fuller explanation of the same opt-in feature, including the daily spending cap
+- [Using a Model to Suggest Categories](/manual/organizing-media/#using-ai-to-suggest-categories) — the fuller explanation of the same opt-in feature, including the daily spending cap
 
 ## Other guides
 

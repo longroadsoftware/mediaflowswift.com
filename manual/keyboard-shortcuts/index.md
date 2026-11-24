@@ -37,6 +37,14 @@ Menu shortcuts work anywhere in the main window. The Review keys work while Revi
 
 ---
 
+### Go
+
+`Cmd+[` — Back to the previous project (or, from Browse Projects…, to the open one)
+
+`Cmd+]` — Forward (dimmed: Back keeps only the projects you left)
+
+---
+
 ### Search & Projects
 
 `Cmd+Shift+F` — Search All Projects…
