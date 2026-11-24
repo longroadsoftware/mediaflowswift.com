@@ -16,7 +16,7 @@ Either way, MediaFlowSwift reads each copy back and compares checksums before it
 
 The Import sheet has a line under where imports go: Also copy to, with a Choose… button and a box to turn it on and off. Pick any second folder or drive, such as a USB drive, a NAS share or a second SSD. The project remembers it for its next imports.
 
-The card is read once. MediaFlowSwift takes each file's SHA-256 checksum from the card as it copies it, and writes the file to both places. Each copy is then read back from its own drive, not from the Mac's memory, and compared with the card. When the import finishes, each place gets a Proof Copy receipt listing every file with its size and checksum, and the completion card says how long each place took.
+The card is read once. MediaFlowSwift takes each file's SHA-256 checksum from the card as it copies it, and writes the file to both places. Each copy is then read back from its own drive, not from the Mac's memory, and compared with the card. When the import finishes, the completion card says how each place went and how long each took. When every clip has both copies, each place gets a Proof Copy receipt listing every file with its size and checksum. If some clips have no second copy, a receipt is written only where imports go, and the completion card says so.
 
 The second place can't be the card you are importing from, or the same folder as the first place. If both places are on the same drive, the sheet warns that it is not a real second copy, because if that drive fails, both copies are lost with it. It asks before going on.
 

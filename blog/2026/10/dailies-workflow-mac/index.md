@@ -125,7 +125,7 @@ A useful dailies report includes:
 
 MediaFlowSwift doesn't write a report automatically during offload. Workflow → Plan & Deliver → [Generate Dailies](/manual/reports/#dailies-report) builds one on demand, organized by shooting date. It can group by scene and camera and include circle takes, ratings, timecodes and notes. It writes HTML, CSV or plain text.
 
-For a quick end-of-day message, [Day Summary](/manual/reports/#day-summary) shows clip count, duration, size, cameras and flagged audio issues, ready to copy. The app writes no MHL file. Its only checksum list is the Proof Copy receipt that an import with Also copy to leaves in each place's import folder, so for the organized folders, make one yourself. [How to Create a Dailies Report and a Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/) explains which output to send.
+For a quick end-of-day message, [Day Summary](/manual/reports/#day-summary) shows clip count, duration, size, cameras and flagged audio issues, ready to copy. The app writes no MHL file. Its only checksum list is the Proof Copy receipt from an import with Also copy to. When every clip has both copies, each place's import folder gets one. Otherwise a receipt is written only where imports go. For the organized folders, make a list yourself. [How to Create a Dailies Report and a Hand-Off File](/guides/dailies-report-and-hand-off-file-for-editor/) explains which output to send.
 
 ## How do you hand off dailies to an editor?
 
@@ -159,7 +159,7 @@ OffShoot runs on macOS and Windows and has a 10-day trial. Silverstack Lab and S
 
 ### Where MediaFlowSwift fits, and where it doesn't
 
-MediaFlowSwift covers offload, organizing, review, selects and the report in one Mac app. Its limits matter for dailies. It applies no LUTs or looks, and it doesn't transcode editing proxies or upload to review platforms. It writes no MHL file, and no checksum list for the organized folders. An import with Also copy to does leave a Proof Copy receipt in each place's import folder, listing every file with its size and checksum.
+MediaFlowSwift covers offload, organizing, review, selects and the report in one Mac app. Its limits matter for dailies. It applies no LUTs or looks, and it doesn't transcode editing proxies or upload to review platforms. It writes no MHL file, and no checksum list for the organized folders. An import with Also copy to does leave a Proof Copy receipt, listing every file with its size and checksum. When every clip has both copies, each place's import folder gets one. Otherwise a receipt is written only where imports go, and the completion card says so.
 
 Several Macs can share projects through the [shared database](/manual/shared-database/). A database file works on either plan, and a database server that several Macs use at once is a Studio Pro feature. The app runs on Apple silicon and Intel Macs with macOS 13 or later. A Windows version is coming.
 
