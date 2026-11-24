@@ -6,11 +6,16 @@ description: "Every article published on the MediaFlowSwift blog in November 202
 permalink: "/blog/2026/11/"
 noindex: true
 crumbs: [{"name": "MediaFlowSwift", "url": "/"}, {"name": "Blog", "url": "/blog/"}, {"name": "2026", "url": "/blog/2026/"}, {"name": "November 2026", "url": "/blog/2026/11/"}]
-items: [{"title": "External Hard Drives for Video Storage: A Mac Buyer's Guide", "url": "/blog/2026/11/external-hard-drives-for-video-mac/", "published": "2026-11-04"}, {"title": "SD Card as Backup for Video Footage: What to Buy, How to Spot Fakes, and How to Verify Copies", "url": "/blog/2026/11/sd-card-as-backup/", "published": "2026-11-03"}, {"title": "Old Archive Footage: Where to Find It and How to License It", "url": "/blog/2026/11/old-archive-footage/", "published": "2026-11-02"}, {"title": "Best Mac Video Library App: Photos, Final Cut, Catalogers and Footage Managers Compared", "url": "/blog/2026/11/best-mac-video-library-app/", "published": "2026-11-01"}]
+items: [{"title": "Video Creator Workflow on a Mac: From Memory Card to YouTube to Archive", "url": "/blog/2026/11/video-creator-workflow-mac/", "published": "2026-11-24"}, {"title": "External Hard Drives for Video Storage: A Mac Buyer's Guide", "url": "/blog/2026/11/external-hard-drives-for-video-mac/", "published": "2026-11-04"}, {"title": "SD Card as Backup for Video Footage: What to Buy, How to Spot Fakes, and How to Verify Copies", "url": "/blog/2026/11/sd-card-as-backup/", "published": "2026-11-03"}, {"title": "Old Archive Footage: Where to Find It and How to License It", "url": "/blog/2026/11/old-archive-footage/", "published": "2026-11-02"}, {"title": "Best Mac Video Library App: Photos, Final Cut, Catalogers and Footage Managers Compared", "url": "/blog/2026/11/best-mac-video-library-app/", "published": "2026-11-01"}]
 ---
 # Articles from November 2026
 
 <div class="post-list">
+<article class="post-card">
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-11-24">November 24, 2026</time> &middot; 10 min read</p>
+<h2><a href="/blog/2026/11/video-creator-workflow-mac/">Video Creator Workflow on a Mac: From Memory Card to YouTube to Archive</a></h2>
+<p>A video creator workflow for the Mac, step by step: import, sort, review, organize, hand off to the editor, write the YouTube details, then archive.</p>
+</article>
 <article class="post-card">
 <p class="post-meta"><a href="/blog/category/storage-backup/">Storage &amp; Backup</a> &middot; <time datetime="2026-11-04">November 4, 2026</time> &middot; 9 min read</p>
 <h2><a href="/blog/2026/11/external-hard-drives-for-video-mac/">External Hard Drives for Video Storage: A Mac Buyer&#x27;s Guide</a></h2>
