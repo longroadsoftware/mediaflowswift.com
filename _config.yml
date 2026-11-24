@@ -12,6 +12,8 @@ include:
   - _redirects
 exclude:
   - README.md
+  # The app zip is over Cloudflare's 25 MiB asset limit (1.12: 48.8 MB); the Worker streams it from the GitHub Release.
+  - downloads/*.zip
   - Gemfile
   - Gemfile.lock
   - wrangler.jsonc
