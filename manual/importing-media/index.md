@@ -14,12 +14,12 @@ generated: tools/import-guide.sh
 An import copies media from a card, a drive or a folder to the place you chose in Settings › Storage › Imports go to (this Mac, an external drive, or the drive your organized media goes to) and adds the clips to the project. The original files are not changed, and nothing is ever deleted from the card. See Where Imports Go.
 
 1. Choose File → Import…
-2. Pick a source at the top of the sheet: Cards & drives lists the SD cards and USB drives MediaFlow has detected; Folder lets you browse to any directory
+2. Pick a source in the Source box above the preview, on the right: Cards & drives lists the SD cards and USB drives MediaFlow has detected; Folder lets you browse to any directory
 3. For a card, choose it from the Choose Card… menu (a single connected card is picked for you; Rescan looks again). For a folder, click Choose Folder…
 4. MediaFlow scans the source, including subfolders, for supported video, image and audio files
 5. Review the file list and check or uncheck the items to include
 6. Set the Camera picker to the camera that shot the footage; click New camera… to add one that is not listed
-7. Optionally tick “Ask a model to suggest categories” — see below
+7. Optionally tick “Ask AI to suggest categories” — see below
 8. Click Import Selected
 
 Above Import Selected, the sheet says where this import goes and how much space is free there, for example “Imports to the drive “SSD” · 812 GB free”. Change… picks another place for this import only. Once the copy starts, the bottom of the sheet shows “Importing to:” with the folder the files are going to.
@@ -40,6 +40,8 @@ Import goes by the file extension, and takes only these:
 
 Every other file is left out of the list, and the sheet says so: once the scan is done, a line at the bottom counts what was passed over by type, for example “15 files left out: 12 .CR3, 3 .INSV”, with the reason (not formats MediaFlow imports yet) and a What’s left out link that opens this topic. The completion card repeats the line after the import. Nothing is copied that was not before. Left out are camera raw stills other than DNG (CR3, CR2, ARW, NEF, RAF and GoPro’s GPR), AVCHD recordings (MTS, M2TS), Insta360 recordings (INSV, INSP), MXF, BRAW and R3D, and TIFF. Two kinds are left out without being counted: hidden files, and the small files a camera or phone writes for its own use beside the clips, because they are the card’s bookkeeping rather than footage: a GoPro’s LRV and THM, a DJI drone’s LRF and SRT, the XML, BIN and index files Sony, Canon, Nikon and AVCHD cameras keep, and an iPhone’s AAE edit files. Check the card in Finder before you clear it, and convert what you need, for example a raw still to DNG or JPG. The same list applies to a card, a folder and an iPhone.
 
+You choose which kinds come in with the Bring in: row above the list of files, which has a box for each: Video, Photos and Audio. Once the scan is done, each box shows how many files of its kind it found, for example Video (24), and a kind the card or folder has none of is dimmed. Untick a kind to leave its files out of this import: they drop out of the list at once, without a new scan, and the line at the bottom counts them apart from the formats MediaFlow can’t take, for example “130 photos not brought in (unticked). 12 files left out: 12 .CR3”. The completion card repeats it. When the boxes leave nothing to list, for example a card of photos with Photos unticked, the list says so in its own space, “654 photos here, none listed”, and its button, Show Photos, ticks the box for you. With all three unticked, Import Selected is dimmed and the sheet says “Tick at least one kind to bring in.” The boxes are remembered for the next import; the first time, all three are ticked. Files of an unticked kind stay on the card. Unless another import brought them in, no project has them, so Clear Card keeps them as Not imported; if one did, Clear Card treats them as it does the rest of that import.
+
 ### Previewing a File
 
 Click a file in the list to see it in the Preview on the right, with details such as its size, length and date. Press Space to play or pause a video there, whatever you clicked last in the sheet. While a video is showing, Space never ticks a checkbox or presses a button. A photo shows as a still picture; with a photo or nothing showing, Space does what it does elsewhere on your Mac (with Keyboard navigation on, it presses the button you moved to with Tab).
@@ -48,9 +50,15 @@ Click a file in the list to see it in the Preview on the right, with details suc
 
 If the folder imports go to is in cloud storage, as Documents is in iCloud when iCloud’s Desktop & Documents Folders is on, or as a Google Drive, OneDrive or Dropbox folder is, every clip you import uploads, and the service may later move clips off this Mac to make room. MediaFlow tells you at launch and asks before your first import of the session; see Footage in iCloud or Other Cloud Storage for what that means and how to keep footage on this Mac.
 
+### Other Macs on a Database Server
+
+On Studio Pro with a database server, MediaFlow also stores a small picture of each clip you import in the database, so your other Macs show the clip’s thumbnail before Organize puts its file where they can reach it. The import never waits for it. See Shared Database Overview.
+
 ### Duplicates
 
 Files that are already in the project are marked Duplicate in the list. A file counts as already in the project when a clip there has the same name as the card file and exactly the same size, so a different clip that only shares its name, such as C0001.MP4 from a second card, is not marked. Two different clips that have the same name and exactly the same size, from two cards, are still marked Duplicate. A clip imported without a recorded size is still compared by name alone. A line at the bottom of the sheet says how many duplicates were detected, and they are skipped when you import.
+
+A file already imported into another project is marked with that project’s name, such as In Beach Day, or In Beach Day + 2 more when several projects have it; point at it to see them all. It is not skipped, because a clip can belong to two projects on purpose: untick it if you don’t want it in this project too. A card, drive or folder file counts when a clip in the other project has its name and exactly its size, and an iPhone item when one has its name, size and the date the phone reports. With a shared database, every project in the database is looked at; without one, the projects in this Mac’s projects list. A line at the bottom of the sheet says how many files are already in other projects.
 
 ### Disk Space
 
@@ -58,7 +66,7 @@ The place the import goes needs room for the selected files plus 10 GB of headro
 
 ### Cancelling
 
-To close the sheet without importing anything, click Cancel at the top or press Esc.
+To close the sheet without importing anything, click Cancel (bottom right, next to Import Selected) or press Esc.
 
 To stop a long import, click Cancel on the progress window. The copy stops between files, the partly written file is discarded, and every file already copied is added to the project and kept in the working folder.
 
@@ -70,21 +78,21 @@ The Camera picker lists the project’s cameras (Camera A, Drone, Phone, …). N
 
 Click a column header to sort the list by Filename, Date, Type, Length or Size; click it again to reverse. Filename keeps a GoPro recording’s chapters together, as the clip table does. The choice is remembered for the next import, whichever source you use. Until a video’s length has been read, it sorts as the shortest.
 
-### Ask a Model to Suggest Categories
+### Ask AI to Suggest Categories
 
-This checkbox asks an AI model to look at each imported video clip and propose one of your project’s categories. It is off every time the sheet opens and applies to this import only, so no import uses a model unless you tick the box for it. The model runs in the background after the copy finishes. Its answers arrive as proposals: nothing is applied to a clip until you confirm it.
+This checkbox asks an AI model to look at each imported video clip and propose one of your project’s categories. It sits at the bottom of the Source box. It is off every time the sheet opens and applies to this import only, so no import uses a model unless you tick the box for it. The model runs in the background after the copy finishes. Its answers arrive as proposals: nothing is applied to a clip until you confirm it.
 
 - With a model that runs on this Mac, nothing leaves the Mac and it costs nothing. It is slow — about a minute a clip
 - With a paid provider (Claude, ChatGPT or Gemini), MediaFlow sends three small frames from each clip to that provider, together with your category list, the clip’s camera, duration and place name, the opening words of its transcript when it has one, and your recent category corrections. The provider bills you for each clip
 - The line under the checkbox names the model and, for a paid one, says “costs money”
 
-The checkbox appears only after you turn on “Use a model to suggest categories” and finish setting up a model in Settings › Analysis. It is dimmed when “Propose category, camera and scene after an import” is off in the same tab, because the model refines that proposal.
+The checkbox appears only after you turn on “Use AI to suggest categories” and finish setting up a model in Settings › Analysis. It is dimmed when “Propose category, camera and scene after an import” is off in the same tab, because the model refines that proposal.
 
 > **Warning:** A paid provider charges for every clip it looks at, and frames from your footage leave this Mac. Set “Stop after … a day” in Settings › Analysis to cap the spend; MediaFlow checks the limit before each clip and stops when it is reached.
 
 ### Ejecting or Clearing a Card
 
-When the source is an SD card or USB drive, an Eject button appears next to the Camera picker, and again on the completion card after the import. The same command is available from File → Eject Removable Media. MediaFlow asks you to confirm, shows an “Ejecting…” step while the card is unmounted (do not pull the card yet), and then tells you it is safe to remove. If the eject fails because files on the card are still open, close any app or Finder window using them and click Retry.
+When the source is an SD card or USB drive, an Eject button appears in the Source box, under the Camera picker, and again on the completion card after the import. The same command is available from File → Eject Removable Media. MediaFlow asks you to confirm, shows an “Ejecting…” step while the card is unmounted (do not pull the card yet), and then tells you it is safe to remove. If the eject fails because files on the card are still open, close any app or Finder window using them and click Retry.
 
 A Clear Card… button appears beside Eject. It closes the Import sheet and opens the Clear Card sheet, which deletes only clips that are already organized and verified at the destination. On a card laid out by the camera, such as a Sony card with a PRIVATE/M4ROOT folder, it deletes nothing and says instead when the card is safe to format in the camera.
 
@@ -99,7 +107,7 @@ See also: [Where Imports Go](#where-imports-go), [Importing from iPhone or Camer
 Every import copies the card; MediaFlow never moves or deletes a file on a card. Settings › Storage › Imports go to chooses where that copy lands until Organize files it at the project’s destination:
 
 - This Mac — Documents → MediaFlow Projects → Imports, as before. The fastest copy, and clips play at once. The footage takes room on the Mac until Free Up Space runs, and twice over until Organize has copied it on. If Documents is kept in iCloud, macOS may upload the footage or move it off the Mac
-- An external drive — a folder you choose on a drive connected to this Mac. Takes the footage off the Mac’s own disk, so a card larger than the Mac’s free space still fits. The drive must be connected to import, and until the clips are organized or archived that drive is the one place they are besides the card
+- An external drive — a folder you choose on a drive connected to this Mac. Takes the footage off the Mac’s own disk, so a card larger than the Mac’s free space still fits. The drive must be connected to import, and until the clips are organized or archived that drive is the one place they are besides the card, unless Also copy to makes a second copy as you import (below)
 - The drive my organized media goes to — a “MediaFlow Imports” folder at the top of the drive or network share the open project organizes into. The copy is already on the drive where it will end up, so Organize moves it into place in seconds, and nothing waits on the Mac. Over a network share the copy takes longer than to a drive on the Mac, and clips play across the network until proxies are made; you need the share connected to import
 
 ### Choosing the External Drive Folder
@@ -118,33 +126,49 @@ An import never lands on the card or drive it is copying from, which would be no
 
 When a drive won’t say how much space is free, the sheet says “free space unknown”. You can still import; if the drive fills, the import stops at the file that doesn’t fit. A drive with no space left is full, and the import doesn’t start.
 
+### Also Copy To
+
+The Also copy to line on the Import sheet copies each clip to a second folder or drive as well, such as a USB drive, a second SSD or a network share, so you leave with two checked copies besides the card, not one. Click Choose… to pick the folder; its box turns the second copy on and off, and the folder is kept while it is off. The choice is remembered for the project, like where imports go, and the sheet shows the free space there. Each import makes its own folder in it. An iPhone import makes one copy.
+
+The card is read once for both copies. Each file is written to both places as it is read, then each copy is read back from its own drive and checked against the checksum taken from the card. A first copy that reads back different is made once more from the card. A second copy that reads back different is made once more from the first copy; if it is still different, that clip has no second copy. When the import finishes, the completion card says how each place went and how long each took. When every clip has both copies, a Proof Copy receipt is written in each place’s folder, so Proof Copy can check either copy later; otherwise a receipt is written only where imports go, and the completion card says so (see Proof Copy receipts in Bringing Your Existing Archive Drives into MediaFlow).
+
+The second place is never on the card or drive being imported from (when you import from a folder on this Mac’s own disk, only that folder, a folder inside it or a folder that holds it), or the folder imports go to; the sheet says why and asks for another. A folder on the same drive as where imports go isn’t a real second copy, because if that drive fails both copies are lost with it, so the sheet asks before it uses one. As with the external drive folder, another drive that happens to share the chosen drive’s name is never copied to, and a folder on a drive chosen on another Mac must be chosen again on this one.
+
+If the second drive isn’t connected when you click Import Selected, the sheet asks whether to import with one copy. If the second place hasn’t enough free space for the selected files, or its drive can’t hold a file that large, the import doesn’t start (unless that drive doesn’t answer in time), and MediaFlow says why; choose another folder or drive, or turn Also copy to off. If the second place fails partway (its drive is unplugged, fills up or stops responding, or a copy still reads back different), the first copy carries on. Either way, each clip without a second copy is marked as missing it, the completion card lists those clips by name with the reason, and Clear Card keeps them on the card until they have one (see Clear Card).
+
+### Finish Second Copy
+
+When an import with Also copy to couldn’t make some second copies (for example, the second drive filled up or wasn’t connected), the completion card says so and offers Finish Second Copy; Workflow › Finish Second Copy does the same later. Each missing copy is made from the clip’s first copy, read back and checked against the checksum taken from the card. A first copy that no longer matches the card is not copied, and a file already in the second place is never written over. If a folder with the import’s name is already there with none of its checked copies in it, that folder is left as it is: the copies go in a new folder beside it, and the summary names both. When every clip in that import’s second folder has its copy, a Proof Copy receipt is written there; a receipt already there is kept as it was.
+
 ### Proxies for Review
 
 When imports land on a network share, MediaFlow makes proxies for review on this Mac straight after the copy, so the clips play at once instead of across the network. Turn this off with “Make proxies for review when imports land on a network share” in Settings › Storage. They are the same proxies Process Queue (Proxies) makes, kept on this Mac; if proxies are already being made, nothing extra is started.
 
 ### After Organize
 
-When the imported copy is already on the drive the project organizes into (imports to that drive, or to this Mac with the destination on this Mac too) and it still matches the checksum taken from the card, Organize simply moves it into its Category and Camera folder. That takes seconds, needs no extra space, and leaves no second copy behind for Free Up Space. The chain stays proved, because the bytes never move and the import’s copy was proved. A clip on another drive, or one changed since the import, is copied and checked as before. A one-off copy somewhere other than the project’s destination always copies, and so does a project that shares its files with another project (Duplicate Project, Share Media), so the other project’s clips keep their files.
+When the imported copy is already on the drive the project organizes into (imports to that drive, or to this Mac with the destination on this Mac too) and it still matches the checksum taken from the card, Organize simply moves it into its Category and Camera folder. That takes seconds, needs no extra space, and leaves no second copy behind for Free Up Space. The chain stays proved, because the bytes never move and the import’s copy was proved. A clip on another drive, or one changed since the import, is copied and checked as before. A one-off copy somewhere other than the project’s destination always copies, and so does a project that shares its files with another project (Duplicate Project, Share Media), so the other project’s clips keep their files. A clip whose import folder holds a Proof Copy receipt is copied too. An import set to make a second copy usually leaves one, even when the second drive wasn’t connected, and the receipt lists every file and must still find them all. That needs room on the drive, the copy is checked like any other, and the import’s copy stays for Free Up Space.
 
 Organize files each clip at the destination and checks the copy against the checksum taken from the card at import. If the imported copy no longer matches it, though its size and date haven’t changed, the copy has been damaged where it landed: Organize leaves that clip where it is and says so, and you can import it again from the card if you still have it. A clip you have changed on purpose since the import (a new size or a later date) is checked afresh instead. The imported copy stays where it landed until Free Up Space reclaims it, whichever place that was. MediaFlow remembers every folder imports have landed in, so clips imported before you changed the setting still read “Imported, not organized yet”, and Free Up Space can reclaim their copies too, even from a folder on the destination’s own drive.
 
 > **Tip:** A fast external SSD is the usual choice for a laptop with a small disk: imports are almost as quick as to the Mac, and the Mac’s disk stays free.
 
-See also: [Importing from a Card, Drive or Folder](#importing-from-a-card-drive-or-folder), [Importing from iPhone or Camera](#importing-from-iphone-or-camera), [Organizing Media to Storage](/manual/organizing-media/#organizing-media-to-storage), [Freeing Up Space](/manual/organizing-media/#freeing-up-space), [Processing the Proxy Queue](/manual/batch-operations/#processing-the-proxy-queue)
+See also: [Importing from a Card, Drive or Folder](#importing-from-a-card-drive-or-folder), [Importing from iPhone or Camera](#importing-from-iphone-or-camera), [Organizing Media to Storage](/manual/organizing-media/#organizing-media-to-storage), [Freeing Up Space](/manual/organizing-media/#freeing-up-space), [Clear Card](/manual/organizing-media/#clear-card), [Processing the Proxy Queue](/manual/batch-operations/#processing-the-proxy-queue)
 
 ## Importing from iPhone or Camera
 
 *Import photos and videos from an iPhone or camera connected over USB, and what to do when clips are missing.*
 
-The iPhone segment of the Import sheet copies photos and videos straight from a phone or camera connected by USB to the place your imports go (see Where Imports Go).
+The iPhone source of the Import sheet copies photos and videos straight from a phone or camera connected by USB to the place your imports go (see Where Imports Go).
 
 1. Connect your iPhone or camera via USB. Unlock the iPhone and tap Trust if it asks
-2. Choose File → Import… and select the iPhone segment at the top of the sheet
-3. Select your device from the Device picker
+2. Choose File → Import… and choose iPhone in the Source picker above the preview
+3. Select your device from the Device picker under it
 4. Check the items to import in the list. An item already in the project is marked Duplicate and is skipped, matched by name, size and the date the phone reports for it; an item imported before this matching was added, or a card, drive or folder clip that happens to share its name, is still compared by name alone
 5. Click Import Selected
 
 Click an item to preview it on the right; MediaFlow copies it to this Mac to show it. Press Space to play or pause a video, as for a card or folder.
+
+The Bring in: boxes, Video, Photos and Audio, work here as for a card: untick a kind to leave its items out of this import, and the line at the bottom counts them, for example “130 photos not brought in (unticked).” If that leaves nothing to list, the list says so and offers a button that ticks the box. The choice is the same one Cards & drives and Folder use, and is remembered for the next import. Items of an unticked kind stay on the phone, which an import never changes; on a card, Clear Card keeps them too, unless another import brought them in (see Importing from a Card, Drive or Folder).
 
 MediaFlow uses Apple’s Image Capture framework to talk to the device. While an iPhone is locked, the sheet asks you to unlock it and tap Trust.
 
@@ -164,7 +188,7 @@ The import does not start unless the place it goes has room for the selected ite
 
 > **Tip:** If the device does not appear, disconnect and reconnect the USB cable, then click Refresh to scan again.
 
-The “Ask a model to suggest categories” checkbox is available here too. See Importing from a Card, Drive or Folder for what it sends and what it costs.
+The “Ask AI to suggest categories” checkbox is available here too. See Importing from a Card, Drive or Folder for what it sends and what it costs.
 
 See also: [Importing from a Card, Drive or Folder](#importing-from-a-card-drive-or-folder), [Where Imports Go](#where-imports-go), [The Import Sheet and Completion Card](#the-import-sheet-and-completion-card), [Import Not Detecting Files](/manual/troubleshooting/#import-not-detecting-files)
 
@@ -172,11 +196,11 @@ See also: [Importing from a Card, Drive or Folder](#importing-from-a-card-drive-
 
 *One Import sheet for every source, its per-import options, and the card that appears when the import finishes.*
 
-File → Import… opens a single Import sheet. The segment at the top chooses the source: Cards & drives (detected SD cards and USB drives), iPhone (phones and cameras over USB), or Folder (any directory). The banner that appears when a card or phone is plugged in opens the sheet on Cards & drives.
+File → Import… opens a single Import sheet. The Source picker, in the box above the preview on the right, chooses the source: Cards & drives (detected SD cards and USB drives), iPhone (phones and cameras over USB), or Folder (any directory). The list of files takes two thirds of the sheet. The right third holds three parts of equal height: the Source box, the Preview, and the details of the item you clicked. The banner that appears across the top of the clips, beside the sidebar, when a card or phone is plugged in opens the sheet on Cards & drives; it moves the pipeline strip and the clips down while it shows, so it never covers them.
 
-### Ask a Model to Suggest Categories
+### Ask AI to Suggest Categories
 
-When a model is set up in Settings › Analysis, the bottom of the sheet offers the checkbox “Ask a model to suggest categories”. It is unticked every time the sheet opens and applies to this import only. A model on this Mac is free and sends nothing off the Mac. A paid provider receives frames from each clip and charges for each one. See Importing from a Card, Drive or Folder for the details.
+When a model is set up in Settings › Analysis, the bottom of the Source box offers the checkbox “Ask AI to suggest categories”. It is unticked every time the sheet opens and applies to this import only. A model on this Mac is free and sends nothing off the Mac. A paid provider receives frames from each clip and charges for each one. See Importing from a Card, Drive or Folder for the details.
 
 ### Completion Card
 

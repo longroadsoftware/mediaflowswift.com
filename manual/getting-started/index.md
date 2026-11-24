@@ -15,7 +15,7 @@ MediaFlow keeps track of the footage from a shoot. You import clips from cards, 
 
 ### System Requirements
 
-Requires macOS 13 Ventura or later on a Mac with Apple silicon (M1 or newer). MediaFlowSwift does not run on Intel-based Macs. About MediaFlowSwift, in the MediaFlowSwift menu, says the same.
+Requires macOS 13 Ventura or later, on a Mac with Apple silicon or an Intel processor. About MediaFlowSwift, in the MediaFlowSwift menu, says the same.
 
 ### Key Capabilities
 
@@ -38,7 +38,7 @@ The pipeline strip under the toolbar follows these steps and always offers the n
 
 ### First-Run Setup
 
-The first time you open MediaFlow, a short tour explains the app. A Setup Wizard follows it. It first asks where your footage goes: this Mac, an external drive, or a network share. Then it asks where organized media goes. Only for a network share does it ask more: which share, and whether to use a database every Mac shares. On a single Mac it makes a small database of your projects for you, unless you untick it. You can skip any question. To answer them later, choose Settings › General › Run Setup Again…
+The first time you open MediaFlow, a short tour explains the app. A Setup Wizard follows it. It first asks where your footage goes: this Mac, an external drive, or a network share. Then it asks where organized media goes. Only for a network share does it ask more: which share, and whether to use a database every Mac shares. On a single Mac it makes a small database of your projects for you, unless you untick it. Last, it asks, optionally, for the email support should write back to. You can skip any question. To answer them later, choose Settings › General › Run Setup Again…
 
 ### Where to Get Help
 
@@ -61,10 +61,12 @@ A project is a .vpm file that records your clips and everything you know about t
 1. Choose File → New Project (Cmd+N)
 2. Enter a descriptive project name
 3. Check Project location — the folder the new project folder is created in. It starts at the last location you used, or your Documents folder; click Choose… to pick another
-4. Check “Organized media goes to” — the destination Organize Media copies clips to. It starts as the new project folder; click Change… to pick another folder, or Use project folder to go back
+4. Check “Organized media goes to” — the destination Organize Media copies clips to. It starts as the new project folder, so the project file and its clips are in one folder. With a default destination in Settings › Storage, that is still so for a project made in the default destination, in a folder inside it (a year folder, say) or anywhere else on the same drive or share. A project made somewhere else, such as on this Mac’s own drive while the default destination is on a share, organizes into a folder named after the project inside the default destination. Click Change… to pick another folder: unless it is named after the project, the project gets its own folder inside it, and the row shows the whole path. Use this folder anyway keeps the folder you picked as it is; Use project folder goes back
 5. Click Create
 
 MediaFlow creates a folder named after the project and saves the .vpm project file inside it.
+
+When the project file and its media would be in two different folders, an orange warning under the destination names both folders, and Create asks before it makes anything. Keep Them Together organizes into the folder the project file is in. Use Two Folders makes the project as the sheet shows it. Cancel goes back to the sheet. MediaFlow asks once for each folder you choose for media; the warning is there every time.
 
 When the destination is on this Mac’s own drive, a plain note under it says so; keeping everything on your Mac is a fine way to work. The note turns into an orange warning only when your setup points somewhere else: when your default destination in Settings › Storage is on another drive or a share, or, with no default destination set, when you use a network share. Then a folder on this Mac usually means that drive or share was not connected when the project was made. When the default destination in Settings › Storage is on this Mac, this Mac is your choice and there is no warning, even if a network share is also set up, for a shared database say. If this Mac is where you want the organized media, you can ignore the warning.
 
@@ -99,7 +101,7 @@ The File → Open Recent submenu lists your recently opened projects for quick a
 
 ### Project Browser
 
-The Project Browser shows all known projects, including those registered in the shared database. It is in the main window: there whenever no project is open, and shown in place of the open project by Projects → Browse Projects… (Cmd+Shift+P). Back to, followed by the project’s name, returns to that project just as you left it. Opening another project from the list asks about unsaved changes first, as opening always does.
+The Project Browser shows all known projects, including those registered in the shared database. It is in the main window: there whenever no project is open, and shown in place of the open project by Projects → Browse Projects… (Cmd+Shift+P). The Back button on the left of the toolbar, or Go → Back to (Cmd+[), returns to that project just as you left it. Opening another project from the list asks about unsaved changes first, as opening always does.
 
 - Double-click a project to open it. Or select it and click Open Selected at the top right, or press Return
 - Right-click anywhere on a project’s row for options: Open, Delete Project…, Remove from List, Show in Finder
@@ -107,7 +109,40 @@ The Project Browser shows all known projects, including those registered in the 
 - The search field in the toolbar searches the clips of every project in the shared database, in the list’s place, under a line that says so; Clear brings the list back. See Searching All Projects
 - Click a column header to sort the list; MediaFlow remembers your choice the next time you open it
 
+### Going Back to the Project You Had Open
+
+When you open another project over the one you were working in, from the Project Browser, Open Recent, File → Open or Search All Projects, the Back button on the left of the toolbar takes you back to the earlier project; hold the pointer over it to see the project’s name. Click it, or choose Go → Back to (Cmd+[), to open that project again just as you left it: the same clips selected, the same sidebar filter, and the selected clip scrolled into view. It asks about unsaved changes first, as opening always does. MediaFlow remembers the last five projects you left this way in the window, until you quit, so Back again goes one further back. A project deleted since you left it is skipped. One whose file can’t be found on a disk that is connected (it may have been moved or renamed) is skipped too, unless the shared database is on and has the project: then Back opens it from the database. With the shared database on, a project archived since you left it is also skipped; without the database, Back opens it as it is. A notice says which projects were skipped, and the button’s help names the ones MediaFlow already knows about before you click. When there is no project to go back to, the button is dimmed. Go → Forward (Cmd+]) is in the menu but always dimmed: Back keeps only the projects you left, so there is nothing to go forward to.
+
 See also: [Creating a New Project](#creating-a-new-project), [Deleting a Project](/manual/project-management/#deleting-a-project)
+
+## Trying the Demo Project
+
+*A made-up shoot to try rating clips, search by what was said and a YouTube draft before your first shoot. It is kept apart from your own projects.*
+
+The demo project, Demo: Bakery Opening Day, is a made-up shoot: six clips, what was said in them, and a YouTube draft. Open it to try MediaFlow before you have footage of your own.
+
+### Opening the Demo
+
+- In the Project Browser, click Try the Demo in the toolbar, or Try the Demo Project when the list is empty
+- Opening it again shows it as you left it, with the stars and marks you gave it
+
+### What to Try
+
+- Review: give a clip stars in the inspector, or mark it Hero or Reject. The pipeline strip’s Review step counts the clips with no stars
+- Search by what was said: type said:“sourdough” in the Search clips field to find the clip where it is said
+- YouTube drafting: Workflow → Plan & Deliver → Prepare for YouTube opens the demo’s draft, with the finished video’s words, a title, a description and chapters. Write with the SEO Agent writes a new one only if you have turned on a writing service in Settings › Privacy, or set up a model on this Mac under Writing for YouTube in Settings › Analysis
+
+### What the Demo Is Not
+
+Its clips are words only. There is no video, so they show as missing and don’t play. While it is open, nothing can be imported into it, and nothing is organized, copied, moved, archived or renamed for it: those commands say they aren’t available in the demo. Prepare for YouTube shows its draft, but doesn’t upload it, apply it to a video on YouTube or export a thumbnail: its words are made up. Nothing in it is yours.
+
+It is kept apart from your work. It is not in the Project Browser’s list, Open Recent or a shared database, and it lives only in its own folder, Demo Project, in MediaFlowSwift’s Application Support folder. A purple Demo badge in the window’s toolbar says when the demo is open; hold the pointer over it for what the demo is.
+
+### Removing the Demo
+
+Click Remove Demo… in the toolbar, or choose Projects → Remove Demo…, then Remove Demo. The demo is closed and what it wrote in its folder is deleted. If anything else is in that folder, such as a file you put there yourself, nothing is deleted and MediaFlow names what it found, so you can move it first. Nothing else is changed. Try the Demo makes a fresh copy at any time.
+
+See also: [Opening an Existing Project](#opening-an-existing-project), [Understanding the Pipeline Strip](#understanding-the-pipeline-strip), [Preparing a Video for YouTube](/manual/publishing/#preparing-a-video-for-youtube)
 
 ## Understanding the Interface
 
@@ -118,14 +153,15 @@ The main window is divided into five areas:
 ### Pipeline Strip (Top)
 
 - One row under the toolbar with the seven steps of a shoot: Import, Categorize, Review, Organize, Free up space, Archive, Eject
+- A notice across the top of the clips (a card plugged in, Missing Cards?, a share reconnecting, the trial) sits above the strip and moves it down; the strip stays sharp and clickable under it
 - See Understanding the Pipeline Strip for what each segment counts and what its button does
 
 ### Sidebar (Left)
 
-- Shows the project name, the organize destination with a Change… link, and the active filters as chips
+- Shows the project name, where the project organizes in plain words, such as Organizes into “Beach Day” on the network share “Media”, with a Change… link, and the active filters as chips. Click where it organizes to see that folder in the Finder, or right-click it and choose Show in Finder. When the project’s media is not in the folder the project file is in, a note under it says where the media is, with Show in Finder
 - Library section: All Media, Hero, Proxy queue
-- Smart Groups section: Not at destination (clips whose file is not at the destination yet), Missing, Uncategorized, Unrated, Unreviewed, Reject candidates
-- Cameras section: the project’s camera list. Click a camera to see only its clips
+- Smart Groups section: Not at destination (clips whose file is not at the destination yet, other than clips set to skip), Missing, Uncategorized, Unrated, Unreviewed, Reject candidates
+- Cameras section: the cameras this project’s clips came from, with how many clips each has. It appears only when clips have a camera. Click a camera to see only its clips
 - Places section: the places your clips were shot, grouped from their GPS data. It appears only when clips have GPS data
 - With no project open, the header says No project open and these sections are replaced by a note: open a project to filter its clips
 
@@ -149,7 +185,8 @@ The main window is divided into five areas:
 - Workflow Tools — Extract a thumbnail, mark in and out points, create a subclip, and manage and process the Proxy queue
 - Edit — Change the category, rating, select status, tags and notes of the selected clips
 - Full Metadata — Everything read from the file, in sections you can open and close: file details; video (resolution, frame rate, codec, bit rate); color and HDR; audio; camera and lens; and, when the clip has them, GPS, weather, drone, GoPro and iPhone data
-- Metadata — A short summary: filename, type, size, date created, duration, category, Camera and Where, and the clip’s thumbnail and proxy files
+- Metadata — A short summary: filename, type, size, date created, duration, category, Camera and Where, where the project organizes, with Show in Finder, and the clip’s thumbnail and proxy files
+- With no clip selected, the panel says where the project organizes, with Show in Finder. In both places a note says so when the media is not next to the project file
 - Scene Log — Scene, shot type, take, Camera angle and Circle Take for the selected clip
 - Transcript — Read, search, correct and export the clip’s transcript, or transcribe it if it has none
 
@@ -167,21 +204,21 @@ See also: [What Is MediaFlow?](#what-is-mediaflow), [Understanding the Pipeline 
 
 *The row under the toolbar that shows how far the project has come and offers the one next action.*
 
-The pipeline strip shows the seven steps of a shoot and how much work each one still has. It runs across the top of the window whenever a project is open. Every segment is a button.
+The pipeline strip shows the seven steps of a shoot and how much work each one still has. It runs across the top of the clips, beside the sidebar, whenever a project is open. A notice, such as Storage Warning, shows above it and moves it and the clips down while it shows; the sidebar stays where it is. Every segment is a button.
 
 ### The Seven Segments
 
 - Import — clips in the project. Button: Import…, the same sheet as File → Import…
 - Categorize — clips with no category (a blank category counts). Button: Auto-suggest
 - Review — clips with no star rating. Button: Review…, the same as Workflow → Review (Cmd+Opt+R)
-- Organize — clips whose file is not at the destination folder. Button: Organize N clips, or Organize N selected clips while clips are selected, since it then copies only those. A clip that is at the destination with a size mismatch counts as organized here; the Where column still shows the mismatch
+- Organize — clips whose file is not at the destination folder. Button: Organize N clips. With some clips selected, its confirmation offers just those as well. A clip that is at the destination with a size mismatch counts as organized here; the Where column still shows the mismatch
 - Free up space — the space the working-directory copies of organized clips still take on this Mac. A copy Free Up Space has deleted no longer counts, one it has moved into this Mac’s Cleanup folder counts until it is deleted, and one Restore from Cleanup puts back counts again. Button: Free Up Space…, which checks each file and shows exactly what it will reclaim
 - Archive — Pending, or the volume the project was archived to (“USB #0007”) with the date. Button: Archive…
 - Eject — removable cards and drives still mounted. Button: Eject &lt;name>, or an Eject menu when more than one is connected
 
 ### Clicking a Segment
 
-Clicking a segment filters the media list to that step’s remaining work and reveals its one primary button on the right. Import shows all media, Categorize shows the uncategorized clips, Review shows the unrated ones and Organize shows the Not at destination smart group. Free up space, Archive and Eject leave the current filter alone because their work is not a subset of the list.
+Clicking a segment filters the media list to that step’s remaining work and reveals its one primary button on the right. Import shows all media, Categorize shows the uncategorized clips, Review shows the unrated ones and Organize shows the Not at destination smart group. Free up space, Archive and Eject leave the current filter alone because their work is not a subset of the list. A segment that filters the list also clears the selection, so no clip stays highlighted from the list you were in before.
 
 Until you click one, the strip follows the first step that still has work to do. A finished step shows a green check instead of its icon.
 
@@ -197,7 +234,7 @@ The same thing used to have several names and the same name used to mean several
 
 ### The Table
 
-- Organize Media keeps its name, and the pipeline strip now says Organize too, instead of naming a device — the menu item, the toolbar button, the right-click action, the strip and the confirmation sheet all read the same. With clips selected it copies the selection; with nothing selected it copies the whole project, and the sheet says which
+- Organize Media keeps its name, and the pipeline strip now says Organize too, instead of naming a device — the menu item, the toolbar button, the right-click action, the strip and the confirmation sheet all read the same. The menu item, the strip and the bar under selected clips copy the whole project, and with some clips selected the sheet offers just those as well; right-click › Organize Media copies just the clicked clips
 - Device is now Camera wherever it means the camera that shot the clip — the table column, the sidebar section, the Import sheet’s picker and the Set Camera menu. “Device” now means an import source: a card, a drive, an iPhone.
 - The Scene Log’s Camera field is now Camera angle — A, B, C, the angle a take was shot from, not the camera body
 - The Location column is now Where, and the sidebar’s Locations section is now Places. Where is about the file; Places is about the world
@@ -205,7 +242,7 @@ The same thing used to have several names and the same name used to mean several
 - Reconnect Destination is now Change destination folder, under Workflow → Repair
 - Refresh Storage Locations is now Re-check files, under Workflow → Repair
 - Do Not Copy now reads Skip (don’t copy). It is still stored as “Do Not Copy”
-- The Dashboard and the Project Checklist are gone. The pipeline strip across the top of the window shows where the project stands
+- The Dashboard and the Project Checklist are gone. The pipeline strip across the top of the clips shows where the project stands
 - Batch Queue is now Proxy queue — the queue for thumbnails and proxies
 - Remove Selected Assets is now Remove from Project
 - Kill is now Reject. It is still stored as “Kill”
@@ -324,13 +361,30 @@ The details card lists the version, the build, your plan, whether updates are ch
 
 ### System Requirements
 
-Requires macOS 13 Ventura or later on a Mac with Apple silicon (M1 or newer). MediaFlowSwift does not run on Intel-based Macs. The app is built for Apple silicon only, so on an Intel-based Mac macOS will not open it. Check the Apple menu → About This Mac: a Mac with Apple silicon names its chip there, such as Apple M1 or Apple M3.
+Requires macOS 13 Ventura or later, on a Mac with Apple silicon or an Intel processor. The same download runs on both kinds of Mac. Check the Apple menu → About This Mac: a Mac with Apple silicon names its chip there, such as Apple M1 or Apple M3; an Intel-based Mac names an Intel processor.
 
 ### Acknowledgements
 
 MediaFlowSwift is built with open-source packages, among them PostgresNIO and Apple’s SwiftNIO, Swift Log and Swift Crypto, and the BoringSSL code SwiftNIO SSL carries. Acknowledgements…, in About and in Settings › General, lists each package with its version and licence, then the full text of each licence and the notices the packages ask to be passed on, including BoringSSL’s OpenSSL, SSLeay and ISC licences. Copy All copies all of it as plain text.
 
 See also: [What Is MediaFlow?](#what-is-mediaflow), [Terms of Use](#terms-of-use), [Contacting Support](/manual/troubleshooting/#contacting-support), [The Settings Window](/manual/settings-preferences/#the-settings-window)
+
+## Using MediaFlow on an Intel Mac
+
+*Every feature works on a Mac with an Intel processor; a few kinds of work take longer, and MediaFlow says where.*
+
+Every feature of MediaFlow works on a Mac with an Intel processor. A few kinds of work lean on hardware that only Macs with Apple silicon have, such as the Neural Engine, so on an Intel Mac they take longer. Nothing is left out or skipped: MediaFlow takes the slower way and says so where you would notice.
+
+### What Takes Longer
+
+- A model on this Mac — Ollama runs the model on the processor alone, often several minutes a clip. Settings › Analysis says so when you set it up, and MediaFlow waits longer for the model to start and to answer. A paid provider does not run on this Mac, so it is no slower here
+- Speech transcription — Apple’s speech recognition takes longer. If this Mac has no on-device speech model for your language, MediaFlow says so and how to turn on Apple’s online speech recognition in Settings › Privacy; no audio leaves this Mac unless you do
+- Vision (faces, text and shot types) — the analysis runs without the Neural Engine, so a pass over a project takes longer
+- HEVC video — some Intel Macs have no video hardware for some kinds of HEVC, such as the 10-bit HDR video iPhones record. macOS decodes such a clip with the processor: thumbnails, analysis and proxies take longer, and a large clip may stutter as it plays. The preview then says Decoded by the processor and offers Make Proxy
+
+Copying, checking and organizing your footage do not depend on any of this, and work the same on every Mac.
+
+See also: [Running a Model on This Mac](/manual/organizing-media/#running-a-model-on-this-mac), [Speech Transcription](/manual/organizing-media/#speech-transcription), [Vision (AI Scene Analysis)](/manual/organizing-media/#vision-ai-scene-analysis), [Processing the Proxy Queue](/manual/batch-operations/#processing-the-proxy-queue), [About MediaFlowSwift](#about-mediaflowswift)
 
 <div class="chapter-nav" role="navigation" aria-label="Chapters">
 <span></span>
