@@ -177,4 +177,4 @@ When it's time to reuse the card, [Clear Card](/manual/organizing-media/#clear-c
 
 For the drives themselves, see [how to label and catalog archive drives](/guides/label-and-catalog-archive-drives-for-video/) and [organizing external hard drives for video](/blog/2026/10/external-hard-drive-organization-for-video/). For the offsite copy, [LTO vs NAS vs cloud](/blog/2026/10/video-archive-storage-lto-vs-nas-vs-cloud/) compares the options.
 
-MediaFlowSwift runs on Macs with Apple silicon and macOS 13 Ventura or later. If you want the import, organize and archive checks in one app, there's a [free trial on the download page](/download.html), and [plans are listed here](/#plans). Whatever tool you use, the rule stays the same: verify the copy first, then clear the card.
+MediaFlowSwift runs on Apple silicon and Intel Macs with macOS 13 Ventura or later. If you want the import, organize and archive checks in one app, there's a [free trial on the download page](/download.html), and [plans are listed here](/#plans). Whatever tool you use, the rule stays the same: verify the copy first, then clear the card.

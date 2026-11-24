@@ -19,7 +19,7 @@ OffShoot is a fast, well-made offload tool. It copies many sources to many desti
 
 MediaFlowSwift proves every copy with SHA-256, then keeps going. It gives each clip a category, files it into Category and Camera folders, and lets you review clips with star ratings and tags. It frees up space only after every clip is proved copied. You can search clips by what was said in them, and it archives to numbered drives with a record of what went where. Studio Pro drafts YouTube titles, descriptions, chapters and tags.
 
-- **Not for you if:** you need an MHL file or a DIT-style transfer report, or you work on an Intel Mac or Windows. Those versions are not out yet. It also copies each import to one destination; the second copy comes when you archive.
+- **Not for you if:** you need an MHL file or a DIT-style transfer report, or you work on Windows. That version is not out yet. It also copies each import to one destination; the second copy comes when you archive.
 - **Price:** Studio is $49.99 a year and Studio Pro is $99.99 a year, or $4.99 and $9.99 a month. There is a 14-day free trial with no card, and one key covers up to three Macs.
 
 ## 2. ShotPut Pro: a long-standing offload tool for Mac and Windows
@@ -71,7 +71,7 @@ You can copy a card in Finder and check it by hand. Finder alone doesn't run a c
 <div class="tablewrap">
 <table class="compare">
   <tr><th>App</th><th>Mac and Windows</th><th>MHL</th><th>Sorts and reviews clips</th><th>Lowest price to keep</th></tr>
-  <tr><td>MediaFlowSwift</td><td>Apple silicon Mac only</td><td>&mdash;</td><td>&#10003;</td><td>$49.99 a year</td></tr>
+  <tr><td>MediaFlowSwift</td><td>Mac only (Apple silicon and Intel)</td><td>&mdash;</td><td>&#10003;</td><td>$49.99 a year</td></tr>
   <tr><td>OffShoot</td><td>&#10003;</td><td>Pro</td><td>&mdash;</td><td>$169 once</td></tr>
   <tr><td>ShotPut Pro</td><td>&#10003;</td><td>&#10003;</td><td>&mdash;</td><td>$169 once</td></tr>
   <tr><td>Offload Manager</td><td>Mac</td><td>&#10003;</td><td>&mdash;</td><td>$199 a year</td></tr>
@@ -85,7 +85,7 @@ A dash means the feature is not offered, or is not listed on that app's own page
 
 ## Which one should you pick?
 
-For a DIT on a film set, look at Silverstack XT, Offload Manager or ShotPut Pro. To browse and convert footage on Mac or Windows, look at Kyno. For a free, light offload tool, look at habitat flow. If you shoot and edit your own footage on an Apple silicon Mac and want one app from card to archive, [try MediaFlowSwift free for 14 days](/download.html), with no card.
+For a DIT on a film set, look at Silverstack XT, Offload Manager or ShotPut Pro. To browse and convert footage on Mac or Windows, look at Kyno. For a free, light offload tool, look at habitat flow. If you shoot and edit your own footage on a Mac and want one app from card to archive, [try MediaFlowSwift free for 14 days](/download.html), with no card.
 
 ## Sources
 

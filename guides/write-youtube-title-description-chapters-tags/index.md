@@ -98,4 +98,4 @@ The manual's warning about the SEO agent's draft:
 
 ## Draft your own YouTube title and chapters
 
-Prepare for YouTube and the SEO Agent are part of MediaFlowSwift. [Download it](/download.html); the full app is free to try for 14 days, no card needed, provided your Mac runs macOS 13 or later on Apple silicon.
+Prepare for YouTube and the SEO Agent are part of MediaFlowSwift. [Download it](/download.html); the full app is free to try for 14 days, no card needed, provided your Mac runs macOS 13 or later (Apple silicon or Intel).
