@@ -99,4 +99,4 @@ If you don't have a database set up yet, Archive to USB offers to make a plain d
 
 ## Start numbering your own drives
 
-Archive to USB and its drive catalog are built into MediaFlowSwift. [Download it](/download.html) to try the complete app for 14 days — no card up front, on a Mac with Apple silicon running macOS 13 or later.
+Archive to USB and its drive catalog are built into MediaFlowSwift. [Download it](/download.html) to try the complete app for 14 days — no card up front, on an Apple silicon or Intel Mac running macOS 13 or later.

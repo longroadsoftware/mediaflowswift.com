@@ -118,7 +118,7 @@ The table sums up each vendor's own pages, checked in November 2026. Test the fe
 | ShotPut Pro / Studio | Verified offload; Studio adds transcode and upload | Projects and reports | Not described | ShotPut Studio 7-day demo | macOS; ShotPut Pro also Windows |
 | habitat flow | Verified offload by shooting day | Projects and shooting days | Not described | Free plan up to 150 GB a week | macOS, free iPhone companion |
 | Silverstack XT | On-set data management and clip library | Tags, comments, 100+ fields, smart folders | Yes, asset information offline | 10-day free trial | Mac (Apple silicon or Intel) |
-| MediaFlowSwift | Copy, organize, review and archive | Notes, tags, category, camera, scene; transcripts | Yes, "Volume not connected"; archive drive list | 14-day trial, no card | Apple silicon Macs, macOS 13 or later |
+| MediaFlowSwift | Copy, organize, review and archive | Notes, tags, category, camera, scene; transcripts | Yes, "Volume not connected"; archive drive list | 14-day trial, no card | Apple silicon and Intel Macs, macOS 13 or later |
 
 None of these tools covers every job. A cataloger knows your drives but won't verify a card copy. An offload tool proves the copy but won't help you browse last year's footage. Pick for the problem you have most often.
 
@@ -164,7 +164,7 @@ NeoFinder lists BRAW and RED R3D support, with more formats through an ffmpeg pl
 
 MediaFlowSwift fits a creator who wants each card to become an organized, reviewed and archived project. It is a weaker fit in these cases:
 
-- It runs only on Apple silicon Macs with macOS 13 or later. Windows and Intel Mac versions are coming, with no date.
+- It runs only on Macs (Apple silicon and Intel) with macOS 13 or later. A Windows version is coming, with no date.
 - It does not import raw video formats such as N-RAW, BRAW or R3D, or MXF.
 - A clip on an unplugged drive plays only if you made a proxy of it first.
 - Searching across all projects needs a shared database, though a database file on one Mac works on any plan.

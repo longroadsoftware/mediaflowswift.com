@@ -89,4 +89,4 @@ Either way, nothing is applied to a clip automatically. Suggestions arrive as pr
 
 ## Put it to work on your own library
 
-MediaFlowSwift is the app that runs Organize Media and the Workflow Templates described above. [Download it](/download.html) and try the full version for 14 days — no card required, macOS 13 or later on a Mac with Apple silicon.
+MediaFlowSwift is the app that runs Organize Media and the Workflow Templates described above. [Download it](/download.html) and try the full version for 14 days — no card required, macOS 13 or later on an Apple silicon or Intel Mac.

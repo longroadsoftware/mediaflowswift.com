@@ -85,4 +85,4 @@ Don't erase the card. Try the import again. A failed check usually means a bad r
 
 ## Check your own card before you erase it
 
-Clear Card's read-back and checksum match are part of MediaFlowSwift, the app this guide describes. [Download it](/download.html) and run the full app for 14 days, no card required, on macOS 13 or later with Apple silicon.
+Clear Card's read-back and checksum match are part of MediaFlowSwift, the app this guide describes. [Download it](/download.html) and run the full app for 14 days, no card required, on macOS 13 or later on an Apple silicon or Intel Mac.

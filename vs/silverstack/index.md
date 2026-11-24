@@ -33,7 +33,7 @@ Silverstack XT can sort, rate, label and search clips too, so the difference her
 
 - MediaFlowSwift writes no MHL file and no DIT-style transfer report, and it has no SDI playback, scopes or ALE export. If a production needs those, Pomfort covers them.
 - MediaFlowSwift copies each import to one destination. Its second copy comes later, when you archive the project to another drive. See [how to keep two checked copies of a card](/guides/two-checked-copies-of-a-card-on-a-mac/).
-- MediaFlowSwift needs an Apple silicon Mac running macOS 13 or later. Versions for Intel Macs and for Windows are not out yet.
+- MediaFlowSwift needs an Apple silicon or Intel Mac running macOS 13 or later. A Windows version is not out yet.
 - Pomfort's licences end. After a timed licence or a subscription ends, Pomfort gives you read-only access to your projects.
 
 ## How is each one priced?
@@ -66,7 +66,7 @@ In US dollars, as listed in Pomfort's store on 5 November 2026, before any tax:
 
 ## Which one should you pick?
 
-Pick Offload Manager or Silverstack XT if you are a DIT, or you hand media to a production that wants ASC MHL, offload reports and a full clip library on set. Pick MediaFlowSwift if you shoot and edit your own footage on an Apple silicon Mac and want one card to become one sorted, reviewed and archived project. [Try MediaFlowSwift free for 14 days](/download.html), with no card, and see which one fits how you work.
+Pick Offload Manager or Silverstack XT if you are a DIT, or you hand media to a production that wants ASC MHL, offload reports and a full clip library on set. Pick MediaFlowSwift if you shoot and edit your own footage on a Mac and want one card to become one sorted, reviewed and archived project. [Try MediaFlowSwift free for 14 days](/download.html), with no card, and see which one fits how you work.
 
 ## Sources
 

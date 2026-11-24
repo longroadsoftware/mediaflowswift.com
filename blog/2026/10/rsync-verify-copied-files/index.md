@@ -183,7 +183,7 @@ MediaFlowSwift's [Clear Card](/manual/organizing-media/#clear-card) deletes only
 
 MediaFlowSwift's limits matter for this comparison. The import copies to one place at a time. A second checked copy comes later, from [Archive to USB](/manual/project-management/#archiving-a-project-to-usb); see [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/).
 
-MediaFlowSwift can organize to a mounted network share, but it doesn't sync to Linux servers over SSH. It keeps checksums inside the project rather than writing a checksum list onto the drive. Its Re-check files command compares sizes, not checksums, so for audits years later, `shasum -c` or an rsync `-c` dry run is still the tool. It runs on Apple silicon Macs, with Windows and Intel Mac versions coming.
+MediaFlowSwift can organize to a mounted network share, but it doesn't sync to Linux servers over SSH. It keeps checksums inside the project rather than writing a checksum list onto the drive. Its Re-check files command compares sizes, not checksums, so for audits years later, `shasum -c` or an rsync `-c` dry run is still the tool. It runs on Apple silicon and Intel Macs, with a Windows version coming.
 
 ## What's a sensible routine before erasing a card?
 

@@ -120,4 +120,4 @@ Once Image Capture has handed a file over, MediaFlowSwift copies it to your impo
 
 ## Get your own second copy made
 
-Import, Organize and Archive to USB are the three commands MediaFlowSwift uses for this. [Download it](/download.html); try the full app for 14 days with no card asked for, on an Apple silicon Mac with macOS 13 or later.
+Import, Organize and Archive to USB are the three commands MediaFlowSwift uses for this. [Download it](/download.html); try the full app for 14 days with no card asked for, on an Apple silicon or Intel Mac with macOS 13 or later.

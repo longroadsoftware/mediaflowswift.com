@@ -90,4 +90,4 @@ NLE Template Export for Final Cut Pro puts the place name and GPS coordinates on
 
 ## See your own shoot on the map
 
-The Shoot Map is part of MediaFlowSwift, the app described above. [Download it](/download.html) — the full app is free to try for 14 days, no card required, and it needs macOS 13 or later and Apple silicon.
+The Shoot Map is part of MediaFlowSwift, the app described above. [Download it](/download.html) — the full app is free to try for 14 days, no card required, and it needs macOS 13 or later on an Apple silicon or Intel Mac.

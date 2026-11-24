@@ -161,7 +161,7 @@ OffShoot runs on macOS and Windows and has a 10-day trial. Silverstack Lab and S
 
 MediaFlowSwift covers offload, organizing, review, selects and the report in one Mac app. Its limits matter for dailies. It applies no LUTs or looks, and it doesn't transcode editing proxies or upload to review platforms. It writes no checksum list or MHL file.
 
-Several Macs can share projects through the [shared database](/manual/shared-database/). A database file works on either plan, and a database server that several Macs use at once is a Studio Pro feature. The app runs on Apple silicon Macs with macOS 13 or later. Windows and Intel Mac versions are coming.
+Several Macs can share projects through the [shared database](/manual/shared-database/). A database file works on either plan, and a database server that several Macs use at once is a Studio Pro feature. The app runs on Apple silicon and Intel Macs with macOS 13 or later. A Windows version is coming.
 
 ## How does a solo dailies workflow differ from a studio pipeline?
 

@@ -83,4 +83,4 @@ Library Moved is for a library you moved in one go. If just a handful of clips a
 
 ## Fix your own missing footage
 
-Library Moved ships in MediaFlowSwift, the app this guide is about. [Download it](/download.html); the full app runs 14 days with no card asked for, provided your Mac has Apple silicon and macOS 13 or later.
+Library Moved ships in MediaFlowSwift, the app this guide is about. [Download it](/download.html); the full app runs 14 days with no card asked for, on an Apple silicon or Intel Mac with macOS 13 or later.

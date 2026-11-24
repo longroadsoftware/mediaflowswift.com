@@ -89,4 +89,4 @@ Category, rating and select-status changes in MediaFlowSwift go through Edit →
 
 ## Run your own review pass
 
-Rapid Review and Smart Selects are part of MediaFlowSwift, the app covered here. [Download it](/download.html) for a 14-day trial of the full app, no card needed, on macOS 13 or later with Apple silicon.
+Rapid Review and Smart Selects are part of MediaFlowSwift, the app covered here. [Download it](/download.html) for a 14-day trial of the full app, no card needed, on macOS 13 or later on an Apple silicon or Intel Mac.
