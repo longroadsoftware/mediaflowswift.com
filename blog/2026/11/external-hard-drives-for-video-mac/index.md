@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/11/external-hard-drives-for-video-mac/
 published: "2026-11-04"
-updated: "2026-11-04"
+updated: "2026-11-24"
 og_image: "/images/blog/external-hard-drives-for-video-mac.png"
 title: "External Hard Drives for Video Storage: A Mac Buyer's Guide"
 seo_title: "External Hard Drives for Video on a Mac: Buyer's Guide"
@@ -187,7 +187,7 @@ MediaFlowSwift checks every copy during import. It computes a SHA-256 checksum f
 
 Erasing is a separate step. [Clear Card](/manual/organizing-media/#clear-card) deletes only clips already organized and verified at the destination. On a card laid out by the camera, it deletes nothing and says when the card is safe to format in the camera.
 
-MediaFlowSwift's limits are real. It copies to one destination per import and writes no ASC MHL file, so a crew that needs either should look at the tools above. It runs on Apple silicon and Intel Macs with macOS 13 or later. A Windows version is coming.
+MediaFlowSwift's limits are real. It copies to at most two places per import, with Also copy to, and writes no ASC MHL file, so a crew that needs more destinations or an MHL file should look at the tools above. It runs on Apple silicon and Intel Macs with macOS 13 or later. A Windows version is coming.
 
 ## How do you keep track of several archive drives?
 
