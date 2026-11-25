@@ -26,7 +26,7 @@ Looking for step-by-step help with the app itself? The [how-to guides](/guides/)
 
 <div class="post-list">
 <article class="post-card">
-<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-11-24">November 24, 2026</time> &middot; 10 min read</p>
+<p class="post-meta"><a href="/blog/category/workflow/">Workflow</a> &middot; <time datetime="2026-11-24">November 24, 2026</time> &middot; 11 min read</p>
 <h3><a href="/blog/2026/11/video-creator-workflow-mac/">Video Creator Workflow on a Mac: From Memory Card to YouTube to Archive</a></h3>
 <p>A video creator workflow for the Mac, step by step: import, sort, review, organize, hand off to the editor, write the YouTube details, then archive.</p>
 </article>
