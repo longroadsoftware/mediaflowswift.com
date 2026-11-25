@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/11/video-creator-workflow-mac/
 published: "2026-11-24"
-updated: "2026-11-24"
+updated: "2026-11-25"
 og_image: "/images/blog/video-creator-workflow-mac.png"
 title: "Video Creator Workflow on a Mac: From Memory Card to YouTube to Archive"
 seo_title: "Video Creator Workflow on a Mac: Card to YouTube to Archive"
@@ -23,7 +23,7 @@ faq:
   - q: "Do the seven steps have to be done in order?"
     a: "No. Every segment of the pipeline strip is a button, so you can click any step at any time. Until you click one, the strip follows the first step that still has work to do, and a finished step shows a green check. The order is a guide to what comes next, and the app does not lock you into it."
   - q: "Does MediaFlowSwift upload my video to YouTube?"
-    a: "Yes, in a limited way today. The Upload tab can send your finished video to your channel, but version 1.12 treats that upload as a private copy for review, and it needs a Google Cloud project of your own. The usual way is to upload in YouTube Studio, then let MediaFlowSwift apply the title, description, chapters, tags and thumbnail, or paste them in. A later version will upload the public video directly from the app."
+    a: "Yes, in a limited way today. The Upload tab can send your finished video to your channel, but version 1.12 treats that upload as a private copy for review, and it needs a Google Cloud project of your own and Sending to YouTube turned on in Settings › Privacy. The usual way is to upload in YouTube Studio, then let MediaFlowSwift apply the title, description, chapters, tags and thumbnail, or paste them in. A later version will upload the public video directly from the app."
   - q: "Does my footage leave my Mac?"
     a: "No. MediaFlowSwift has no account and collects no usage data. Your media and projects stay on your Mac and your own network, in ordinary folders. A few optional features use a service run by another company, such as a paid model that writes YouTube text. Each one is off until you turn it on in Settings, under Privacy."
   - q: "Can I try the workflow without my own footage?"
@@ -121,7 +121,7 @@ A checklist beside the editor checks the draft against YouTube's rules as you ty
 
 In version 1.12 the public video goes up in YouTube Studio, uploaded by you. After that there are two ways to add the details:
 
-1. **Apply to the Video I Uploaded** sets the title, description, chapters, tags, thumbnail and captions for you. Apply needs a Google Cloud project of your own. The [setup](/manual/publishing/#setting-up-your-google-client) is free and takes about ten minutes, once.
+1. **Apply to the Video I Uploaded** sets the title, description, chapters, tags, thumbnail and captions for you. Apply needs a Google Cloud project of your own, and Sending to YouTube turned on in Settings › Privacy. The [setup](/manual/publishing/#setting-up-your-google-client) is free and takes about ten minutes, once.
 2. **Copy Title, Copy Description and Copy Tags** let you paste each field into the upload page. Copying needs no setup.
 
 ### Uploading from inside the app
