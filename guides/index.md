@@ -3,7 +3,7 @@ layout: guide
 title: "MediaFlowSwift Guides"
 published: "2026-10-13"
 description: "How-to answers for footage on a Mac: check a card copy before you erase it, keep two copies, find moved clips, label archive drives, publish to YouTube."
-updated: "2026-11-05"
+updated: "2026-11-24"
 permalink: /guides/
 ---
 # Guides
@@ -33,7 +33,7 @@ The guides are grouped by the moment you need them. That means before you erase 
   Checksums, not playback, prove a copy is safe. What gets checked at import, at organize and before Clear Card, and what never does.
 
 - **[How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/)**
-  Import and organize to your working drive, then archive to a second. Two checked copies, made one after the other, not at the same time.
+  Turn on Also copy to and import to two places at once, or archive to a second drive later. Two checked copies, either way.
 
 ## When something looks wrong
 

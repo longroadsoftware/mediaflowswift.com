@@ -3,6 +3,7 @@ layout: guide
 title: "ShotPut Pro Alternative: MediaFlowSwift vs ShotPut Pro"
 description: "Looking for a ShotPut Pro alternative? See how MediaFlowSwift compares to ShotPut Pro, what each app does better, what each costs, and which fits how you work."
 published: "2026-11-05"
+updated: "2026-11-24"
 permalink: /vs/shotput-pro/
 ---
 # MediaFlowSwift vs ShotPut Pro: Which One Fits Your Workflow?
@@ -33,7 +34,7 @@ ShotPut Pro's own page centres on offloading, checking and reporting. It does no
 
 - MediaFlowSwift writes no MHL file and no DIT-style transfer report. If a client or studio asks for ASC MHL, ShotPut Pro covers it.
 - MediaFlowSwift needs an Apple silicon or Intel Mac running macOS 13 or later. A Windows version is not out yet. ShotPut Pro runs on Intel and Apple silicon Macs and on Windows.
-- MediaFlowSwift copies each import to one destination. Its second copy comes later, when you archive the project to another drive. See [how to keep two checked copies of a card](/guides/two-checked-copies-of-a-card-on-a-mac/).
+- MediaFlowSwift can copy a card to two places in one import, with Also copy to on the Import sheet. It reads the card once and checks each copy against the card. A second copy can also come later, when you archive the project to another drive. See [how to keep two checked copies of a card](/guides/two-checked-copies-of-a-card-on-a-mac/).
 - ShotPut Pro's own page lists no clip review, star ratings, speech search or YouTube publishing.
 
 ## How is each one priced?

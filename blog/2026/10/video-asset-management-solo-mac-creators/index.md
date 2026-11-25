@@ -3,7 +3,7 @@ layout: post
 noindex: true
 permalink: /blog/2026/10/video-asset-management-solo-mac-creators/
 published: "2026-10-29"
-updated: "2026-10-29"
+updated: "2026-11-24"
 og_image: "/images/blog/video-asset-management-solo-mac-creators.png"
 title: "Video Asset Management for Solo Mac Creators: What You Need, What to Skip"
 seo_title: "Video Asset Management for Solo Mac Creators"
@@ -167,7 +167,7 @@ Price models differ too. OffShoot and MediaTools Pro sell one-time licenses. Sil
 MediaFlowSwift fits a solo creator who wants each card to become an organized, reviewed and archived project. It is a weaker fit in a few cases:
 
 - It runs only on Macs (Apple silicon and Intel) with macOS 13 or later. A Windows version is coming.
-- It copies to one destination per import, not to several drives in one job.
+- It copies to at most two places per import, with Also copy to, not to several drives in one job.
 - It writes no ASC MHL file and does not copy to S3 or other cloud storage.
 
 The [OffShoot](/vs/offshoot/) and [habitat flow](/vs/habitat-flow/) comparisons go further.

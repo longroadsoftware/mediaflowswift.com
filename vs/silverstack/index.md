@@ -3,6 +3,7 @@ layout: guide
 title: "MediaFlowSwift vs Silverstack: A Mac Alternative to Pomfort"
 description: "Looking for a Silverstack alternative for Mac? See how MediaFlowSwift compares to Pomfort's Silverstack XT and Offload Manager, what each costs, and which fits you."
 published: "2026-11-05"
+updated: "2026-11-24"
 permalink: /vs/silverstack/
 ---
 # MediaFlowSwift vs Silverstack and Offload Manager: Which One Fits You?
@@ -32,7 +33,7 @@ Silverstack XT can sort, rate, label and search clips too, so the difference her
 ## What are the limits on each side?
 
 - MediaFlowSwift writes no MHL file and no DIT-style transfer report, and it has no SDI playback, scopes or ALE export. If a production needs those, Pomfort covers them.
-- MediaFlowSwift copies each import to one destination. Its second copy comes later, when you archive the project to another drive. See [how to keep two checked copies of a card](/guides/two-checked-copies-of-a-card-on-a-mac/).
+- MediaFlowSwift can copy a card to two places in one import, with Also copy to on the Import sheet. It reads the card once and checks each copy against the card. A second copy can also come later, when you archive the project to another drive. See [how to keep two checked copies of a card](/guides/two-checked-copies-of-a-card-on-a-mac/).
 - MediaFlowSwift needs an Apple silicon or Intel Mac running macOS 13 or later. A Windows version is not out yet.
 - Pomfort's licences end. After a timed licence or a subscription ends, Pomfort gives you read-only access to your projects.
 

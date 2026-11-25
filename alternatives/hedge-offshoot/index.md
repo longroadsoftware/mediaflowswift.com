@@ -3,6 +3,7 @@ layout: guide
 title: "Hedge and OffShoot Alternatives for Mac: Six Apps Compared"
 description: "Looking for an alternative to Hedge's OffShoot on a Mac? Six apps that check a card copy with checksums, who each is for, and what each costs in US dollars."
 published: "2026-11-05"
+updated: "2026-11-24"
 permalink: /alternatives/hedge-offshoot/
 ---
 # Hedge and OffShoot Alternatives for Mac: Six Ways to Prove a Card Copy
@@ -19,7 +20,7 @@ OffShoot is a fast, well-made offload tool. It copies many sources to many desti
 
 MediaFlowSwift proves every copy with SHA-256, then keeps going. It gives each clip a category, files it into Category and Camera folders, and lets you review clips with star ratings and tags. It frees up space only after every clip is proved copied. You can search clips by what was said in them, and it archives to numbered drives with a record of what went where. Studio Pro drafts YouTube titles, descriptions, chapters and tags.
 
-- **Not for you if:** you need an MHL file or a DIT-style transfer report, or you work on Windows. That version is not out yet. It also copies each import to one destination; the second copy comes when you archive.
+- **Not for you if:** you need an MHL file or a DIT-style transfer report, or you work on Windows. That version is not out yet. It also copies a card to at most two places per import, with Also copy to, not many sources to many drives in one job. A second copy can also come later, when you archive.
 - **Price:** Studio is $49.99 a year and Studio Pro is $99.99 a year, or $4.99 and $9.99 a month. There is a 14-day free trial with no card, and one key covers up to three Macs.
 
 ## 2. ShotPut Pro: a long-standing offload tool for Mac and Windows
