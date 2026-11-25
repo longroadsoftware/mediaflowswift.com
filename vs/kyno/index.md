@@ -3,6 +3,7 @@ layout: guide
 title: "MediaFlowSwift vs Kyno: Which One Fits Your Workflow?"
 description: "Kyno and MediaFlowSwift both back up, check and organize footage. See what each does better, what each costs in US dollars, and which fits how you work."
 published: "2026-11-05"
+updated: "2026-11-24"
 permalink: /vs/kyno/
 ---
 # MediaFlowSwift vs Kyno: Which One Fits Your Workflow?
@@ -33,8 +34,8 @@ Both apps let you log and tag clips. MediaFlowSwift adds steps that Kyno's own p
 
 - MediaFlowSwift writes no MHL file and no DIT-style transfer report. Kyno writes MHL.
 - MediaFlowSwift does not transcode, apply LUTs or export subclips. Kyno does.
-- MediaFlowSwift copies each import to one destination. Its second copy comes later, when you archive the project to another drive. See [how to keep two checked copies of a card](/guides/two-checked-copies-of-a-card-on-a-mac/).
-- MediaFlowSwift needs an Apple silicon Mac running macOS 13 or later. Versions for Intel Macs and for Windows are not out yet. Kyno runs on macOS and Windows.
+- MediaFlowSwift can copy a card to two places in one import, with Also copy to on the Import sheet. It reads the card once and checks each copy against the card. A second copy can also come later, when you archive the project to another drive. See [how to keep two checked copies of a card](/guides/two-checked-copies-of-a-card-on-a-mac/).
+- MediaFlowSwift needs an Apple silicon or Intel Mac running macOS 13 or later. A Windows version is not out yet. Kyno runs on macOS and Windows.
 
 ## How is each one priced?
 
@@ -65,7 +66,7 @@ In US dollars, as listed on [Kyno's pricing page](https://lesspain.software/kyno
 
 ## Which one should you pick?
 
-Pick Kyno if you want to browse, log and convert footage where it sits, need MHL or transcoding, or work on Windows. Pick MediaFlowSwift if you want each card to become a project that is proved copied, sorted, reviewed, archived and ready to publish on an Apple silicon Mac. [Try MediaFlowSwift free for 14 days](/download.html), with no card, and see which one fits how you work.
+Pick Kyno if you want to browse, log and convert footage where it sits, need MHL or transcoding, or work on Windows. Pick MediaFlowSwift if you want each card to become a project that is proved copied, sorted, reviewed, archived and ready to publish on a Mac. [Try MediaFlowSwift free for 14 days](/download.html), with no card, and see which one fits how you work.
 
 ## Sources
 

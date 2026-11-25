@@ -3,7 +3,7 @@ layout: post
 noindex: true
 permalink: /blog/2026/10/video-asset-management-solo-mac-creators/
 published: "2026-10-29"
-updated: "2026-10-29"
+updated: "2026-11-24"
 og_image: "/images/blog/video-asset-management-solo-mac-creators.png"
 title: "Video Asset Management for Solo Mac Creators: What You Need, What to Skip"
 seo_title: "Video Asset Management for Solo Mac Creators"
@@ -158,7 +158,7 @@ The table below comes from each vendor's own site, checked in October 2026. Scor
 | [Silverstack XT](https://pomfort.com/silverstackxt/features/) (Pomfort) | XXH64, MD5, SHA1 and more; ASC MHL | Searchable clip library, tags, smart folders, reports; viewable offline | Free 10-day trial | Mac, native on Apple silicon |
 | [habitat flow](https://habitat-flow.com/) | xxHash64 with an ASC MHL report | Project and shooting-day folders; only reads the card | Free plan up to 150 GB a week | macOS, free iPhone companion |
 | [MediaTools Pro](https://mediatoolspro.com/) | SHA-256 | Search across drives; DaVinci Resolve import in Pro | MediaTools Lite is free | macOS 12+, Windows 10+ |
-| MediaFlowSwift | SHA-256 with full read-back | Category and camera folders, ratings, selects, proxies, numbered archive drives, reports | 14-day trial, no card | Apple silicon, macOS 13+ |
+| MediaFlowSwift | SHA-256 with full read-back | Category and camera folders, ratings, selects, proxies, numbered archive drives, reports | 14-day trial, no card | Apple silicon and Intel, macOS 13+ |
 
 Price models differ too. OffShoot and MediaTools Pro sell one-time licenses. Silverstack XT is a yearly subscription or a temporary license. habitat flow Pro comes by the year or as a one-time purchase. MediaFlowSwift's plans are on [the plans section](/#plans).
 
@@ -166,8 +166,8 @@ Price models differ too. OffShoot and MediaTools Pro sell one-time licenses. Sil
 
 MediaFlowSwift fits a solo creator who wants each card to become an organized, reviewed and archived project. It is a weaker fit in a few cases:
 
-- It runs only on Apple silicon Macs with macOS 13 or later. Windows and Intel Mac versions are coming.
-- It copies to one destination per import, not to several drives in one job.
+- It runs only on Macs (Apple silicon and Intel) with macOS 13 or later. A Windows version is coming.
+- It copies to at most two places per import, with Also copy to, not to several drives in one job.
 - It writes no ASC MHL file and does not copy to S3 or other cloud storage.
 
 The [OffShoot](/vs/offshoot/) and [habitat flow](/vs/habitat-flow/) comparisons go further.

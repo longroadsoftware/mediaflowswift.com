@@ -54,8 +54,9 @@ Choose MediaFlow → Settings (Cmd+,). The window has nine tabs. This topic says
 ### General
 
 - Setup — Run Setup Again… reopens the first-run setup questions. MediaFlow saves your setup whenever you quit and puts it back if this Mac’s settings are ever lost. Save Setup Now saves it at once. Restore Saved Setup puts the saved settings back, replacing what is set now, except today’s spend and the YouTube permissions, which it only fills in where this Mac has none. Passwords and API keys are not part of the saved setup; they stay in the Keychain
+- Support — Your email for replies from support. It is filled in on Help → Report a Problem… and Help → Contact Support…, and used only when you send one of them, so support can write back to you.
 - Updates — New versions come from mediaflowswift.com. “Check for new versions automatically” is off until you say yes, when MediaFlow first asks or here; it is in Privacy too. While it is on, MediaFlow looks shortly after launch, on wake and every few hours; a new version asks Install Now, Later or Skip This Version, never while something is running, while you are typing or while another dialog is open. A version you skipped is shown here, with Offer It Again. To look now, choose MediaFlow → Check for Updates…, which always offers the newest version
-- About — The version and build you are running, the maker, what MediaFlowSwift needs to run (a Mac with Apple silicon and macOS 13 Ventura or later), links to the website, the support page, the terms of use and the privacy page, and Acknowledgements… for the open-source packages it is built with. MediaFlowSwift → About MediaFlowSwift shows these too, and also whether this is the newest version, with Check Now and Release Notes, and the details support asks for
+- About — The version and build you are running, the maker, what MediaFlowSwift needs to run (macOS 13 Ventura or later, on a Mac with Apple silicon or an Intel processor), links to the website, the support page, the terms of use and the privacy page, and Acknowledgements… for the open-source packages it is built with. MediaFlowSwift → About MediaFlowSwift shows these too, and also whether this is the newest version, with Check Now and Release Notes, and the details support asks for
 
 ### Network
 
@@ -63,7 +64,7 @@ Where you choose the network share that MediaFlow reconnects to. Nothing is assu
 
 - Shares already mounted on this Mac are listed. Click Use this beside the one you want; it then reads In use
 - Look for servers searches the network. Connect to… opens a found server in Finder, which asks for the password and shows its shares. Mount one, then click Use this
-- Type the address instead takes an smb:// address. A name ending in .local keeps working when the server gets a new address
+- Type the address instead takes an smb:// address. It is saved when you press Return or click away from the field, without any name or password in it: macOS asks for those when it connects. When they can’t be told apart from the rest of the address, or the address has a port and an @ in the share’s name, it isn’t saved, and a note under the field says how to type it. Clicking away saves only what you typed, and clearing the field and pressing Return forgets the address but keeps the share. A name ending in .local keeps working when the server gets a new address
 - Once a share is chosen, the tab shows Connected or Not connected. Connect now mounts it again. Forget stops using it, and the settings that follow the share go back to unset
 
 ### Storage
@@ -71,8 +72,8 @@ Where you choose the network share that MediaFlow reconnects to. Nothing is assu
 - Enable Shared Database — Turns the shared database on and connects
 - Store — Database file or Database server. Changing it reconnects; it does not move any records
 - Database file — New Database File… asks where a new database file will live, makes it there and connects; Use an Existing Database File… picks one that is already there, such as the one another Mac made. Neither ever replaces a file. The line under them says what a database file is for. Type the path instead is there if you need it. The line below says whether the file can be reached and, when it can, where it is, with Show in Finder. Reset to Default points at MediaFlow/mediaflow.db on the chosen network share, and is dimmed until a share is chosen
-- Database server — Host (a button beside it offers the server of the chosen network share), Port, Database, User and Password. The password is kept in your Keychain. Test Connection shows the server version or the reason it failed. Set Up a Server… is a guide to making one. Two Copy buttons move every record between the file and the server
-- Organize Media — “Default destination for new projects” (Choose… or Clear) fills in the destination for a project that has none; a project’s own destination always wins
+- Database server — Host (a button beside it offers the server of the chosen network share), Port, Database, User and Password. The password is kept in your Keychain. Test Connection shows the server version or the reason it failed. When MediaFlow has reached the server another way than Host says, a line under the connection status says so, with a Use this button (see Connecting to a Database Server). Set Up a Server… is a guide to making one. Two Copy buttons move every record between the file and the server
+- Organize Media — “Default destination for new projects” (Choose… or Clear) fills in the destination for a project that has none, as a folder named after the project inside it. A new project made in that folder, or anywhere on its drive or share, keeps its media in its own project folder instead; a project’s own destination always wins
 - Verify organized copies by reading them back — On: every copy is read again in full and its SHA-256 compared with the source; slowest and safest. Off: copies are checked by size plus 1 MB samples at the start, middle and end; much faster over a network
 - Remove unfinished copies after … days — When Organize gives up on a clip because a network drive dropped, what had arrived is kept on the drive so the next Organize can carry it on. One that no Organize carries on is removed after this many days (7 unless you change it), the next time you organize to that folder
 
@@ -89,7 +90,7 @@ Where you choose the network share that MediaFlow reconnects to. Nothing is assu
 
 ### Analysis
 
-- Use a model to suggest categories — Lets you use an AI model, running on this Mac or at a provider you pay. An import uses the model only when you tick the box for it in the Import sheet. For a paid provider you add an API key, which is kept in the Keychain, and can set a spending limit with “Stop after … a day”
+- Use AI to suggest categories — Lets you use an AI model, running on this Mac or at a provider you pay. An import uses the model only when you tick the box for it in the Import sheet. For a paid provider you add an API key, which is kept in the Keychain, and can set a spending limit with “Stop after … a day”
 - Propose category, camera and scene after an import — After an import finishes, MediaFlow examines each clip on this Mac and proposes values. Proposals appear in italic and are not applied until you confirm them
 - Also look at the pictures and listen to the first minute (Tier 1) — A second, slower pass. Off by default. You can turn it on for the open project only, or run it over the open project now
 
@@ -107,25 +108,25 @@ One switch for each Smart Notification: Uncategorized Clips, Missing Cards, Form
 - Licence key — Where you enter a key and click Activate, see the Macs it is active on, and Release this Mac
 - The plans — What Studio and Studio Pro each include, their prices, and Buy on the website…. Nothing is sent anywhere from this tab until you enter a key. See Plans and Pricing
 
-See also: [The Settings Window, Tab by Tab](/manual/setup-network/#the-settings-window-tab-by-tab), [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac), [Setting Up MediaFlow](/manual/setup-network/#setting-up-mediaflow), [Choosing and Connecting Your Network Share](/manual/setup-network/#choosing-and-connecting-your-network-share), [Saved Setup: A Copy of Your Settings](/manual/setup-network/#saved-setup-a-copy-of-your-settings), [Updating MediaFlow](/manual/setup-network/#updating-mediaflow), [Database File or Database Server?](/manual/shared-database/#database-file-or-database-server), [Connecting to a Database Server](/manual/shared-database/#connecting-to-a-database-server), [Adding, Renaming, Retiring and Removing Categories](/manual/tags-categories/#adding-renaming-retiring-and-removing-categories), [Using a Model to Suggest Categories](/manual/organizing-media/#using-a-model-to-suggest-categories), [How MediaFlow Verifies Copies](/manual/organizing-media/#how-mediaflow-verifies-copies), [Smart Notifications](#smart-notifications), [Plans and Pricing](#plans-and-pricing)
+See also: [The Settings Window, Tab by Tab](/manual/setup-network/#the-settings-window-tab-by-tab), [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac), [Setting Up MediaFlow](/manual/setup-network/#setting-up-mediaflow), [Choosing and Connecting Your Network Share](/manual/setup-network/#choosing-and-connecting-your-network-share), [Saved Setup: A Copy of Your Settings](/manual/setup-network/#saved-setup-a-copy-of-your-settings), [Updating MediaFlow](/manual/setup-network/#updating-mediaflow), [Database File or Database Server?](/manual/shared-database/#database-file-or-database-server), [Connecting to a Database Server](/manual/shared-database/#connecting-to-a-database-server), [Adding, Renaming, Retiring and Removing Categories](/manual/tags-categories/#adding-renaming-retiring-and-removing-categories), [Using AI to Suggest Categories](/manual/organizing-media/#using-ai-to-suggest-categories), [How MediaFlow Verifies Copies](/manual/organizing-media/#how-mediaflow-verifies-copies), [Smart Notifications](#smart-notifications), [Plans and Pricing](#plans-and-pricing)
 
 ## Smart Notifications
 
-*The banner at the top of the window that points out unfinished work in the open project.*
+*The banner at the top of the clips, beside the sidebar, that points out unfinished work in the open project.*
 
-When a project opens or changes, MediaFlow checks it against these conditions and shows the first one that applies as a banner above the media list. Each banner has an action button where one makes sense, and an X button that opens a menu with Dismiss and “Don’t show again for this project”.
+When a project opens, MediaFlow checks it against these conditions and shows the first one that applies as a banner across the top of the clips, beside the sidebar. The banner takes its own space and moves the pipeline strip and the clips down while it shows, so it never covers them. Each banner has an action button where one makes sense, and an X button that opens a menu with Dismiss and “Don’t show again for this project”.
 
 ### Notification Types
 
 - Uncategorized Clips — 5 or more clips without a category; action: Auto-Suggest
 - Unorganized Media — not a banner. The Organize segment of the pipeline strip always shows the pending count, and turns orange at 10 or more clips when a destination is set
-- Missing Cards — One camera has far fewer clips than the others (under 30% of the average), which may mean a card was not imported
+- Missing Cards — One camera has far fewer clips than the others (under 30% of the average), which may mean a card was not imported. It names cameras as the Camera column does, and leaves out clips with no camera
 - Format Mismatch — 3 or more clips differ from the dominant resolution or frame rate; action: Check Formats
 - Storage Warning — The destination volume is 85% full or more; action: Storage Forecast
 - Unrated Clips — 20 or more clips have no star rating
 - Stale Project — No changes for 7 days or more
 
-Turn individual types off in Settings › Notifications. A “Don’t show again for this project” choice is remembered across launches; a plain Dismiss hides the banner only until MediaFlow next checks the project, so it can come back. A device-connection banner takes precedence while a card or phone is being detected.
+Turn individual types off in Settings › Notifications. A “Don’t show again for this project” choice is remembered across launches; a plain Dismiss hides the banner only until the project is closed and opened again, so it can come back then. Changing the project’s destination checks the Storage Warning again straight away, against the new place, so it can show even if you dismissed it; other banners you dismissed stay hidden until the project is closed and opened again. A device-connection banner takes precedence while a card or phone is being detected.
 
 See also: [The Settings Window](#the-settings-window), [Understanding the Pipeline Strip](/manual/getting-started/#understanding-the-pipeline-strip), [Auto-Suggest Categories](/manual/tags-categories/#auto-suggest-categories), [Storage Forecast](/manual/storage-maintenance/#storage-forecast), [Format Conformance Checker](/manual/organizing-media/#format-conformance-checker)
 

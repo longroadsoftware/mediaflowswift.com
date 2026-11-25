@@ -1,8 +1,9 @@
 ---
 layout: guide
-title: "MediaFlowSwift vs ShotPut Pro: Which One Fits Your Workflow?"
-description: "ShotPut Pro and MediaFlowSwift both prove a card copy with checksums. See what each does better, what each costs in US dollars, and which fits how you work."
+title: "ShotPut Pro Alternative: MediaFlowSwift vs ShotPut Pro"
+description: "Looking for a ShotPut Pro alternative? See how MediaFlowSwift compares to ShotPut Pro, what each app does better, what each costs, and which fits how you work."
 published: "2026-11-05"
+updated: "2026-11-24"
 permalink: /vs/shotput-pro/
 ---
 # MediaFlowSwift vs ShotPut Pro: Which One Fits Your Workflow?
@@ -19,7 +20,7 @@ ShotPut Pro describes itself as making "[lightning fast verified offloads and me
 
 ShotPut Pro is built for the person on set whose job is the offload. It writes PDF offload reports with thumbnails, writes ASC MHL files, lets you pick the checksum, and saves destinations as presets. It runs on Windows as well as on Mac, and on Intel Macs as well as Apple silicon. Imagine Products has sold it for years, and many DITs and assistant editors already know it.
 
-## What does MediaFlowSwift do better?
+## ShotPut Pro alternative: what MediaFlowSwift does better
 
 ShotPut Pro's own page centres on offloading, checking and reporting. It does not describe reviewing or sorting clips. MediaFlowSwift covers the work after the copy:
 
@@ -32,8 +33,8 @@ ShotPut Pro's own page centres on offloading, checking and reporting. It does no
 ## What are the limits on each side?
 
 - MediaFlowSwift writes no MHL file and no DIT-style transfer report. If a client or studio asks for ASC MHL, ShotPut Pro covers it.
-- MediaFlowSwift needs an Apple silicon Mac running macOS 13 or later. Versions for Intel Macs and for Windows are not out yet. ShotPut Pro runs on Intel and Apple silicon Macs and on Windows.
-- MediaFlowSwift copies each import to one destination. Its second copy comes later, when you archive the project to another drive. See [how to keep two checked copies of a card](/guides/two-checked-copies-of-a-card-on-a-mac/).
+- MediaFlowSwift needs an Apple silicon or Intel Mac running macOS 13 or later. A Windows version is not out yet. ShotPut Pro runs on Intel and Apple silicon Macs and on Windows.
+- MediaFlowSwift can copy a card to two places in one import, with Also copy to on the Import sheet. It reads the card once and checks each copy against the card. A second copy can also come later, when you archive the project to another drive. See [how to keep two checked copies of a card](/guides/two-checked-copies-of-a-card-on-a-mac/).
 - ShotPut Pro's own page lists no clip review, star ratings, speech search or YouTube publishing.
 
 ## How is each one priced?
@@ -45,7 +46,8 @@ ShotPut Pro's own page centres on offloading, checking and reporting. It does no
   <tr><td>Checksum verification on every card copy</td><td>&#10003;</td><td>&#10003;</td></tr>
   <tr><td>ASC MHL file and PDF offload report</td><td>&mdash;</td><td>&#10003;</td></tr>
   <tr><td colspan="3" class="group">Where it runs</td></tr>
-  <tr><td>Intel Macs and Windows</td><td>&mdash;</td><td>&#10003;</td></tr>
+  <tr><td>Intel Macs</td><td>&#10003;</td><td>&#10003;</td></tr>
+  <tr><td>Windows</td><td>&mdash;</td><td>&#10003;</td></tr>
   <tr><td colspan="3" class="group">After the copy</td></tr>
   <tr><td>Categorize, then file into Category and Camera folders</td><td>&#10003;</td><td>&mdash;</td></tr>
   <tr><td>Frame-accurate review, star ratings, tags</td><td>&#10003;</td><td>&mdash;</td></tr>
@@ -63,7 +65,7 @@ In US dollars, as listed on [ShotPut Pro's Mac page](https://imagineproducts.com
 
 ## Which one should you pick?
 
-Pick ShotPut Pro if your job ends at the offload and you need ASC MHL, PDF transfer reports, Windows or an Intel Mac. Pick MediaFlowSwift if you shoot and edit your own footage on an Apple silicon Mac and want one card to become one sorted, reviewed and archived project. [Try MediaFlowSwift free for 14 days](/download.html), with no card, and see which one fits how you work.
+Pick ShotPut Pro if your job ends at the offload and you need ASC MHL, PDF transfer reports or Windows. Pick MediaFlowSwift if you shoot and edit your own footage on a Mac and want one card to become one sorted, reviewed and archived project. [Try MediaFlowSwift free for 14 days](/download.html), with no card, and see which one fits how you work.
 
 ## Sources
 

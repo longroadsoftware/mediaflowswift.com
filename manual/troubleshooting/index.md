@@ -21,7 +21,7 @@ Symptom: a clip shows a red X and the word Missing in the Where column. MediaFlo
 
 ### Fixes
 
-1. Mount the drive or share. For the network share you chose in Settings › Network, click Connect now there, or choose Database → Reconnect Network Share. Then choose Workflow → Repair → Re-check files
+1. Mount the drive or share. For the network share you chose in Settings › Network, click Connect now there, choose Database → Reconnect Network Share, or connect to it in the Finder. Then choose Workflow → Repair → Re-check files
 2. If the files moved, choose Workflow → Repair → Relink Missing Media and pick the folder they are in now
 3. If the whole destination moved, choose Workflow → Repair → Change destination folder
 4. For one file, right-click the clip, choose Relink… and pick the file
@@ -40,7 +40,7 @@ See also: [Relinking Missing Media](/manual/storage-maintenance/#relinking-missi
 
 *When a newer MediaFlowSwift saved a project, or its shared database is set up for a newer version, an older one opens it to look at and changes nothing. Update this Mac to work on it again.*
 
-Symptom: a strip across the top of the window says “This project was saved by a newer MediaFlowSwift. Update MediaFlowSwift on this Mac to change it.” When the shared database is the reason, it names the project’s server or its database instead.
+Symptom: a strip across the top of the clips, beside the sidebar, says “This project was saved by a newer MediaFlowSwift. Update MediaFlowSwift on this Mac to change it.” When the shared database is the reason, it names the project’s server or its database instead.
 
 ### Why nothing can be changed
 
@@ -79,9 +79,9 @@ See also: [Connecting to a Database Server](/manual/shared-database/#connecting-
 
 ## Reporting a Problem
 
-*Put together a report of what went wrong, with personal details taken out, to email to support from your own mail app, copy or save.*
+*Tell support what went wrong. Send to Support delivers it, with what helps find the fault and personal details taken out.*
 
-Choose Help → Report a Problem…, or click Report a Problem… where it is offered: on an error message, and under the list of files that failed in a copy. Say what happened and what you were doing, and leave an email address if you would like a reply. MediaFlowSwift adds what helps find a fault, and shows you the whole report before anything else happens. You can change any of it.
+Choose Help → Report a Problem…, or click Report a Problem… where it is offered: on an error message, and under the list of files that failed in a copy. Say what happened and what you were doing, and click Send to Support. The email address for a reply is filled in from Settings › General; you can change it for this report, or leave it empty, though then no one can write back. MediaFlowSwift adds what helps find a fault. Open What’s Sent to read the whole report before it goes, choose whether crash reports and the end of the log go with it, and change any of it.
 
 ### What Is in a Report
 
@@ -90,6 +90,7 @@ Choose Help → Report a Problem…, or click Report a Problem… where it is of
 - A summary of any crashes and hangs macOS recorded for MediaFlowSwift in the last two weeks: what kind of failure, how often (times are in UTC), and where in the program it happened. Two sources say so: the report files macOS writes in Logs/DiagnosticReports in your Library, of which MediaFlowSwift reads only the ones about itself, not those of another program that shares its name, and MetricKit, Apple’s service that hands an app its own crash and hang diagnostics on a later launch. The same fault told by both is counted once. Neither leaves your Mac unless you send a report
 - Whether the last run ended without quitting
 - The last 150 lines of MediaFlowSwift’s log (Help → Show Log)
+- A screenshot, only if you add one (see Adding a Screenshot)
 
 ### What Is Taken Out
 
@@ -97,15 +98,19 @@ Before you see the report, MediaFlowSwift takes out of everything it adds, inclu
 
 It errs on the side of taking out too much. It cannot know a name it has never been told, such as a project on another Mac mentioned in the log, so read the report over; and what you type yourself is left exactly as you typed it. Once you edit the report, the fields above it stop changing it, so nothing you wrote is lost; Start Again from the Fields Above makes it afresh.
 
+### Adding a Screenshot
+
+A report has no picture unless you add one. Add Screenshot… → This Window takes the MediaFlowSwift window you reported from, as it is drawn, without the Report a Problem window: never another app, and never the rest of your screen. Add Screenshot… → Choose an Image… adds a picture you already have, such as a screenshot taken with Shift-Command-5. One picture goes with a report. It shows in the window, and Remove Screenshot takes it off before anything is sent.
+
+Nothing is taken out of a picture, as it is of the text: anything it shows, such as file or folder names, goes as it is, so look at it first. It is copied from its pixels, so nothing the file says about itself, such as where a photo was taken, goes with it, and a large one is made smaller. Send to Support carries it with the report, and it is kept at most 30 days and then deleted. Email Report… can take it too: when Mail is the app that opens email links on your Mac, Email Report… attaches it to the message and puts the whole report in the message, however long. With another mail app, or when no message appears, Show Screenshot in Finder shows its file, to drag into your message.
+
 ### Sending It
 
-Email Report… opens a new message to support@mediaflowswift.com in your own mail app, with the report exactly as it is in the window, for you to read and send. A short report is filled in for you. A longer one, which most are once the log is in, would not fit in a new message in every mail app, so the message asks you to paste it in (⌘V) from the clipboard. Short or long, Email Report… always puts the report on the clipboard. If no message appears (Mail shows only its window for adding an email account when none is set up in it), paste the report into an email to support@mediaflowswift.com from wherever you read your email. MediaFlowSwift itself makes no connection: the report goes only if you send the message, from your own email, so support can reply to you there.
+Send to Support delivers the report straight to the people who make MediaFlowSwift, over an encrypted connection to Long Road Software’s report relay, which holds it until support collects it. The window then shows a reference such as R-12; quote it if you write about the same problem later. A reply comes to the email address you gave. We aim to reply within two working days. Nothing is sent until you click Send to Support. With the report go only a title, the crash signature if there is one, your reply address, the screenshot if you added one, and a random identifier for this copy of the app; before the first report, this Mac also asks the relay for a key of its own. Settings › Privacy lists exactly what is sent.
 
-If your Mac opens email links in a web browser rather than a mail app, as it does once Gmail or another webmail is chosen for email, the browser may show no message at all; and if no app is set to open them, nothing opens. So in either case MediaFlowSwift does not hand the message over: the report is on the clipboard, and the window says where to send it. Copy Address puts support@mediaflowswift.com on the clipboard in its place, to paste into To:, and Copy Report puts the report back, to paste into the message. If your webmail does open email links, Open in (your browser) Anyway starts a new message to support there with only a subject line, and you paste the report in. The report itself never goes into the link: a webmail turns the link into a web address, which your browser keeps in its history. If that does not open either, the window says so, and the report is still on the clipboard.
+The first time, MediaFlowSwift asks before it sends anything: saying yes turns on Sending to support in Settings › Privacy, where you can turn it off again. While it is off, the next Send to Support asks again.
 
-Copy Report puts the text on the clipboard; Save… writes it to a file, if you would rather attach it to an email; sending it however you like is up to you. Help → Contact Support… and a plan change’s Email Support… work the same way when your Mac opens email links in a browser or in nothing: an alert puts the subject line and your version details, or the request, on the clipboard, with Copy Address, Copy Details (or Copy Request) and Open in (your browser) Anyway. See Contacting Support.
-
-A Mac that MediaFlowSwift’s maker has set up for its own testing shows a Send button as well, which hands a report to the maker’s own report relay. A customer’s copy has no relay and needs none: Email Report… is the way to send a report, and MediaFlowSwift never sends one on its own.
+If sending does not work, for instance with no internet connection, the window says why and the report is still there. Other Ways has Email Report…, which opens a new message to support@mediaflowswift.com in your own mail app with the report in it (a long report goes on the clipboard, for you to paste into the message with ⌘V); Copy Report; and Save…, which writes it to a file. If your Mac opens email links in a web browser, or in nothing, Email Report… puts the report on the clipboard instead and the window says where to send it, with Copy Address and, for a webmail that takes email links, Open in (your browser) Anyway.
 
 ### After a Crash
 
@@ -121,19 +126,25 @@ See also: [Contacting Support](#contacting-support), [Database Connection Issues
 
 ## Contacting Support
 
-*Write to support from your own mail app, or read the support page on the website. MediaFlowSwift sends nothing itself.*
+*Ask a question or suggest a feature from inside the app, and get the answer by email. Or read the support page on the website.*
 
-Choose Help → Contact Support… to write to support@mediaflowswift.com. It opens a new message in your own mail app, addressed to support, with this copy’s version and build, your macOS version and your Mac’s chip filled in at the bottom: the first things support needs to know. Nothing else about you, your Mac or your projects is in it. Write your question above them and send it as you would any email; support replies to the address you send from. We aim to reply within two working days.
+Choose Help → Contact Support…. Pick Get Help to ask how to do something, or Suggest a Feature to tell us about something you would like MediaFlowSwift to do. Write a subject and your message, check the email address for the reply (filled in from Settings › General), and click Send to Support. It goes straight to the people who make MediaFlowSwift, and the window shows a reference such as R-12. We aim to reply within two working days. Every feature request is read and kept on the list we plan from; we can’t promise when, or whether, one is built.
 
-If your Mac opens email links in a web browser, as it does once Gmail or another webmail is chosen for email, or in no app at all, MediaFlowSwift does not start the message there, since the browser may show no message to send. An alert says so instead, and puts the subject line and those details on the clipboard. Copy Address puts support@mediaflowswift.com on the clipboard in their place, to paste into To:, and Copy Details puts the details back. If your webmail does take email links, Open in (your browser) Anyway starts a new message to support there with only the subject in it, for you to paste the details into.
+Unless you turn it off, this copy’s version and build, your macOS version and your Mac’s chip go with your message: the first things support needs to know. Nothing else about you, your Mac or your projects is in it. What’s Sent shows exactly what goes. As with a problem report, the first Send to Support asks before anything is sent, and saying yes turns on Sending to support in Settings › Privacy.
 
-Choose Help → Support Website to open mediaflowswift.com’s support page in your web browser, with answers to common questions.
+### Your Email for Replies
 
-Something went wrong? Help → Report a Problem… puts together what support needs to find a fault, with personal details taken out, and Email Report… there hands it to your mail app in the same way, and puts it on the clipboard too; Copy Report and Save… are there to send it yourself. See Reporting a Problem.
+Settings › General › Support holds the email address support writes back to, so you type it once; the setup wizard asks for it too. It is used only when you send a problem report or a message to support, and goes nowhere else. If you leave it empty, the first address you send with is kept there for next time. An address you save there while Report a Problem or Contact Support is open appears in that window too, unless you have already typed one into it.
 
-> **Tip:** If no message appears (Mail shows only its window for adding an email account when none is set up in it), or you write from webmail that is not set up as your Mac’s mail app, write to support@mediaflowswift.com from wherever you read your email. Include the version shown in Settings › General.
+### Other Ways
 
-Neither item makes a connection of its own: the message goes only when you send it, and the page is fetched by your browser. Settings › Privacy lists both.
+Other Ways → Email Instead… opens your message in your own mail app, addressed to support@mediaflowswift.com, for you to send; support replies to the address you send from. Before you have agreed to the terms of use, Help → Contact Support… does this straight away. If your Mac opens email links in a web browser, or in no app at all, an alert says so instead and puts your message on the clipboard, with Copy Address and, for a webmail that takes email links, Open in (your browser) Anyway.
+
+Help → Support Website opens mediaflowswift.com’s support page in your web browser, with answers to common questions.
+
+Something went wrong? Help → Report a Problem… sends what support needs to find a fault, with personal details taken out. See Reporting a Problem.
+
+> **Tip:** You can always write to support@mediaflowswift.com from wherever you read your email. Include the version shown in Settings › General.
 
 See also: [Reporting a Problem](#reporting-a-problem), [Privacy: What Leaves This Mac](/manual/setup-network/#privacy-what-leaves-this-mac)
 
@@ -148,7 +159,7 @@ The shared database is optional: every project opens and works from its project 
 Symptom: the status reads “Connection failed: …”, “Database file offline” or “Waiting for the network share…”. Cause: the file, or the drive or share it is on, cannot be reached.
 
 1. Open Settings › Storage and read the line under Database. “Database file accessible” means the file can be reached. “Database file not found (will be created on connect)” means the path is reachable but holds no file yet. “No database file chosen yet” means you need to click New Database File… or Use an Existing Database File…
-2. If the file is on a network share, open Settings › Network. If it says Not connected, click Connect now, or choose Database → Reconnect Network Share
+2. If the file is on a network share, open Settings › Network. If it says Not connected, click Connect now, choose Database → Reconnect Network Share, or connect to it in the Finder
 3. Choose Database → Enable & Connect Database (Reconnect Database while it is connected)
 4. If the path is wrong, click Change… and pick the file. Reset to Default points at MediaFlow/mediaflow.db on the chosen network share; it is dimmed until you choose a share in Settings › Network
 
@@ -161,10 +172,18 @@ Open Settings › Storage and click Test Connection. It shows the server’s ver
 - “Nothing is listening at host, port …” — the database server is not running there, or the Port is wrong. Start the server, or correct the Port (usually 5432)
 - “… could not be found on the network. Check the host name.” — The Host is misspelled, or this Mac is on a different network
 - “… did not answer within 10 seconds” — Something between this Mac and the server, often a firewall, is dropping the connection. Check that the server allows connections from this Mac
+- “… reached through Tailscale; the server’s Tailscale may be offline” — The Host led to the server’s Tailscale address, and nothing answered there, so the Port is not what is wrong. Check that Tailscale is running on the server and on this Mac. On the server’s own network, its .local name or its address there works without Tailscale
+- “Also tried, to reach the same server: …” — The other ways MediaFlow tried to reach your server when the Host did not answer, and how each ended. It tries them once it has connected to your server before, and uses one only when the server there is the same one
 - “… is not reachable from this network.” — This Mac has no route to the server. Check your network or VPN
 - “… closed the connection” — The server is set to refuse this Mac. Whoever runs the server needs to allow this Mac’s address in pg_hba.conf
-- “The server asked for the password in plain text…” or “… as an MD5 hash…” — MediaFlow did not send the password: a server that asks for it this way could be something else on the network pretending to be yours. If it is your own server, whoever runs it sets it to sign in with SCRAM (scram-sha-256 in pg_hba.conf) and sets the password again. A server made with Set Up a Server… already signs in this way
+- “… accepts encrypted connections only” — Encryption is Off on this Mac, and the server takes only encrypted connections. In Settings › Storage, set Encryption to Encrypted on every Mac that uses the server
+- “The server’s identity changed” — Encryption is Encrypted, and the server offered a different certificate from the one this Mac remembered. Nothing was sent to it, unless another connection remembered a different certificate while this one was signing in: then the message says the connection was ended only after this Mac had signed in, so that server was sent proof that this Mac knows the password, but never the password itself. If the server was set up again or given a new certificate, click Forget and Re-trust… in Settings › Storage, beside the server named in Host and Port, and connect again. If not, something on the network may be pretending to be the server: find out which before you connect
+- “macOS did not let MediaFlowSwift read the certificate this Mac remembered…” — Encryption is Encrypted, and macOS would not hand over the server’s certificate kept in your Keychain, so this Mac cannot tell whether it is the same server, and refuses it rather than trusting it as new. Choose Database → Enable & Connect Database (Reconnect Database while it is connected), and when macOS asks, enter your Mac password and click Always Allow. Settings › Storage says so under Encryption until macOS does
+- “The server asked for the password in plain text…” or “… as an MD5 hash…” — MediaFlow did not send the password: a server that asks for it in plain text or MD5 could be something else on the network pretending to be yours. If it is your own server, whoever runs it sets it to sign in with SCRAM (scram-sha-256 in place of password or md5 in its pg_hba.conf), sets password_encryption to scram-sha-256 (older servers otherwise keep new passwords as MD5), then sets the user’s password again. A server made with Set Up a Server… already signs in this way
+- “The server asked for the password to be proved with only… rounds of SCRAM…” — MediaFlow did not send it: so few rounds would make the password quick to guess. If it is your own server, whoever runs it sets it to use at least 4096 rounds, the usual number, and sets the password again
 - A message in the server’s own words, such as a failed password or a database or role that does not exist — Correct the Password, Database or User field
+
+When the server cannot be reached, MediaFlow tries again by itself: after a couple of seconds, then at longer and longer waits, up to every five minutes, and at once when this Mac’s network changes (Wi-Fi, a cable, a VPN or Tailscale going on or off), when the Mac wakes from sleep, and when a drive or share is connected. What you saved meanwhile is sent as soon as it connects. A sign-in the server refused, such as a wrong password, is not tried again on a timer: correct it in Settings › Storage, or choose Database → Enable & Connect Database.
 
 If there is no server yet, Set Up a Server… walks you through making one.
 
@@ -330,18 +349,23 @@ See also: [Understanding the Where Column](#understanding-the-where-column), [Cl
 
 *What each icon and label in the Where column says about where a clip’s file is right now.*
 
-The Where column (once called Location) shows where each clip’s file is. The same eight labels appear on the grid badge and in the legend behind the info button above the media list:
+The Where column (once called Location) shows where each clip’s file is. The same nine labels appear on the grid badge and in the legend behind the info button above the media list:
 
-- Green check (At destination) — The file is at the project’s destination and has been verified
+- Green check (At destination) — The file is at the project’s destination and has been verified. When the file is inside the project’s destination, the tooltip names the folder it is in and the share, drive or Mac the destination is on, with the folder’s full path when this Mac can reach it. Right-click and choose Show in Finder to see the file; with several clips chosen it shows those this Mac can reach, and it is dimmed when this Mac can’t reach any of them
 - Blue folder (Imported, not organized yet) — The file was imported (to this Mac, a drive or a share) and has not been organized yet
 - Orange arrow (Only on card) — The file is on a camera card and has not been copied to the destination
 - Orange arrow (Not at destination) — The file is on another drive or folder, not a card, and not at the destination. The tooltip names the drive
 - Green link (Referenced) — The file stays where it was (Create Project From Folder) and is not copied
+- Purple star (Brand Kit) — The file is in your Brand Kit, the one copy your projects share. MediaFlowSwift never deletes or moves it; only Remove from Brand Kit, or Workflow → Cleanup → Old Brand Kit Versions… for a version no project uses, puts it in the Trash, or a folder on a network drive, when you ask
 - Red X (Missing) — The file cannot be found at any recorded path
 - Yellow triangle (Size mismatch) — The file is at the destination, but its size does not match the source
 - Gray question mark (Unknown) — MediaFlow has not checked this file yet
 
-Four more labels can appear in grey instead, when this Mac cannot see the file. Volume not connected means the drive or share it is on is not mounted. On another Mac means the file is in another account’s home folder, usually because it was imported on another Mac that shares this project. Not on this Mac means this Mac has never had the file and cannot find it, usually because it was imported on another Mac and kept somewhere else there. Not downloaded from iCloud, with a cloud, means iCloud has moved the file off this Mac and left a placeholder; it reads Not downloaded from Google Drive, OneDrive or Dropbox for those services, and Online-only (not on this Mac) for another. Download it in the Finder (see Footage in iCloud or Other Cloud Storage). The legend has a row for the last three, and none of the four is Missing. A clip on another Mac or not on this Mac is also left out of the Missing and Not at destination groups and of the pipeline’s Organize count, because it is that Mac’s to organize. One in another account’s home folder is left out of the Free up space count too.
+When this Mac cannot see the file, one of four labels appears in grey instead. Volume not connected means the drive or share it is on is not mounted. On another Mac means the file is in another account’s home folder, usually because it was imported on another Mac that shares this project. Not on this Mac means this Mac has never had the file and cannot find it, usually because it was imported on another Mac and kept somewhere else there. Not downloaded from iCloud, with a cloud, means iCloud has moved the file off this Mac and left a placeholder; it reads Not downloaded from Google Drive, OneDrive or Dropbox for those services, and Online-only (not on this Mac) for another. Download it in the Finder (see Footage in iCloud or Other Cloud Storage). The legend has a row for the last three of these four, and none of them is Missing. A clip on another Mac or not on this Mac is also left out of the Missing and Not at destination groups and of the pipeline’s Organize count, because it is that Mac’s to organize. One in another account’s home folder is left out of the Free up space count too.
+
+For a clip that reads On another Mac or Not on this Mac, the tooltip also says where the project records it when that is in the destination: the folder, and the Mac or share it is on. It never shows the path of a folder in another person’s home folder.
+
+One more grey label is about the clip rather than its file. A clip set to Skip (don’t copy) that has not been copied reads Skipped — not copied instead of Not at destination, Only on card, Referenced or Imported, not organized yet. Organize never copies it, so it is left where it is, and it is left out of the Not at destination group and of the pipeline’s Organize count; the Organize step says how many clips set to skip were left out. It has no copy at the destination, so Free Up Space and Clear Card never remove its file. A clip copied before it was set to skip is at the destination, and they treat it like any other organized clip. Give it another category and it is back in the Organize count and the Not at destination group at once. A skipped clip whose file is missing still reads Missing, and one MediaFlow cannot place still reads Unknown, because what is true of the file comes first; both are still counted among the clips the Organize step says were left out.
 
 The sidebar’s Smart Groups filter the media list to clips that still need attention: Not at destination, Missing, Uncategorized, Unrated, Unreviewed and Reject candidates. Unreviewed holds clips with an import-analysis proposal nobody has confirmed. Reject candidates holds clips import analysis flagged as probable rejects.
 

@@ -3,7 +3,7 @@ layout: guide
 title: "MediaFlowSwift Guides"
 published: "2026-10-13"
 description: "How-to answers for footage on a Mac: check a card copy before you erase it, keep two copies, find moved clips, label archive drives, publish to YouTube."
-updated: "2026-11-05"
+updated: "2026-11-24"
 permalink: /guides/
 ---
 # Guides
@@ -33,7 +33,7 @@ The guides are grouped by the moment you need them. That means before you erase 
   Checksums, not playback, prove a copy is safe. What gets checked at import, at organize and before Clear Card, and what never does.
 
 - **[How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/)**
-  Import and organize to your working drive, then archive to a second. Two checked copies, made one after the other, not at the same time.
+  Turn on Also copy to and import to two places at once, or archive to a second drive later. Two checked copies, either way.
 
 ## When something looks wrong
 
@@ -94,7 +94,7 @@ The comparisons with other apps quote each app's own pages, with the date prices
 
 ## What the guides assume
 
-- **Your Mac:** MediaFlowSwift runs on macOS 13 or later, on a Mac with Apple silicon.
+- **Your Mac:** MediaFlowSwift runs on macOS 13 or later, on an Apple silicon or Intel Mac.
 - **Your plan:** most guides work on either plan. YouTube publishing and the database server several Macs share need Studio Pro.
 - **Your storage:** cards, external drives and shared drives you already own.
 - **Your privacy:** features that send anything off your Mac, such as maps or place names, are off until you turn them on. Settings › Privacy lists each one.
@@ -109,4 +109,4 @@ If a guide gets something wrong, tell us at [support@mediaflowswift.com](mailto:
 
 Looking for how a particular window works? That's the [manual](/manual/). Broader articles on NAS setups, archive storage and choosing software are on the [blog](/blog/). Stuck on something not covered here? [Support](/support.html).
 
-Want to try it first? [Download MediaFlowSwift](/download.html): the full app is free for 14 days, no card required, provided your Mac has Apple silicon and runs macOS 13 or later.
+Want to try it first? [Download MediaFlowSwift](/download.html): the full app is free for 14 days, no card required, on an Apple silicon or Intel Mac with macOS 13 or later.

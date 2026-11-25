@@ -75,4 +75,4 @@ The Final Cut Pro export is the one built to carry your organization (categories
 
 ## Send your first report or hand-off file
 
-Generate Dailies and NLE Template Export are both built into MediaFlowSwift, the app covered above. [Download it](/download.html) for a 14-day trial of the full app — no card needed, running on macOS 13 or later with Apple silicon.
+Generate Dailies and NLE Template Export are both built into MediaFlowSwift, the app covered above. [Download it](/download.html) for a 14-day trial of the full app — no card needed, running on macOS 13 or later on an Apple silicon or Intel Mac.

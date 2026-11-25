@@ -80,4 +80,4 @@ MediaFlowSwift's .vtt option follows the W3C's [WebVTT specification](https://ww
 
 ## Search your own footage by what's said
 
-On-device transcription and search are built into MediaFlowSwift. [Download it](/download.html) — the full app runs free for 14 days, no card required, and it needs a Mac with Apple silicon on macOS 13 or later.
+On-device transcription and search are built into MediaFlowSwift. [Download it](/download.html) — the full app runs free for 14 days, no card required, and it needs an Apple silicon or Intel Mac on macOS 13 or later.

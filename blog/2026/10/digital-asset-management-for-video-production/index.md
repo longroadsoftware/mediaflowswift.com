@@ -2,7 +2,7 @@
 layout: post
 permalink: /blog/2026/10/digital-asset-management-for-video-production/
 published: "2026-10-23"
-updated: "2026-10-26"
+updated: "2026-11-24"
 og_image: "/images/blog/digital-asset-management-for-video-production.png"
 title: "Digital Asset Management for Video Production: What It Means on a Mac"
 seo_title: "Digital Asset Management for Video Production on a Mac"
@@ -124,7 +124,7 @@ For choosing between apps, use the [evaluation checklist](/blog/2026/10/evaluati
 
 ## Where does MediaFlowSwift fit, and where doesn't it?
 
-MediaFlowSwift is a footage manager for Macs with Apple silicon and macOS 13 or later. Windows and Intel Mac versions are coming. Everything below is described in its online manual.
+MediaFlowSwift is a footage manager for Apple silicon and Intel Macs with macOS 13 or later. A Windows version is coming. Everything below is described in its online manual.
 
 ### What it tracks
 
@@ -148,10 +148,10 @@ All of these features are in both Studio and Studio Pro. A shared database as a 
 
 ### Where it falls short
 
-- It runs only on Apple silicon Macs. Windows and Intel Mac versions are not out yet.
+- It runs only on Macs (Apple silicon and Intel). A Windows version is not out yet.
 - Import takes MP4, MOV, M4V and AVI video. MXF, BRAW, R3D and AVCHD files are left out, and the sheet says so.
 - Camera helper files such as Sony XML or DJI SRT files are not imported, and the manual describes no XMP support.
-- It copies to one destination per import and writes no ASC MHL file. OffShoot Pro covers MHL.
+- It copies to at most two places per import, with Also copy to, and writes no ASC MHL file. OffShoot Pro covers MHL.
 - The manual describes no client review links or approval workflow. A team that needs those should look at a full DAM.
 
 If MediaFlowSwift sounds like a fit for your footage, the [download page](/download.html) has a 14-day trial, with [plans](/#plans) listed for after it ends.

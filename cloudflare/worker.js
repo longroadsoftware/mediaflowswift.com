@@ -79,6 +79,22 @@ export default {
       });
     }
 
+    // The app zip (over the 25 MiB asset limit) comes from the GitHub Release of the same version. Fetched here and
+    // streamed back, never redirected: the app's updater refuses redirects. Same bytes as latest.json's sha256.
+    const zip = path.match(/^\/downloads\/(MediaFlowswift-(\d+(?:\.\d+)+)\.zip)$/);
+    if (zip && (request.method === "GET" || request.method === "HEAD")) {
+      const src = `https://github.com/longroadsoftware/mediaflowswift.com/releases/download/v${zip[2]}/${zip[1]}`;
+      const r = await fetch(src, { method: request.method, redirect: "follow", cf: { cacheEverything: true, cacheTtl: 86400 } });
+      if (r.status !== 200) return new Response("Not found", { status: 404 });
+      const h = new Headers();
+      h.set("Content-Type", "application/zip");
+      const len = r.headers.get("Content-Length");
+      if (len) h.set("Content-Length", len);
+      h.set("Cache-Control", "public, max-age=3600");
+      h.set("X-Robots-Tag", "noindex");
+      return new Response(request.method === "HEAD" ? null : r.body, { status: 200, headers: h });
+    }
+
     // Files (run_worker_first sends them here too): serve as-is; HTML pages also get counted.
     if (!path.endsWith("/")) {
       const file = await env.ASSETS.fetch(request);
