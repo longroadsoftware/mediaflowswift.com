@@ -4,6 +4,7 @@ The public website for MediaFlowSwift, hosted on **Cloudflare** since 2026-11-11
 
 - `index.html` — overview, how it works, plans
 - `support.html`, `privacy.html`, `terms.html`
+- `compare/index.html` — Studio vs Studio Pro (`/compare/`), linked as Compare plans in the menu and from the Plans section. Its price table and its feature table repeat the home page's Plans section (`paddle-config.js` has the prices), so change them together
 - `about/index.html` — About (`/about/`): who makes MediaFlowSwift and why, and what it promises about files. Uses absolute links to `/site.css` and site pages because it lives in a folder. No photo yet; add one as its own change
 - `site.css` — the one stylesheet (dark only). The header is `position: sticky`, so the menu stays on screen on every page, and `scroll-padding-top` keeps `/#plans`-style jumps clear of it
 - `site.js` — loaded (defer) on every page and layout: header shadow and progress line, the home page's lit menu link for the section on screen, scroll-in reveals, the hero's REC timecode. Optional: with it off, every page still reads and works
