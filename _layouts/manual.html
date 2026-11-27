@@ -12,7 +12,14 @@
 <meta property="og:description" content="{{ page.description | escape }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediaFlowSwift — Video footage manager for Mac">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page.description | escape }}">
+<meta name="twitter:image" content="https://mediaflowswift.com/images/og-image.png">
+<meta name="twitter:image:alt" content="MediaFlowSwift — Video footage manager for Mac">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","email":"support@mediaflowswift.com","sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]},{"@type":"WebSite","@id":"https://mediaflowswift.com/#website","name":"MediaFlowSwift","url":"https://mediaflowswift.com/","publisher":{"@id":"https://longroadsoftware.com/#organization"}},{"@type":"TechArticle","@id":"{{ site.url }}{{ page.url }}","url":"{{ site.url }}{{ page.url }}","headline":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"isPartOf":{"@id":"https://mediaflowswift.com/#website"},"publisher":{"@id":"https://longroadsoftware.com/#organization"},"author":{"@id":"https://longroadsoftware.com/#organization"},"about":{"@type":"SoftwareApplication","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"}}]}
 </script>
