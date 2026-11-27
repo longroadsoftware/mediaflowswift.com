@@ -42,6 +42,7 @@
       <a href="/download.html">Download</a>
       <a href="/#how">How it works</a>
       <a href="/#plans">Plans</a>
+      <a href="/compare/">Compare plans</a>
       <a href="/manual/">Manual</a>
       <a href="/guides/">Guides</a>
       <a href="/blog/">Blog</a>
@@ -154,7 +155,7 @@
       started: Number(form.started.value)
     };
     button.disabled = true;
-    status.textContent = "Sending\u2026";
+    status.textContent = "Sending…";
     fetch(form.action, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -164,7 +165,7 @@
     }).then(function (result) {
       if (result.ok && result.body && result.body.ok) {
         form.hidden = true;
-        status.textContent = "Sent. We\u2019ll reply to the address you gave, usually within two working days.";
+        status.textContent = "Sent. We’ll reply to the address you gave, usually within two working days.";
         return;
       }
       status.textContent = (result.body && result.body.error) || "That did not send. Use one of the addresses below.";
