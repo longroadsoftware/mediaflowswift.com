@@ -5,6 +5,7 @@ published: "2026-10-21"
 updated: "2026-11-24"
 og_image: "/images/blog/evaluating-video-file-management-software.png"
 title: "Evaluating Video File Management Software: A Pass/Fail Checklist for Mac"
+# seo_title is the search-result <title> only; title stays the full headline (H1, Open Graph, JSON-LD, blog listings, OG image).
 seo_title: "Video File Management Software for Mac: How to Evaluate It"
 description: "A pass/fail checklist for video file management software on Mac: test verified offloads, drive tracking, search and relinking, then compare the main tools."
 slug: "evaluating-video-file-management-software"
