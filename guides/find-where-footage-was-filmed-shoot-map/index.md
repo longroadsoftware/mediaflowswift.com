@@ -85,7 +85,7 @@ NLE Template Export for Final Cut Pro puts the place name and GPS coordinates on
 ## Other guides
 
 - [How to Review Footage and Pick Your Selects on a Mac](/guides/review-and-pick-selects-on-a-mac/) — narrowing to a location's clips is one more way to focus a review session.
-- [How to Automate Video File Organization on Your Mac](/guides/automate-video-file-organization-on-mac/) — once clips are grouped by location, let MediaFlowSwift carry that organization into your folders.
+- [How to Automate Video File Organization on Your Mac](/guides/automate-video-file-organization-on-mac/) — the map shows where clips were shot; Organize Media files them into Category and Camera folders.
 
 [All guides](/guides/) — the full list.
 
