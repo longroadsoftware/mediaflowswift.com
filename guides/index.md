@@ -80,6 +80,9 @@ The comparisons with other apps quote each app's own pages, with the date prices
 - **[MediaFlowSwift vs Just Using Finder and a Spreadsheet](/vs/finder-and-spreadsheet/)**
   What you give up going manual, how to check a copy by hand, and when the free way is good enough.
 
+- **[MediaFlowSwift vs Organizing Footage Yourself in Finder](/vs/organizing-footage-in-finder/)**
+  Folders you name yourself, where that breaks down, and when finding a clip by what it is beats finding it by folder name.
+
 - **[MediaFlowSwift vs ShotPut Pro](/vs/shotput-pro/)**
   Both prove a card copy. ShotPut Pro stops at the offload and report; what MediaFlowSwift adds, and what each costs.
 
