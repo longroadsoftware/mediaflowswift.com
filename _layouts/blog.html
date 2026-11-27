@@ -14,7 +14,14 @@
 <meta property="og:description" content="{{ page.description | escape }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediaFlowSwift — Video footage manager for Mac">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page.description | escape }}">
+<meta name="twitter:image" content="https://mediaflowswift.com/images/og-image.png">
+<meta name="twitter:image:alt" content="MediaFlowSwift — Video footage manager for Mac">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":{% if page.url == "/blog/" %}"Blog"{% else %}"CollectionPage"{% endif %},"@id":"{{ site.url }}{{ page.url }}{% if page.url == "/blog/" %}#blog{% endif %}","name":{{ page.title | jsonify }},"description":{{ page.description | jsonify }},"url":"{{ site.url }}{{ page.url }}","inLanguage":"en-US","isPartOf":{"@type":"WebSite","name":"MediaFlowSwift","url":"https://mediaflowswift.com/"},"publisher":{"@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]}{% if page.items %},"{% if page.url == "/blog/" %}blogPost{% else %}hasPart{% endif %}":[{% for i in page.items %}{"@type":"BlogPosting","headline":{{ i.title | jsonify }},"url":"{{ site.url }}{{ i.url }}","datePublished":{{ i.published | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]{% endif %}},
