@@ -70,7 +70,7 @@ The Final Cut Pro export is the one built to carry your organization (categories
 ## Other guides
 
 - [How to Review Footage and Pick Your Selects on a Mac](/guides/review-and-pick-selects-on-a-mac/) — rate and tag clips before you generate a dailies report.
-- [How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/) — keep a record of which drive holds each day's footage.
+- [How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/) — keep a record of which numbered drive each project's footage is archived to.
 
 [All guides](/guides/) — the full list.
 
