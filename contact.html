@@ -12,7 +12,14 @@
 <meta property="og:description" content="Write to us about the app, buying a plan, or a bill. The form sends your note to the right address.">
 <meta property="og:url" content="https://mediaflowswift.com/contact.html">
 <meta property="og:image" content="https://mediaflowswift.com/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediaFlowSwift — Video footage manager for Mac">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact MediaFlowSwift">
+<meta name="twitter:description" content="Write to us about the app, buying a plan, or a bill. The form sends your note to the right address.">
+<meta name="twitter:image" content="https://mediaflowswift.com/images/og-image.png">
+<meta name="twitter:image:alt" content="MediaFlowSwift — Video footage manager for Mac">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://longroadsoftware.com/#organization","name":"Long Road Software LLC","url":"https://longroadsoftware.com/","email":"support@mediaflowswift.com","sameAs":["https://github.com/longroadsoftware","https://www.youtube.com/@LongRoadSoftware","https://www.facebook.com/longroadsoftware"]},{"@type":"WebSite","@id":"https://mediaflowswift.com/#website","name":"MediaFlowSwift","url":"https://mediaflowswift.com/","publisher":{"@id":"https://longroadsoftware.com/#organization"}},{"@type":"ContactPage","@id":"https://mediaflowswift.com/contact.html","url":"https://mediaflowswift.com/contact.html","name":"Contact MediaFlowSwift","description":"Write to MediaFlowSwift about the app, buying a plan, or a bill. The form sends your note to the right address.","isPartOf":{"@id":"https://mediaflowswift.com/#website"},"publisher":{"@id":"https://longroadsoftware.com/#organization"}}]}
 </script>
@@ -154,7 +161,7 @@
       started: Number(form.started.value)
     };
     button.disabled = true;
-    status.textContent = "Sending\u2026";
+    status.textContent = "Sending…";
     fetch(form.action, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -164,7 +171,7 @@
     }).then(function (result) {
       if (result.ok && result.body && result.body.ok) {
         form.hidden = true;
-        status.textContent = "Sent. We\u2019ll reply to the address you gave, usually within two working days.";
+        status.textContent = "Sent. We’ll reply to the address you gave, usually within two working days.";
         return;
       }
       status.textContent = (result.body && result.body.error) || "That did not send. Use one of the addresses below.";
