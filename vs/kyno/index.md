@@ -1,7 +1,7 @@
 ---
 layout: guide
-title: "MediaFlowSwift vs Kyno: Which One Fits Your Workflow?"
-description: "Kyno and MediaFlowSwift both back up, check and organize footage. See what each does better, what each costs in US dollars, and which fits how you work."
+title: "Kyno Alternative for Mac: MediaFlowSwift vs Kyno"
+description: "Looking for a Kyno alternative for Mac? See how MediaFlowSwift compares to Kyno: what each does better, what each costs in US dollars, and which fits how you work."
 published: "2026-11-05"
 updated: "2026-11-24"
 permalink: /vs/kyno/

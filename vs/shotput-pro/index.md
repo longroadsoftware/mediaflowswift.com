@@ -1,7 +1,7 @@
 ---
 layout: guide
-title: "ShotPut Pro Alternative: MediaFlowSwift vs ShotPut Pro"
-description: "Looking for a ShotPut Pro alternative? See how MediaFlowSwift compares to ShotPut Pro, what each app does better, what each costs, and which fits how you work."
+title: "ShotPut Pro Alternative for Mac: MediaFlowSwift vs ShotPut Pro"
+description: "Looking for a ShotPut Pro alternative for Mac? See how MediaFlowSwift compares to ShotPut Pro, what each app does better, what each costs, and which fits how you work."
 published: "2026-11-05"
 updated: "2026-11-24"
 permalink: /vs/shotput-pro/
