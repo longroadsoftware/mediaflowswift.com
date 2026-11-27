@@ -1,9 +1,9 @@
 ---
 layout: guide
-title: "Hedge and OffShoot Alternatives for Mac: Six Apps Compared"
-description: "Looking for an alternative to Hedge's OffShoot on a Mac? Six apps that check a card copy with checksums, who each is for, and what each costs in US dollars."
+title: "OffShoot Alternatives for Mac: Six Apps Compared (With Prices)"
+description: "Comparing OffShoot? Six Mac apps that check a card copy with checksums like OffShoot does — what each costs, who each is for, checked against each app's own site."
 published: "2026-11-05"
-updated: "2026-11-24"
+updated: "2026-11-27"
 permalink: /alternatives/hedge-offshoot/
 ---
 # Hedge and OffShoot Alternatives for Mac: Six Ways to Prove a Card Copy
