@@ -2,8 +2,8 @@
 layout: guide
 title: "MediaFlowSwift Guides"
 published: "2026-10-13"
-description: "How-to answers for footage on a Mac: check a card copy before you erase it, keep two copies, find moved clips, label archive drives, publish to YouTube."
-updated: "2026-11-24"
+description: "How-to answers for footage on a Mac: check a card copy before you erase it, keep two copies, avoid duplicate imports, find moved clips, label archive drives, publish to YouTube."
+updated: "2026-11-27"
 permalink: /guides/
 ---
 # Guides
@@ -18,6 +18,7 @@ The guides are grouped by the moment you need them. That means before you erase 
 |---|---|
 | Format a card and be sure the footage is safe | [Is It Safe to Erase Your Card?](/guides/verify-footage-copied-before-erasing-card/) |
 | Have a second copy before the card goes back in the camera | [Two Checked Copies of a Card](/guides/two-checked-copies-of-a-card-on-a-mac/) |
+| Stop a re-imported card from doubling up your footage | [Avoid Importing the Same Footage Twice](/guides/avoid-importing-duplicate-footage-twice-mac/) |
 | Fix clips that show as missing after a drive change | [Footage Missing After a Move](/guides/footage-missing-after-moving-to-external-drive/) |
 | Stop sorting folders by hand | [Automate File Organization](/guides/automate-video-file-organization-on-mac/) |
 | Know which shelf drive holds an old project | [Label and Catalog Archive Drives](/guides/label-and-catalog-archive-drives-for-video/) |
@@ -34,6 +35,9 @@ The guides are grouped by the moment you need them. That means before you erase 
 
 - **[How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/)**
   Turn on Also copy to and import to two places at once, or archive to a second drive later. Two checked copies, either way.
+
+- **[How to Avoid Importing the Same Footage Twice on a Mac](/guides/avoid-importing-duplicate-footage-twice-mac/)**
+  A re-imported card is marked Duplicate by name and size, and skipped. What counts as a match, and what MediaFlowSwift can't catch.
 
 ## When something looks wrong
 
