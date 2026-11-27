@@ -1,12 +1,12 @@
 ---
 layout: guide
-title: "Hedge and OffShoot Alternatives for Mac: Six Apps Compared"
-description: "Looking for an alternative to Hedge's OffShoot on a Mac? Six apps that check a card copy with checksums, who each is for, and what each costs in US dollars."
+title: "Hedge Alternative for Mac: Six Apps Compared to OffShoot"
+description: "Looking for a Hedge or OffShoot alternative for Mac? Six apps that check a card copy with checksums, who each is for, and what each costs in US dollars."
 published: "2026-11-05"
 updated: "2026-11-24"
 permalink: /alternatives/hedge-offshoot/
 ---
-# Hedge and OffShoot Alternatives for Mac: Six Ways to Prove a Card Copy
+# Hedge Alternative for Mac: Six Apps Compared to OffShoot
 
 <p class="vs-answer">OffShoot is the copy app from Hedge; many people still call it "Hedge". Every app below proves a card copy with a checksum, not just a finished drag in Finder. They differ in who they are built for: a DIT on a film set, an assistant editor, or someone who shoots and edits their own footage. We make MediaFlowSwift, so it is listed first, but we have tried to be fair to the rest.</p>
 
