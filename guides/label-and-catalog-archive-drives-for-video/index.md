@@ -3,7 +3,7 @@ layout: guide
 title: "How to Label and Catalog Your Archive Drives for Video"
 description: "MediaFlowSwift numbers every archive drive and keeps a record of what's on it, so labeling your shelf of USB drives takes one sticker, not a spreadsheet."
 published: "2026-10-13"
-updated: "2026-11-03"
+updated: "2026-11-27"
 permalink: /guides/label-and-catalog-archive-drives-for-video/
 ---
 # How to Label and Catalog Your Archive Drives for Video
@@ -94,6 +94,7 @@ If you don't have a database set up yet, Archive to USB offers to make a plain d
 
 - [How to Automate Video File Organization on Your Mac](/guides/automate-video-file-organization-on-mac/) — Category and Camera folders, sorted the same way every time.
 - [Footage Missing After Moving to an External Drive?](/guides/footage-missing-after-moving-to-external-drive/) — why clips show as missing, and the command that repoints them.
+- [How to Back Up RV Trip Footage Without Losing Your Mac's Storage](/guides/back-up-rv-footage-without-losing-mac-storage/) — two checked copies on the road, then space cleared on your Mac.
 
 [All guides](/guides/) — the full list.
 

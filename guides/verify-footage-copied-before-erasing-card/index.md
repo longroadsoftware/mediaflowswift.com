@@ -3,7 +3,7 @@ layout: guide
 title: "Is It Safe to Erase Your Card After Importing on a Mac?"
 description: "Checksums, not playback, prove a copy is safe. See how MediaFlowSwift checks a copy at import, at organize, and once more before Clear Card erases a card."
 published: "2026-10-13"
-updated: "2026-11-24"
+updated: "2026-11-27"
 permalink: /guides/verify-footage-copied-before-erasing-card/
 ---
 # Is It Safe to Erase Your Card After Importing on a Mac?
@@ -80,6 +80,7 @@ Don't erase the card. Try the import again. A failed check usually means a bad r
 
 - [How to Keep Two Checked Copies of a Memory Card on a Mac](/guides/two-checked-copies-of-a-card-on-a-mac/) — getting a second checked copy, at import or later.
 - [How to Automate Video File Organization on Your Mac](/guides/automate-video-file-organization-on-mac/) — Category and Camera folders, sorted the same way every time.
+- [How to Back Up RV Trip Footage Without Losing Your Mac's Storage](/guides/back-up-rv-footage-without-losing-mac-storage/) — two checked copies on the road, then space cleared on your Mac.
 
 [All guides](/guides/) — the full list.
 

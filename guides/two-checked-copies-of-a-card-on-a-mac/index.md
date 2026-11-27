@@ -3,7 +3,7 @@ layout: guide
 title: "How to Keep Two Checked Copies of a Memory Card on a Mac"
 description: "Import a card to two places at once with Also copy to, or archive the project to a second drive later. Two checksum-verified copies either way."
 published: "2026-10-13"
-updated: "2026-11-24"
+updated: "2026-11-27"
 permalink: /guides/two-checked-copies-of-a-card-on-a-mac/
 ---
 # How to Keep Two Checked Copies of a Memory Card on a Mac
@@ -127,6 +127,7 @@ Once Image Capture has handed a file over, MediaFlowSwift copies it to your impo
 
 - [Is It Safe to Erase Your Card After Importing on a Mac?](/guides/verify-footage-copied-before-erasing-card/) — what the checksum check proves before you format.
 - [How to Label and Catalog Your Archive Drives for Video](/guides/label-and-catalog-archive-drives-for-video/) — numbered drives, and a record of what went where.
+- [How to Back Up RV Trip Footage Without Losing Your Mac's Storage](/guides/back-up-rv-footage-without-losing-mac-storage/) — two checked copies on the road, then space cleared on your Mac.
 
 [All guides](/guides/) — the full list.
 
