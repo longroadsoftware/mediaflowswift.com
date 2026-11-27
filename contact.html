@@ -155,7 +155,7 @@
       started: Number(form.started.value)
     };
     button.disabled = true;
-    status.textContent = "Sending\\u2026";
+    status.textContent = "Sending\u2026";
     fetch(form.action, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -165,7 +165,7 @@
     }).then(function (result) {
       if (result.ok && result.body && result.body.ok) {
         form.hidden = true;
-        status.textContent = "Sent. We\\u2019ll reply to the address you gave, usually within two working days.";
+        status.textContent = "Sent. We\u2019ll reply to the address you gave, usually within two working days.";
         return;
       }
       status.textContent = (result.body && result.body.error) || "That did not send. Use one of the addresses below.";
