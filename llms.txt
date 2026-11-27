@@ -30,6 +30,7 @@ Plain answers to the questions people ask when moving footage off a card on a Ma
 - Footage missing after moving to an external drive: https://mediaflowswift.com/guides/footage-missing-after-moving-to-external-drive/ — the Where column, Library Moved, relinking and re-checking
 - How to automate video file organization on a Mac: https://mediaflowswift.com/guides/automate-video-file-organization-on-mac/ — category and camera folders, workflow templates
 - How to label and catalog archive drives for video: https://mediaflowswift.com/guides/label-and-catalog-archive-drives-for-video/ — numbered archive volumes and the record of what is on each
+- How to back up RV trip footage without losing your Mac's storage: https://mediaflowswift.com/guides/back-up-rv-footage-without-losing-mac-storage/ — Storage Forecast for the destination drive, a second checked copy with Also copy to or Archive to USB, then Free Up Space; card originals are staged on this Mac, import copies on the destination's drive are staged on that drive, and space returns only when the staged files are deleted
 
 ## Blog
 
