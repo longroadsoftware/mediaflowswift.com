@@ -93,6 +93,7 @@ The manual's warning about the SEO agent's draft:
 ## Other guides
 
 - [How to Find a Clip by What Was Said in It on a Mac](/guides/search-video-by-what-was-said/) — the same on-this-Mac transcription that feeds this draft.
+- [How to Review Footage and Pick Your Selects on a Mac](/guides/review-and-pick-selects-on-a-mac/) — pick your best clips before you cut and export the video you'll transcribe here.
 
 [All guides](/guides/) — the full list.
 
